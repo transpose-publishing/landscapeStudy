@@ -15,6 +15,24 @@ refined <- base_data %>%
   )) 
 
 
+# # check publisher names
+# refined %>% 
+#   count(publisher, sort = T)
+
+refined <- refined %>% 
+  mutate(publisher_clean = case_when(
+    str_detect(publisher, "^American Chemical Society") ~ "American Chemical Society",
+    str_detect(publisher, "^American Heart Association") ~ "American Heart Association",
+    str_detect(publisher, "^Cell") ~ "Cell Press (Elsevier)",
+    str_detect(publisher, "^IEEE") ~ "IEEE",
+    str_detect(publisher, "^IOP") ~ "IOP",
+    str_detect(publisher, "^SpringerNature") ~ "Springer Nature",
+    TRUE ~ publisher
+  ))
+
+
+# why do some journals have no publisher?
+# missing in excel (see analysis notes)
 
 # data on subject area is a bit messy -> there is no way to split it directly
 # we first create a variable with the full area names. then we squash it into
