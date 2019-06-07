@@ -10,7 +10,7 @@ gs_dat <- read_excel("data-raw/Compiled_Landscape study journals list.xlsx",
                      sheet = "G_ALL_dedup")
 
 gs_dat <- select(gs_dat, -contains("Reviewer"), issn = ISSN, 
-                 title = `Journal Title`)
+                 gs_title = `Journal Title`)
 
 
 # Import landscape data ----
@@ -34,8 +34,8 @@ names(transpose) <- new_names
 # - dummy issn for NIPS
 # - change issn to online version
 gs_dat <- gs_dat %>% 
-  mutate(issn = case_when(str_detect(title, "Rheuma") ~ "1468-2060",
-                          str_detect(title, "NIPS") ~ "NIPS-ISSN",
+  mutate(issn = case_when(str_detect(gs_title, "Rheuma") ~ "1468-2060",
+                          str_detect(gs_title, "NIPS") ~ "NIPS-ISSN",
                           TRUE ~ issn))
 
 transpose <- transpose %>% 
@@ -58,8 +58,9 @@ check2  <- gs_dat %>%
 
 if (any(check1 != 0, check2 != 0)) {
   stop("Matching wasn't sucessful! Please check the output!")
+} else {
+  # write result to disk 
+  write_csv(joined_dataset, "data-transformed/joined_data.csv")
+  
 }
 
-
-# write result to disk -----
-write_csv(joined_dataset, "data-transformed/joined_data.csv")
