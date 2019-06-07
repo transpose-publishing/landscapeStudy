@@ -12,6 +12,12 @@ gs_dat <- read_excel("data-raw/Compiled_Landscape study journals list.xlsx",
 gs_dat <- select(gs_dat, -contains("Reviewer"), issn = ISSN, 
                  gs_title = `Journal Title`)
 
+# fix error for American Journal of Political Science: rank was missing
+gs_dat <- gs_dat %>% 
+  mutate(G_SS_rank = case_when(
+    issn == "1540-5907" ~ 8,
+    TRUE ~ G_SS_rank)
+  )
 
 # Import landscape data ----
 transpose <- read_excel("data-raw/TRANSPOSE landscape study - 2019-06-02.xlsx",
