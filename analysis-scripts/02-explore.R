@@ -2,6 +2,7 @@ library(tidyverse)
 theme_set(hrbrmisc::theme_hrbrmstr())
 library(RColorBrewer)
 library(ggalt)
+library(rcrossref)
 source("R/helpers.R")
 
 # import data
@@ -34,10 +35,12 @@ refined_with_areas %>%
   facet_wrap(~pr_type_clean) +
   coord_flip()
 
-ggplot(refined_with_areas, aes(area, fill = pr_type_clean)) +
-  geom_bar(position = "fill") +
+ggplot(refined_with_areas, aes(str_wrap(area, 20), fill = pr_type_clean)) +
+  geom_bar(position = "fill", width = .7) +
   # coord_flip() +
-  scale_fill_brewer(palette = "Set1")
+  scale_fill_brewer(palette = "Set1") +
+  theme(legend.position = "top") +
+  labs(fill = NULL)
 
 refined_with_areas %>% 
   filter(is.na(area))
@@ -56,4 +59,37 @@ ggplot(refined_with_areas, aes(area, `h5-index`)) +
   geom_boxplot() +
   coord_flip()
 
-refined_with_areas %>% arrange(desc(G_HMS_rank)) %>% select(G_100_rank, G_HMS_rank) %>% View()
+refined_with_areas %>% 
+  arrange(desc(G_HMS_rank)) %>% 
+  select(G_100_rank, G_HMS_rank) %>% 
+  View()
+
+
+## enrich with data about n of articles from crossref ----
+# take first issn
+test_issn <- refined %>% 
+  head(1) %>% 
+  pull(issn)
+
+test_journal <- cr_journals(test_issn, works = T)
+
+test_journal$data %>% 
+  View()
+
+test_journal_big <- cr_journals(test_issn, works = T, limit = 1000,
+                                filter = c(from_pub_date = 2017, 
+                                           until_pub_date = 2018))
+
+test_journal_big$data %>% 
+  as.tibble() %>% 
+  mutate(reference.count = as.integer(reference.count))%>% View()
+
+test_journal_very_big <- cr_journals(
+  test_issn, works = T, limit = 1000,
+  cursor = "*", cursor_max = 5000,
+  filter = c(from_pub_date = 2015, until_pub_date = 2018),
+  .progress = TRUE)
+
+test_journa_very_big$data %>% 
+  as.tibble() %>% View()
+
