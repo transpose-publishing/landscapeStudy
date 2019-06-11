@@ -1,0 +1,218 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+```
+
+
+```{r, message=FALSE}
+library(tidyverse)
+library(RColorBrewer)
+library(ggalt)
+library(visdat)
+library(here)
+library(tidytext)
+library(igraph)
+library(ggraph)
+source(here("R/helpers.R"))
+
+theme_set(hrbrmisc::theme_hrbrmstr())
+
+
+# import data
+refined <- read_csv(here("data-transformed/refined.csv"))
+refined_with_areas <- read_csv(here("data-transformed/refined_w_areas.csv"))
+
+```
+
+
+# General overview
+```{r, fig.height=10, fig.width=10}
+refined %>% 
+  vis_miss()
+```
+
+There is quite some missing data, which shouldn't be like this. For example
+the field U30 in excel (table RAW), which has the opr-responses for the journal
+"Advanced Materials" is missing. It should probably be "Not specified".
+
+The following are all variables, where implicit missings should be checked and
+converted to explicit ones (as for opr_responses), or fixed (as for publishers).
+
+```{r, fig.height=3, fig.width=3}
+# only columns with missing data
+with_missings <- refined %>% 
+  select(-starts_with("G_"), -ends_with("clean")) %>% 
+  select_if(~any(is.na(.))) %>% 
+  # remove a few columns where missing data is ok
+  select(-starts_with("review date"),
+         -starts_with("To dis"),
+         -starts_with("Time ta"),
+         -starts_with("Review"),
+         -starts_with("Free"),
+         # Top journals are being removed as well, since these are legit 
+         # missings
+         -starts_with("Top journals in")
+         )
+
+with_missings %>% 
+  vis_miss() +
+  theme(plot.margin = margin(r = 50))
+```
+
+
+
+
+# Peer Review
+```{r}
+# small tweaks
+refined_with_areas <- refined_with_areas %>% 
+  order_factors()
+```
+
+
+```{r, fig.width=6, fig.height=3}
+ggplot(refined_with_areas, aes(str_wrap(area, 20), fill = pr_type_clean)) +
+  geom_bar(position = "fill", width = .7) +
+  # coord_flip() +
+  scale_fill_brewer(palette = "Set3") +
+  scale_y_continuous(labels = scales::percent) +
+  theme(legend.position = "top") +
+  labs(fill = NULL, x = NULL, y = NULL, 
+       title = "What type of peer review is used?")
+```
+
+
+```{r, fig.width=5, fig.height=4}
+ggplot(refined_with_areas, aes(fct_rev(area), fill = area)) +
+  geom_bar(show.legend = F) +
+  facet_wrap(~pr_type_clean) +
+  coord_flip() +
+  labs(x = NULL, y = NULL, 
+     title = "What type of peer review is used?")
+```
+
+
+
+# Open Peer Review
+```{r, fig.width=12, fig.height=6}
+pdata <- refined %>% 
+  select(opr_reports:opr_versions) %>% 
+  gather(var, val)
+
+labels <- pdata %>% 
+  distinct(var) %>% 
+  mutate(label = case_when(
+    var == "opr_reports" ~ "Are peer review reports being published?",
+    var == "opr_responses" ~ "Are author responses to reviews being published?",
+    var == "opr_letters" ~ "Are editorial decision letters being published?",
+    TRUE ~ "Are previous versions of the manuscript being published?"
+  )) %>% 
+mutate_at("label", ~str_wrap(., 40))
+
+pdata %>% 
+  left_join(labels) %>% 
+  {ggplot(., aes(label, fill = val)) +
+  geom_bar(position = "fill") +
+  coord_flip() +
+  # theme(legend.position = "top") +
+  labs(x = NULL, y = NULL, fill = NULL) } %>% 
+  plotly::ggplotly()
+```
+
+```{r, fig.height=6, fig.width=6}
+pdata <- refined_with_areas %>% 
+  select(area, opr_reports:opr_versions) %>% 
+  gather(var, val, -area)
+
+labels <- pdata %>% 
+  distinct(var) %>% 
+  mutate(label = case_when(
+    var == "opr_reports" ~ "Are peer review reports being published?",
+    var == "opr_responses" ~ "Are author responses to reviews being published?",
+    var == "opr_letters" ~ "Are editorial decision letters being published?",
+    TRUE ~ "Are previous versions of the manuscript being published?"
+  )) %>% 
+mutate_at("label", ~str_wrap(., 40))
+
+pdata %>% 
+  left_join(labels) %>% 
+  ggplot(., aes(label, fill = val)) +
+  geom_bar(position = "fill") +
+  coord_flip() +
+  facet_wrap(~area) +
+  theme(legend.position = "top") +
+  labs(x = NULL, y = NULL, fill = NULL) 
+```
+
+
+# Co-Review
+Let's look at the co-review policy.
+
+```{r}
+coreview_policies <- refined %>% 
+  select(coreview_policy) %>% 
+  filter(!is.na(coreview_policy),
+         !(coreview_policy %in% c("Not specified", "Not found")))
+```
+
+Only `r nrow(coreview_policies)` out of `r nrow(refined)` do have a 
+coreview-policy.
+
+The following table displays stemmed parts of the policies, sorted by propensity.
+```{r}
+coreview_policies %>% 
+  distinct() %>% 
+  unnest_tokens(word, coreview_policy) %>% 
+  anti_join(stop_words) %>% 
+  mutate(word = SnowballC::wordStem(word)) %>% 
+  count(word, sort = T)
+```
+
+
+```{r}
+# bigram analysis
+
+bigrams <- coreview_policies %>% 
+  distinct() %>%
+  unnest_tokens(bigram, coreview_policy, token = "ngrams", n = 2)
+
+bigrams_separated <- bigrams %>%
+  separate(bigram, c("word1", "word2"), sep = " ")
+
+bigrams_filtered <- bigrams_separated %>%
+  filter(!word1 %in% stop_words$word) %>%
+  filter(!word2 %in% stop_words$word)
+
+# new bigram counts:
+bigram_counts <- bigrams_filtered %>% 
+  count(word1, word2, sort = TRUE)
+
+bigram_graph <- bigram_counts %>%
+  filter(n > 2) %>%
+  graph_from_data_frame()
+```
+
+The following graph shows the relationship between to most common bigrams (only
+bigrams that occur at least three times).
+
+```{r, fig.width=4, fig.height=4}
+set.seed(2019)
+
+a <- grid::arrow(type = "closed", length = unit(.15, "inches"))
+
+ggraph(bigram_graph, layout = "fr") +
+  geom_edge_link(aes(edge_alpha = n), show.legend = FALSE,
+                 arrow = a, end_cap = circle(.07, 'inches')) +
+  geom_node_point(color = "lightblue", size = 4) +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1, repel = T) +
+  theme_void()
+```
+
+
+
+# Preprints
