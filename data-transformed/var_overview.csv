@@ -1,0 +1,62 @@
+variable,description,type,var_number
+reviewer 1,Your initials,"[Initials of first, last name]",1
+review date...3,Entry date,[YYYY-MM-DD],2
+reviewer 2,Your initials,"[Initials of first, last name]",3
+review date...5,Entry date,[YYYY-MM-DD],4
+reviewer 3,NA,NA,5
+review 3 date,NA,NA,6
+To discuss,NA,NA,7
+issn,"Journal ISSN 
+ (optional. Please enter just one ISSN associated with your journal, which can be print or electronic)",NA,8
+title,"Journal title 
+ (one per column)",[string],9
+Top journals in... [field] (added by JP from https://docs.google.com/spreadsheets/d/1Dluo5DNWU4UrmwIZLzqcToioRdyZ1qc1EofAk4ypiW8/edit#gid=1793295014),NA,NA,10
+publisher,Publisher,[string],11
+pr-type,"Type of peer review
+ Single blind - reviewers are anonymous to the author. Double blind - reviewers and authors are
+ anonymous to each other.","Single blind, Double blind, Not blinded, unsure, other",12
+pr-policy,Peer review policy URL,[link],13
+pr-form-url,Peer review form URL (a copy of the peer review form),[link],14
+pr-credit-url,Peer review credit policy URL,[link],15
+pr-database,Peer reviewer activity deposited into open databases? Examples include Publons and ORCID,"Yes, No, Unsure",16
+pr-transfer-policy,Peer review transfer policy,[string],17
+pr-transfer-url,Peer review transfer policy URL,[link],18
+opr-reports,"Peer review reports - published?, attributes (An example of ""Conditional"" publication: reviews are published unless the reviewer recommends rejection or withdraws.)","Mandatory, Conditional, Optional, No, Not specified
+ Attributes: Have date, Have DOI, Free to read (not paywalled), Under a Creative Commons License, Deposited into PubMed Central",19
+opr-responses,"Author responses to reviews - published?, attributes",NA,20
+opr-letters,"Editorial decision letters - published?, attributes",NA,21
+opr-versions,"Previous versions of the manuscript - published?, attributes",NA,22
+opr-identities-published,Reviewer identities published?,"Mandatory, Conditional, Optional, No, Not specified",23
+opr-indenties-author,Reviewer identities revealed to the author (even if not published)?,NA,24
+opr-comments,Public commenting during formal peer review?,NA,25
+opr-interaction,Open interaction (reviewers consult with one another)?,NA,26
+opr-additional,"Additional OPR information
+ Add any notes here about the nature of ""conditional"" publishing, etc",[string],27
+coreview-policy,Co-reviewer policy Co-reviewers are people whom a peer reviewer invites to help them write a peer review. Often these are junior scholars in the same lab/group as the peer reviewer.,[string],28
+coreview-url,Co-reviewer policy URL,[link],29
+coreview-email,Co-reviewers can contribute?,"Yes, No, Unsure",30
+coreview-form,Dedicated place in the peer review form to identify co-reviewers?,"Yes, No, Unsure",31
+coreview-database,Peer reviewer activity for co-reviewers deposited into open databases?,"Yes, No, Unsure",32
+preprint-url,Preprint policy URL(s),"[link or links, separated by commas]",33
+preprint-version,Version of the paper that can be posted to a preprint server,"No preprint policy
+ None (preprints not allowed)
+ First submission only (before peer review)
+ After peer review (but not final, copyedited version)
+ Any
+ Unsure (preprints are allowed, but it's not clear what version)
+ Other",34
+preprint-servers,Acceptable servers or characteristics of preprint servers,[string],35
+preprint-citation,"Preprints allowed in citation list? If citations are only permitted to preprints that appear in certain servers, please select and describe in ""Other.""","Yes, in the reference list
+ Yes, but only in the text (not the reference list)
+ No
+ Not specified
+ Unsure
+ Other",36
+preprint-link,Link provided to preprint version of a paper?,"Yes, No, Unsure",37
+preprint-media,"Preprint media coverage policy What type of coverage about preprints is permitted? (eg blog posts, social media, news outlets, etc). Paste the policy here.",[string],38
+preprint-licensing,"Preprint licensing policy What licenses (CC BY, etc) are permitted for preprints?",[string],39
+preprint-scoop,"Scoop protection policy ""Scoop protection"" refers to policies about whether submitted preprint will be rejected if a competing work comes out in another journal after the date of preprinting.",[string],40
+preprint-review,Community review policy for preprints,[string],41
+Free Notes/Observations,NA,NA,42
+Time taken to do the Survey,NA,NA,43
+Reviewer 2 changes,NA,NA,44
