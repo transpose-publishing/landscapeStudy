@@ -3,6 +3,8 @@ In the filtered file publishers are missing. This is because sometimes the third
 row has of a journal has no info on publishers. Simply taking the first would be
 incorrect. Someone would need to go over this again.
 
+- in general there is some missing data -> see RNotebook.
+
 # Recoding publishers
 Publishers could be unified for several reasons. 
 - Some journals are published by a big house (Springer, Wiley) in cooperation 
@@ -13,6 +15,8 @@ Association, Wiley & American Finance Association (AFA)).
   is published or co-published by a subject association.
   
   -> for starters, I just fix typos and leave the rest to be decided.
+  
+  -> sounds interesting -> lets do it
   
   
 # Subject areas
@@ -27,6 +31,9 @@ discipline?
  Question: where to get the category from, since it is afaik not possible to
  directly search in GS for the journal.
 
+  -> add them by hand (look at journal, come up with suggestion -> cross check
+  afterwards)
+
 
 # Contrasting with h-index
 - not sure how meaningful that would be, since the distribution of h-indices is
@@ -37,9 +44,15 @@ heavily influenced by the sample.
 - with what would we correlate the h-index? if the policy is clear or not?
 
 
+Tony: presumably higher impact journals have more ressources, but maybe they make
+more money and thus dont need open policies.
+
+-> crossref for landscape study with general database.
+
+
 # Data from CrossRef
 - get an n for the journal: this is possible. would make sense to limit to 
-specific years (for ex. 2015-2018, or five years), because it would otherwise
+specific years (for ex. 2017-2018, or five years), because it would otherwise
     - take a long time
     - be not helpful, since year coverage might vary.
 - Citations? This is essentially the same as h-index, just decomposed into single
