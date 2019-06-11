@@ -36,3 +36,16 @@ Maybe include data from crossref:
 
 # Timeline
 Play around til friday.
+
+
+
+# New TODO
+
+- fix data entry errors
+- re-import data from first and third row from RAW tab
+- do general overview for all variables
+
+
+Later bit: look at data from database, and compare them.
+
+Timeline: 2-3 weeks
