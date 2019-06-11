@@ -82,7 +82,7 @@ test_journal_big <- cr_journals(test_issn, works = T, limit = 1000,
 
 test_journal_big$data %>% 
   as.tibble() %>% 
-  mutate(reference.count = as.integer(reference.count))%>% View()
+  mutate(reference.count = as.integer(reference.count)) %>% View()
 
 test_journal_very_big <- cr_journals(
   test_issn, works = T, limit = 1000,
