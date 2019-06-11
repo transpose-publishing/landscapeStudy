@@ -3,7 +3,7 @@ order_factors <- function(df) {
     mutate(
       pr_type_clean = factor(
         pr_type_clean,
-        levels = c("not blinded", "single blind", "double blind", "unsure", 
+        levels = c("single blind", "double blind", "not blinded", "unsure", 
                    "other"))
       )
 }
