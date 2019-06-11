@@ -1,6 +1,8 @@
 ---
 title: "R Notebook"
-output: html_notebook
+output: 
+  html_document:
+    keep_md: true
 ---
 
 
@@ -43,7 +45,7 @@ the field U30 in excel (table RAW), which has the opr-responses for the journal
 The following are all variables, where implicit missings should be checked and
 converted to explicit ones (as for opr_responses), or fixed (as for publishers).
 
-```{r, fig.height=3, fig.width=3}
+```{r, fig.height=6, fig.width=6}
 # only columns with missing data
 with_missings <- refined %>% 
   select(-starts_with("G_"), -ends_with("clean")) %>% 
@@ -75,7 +77,7 @@ refined_with_areas <- refined_with_areas %>%
 ```
 
 
-```{r, fig.width=6, fig.height=3}
+```{r, fig.width=10, fig.height=5}
 ggplot(refined_with_areas, aes(str_wrap(area, 20), fill = pr_type_clean)) +
   geom_bar(position = "fill", width = .7) +
   # coord_flip() +
@@ -87,7 +89,7 @@ ggplot(refined_with_areas, aes(str_wrap(area, 20), fill = pr_type_clean)) +
 ```
 
 
-```{r, fig.width=5, fig.height=4}
+```{r, fig.width=9, fig.height=8}
 ggplot(refined_with_areas, aes(fct_rev(area), fill = area)) +
   geom_bar(show.legend = F) +
   facet_wrap(~pr_type_clean) +
@@ -124,7 +126,7 @@ pdata %>%
   plotly::ggplotly()
 ```
 
-```{r, fig.height=6, fig.width=6}
+```{r, fig.height=9, fig.width=9}
 pdata <- refined_with_areas %>% 
   select(area, opr_reports:opr_versions) %>% 
   gather(var, val, -area)
@@ -200,7 +202,7 @@ bigram_graph <- bigram_counts %>%
 The following graph shows the relationship between to most common bigrams (only
 bigrams that occur at least three times).
 
-```{r, fig.width=4, fig.height=4}
+```{r, fig.width=7, fig.height=7}
 set.seed(2019)
 
 a <- grid::arrow(type = "closed", length = unit(.15, "inches"))
