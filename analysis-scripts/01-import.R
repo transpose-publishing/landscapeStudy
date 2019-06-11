@@ -70,3 +70,24 @@ if (any(check1 != 0, check2 != 0)) {
   
 }
 
+
+# import list of variables for ease of use
+transpose_vars <- read_excel(
+  "data-raw/TRANSPOSE landscape study - 2019-06-02.xlsx",
+  sheet = "Raw", n_max = 2)
+  
+part1 <- transpose_vars %>% 
+  slice(1) %>% 
+  gather(variable, description) %>% 
+  slice(-1)
+
+part2 <- transpose_vars %>% 
+  slice(2) %>% 
+  gather(variable, type) %>% 
+  slice(-1)
+
+part1 %>% 
+  left_join(part2) %>% 
+  mutate(var_number = 1:n())   -> var_overview
+
+write_csv(var_overview, "data-transformed/var_overview.csv")
