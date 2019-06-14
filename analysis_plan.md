@@ -44,6 +44,7 @@ Play around til friday.
 - fix data entry errors
 - re-import data from first and third row from RAW tab
 - do general overview for all variables
+- fix plotly in md (probably just dont use ggplotly for md output) DONE
 
 
 Later bit: look at data from database, and compare them.

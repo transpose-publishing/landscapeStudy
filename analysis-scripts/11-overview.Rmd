@@ -1,7 +1,10 @@
 ---
-title: "R Notebook"
+title: "Landscape Study - General Overview"
+author: Thomas Klebel
+date: Last changed `r lubridate::today()`
 output: 
   html_document:
+    df_print: paged
     keep_md: true
 ---
 
@@ -118,12 +121,11 @@ mutate_at("label", ~str_wrap(., 40))
 
 pdata %>% 
   left_join(labels) %>% 
-  {ggplot(., aes(label, fill = val)) +
+  ggplot(., aes(label, fill = val)) +
   geom_bar(position = "fill") +
   coord_flip() +
   # theme(legend.position = "top") +
-  labs(x = NULL, y = NULL, fill = NULL) } %>% 
-  plotly::ggplotly()
+  labs(x = NULL, y = NULL, fill = NULL) 
 ```
 
 ```{r, fig.height=9, fig.width=9}
@@ -149,6 +151,7 @@ pdata %>%
   facet_wrap(~area) +
   theme(legend.position = "top") +
   labs(x = NULL, y = NULL, fill = NULL) 
+# display via plotly was removed, so it could be rendered on GitHub
 ```
 
 
@@ -172,7 +175,7 @@ coreview_policies %>%
   unnest_tokens(word, coreview_policy) %>% 
   anti_join(stop_words) %>% 
   mutate(word = SnowballC::wordStem(word)) %>% 
-  count(word, sort = T)
+  count(word, sort = T) 
 ```
 
 
