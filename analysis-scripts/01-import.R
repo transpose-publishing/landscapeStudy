@@ -28,10 +28,10 @@ transpose <- read_excel("data-raw/TRANSPOSE landscape study - 2019-06-02.xlsx",
                         sheet = "Raw") %>% 
   slice(-1:-2) %>% 
   # https://stackoverflow.com/a/46895151/3149349
-  mutate_at(vars(starts_with("review date")), ~excel_numeric_to_date(as.numeric(.))) %>% 
   rename(review_date_1 = `review date...3`, review_date_2 = `review date...5`,
          review_date_3 = `review 3 date`,
-         top_journals_in = starts_with("Top journals"))
+         top_journals_in = starts_with("Top journals")) %>% 
+  mutate_at(vars(starts_with("review_date")), ~excel_numeric_to_date(as.numeric(.)))
 
 
 # remove dashes from names and replace with underscores
