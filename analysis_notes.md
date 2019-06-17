@@ -57,3 +57,10 @@ specific years (for ex. 2017-2018, or five years), because it would otherwise
     - be not helpful, since year coverage might vary.
 - Citations? This is essentially the same as h-index, just decomposed into single
 articles. would suffer the same fate.
+
+
+# Missing data questions
+What about column AC? (coreview Policy)
+rows 24 and 27 are not clear.
+
+apart from those rows, in most instances data can be copied two rows down
