@@ -93,6 +93,9 @@ write_csv(transpose_clean, "data-transformed/before_manual_fixing.csv")
 # What will be fixed:
 # - missing publisher
 # - missing data in other places
+# 
+# diffing can be done via:
+# git diff --color-words="[^[:space:],]+" *after*
 
 transpose_fixed <- read_csv("data-transformed/after_manual_fixing.csv")
 
