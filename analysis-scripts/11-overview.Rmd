@@ -285,3 +285,17 @@ refined %>%
 ```
 
 # Preprints
+```{r}
+refined %>% 
+  plot_univariate(preprint_version) +
+  coord_flip() 
+
+refined %>% 
+  plot_univariate(preprint_citation) +
+  coord_flip()
+
+refined %>% 
+  plot_univariate(preprint_link) +
+  coord_flip()
+
+```
