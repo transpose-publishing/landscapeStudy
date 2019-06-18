@@ -16,8 +16,9 @@ refined <- base_data %>%
 
 
 # # check publisher names
-# refined %>% 
-#   count(publisher, sort = T)
+# refined %>%
+#   count(publisher) %>% 
+#   arrange(publisher)
 
 refined <- refined %>% 
   mutate(publisher_clean = case_when(
@@ -31,8 +32,6 @@ refined <- refined %>%
   ))
 
 
-# why do some journals have no publisher?
-# missing in excel (see analysis notes)
 
 # data on subject area is a bit messy -> there is no way to split it directly
 # we first create a variable with the full area names. then we squash it into
@@ -43,7 +42,7 @@ recoded <- refined %>%
   gather(area, score, -issn) %>% 
   drop_na() %>% 
   mutate(area_clean = case_when(
-    str_detect(area, "BEM") ~ "Business, Economics & Life Sciences",
+    str_detect(area, "BEM") ~ "Business, Economics & Management",
     str_detect(area, "CMS") ~ "Chemical & Materials Sciences", 
     str_detect(area, "ECS") ~ "Engineering & Computer Science",
     str_detect(area, "HMS") ~ "Health & Medical Sciences",
