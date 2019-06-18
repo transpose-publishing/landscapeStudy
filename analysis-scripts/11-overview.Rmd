@@ -102,6 +102,38 @@ ggplot(refined_with_areas, aes(fct_rev(area), fill = area)) +
 ```
 
 
+```{r}
+# plotting function for univariate data
+plot_univariate <- function(data, var) {
+  var <- enquo(var)
+  
+  pdata <- data %>% 
+    count(!!var) %>% 
+    mutate(y = str_trunc(!!var, 40))
+  
+  
+  pdata %>% 
+    ggplot(aes(y, n)) +
+    geom_lollipop() +
+    geom_label(aes(label = n),
+             hjust = 0, nudge_y = 2, label.size = 0) +
+    scale_y_continuous(limits = c(0, max(pdata$n) + max(pdata$n)/10)) +
+    labs(title = paste("Variable:", rlang::as_name(var)))
+}
+```
+
+
+
+```{r}
+refined %>% 
+  plot_univariate(pr_database) +
+  coord_flip()
+```
+
+
+
+
+
 
 # Open Peer Review
 ```{r, fig.width=12, fig.height=6}
@@ -154,6 +186,25 @@ pdata %>%
 # display via plotly was removed, so it could be rendered on GitHub
 ```
 
+
+
+```{r}
+refined %>% 
+  plot_univariate(opr_identities_published) +
+  coord_flip() 
+
+refined %>% 
+  plot_univariate(opr_indenties_author) +
+  coord_flip()
+
+refined %>% 
+  plot_univariate(opr_comments) +
+  coord_flip()
+
+refined %>% 
+  plot_univariate(opr_interaction) +
+  coord_flip()
+```
 
 # Co-Review
 Let's look at the co-review policy.
