@@ -269,6 +269,19 @@ ggraph(bigram_graph, layout = "fr") +
   theme_void()
 ```
 
+```{r}
+refined %>% 
+  plot_univariate(coreview_email) +
+  coord_flip() 
 
+refined %>% 
+  plot_univariate(coreview_form) +
+  coord_flip()
+
+refined %>% 
+  plot_univariate(coreview_database) +
+  coord_flip()
+
+```
 
 # Preprints

@@ -83,6 +83,6 @@ bigrams that occur at least three times).
 
 ![](11-overview_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
 
-
+![](11-overview_files/figure-html/unnamed-chunk-16-1.png)<!-- -->![](11-overview_files/figure-html/unnamed-chunk-16-2.png)<!-- -->![](11-overview_files/figure-html/unnamed-chunk-16-3.png)<!-- -->
 
 # Preprints
