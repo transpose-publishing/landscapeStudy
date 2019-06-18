@@ -41,11 +41,24 @@ converted to explicit ones (as for opr_responses), or fixed (as for publishers).
 
 
 
-# Open Peer Review
-![](11-overview_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+
+
 
 ![](11-overview_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
+
+
+
+
+
+# Open Peer Review
+![](11-overview_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+
+![](11-overview_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+
+
+
+![](11-overview_files/figure-html/unnamed-chunk-11-1.png)<!-- -->![](11-overview_files/figure-html/unnamed-chunk-11-2.png)<!-- -->![](11-overview_files/figure-html/unnamed-chunk-11-3.png)<!-- -->![](11-overview_files/figure-html/unnamed-chunk-11-4.png)<!-- -->
 
 # Co-Review
 Let's look at the co-review policy.
@@ -68,7 +81,7 @@ The following table displays stemmed parts of the policies, sorted by propensity
 The following graph shows the relationship between to most common bigrams (only
 bigrams that occur at least three times).
 
-![](11-overview_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![](11-overview_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
 
 
 
