@@ -96,6 +96,10 @@ write_csv(transpose_clean, "data-transformed/before_manual_fixing.csv")
 # 
 # diffing can be done via:
 # git diff --color-words="[^[:space:],]+" *after*
+# git diff --color-words="[^[:space:],]+" 16ad54bf e1e2b554
+# git diff --no-index --color-words="[^[:space:],]+" before_manual_fixing.csv after_manual_fixing.csv
+# the last one is not very helpful since quoting changes a lot of things...
+# --no-index is needed, since these are two uncommited files
 
 transpose_fixed <- read_csv("data-transformed/after_manual_fixing.csv")
 
