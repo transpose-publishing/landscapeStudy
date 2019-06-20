@@ -125,8 +125,15 @@ plot_univariate <- function(data, var) {
 
 
 ```{r}
+refined <- refined %>% 
+  mutate(pr_database_clean = case_when(
+    str_detect(pr_database, "^Yes") ~ "Yes",
+    str_detect(pr_database, "Unsure") ~ "Unsure",
+    str_detect(pr_database, "No") ~ "No"
+  ))
+
 refined %>% 
-  plot_univariate(pr_database) +
+  plot_univariate(pr_database_clean) +
   coord_flip()
 ```
 
@@ -136,10 +143,15 @@ refined %>%
 
 
 # Open Peer Review
-```{r, fig.width=12, fig.height=6}
+```{r, fig.width=8, fig.height=5}
 pdata <- refined %>% 
   select(opr_reports:opr_versions) %>% 
-  gather(var, val)
+  gather(var, val) %>% 
+  mutate(val_clean = case_when(
+    str_detect(val, "Conditional") ~ "Conditional",
+    str_detect(str_to_lower(val), "not spec") ~ "Not specified",
+    TRUE ~ val
+  ))
 
 labels <- pdata %>% 
   distinct(var) %>% 
@@ -153,10 +165,12 @@ mutate_at("label", ~str_wrap(., 40))
 
 pdata %>% 
   left_join(labels) %>% 
-  ggplot(., aes(label, fill = val)) +
-  geom_bar(position = "fill") +
+  ggplot(., aes(label, fill = val_clean)) +
+  geom_bar(position = "fill", width = .7) +
   coord_flip() +
-  # theme(legend.position = "top") +
+  scale_y_continuous(labels = scales::percent) +
+  scale_fill_brewer(palette = "Set3") +
+  theme(legend.position = "top") +
   labs(x = NULL, y = NULL, fill = NULL) 
 ```
 
@@ -285,11 +299,30 @@ refined %>%
 ```
 
 # Preprints
-```{r}
-refined %>% 
-  plot_univariate(preprint_version) +
-  coord_flip() 
+```{r preprint version, fig.width=4, fig.height=2.5}
+refined <- refined %>% 
+  mutate(preprint_version_clean = case_when(
+    str_detect(preprint_version, "Unsure") ~ 
+      "Unsure (preprints are allowed, but it's not clear which version)",
+    str_detect(preprint_version, "Any .*? or") ~ "Other",
+    str_detect(preprint_version, "Other|Unclear") ~ "Other",
+    str_detect(preprint_version, "None") ~ "None",
+    str_detect(preprint_version, "First sub") ~ 
+      "First submission only (before peer review)",
+    str_detect(preprint_version, "After peer re") ~ "After peer review",
+    str_detect(preprint_version, "Any|any") ~ "Any",
+    str_detect(preprint_version, "No") ~ "No preprint policy",
+  )) 
 
+
+refined %>% 
+  plot_univariate(preprint_version_clean) +
+  coord_flip() +
+  labs(title = "What version of a preprint can be posted?")
+```
+
+
+```{r}
 refined %>% 
   plot_univariate(preprint_citation) +
   coord_flip()
