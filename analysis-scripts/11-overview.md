@@ -14,8 +14,12 @@ output:
 
 
 
+# Summary
+The general impression is, that the journals most of the time do not have a 
+specific policy regarding the aspect under question, or it was unclear for our
+reviewers if there was a policy or not or how to interpret it.
 
-# General overview
+# Missing data
 ![](11-overview_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 There is quite some missing data, which shouldn't be like this. For example
