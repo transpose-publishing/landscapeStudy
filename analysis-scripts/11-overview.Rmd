@@ -113,12 +113,13 @@ plot_univariate <- function(data, var) {
   
   
   pdata %>% 
-    ggplot(aes(y, n)) +
+    ggplot(aes(fct_reorder(y, n), n)) +
     geom_lollipop() +
     geom_label(aes(label = n),
              hjust = 0, nudge_y = 2, label.size = 0) +
     scale_y_continuous(limits = c(0, max(pdata$n) + max(pdata$n)/10)) +
-    labs(title = paste("Variable:", rlang::as_name(var)))
+    labs(title = paste("Variable:", rlang::as_name(var)),
+         x = NULL, y = "count")
 }
 ```
 
@@ -231,12 +232,15 @@ coreview_policies <- refined %>%
 ```
 
 Only `r nrow(coreview_policies)` out of `r nrow(refined)` do have a 
-coreview-policy.
+coreview-policy. Due to policies being similar across journals of certain 
+publishers, there are `r nrow(distinct(coreview_policies))`
+distinct policies in our dataset.
 
-The following table displays stemmed parts of the policies, sorted by propensity.
+The following table displays stemmed parts of the distinct policies, sorted by
+propensity.
 ```{r}
 coreview_policies %>% 
-  distinct() %>% 
+  distinct() %>%
   unnest_tokens(word, coreview_policy) %>% 
   anti_join(stop_words) %>% 
   mutate(word = SnowballC::wordStem(word)) %>% 
@@ -283,23 +287,57 @@ ggraph(bigram_graph, layout = "fr") +
   theme_void()
 ```
 
+
+
+
+```{r, eval=FALSE}
+# trigram analysis
+
+trigrams <- coreview_policies %>% 
+  distinct() %>%
+  unnest_tokens(bigram, coreview_policy, token = "ngrams", n = 3)
+
+trigrams_separated <- trigrams %>%
+  separate(bigram, c("word1", "word2", "word3"), sep = " ")
+
+trigrams_filtered <- trigrams_separated %>%
+  filter(!word1 %in% stop_words$word) %>%
+  filter(!word2 %in% stop_words$word) %>% 
+  filter(!word3 %in% stop_words$word)
+
+
+# new bigram counts:
+trigram_counts <- trigrams_filtered %>% 
+  count(word1, word2, word3, sort = TRUE)
+
+trigram_counts
+```
+
+
+
+This might be interesting -- split by subject area
 ```{r}
 refined %>% 
   plot_univariate(coreview_email) +
   coord_flip() 
+```
 
+This doesn't look interesting.
+```{r}
 refined %>% 
   plot_univariate(coreview_form) +
   coord_flip()
+```
 
+This doesn't look interesting.
+```{r}
 refined %>% 
   plot_univariate(coreview_database) +
   coord_flip()
-
 ```
 
 # Preprints
-```{r preprint version, fig.width=4, fig.height=2.5}
+```{r preprint version, fig.width=7, fig.height=4}
 refined <- refined %>% 
   mutate(preprint_version_clean = case_when(
     str_detect(preprint_version, "Unsure") ~ 
@@ -318,7 +356,7 @@ refined <- refined %>%
 refined %>% 
   plot_univariate(preprint_version_clean) +
   coord_flip() +
-  labs(title = "What version of a preprint can be posted?")
+  labs(title = "What version of a preprint\ncan be posted?")
 ```
 
 
