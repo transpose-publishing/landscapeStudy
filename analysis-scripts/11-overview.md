@@ -58,7 +58,7 @@ converted to explicit ones (as for opr_responses), or fixed (as for publishers).
 
 
 
-![](11-overview_files/figure-html/unnamed-chunk-11-1.png)<!-- -->![](11-overview_files/figure-html/unnamed-chunk-11-2.png)<!-- -->![](11-overview_files/figure-html/unnamed-chunk-11-3.png)<!-- -->![](11-overview_files/figure-html/unnamed-chunk-11-4.png)<!-- -->
+
 
 # Co-Review
 Let's look at the co-review policy.
@@ -93,7 +93,7 @@ bigrams that occur at least three times).
 
 
 
-This might be interesting -- split by subject.
+The next figure might be interesting -- split by subject area.
 ![](11-overview_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
 
 This doesn't look interesting.
@@ -106,4 +106,8 @@ This doesn't look interesting.
 ![](11-overview_files/figure-html/preprint version-1.png)<!-- -->
 
 
-![](11-overview_files/figure-html/unnamed-chunk-20-1.png)<!-- -->![](11-overview_files/figure-html/unnamed-chunk-20-2.png)<!-- -->
+![](11-overview_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
+
+
+![](11-overview_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
+

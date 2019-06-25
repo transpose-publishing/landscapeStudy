@@ -119,7 +119,7 @@ plot_univariate <- function(data, var) {
              hjust = 0, nudge_y = 2, label.size = 0) +
     scale_y_continuous(limits = c(0, max(pdata$n) + max(pdata$n)/10)) +
     labs(title = paste("Variable:", rlang::as_name(var)),
-         x = NULL, y = "count")
+         x = NULL, y = NULL)
 }
 ```
 
@@ -144,9 +144,9 @@ refined %>%
 
 
 # Open Peer Review
-```{r, fig.width=8, fig.height=5}
+```{r, fig.width=8, fig.height=7}
 pdata <- refined %>% 
-  select(opr_reports:opr_versions) %>% 
+  select(opr_reports:opr_interaction) %>% 
   gather(var, val) %>% 
   mutate(val_clean = case_when(
     str_detect(val, "Conditional") ~ "Conditional",
@@ -160,7 +160,11 @@ labels <- pdata %>%
     var == "opr_reports" ~ "Are peer review reports being published?",
     var == "opr_responses" ~ "Are author responses to reviews being published?",
     var == "opr_letters" ~ "Are editorial decision letters being published?",
-    TRUE ~ "Are previous versions of the manuscript being published?"
+    var == "opr_versions" ~ "Are previous versions of the manuscript being published?",
+    var == "opr_identities_published" ~ "Are reviewer identities being published?",
+    var == "opr_indenties_author" ~ "Are reviewer identities revealed to the author (even if not published)?",
+    var == "opr_comments" ~ "Is there public commenting during formal peer review?",
+    var == "opr_interaction" ~ "Is there open interaction (reviewers consult with one another)?"
   )) %>% 
 mutate_at("label", ~str_wrap(., 40))
 
@@ -175,10 +179,15 @@ pdata %>%
   labs(x = NULL, y = NULL, fill = NULL) 
 ```
 
-```{r, fig.height=9, fig.width=9}
+```{r, fig.height=12, fig.width=9}
 pdata <- refined_with_areas %>% 
-  select(area, opr_reports:opr_versions) %>% 
-  gather(var, val, -area)
+  select(area, opr_reports:opr_interaction) %>% 
+  gather(var, val, -area) %>% 
+  mutate(val_clean = case_when(
+    str_detect(val, "Conditional") ~ "Conditional",
+    str_detect(str_to_lower(val), "not spec") ~ "Not specified",
+    TRUE ~ val
+  ))
 
 labels <- pdata %>% 
   distinct(var) %>% 
@@ -186,14 +195,18 @@ labels <- pdata %>%
     var == "opr_reports" ~ "Are peer review reports being published?",
     var == "opr_responses" ~ "Are author responses to reviews being published?",
     var == "opr_letters" ~ "Are editorial decision letters being published?",
-    TRUE ~ "Are previous versions of the manuscript being published?"
+    var == "opr_versions" ~ "Are previous versions of the manuscript being published?",
+    var == "opr_identities_published" ~ "Are reviewer identities being published?",
+    var == "opr_indenties_author" ~ "Are reviewer identities revealed to the author (even if not published)?",
+    var == "opr_comments" ~ "Is there public commenting during formal peer review?",
+    var == "opr_interaction" ~ "Is there open interaction (reviewers consult with one another)?"
   )) %>% 
 mutate_at("label", ~str_wrap(., 40))
 
 pdata %>% 
   left_join(labels) %>% 
-  ggplot(., aes(label, fill = val)) +
-  geom_bar(position = "fill") +
+  ggplot(., aes(label, fill = val_clean)) +
+  geom_bar(position = "fill", width = .7) +
   coord_flip() +
   facet_wrap(~area) +
   theme(legend.position = "top") +
@@ -203,7 +216,8 @@ pdata %>%
 
 
 
-```{r}
+```{r, eval=FALSE}
+# these plots have been incorporated above
 refined %>% 
   plot_univariate(opr_identities_published) +
   coord_flip() 
@@ -315,7 +329,7 @@ trigram_counts
 
 
 
-This might be interesting -- split by subject area
+The next figure might be interesting -- split by subject area.
 ```{r}
 refined %>% 
   plot_univariate(coreview_email) +
@@ -337,7 +351,7 @@ refined %>%
 ```
 
 # Preprints
-```{r preprint version, fig.width=7, fig.height=4}
+```{r preprint version}
 refined <- refined %>% 
   mutate(preprint_version_clean = case_when(
     str_detect(preprint_version, "Unsure") ~ 
@@ -361,12 +375,29 @@ refined %>%
 
 
 ```{r}
-refined %>% 
-  plot_univariate(preprint_citation) +
-  coord_flip()
+refined <- refined %>% 
+  mutate(preprint_citation_clean = case_when(
+    str_detect(preprint_citation, "Not spec") ~ "Not specified",
+    str_detect(preprint_citation, "Unsure") ~ "Unsure",
+    str_detect(preprint_citation, "No") ~ "No",
+    str_detect(preprint_citation, "only in the text") ~ "Yes, but only in the text",
+    str_detect(preprint_citation, "reference list") ~ "Yes, in the reference list",
+    is.na(preprint_citation) ~ NA_character_,
+    TRUE ~ "Other"
+  )) 
 
 refined %>% 
-  plot_univariate(preprint_link) +
-  coord_flip()
+  plot_univariate(preprint_citation_clean) +
+  coord_flip() +
+  labs(title = "Can preprints be cited?")
 
 ```
+
+
+```{r}
+refined %>% 
+  plot_univariate(preprint_link) +
+  coord_flip() +
+  labs(title = "Is a link provided to the preprint version of a paper?")
+```
+
