@@ -334,12 +334,29 @@ trigram_counts
 
 
 
-The next figure might be interesting -- split by subject area.
 ```{r}
 refined %>% 
   plot_univariate(coreview_email) +
-  coord_flip() 
+  coord_flip() +
+  labs(title = "Can co-reviewers contribute?")
 ```
+
+```{r, fig.width=10, fig.height=5}
+refined_with_areas %>% 
+  mutate(coreview_email = case_when(
+    coreview_email == "unsure" ~ "Unsure",
+    TRUE ~ coreview_email
+  )) %>% 
+  ggplot(aes(str_wrap(area, 20), fill = coreview_email)) +
+  geom_bar(position = "fill", width = .7) +
+  scale_fill_brewer(palette = "Set3") +
+  scale_y_continuous(labels = scales::percent) +
+  theme(legend.position = "top") +
+  labs(fill = NULL, x = NULL, y = NULL, 
+       title = "Can co-reviewers contribute?")
+```
+
+
 
 This doesn't look interesting.
 ```{r}
@@ -395,7 +412,6 @@ refined %>%
   plot_univariate(preprint_citation_clean) +
   coord_flip() +
   labs(title = "Can preprints be cited?")
-
 ```
 
 

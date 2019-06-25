@@ -97,21 +97,24 @@ bigrams that occur at least three times).
 
 
 
-The next figure might be interesting -- split by subject area.
 ![](11-overview_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
 
-This doesn't look interesting.
 ![](11-overview_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
+
+
 
 This doesn't look interesting.
 ![](11-overview_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
+
+This doesn't look interesting.
+![](11-overview_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
 
 # Preprints
 ![](11-overview_files/figure-html/preprint version-1.png)<!-- -->
 
 
-![](11-overview_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
-
-
 ![](11-overview_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
+
+
+![](11-overview_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
 
