@@ -84,7 +84,7 @@ refined_with_areas <- refined_with_areas %>%
 ```
 
 
-```{r, fig.width=10, fig.height=5}
+```{r, fig.width=12, fig.height=5}
 ggplot(refined_with_areas, aes(str_wrap(area, 20), fill = pr_type_clean)) +
   geom_bar(position = "fill", width = .7) +
   # coord_flip() +
@@ -341,7 +341,7 @@ refined %>%
   labs(title = "Can co-reviewers contribute?")
 ```
 
-```{r, fig.width=10, fig.height=5}
+```{r, fig.width=12, fig.height=5}
 refined_with_areas %>% 
   mutate(coreview_email = case_when(
     coreview_email == "unsure" ~ "Unsure",
