@@ -73,6 +73,32 @@ with_missings %>%
   theme(plot.margin = margin(r = 50))
 ```
 
+# Publisher versus subject area
+The question is, whether it is reasonable to split results by publisher.
+I think it does not make much sense:
+
+- There are not many publishers, that have multiple publications
+- Except Springer Nature and Elsevier, most publishers are confined to one or 
+two subject areas. Looking at publishers would misinterprete differences as
+being due to the publisher when they are due to the subject area.
+- The only thing to compare would be thus Springer Nature vs. Elsevier
+
+
+```{r, fig.width=12, fig.height=6}
+refined %>% 
+  count(publisher_clean, sort = T) %>% 
+  filter(n > 4) %>% 
+  left_join(refined_with_areas) %>% 
+  count(publisher_clean, area) %>% 
+  ggplot(aes(publisher_clean, str_wrap(area, 20), colour = n, size = n)) +
+  geom_point() +
+  viridis::scale_color_viridis() +
+  coord_flip() +
+  labs(x = NULL, y = NULL, title = "Journals by Publisher and subject area",
+       colour = NULL, size = NULL) +
+  theme(legend.position = "top")
+```
+
 
 
 
@@ -479,6 +505,11 @@ preprint_servers %>%
   anti_join(stop_words) %>% 
   # mutate(word = SnowballC::wordStem(word)) %>% 
   count(word, sort = T)
+```
+
+```{r, fig.width=10, fig.height=10}
+preprint_servers %>% 
+  make_bigram_analysis(preprint_servers, 3, .distinct = T)
 ```
 
 
