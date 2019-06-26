@@ -1,7 +1,7 @@
 ---
 title: "Landscape Study - General Overview"
 author: Thomas Klebel
-date: Last changed 2019-06-25
+date: Last changed 2019-06-26
 output: 
   html_document:
     df_print: paged
@@ -51,14 +51,15 @@ converted to explicit ones (as for opr_responses), or fixed (as for publishers).
 ![](11-overview_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 
+![](11-overview_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 
 
 
 # Open Peer Review
-![](11-overview_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
-
 ![](11-overview_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+
+![](11-overview_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
 
 
@@ -88,7 +89,7 @@ propensity.
 The following graph shows the relationship between to most common bigrams (only
 bigrams that occur at least three times).
 
-![](11-overview_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
+![](11-overview_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 
 
 
@@ -96,25 +97,29 @@ bigrams that occur at least three times).
 
 
 
-
-![](11-overview_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
 
 ![](11-overview_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
 
-
-
-This doesn't look interesting.
 ![](11-overview_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
+
+
 
 This doesn't look interesting.
 ![](11-overview_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
 
+This doesn't look interesting.
+![](11-overview_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
+
 # Preprints
 ![](11-overview_files/figure-html/preprint version-1.png)<!-- -->
 
-
-![](11-overview_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
-
-
 ![](11-overview_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
+
+
+![](11-overview_files/figure-html/unnamed-chunk-23-1.png)<!-- -->
+
+![](11-overview_files/figure-html/unnamed-chunk-24-1.png)<!-- -->
+
+
+![](11-overview_files/figure-html/unnamed-chunk-25-1.png)<!-- -->
 

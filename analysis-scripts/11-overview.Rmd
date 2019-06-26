@@ -125,6 +125,18 @@ plot_univariate <- function(data, var) {
     labs(title = paste("Variable:", rlang::as_name(var)),
          x = NULL, y = NULL)
 }
+
+plot_with_areas <- function(data, var, title = NULL) {
+  var <- enquo(var)
+  
+  ggplot(data, aes(str_wrap(area, 20), fill = !!var)) +
+    geom_bar(position = "fill", width = .7) +
+    scale_fill_brewer(palette = "Set3") +
+    scale_y_continuous(labels = scales::percent) +
+    theme(legend.position = "top") +
+    labs(fill = NULL, x = NULL, y = NULL, 
+         title = title)
+}
 ```
 
 
@@ -140,10 +152,27 @@ refined <- refined %>%
 refined %>% 
   plot_univariate(pr_database_clean) +
   coord_flip() +
-  labs(title = "Is peer reviewer activity deposited into open databases? (like Publons or ORCID)")
+  labs(title = "Is peer reviewer activity deposited into\nopen databases? (like Publons or ORCID)")
 ```
 
 
+```{r, fig.width=12, fig.height=6}
+refined_with_areas <- refined_with_areas %>% 
+  mutate(pr_database_clean = case_when(
+    str_detect(pr_database, "^Yes") ~ "Yes",
+    str_detect(pr_database, "Unsure") ~ "Unsure",
+    str_detect(pr_database, "No") ~ "No"
+  ))
+
+refined_with_areas %>% 
+  mutate(pr_database_clean = fct_relevel(
+    pr_database_clean,
+    "Yes"
+  )) %>% 
+  plot_with_areas(pr_database_clean,
+                  title = "Is peer reviewer activity deposited into open databases? (like Publons or ORCID)")
+
+```
 
 
 
@@ -212,6 +241,7 @@ pdata %>%
   left_join(labels) %>% 
   ggplot(., aes(label, fill = val_clean)) +
   geom_bar(position = "fill", width = .7) +
+  scale_y_continuous(labels = scales::percent) +
   coord_flip() +
   facet_wrap(~area) +
   theme(legend.position = "top") +
@@ -395,6 +425,31 @@ refined %>%
   labs(title = "What version of a preprint\ncan be posted?")
 ```
 
+```{r, fig.width=12, fig.height=6}
+refined_with_areas <- refined_with_areas %>% 
+  mutate(preprint_version_clean = case_when(
+    str_detect(preprint_version, "Unsure") ~ 
+      "Unsure (preprints are allowed, but it's not clear which version)",
+    str_detect(preprint_version, "Any .*? or") ~ "Other",
+    str_detect(preprint_version, "Other|Unclear") ~ "Other",
+    str_detect(preprint_version, "None") ~ "None",
+    str_detect(preprint_version, "First sub") ~ 
+      "First submission only (before peer review)",
+    str_detect(preprint_version, "After peer re") ~ "After peer review",
+    str_detect(preprint_version, "Any|any") ~ "Any",
+    str_detect(preprint_version, "No") ~ "No preprint policy",
+  )) 
+
+
+refined_with_areas %>% 
+  mutate(preprint_version_clean = fct_relevel(preprint_version_clean,
+                                              "Any", "After peer review") %>% 
+           fct_relevel("None", after = 3))  %>% 
+  plot_with_areas(preprint_version_clean, 
+                  "What version of a preprint can be posted?")
+
+```
+
 
 ```{r}
 refined <- refined %>% 
@@ -412,6 +467,26 @@ refined %>%
   plot_univariate(preprint_citation_clean) +
   coord_flip() +
   labs(title = "Can preprints be cited?")
+```
+
+```{r, fig.width=12, fig.height=6}
+refined_with_areas <- refined_with_areas %>% 
+  mutate(preprint_citation_clean = case_when(
+    str_detect(preprint_citation, "Not spec") ~ "Not specified",
+    str_detect(preprint_citation, "Unsure") ~ "Unsure",
+    str_detect(preprint_citation, "No") ~ "No",
+    str_detect(preprint_citation, "only in the text") ~ "Yes, but only in the text",
+    str_detect(preprint_citation, "reference list") ~ "Yes, in the reference list",
+    is.na(preprint_citation) ~ NA_character_,
+    TRUE ~ "Other"
+  )) 
+
+refined_with_areas %>% 
+    mutate(preprint_citation_clean = 
+             fct_relevel(preprint_citation_clean,
+                         "Yes, in the reference list", "Yes, but only in the text",
+                         "No", "Not specified", "Unsure", "Other")) %>% 
+  plot_with_areas(preprint_citation_clean, "Can preprints be cited?")
 ```
 
 
