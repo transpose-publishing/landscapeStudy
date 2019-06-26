@@ -299,41 +299,54 @@ coreview_policies %>%
 
 ```{r}
 # bigram analysis
-
-bigrams <- coreview_policies %>% 
-  distinct() %>%
-  unnest_tokens(bigram, coreview_policy, token = "ngrams", n = 2)
-
-bigrams_separated <- bigrams %>%
-  separate(bigram, c("word1", "word2"), sep = " ")
-
-bigrams_filtered <- bigrams_separated %>%
-  filter(!word1 %in% stop_words$word) %>%
-  filter(!word2 %in% stop_words$word)
-
-# new bigram counts:
-bigram_counts <- bigrams_filtered %>% 
-  count(word1, word2, sort = TRUE)
-
-bigram_graph <- bigram_counts %>%
-  filter(n > 2) %>%
-  graph_from_data_frame()
+make_bigram_analysis <- function(df, var, cutoff = 2, .distinct = T) {
+  
+  var <- enquo(var)
+  
+  if (.distinct) {
+    df <- df %>% 
+      distinct(!!var)
+  }  
+  
+  
+  bigrams <- df %>% 
+    unnest_tokens(bigram, !!var, token = "ngrams", n = 2)
+  
+  bigrams_separated <- bigrams %>%
+    separate(bigram, c("word1", "word2"), sep = " ")
+  
+  bigrams_filtered <- bigrams_separated %>%
+    filter(!word1 %in% stop_words$word) %>%
+    filter(!word2 %in% stop_words$word)
+  
+  # new bigram counts:
+  bigram_counts <- bigrams_filtered %>% 
+    count(word1, word2, sort = TRUE)
+  
+  bigram_graph <- bigram_counts %>%
+    filter(n > cutoff) %>%
+    igraph::graph_from_data_frame()
+  
+  
+  set.seed(2019)
+  
+  a <- grid::arrow(type = "closed", length = unit(.15, "inches"))
+  
+  ggraph::ggraph(bigram_graph, layout = "fr") +
+    ggraph::geom_edge_link(aes(edge_alpha = n), show.legend = FALSE,
+                   arrow = a, end_cap = circle(.07, 'inches')) +
+    ggraph::geom_node_point(color = "lightblue", size = 4) +
+    ggraph::geom_node_text(aes(label = name), vjust = 1, hjust = 1, repel = T) +
+    theme_void()
+}
 ```
 
 The following graph shows the relationship between to most common bigrams (only
 bigrams that occur at least three times).
 
 ```{r, fig.width=7, fig.height=7}
-set.seed(2019)
-
-a <- grid::arrow(type = "closed", length = unit(.15, "inches"))
-
-ggraph(bigram_graph, layout = "fr") +
-  geom_edge_link(aes(edge_alpha = n), show.legend = FALSE,
-                 arrow = a, end_cap = circle(.07, 'inches')) +
-  geom_node_point(color = "lightblue", size = 4) +
-  geom_node_text(aes(label = name), vjust = 1, hjust = 1, repel = T) +
-  theme_void()
+coreview_policies %>% 
+  make_bigram_analysis(coreview_policy)
 ```
 
 
@@ -444,11 +457,31 @@ refined_with_areas <- refined_with_areas %>%
 refined_with_areas %>% 
   mutate(preprint_version_clean = fct_relevel(preprint_version_clean,
                                               "Any", "After peer review") %>% 
-           fct_relevel("None", after = 3))  %>% 
+           fct_relevel("None", "No preprint policy", "Other", after = 4))  %>% 
   plot_with_areas(preprint_version_clean, 
                   "What version of a preprint can be posted?")
 
 ```
+
+
+```{r}
+preprint_servers <- refined %>% 
+  select(preprint_servers) %>% 
+  filter(!is.na(preprint_servers),
+         !(preprint_servers %in% c("Not specified", "Not found")))
+```
+
+
+```{r}
+preprint_servers %>% 
+  distinct() %>%
+  unnest_tokens(word, preprint_servers) %>% 
+  anti_join(stop_words) %>% 
+  # mutate(word = SnowballC::wordStem(word)) %>% 
+  count(word, sort = T)
+```
+
+
 
 
 ```{r}
