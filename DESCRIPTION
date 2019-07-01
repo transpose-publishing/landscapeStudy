@@ -1,0 +1,15 @@
+Package: landscapeStudy
+Title: Analysis compendium for the landsacpe study on transpose data
+Version: 0.0.1
+Authors@R: 
+    person(given = "Thomas",
+           family = "Klebel",
+           role = c("aut", "cre"),
+           email = "thomas.klebel@tugraz.at",
+           comment = c(ORCID = "0000-0002-7331-4751"))
+Description: All data and code regarding the analysis of the landscape study 
+  done on data collected in collaboration with the transpose project
+  (https://transpose-publishing.github.io/#/).
+License: CCBY-4.0
+Encoding: UTF-8
+LazyData: true
