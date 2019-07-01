@@ -6,7 +6,7 @@ library(janitor)
 test_that("data cleaning doesn't break", {
   transpose_clean <- read_excel("TRANSPOSE landscape study - 2019-06-02.xlsx",
                                 sheet = "Raw") %>%
-    clean_raw_sheet()
+    clean_raw_sheet(source = "excel")
 
 
   # there are some annoying columns with inconsistent date formats, which are not
