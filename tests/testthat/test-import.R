@@ -6,7 +6,7 @@ library(landscapeStudy)
 
 test_that("data from excel is imported consistently", {
   transpose_clean <- read_excel("TRANSPOSE landscape study - 2019-06-02.xlsx",
-                                sheet = "Raw") %>%
+                                sheet = "Raw", .name_repair = "universal") %>%
     clean_raw_sheet(source = "excel")
 
 
@@ -18,13 +18,13 @@ test_that("data from excel is imported consistently", {
 
   # import filtered data and do some renaming
   transpose_raw <- read_excel("TRANSPOSE landscape study - 2019-06-02.xlsx",
-                              sheet = "Filtered") %>%
-    select(-starts_with("To dis"), -publisher, -starts_with("review")) %>%
-    rename(top_journals_in = starts_with("Top journals"))
+                              sheet = "Filtered", .name_repair = "universal") %>%
+    select(-starts_with("To.dis"), -publisher, -starts_with("review")) %>%
+    rename(top_journals_in = starts_with("Top.journals"))
 
 
   old_names <- names(transpose_raw)
-  new_names <- str_replace_all(old_names, "-", "_")
+  new_names <- str_replace_all(old_names, "\\.", "_")
   names(transpose_raw) <- new_names
 
 
