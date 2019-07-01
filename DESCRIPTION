@@ -13,3 +13,5 @@ Description: All data and code regarding the analysis of the landscape study
 License: CCBY-4.0
 Encoding: UTF-8
 LazyData: true
+Suggests: 
+    testthat (>= 2.1.0)
