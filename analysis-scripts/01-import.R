@@ -5,6 +5,7 @@
 library(tidyverse)
 library(readxl)
 library(janitor)
+source("R/helpers.R")
 
 # Import GS data ----
 gs_dat <- read_excel("data-raw/Compiled_Landscape study journals list.xlsx",
@@ -24,37 +25,10 @@ gs_dat <- gs_dat %>%
 # we are re-doing the import which was done by Jessica inside the sheet.
 # so we have to import the raw sheet, and then take either the first or the
 # third row.
-transpose <- read_excel("data-raw/TRANSPOSE landscape study - 2019-06-02.xlsx",
+transpose_clean <- read_excel("data-raw/TRANSPOSE landscape study - 2019-06-02.xlsx",
                         sheet = "Raw") %>% 
-  slice(-1:-2) %>% 
-  # https://stackoverflow.com/a/46895151/3149349
-  rename(review_date_1 = `review date...3`, review_date_2 = `review date...5`,
-         review_date_3 = `review 3 date`,
-         top_journals_in = starts_with("Top journals")) %>% 
-  mutate_at(vars(starts_with("review_date")), ~excel_numeric_to_date(as.numeric(.)))
+  clean_raw_sheet()
 
-
-# remove dashes from names and replace with underscores
-old_names <- names(transpose)
-new_names <- str_replace_all(old_names, "-", "_")
-names(transpose) <- new_names
-
-# take the first row for general information
-first_part <- transpose %>% 
-  # drop the column "Property" since it doesn't hold any additional information
-  select(`reviewer 1`:publisher, -`To discuss`) %>% 
-  mutate(group = rep(1:3, length.out = n())) %>% 
-  filter(group == 1) %>% 
-  select(-group)
-
-# take the third row for result of review
-second_part <- transpose %>% 
-  select(pr_type:`Reviewer 2 changes`) %>% 
-  mutate(group = rep(1:3, length.out = n())) %>% 
-  filter(group == 3) %>% 
-  select(-group)
-
-transpose_clean <- bind_cols(first_part, second_part)
 
 
 # just to check, whether there are any changes, we import the Filtered sheet as
@@ -63,7 +37,7 @@ transpose_clean <- bind_cols(first_part, second_part)
 # there are some annoying columns with inconsistent date formats, which are not
 # relevant. info on publisher needs to be removed, since this was the reason for
 # the whole exercise (having missing publishers)
-transpose_test <- bind_cols(first_part, second_part) %>% 
+transpose_test <- transpose_clean %>% 
   select(-starts_with("review_date"), -publisher)
 
 # import filtered data and do some renaming
