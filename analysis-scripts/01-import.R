@@ -5,7 +5,7 @@
 library(tidyverse)
 library(readxl)
 library(janitor)
-source("R/helpers.R")
+library(landscapeStudy)
 
 # Import GS data ----
 gs_dat <- read_excel("data-raw/Compiled_Landscape study journals list.xlsx",
