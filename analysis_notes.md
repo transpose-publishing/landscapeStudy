@@ -64,3 +64,14 @@ What about column AC? (coreview Policy)
 rows 24 and 27 are not clear.
 
 apart from those rows, in most instances data can be copied two rows down
+
+
+# Diffing two csv files
+```r
+# diffing can be done via:
+# git diff --color-words="[^[:space:],]+" *after*
+# git diff --color-words="[^[:space:],]+" 16ad54bf e1e2b554
+# git diff --no-index --color-words="[^[:space:],]+" before_manual_fixing.csv after_manual_fixing.csv
+# the last one is not very helpful since quoting changes a lot of things...
+# --no-index is needed, since these are two uncommited files
+```
