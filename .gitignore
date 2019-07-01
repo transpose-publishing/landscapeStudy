@@ -2,11 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
-
 .DS_Store
 *.pdf
 *.docx
 *.html
 
-*test*
 *try*
+.httr-oauth
