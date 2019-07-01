@@ -6,6 +6,7 @@ library(tidyverse)
 library(readxl)
 library(janitor)
 library(landscapeStudy)
+library(googlesheets)
 
 # Import GS data ----
 gs_dat <- read_excel("data-raw/Compiled_Landscape study journals list.xlsx",
@@ -21,61 +22,15 @@ gs_dat <- gs_dat %>%
     TRUE ~ G_SS_rank)
   )
 
-# Import landscape data ----
-# we are re-doing the import which was done by Jessica inside the sheet.
-# so we have to import the raw sheet, and then take either the first or the
-# third row.
-transpose_clean <- read_excel("data-raw/TRANSPOSE landscape study - 2019-06-02.xlsx",
-                        sheet = "Raw") %>%
-  clean_raw_sheet()
-
-
-
-# just to check, whether there are any changes, we import the Filtered sheet as
-# well and check if they are identical
-
-# there are some annoying columns with inconsistent date formats, which are not
-# relevant. info on publisher needs to be removed, since this was the reason for
-# the whole exercise (having missing publishers)
-transpose_test <- transpose_clean %>%
-  select(-starts_with("review_date"), -publisher)
-
-# import filtered data and do some renaming
-transpose_raw <- read_excel("data-raw/TRANSPOSE landscape study - 2019-06-02.xlsx",
-                        sheet = "Filtered") %>%
-  select(-starts_with("To dis")) %>%
-  select(-`review date...2`, -`review date...4`, -`review 3 date`,
-         top_journals_in = starts_with("Top journals"),
-         -publisher)
-
-
-old_names <- names(transpose_raw)
-new_names <- str_replace_all(old_names, "-", "_")
-names(transpose_raw) <- new_names
-
-if (all.equal(transpose_test, transpose_raw)) {
-  "Everything is fine!"
-} else {
-  stop("There is a problem here!!", call. = FALSE)
-}
-
-
-# export the newly filtered data as csv
-write_csv(transpose_clean, "data-transformed/before_manual_fixing.csv")
-
-
-# What will be fixed:
+# # Import landscape data ----
+# Data had to be manually fixed in google sheets
 # - missing publisher
-# - missing data in other places
-#
-# diffing can be done via:
-# git diff --color-words="[^[:space:],]+" *after*
-# git diff --color-words="[^[:space:],]+" 16ad54bf e1e2b554
-# git diff --no-index --color-words="[^[:space:],]+" before_manual_fixing.csv after_manual_fixing.csv
-# the last one is not very helpful since quoting changes a lot of things...
-# --no-index is needed, since these are two uncommited files
+# - missing data in other places (mainly coreview-policy and preprint-citation)
+gs_sheet <- gs_title("master data file for analysis")
 
-transpose_fixed <- read_csv("data-transformed/after_manual_fixing.csv")
+transpose_fixed <- gs_read(gs_sheet) %>%
+  as_tibble(.name_repair = "universal") %>%
+  clean_raw_sheet(source = "google")
 
 
 
