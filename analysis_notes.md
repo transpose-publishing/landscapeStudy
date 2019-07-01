@@ -75,3 +75,7 @@ apart from those rows, in most instances data can be copied two rows down
 # the last one is not very helpful since quoting changes a lot of things...
 # --no-index is needed, since these are two uncommited files
 ```
+
+# Moving from ecxel data to gs data
+Tony will check once more, if there is a more recent file. There are still 
+errors to fix in the columns `opr-reports` and one in `opr-responses`.
