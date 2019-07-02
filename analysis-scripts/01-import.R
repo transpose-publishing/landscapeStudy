@@ -26,8 +26,8 @@ gs_dat <- gs_dat %>%
 # so we have to import the raw sheet, and then take either the first or the
 # third row.
 transpose_clean <- read_excel("data-raw/TRANSPOSE landscape study - 2019-06-02.xlsx",
-                        sheet = "Raw") %>%
-  clean_raw_sheet()
+                        sheet = "Raw", .name_repair = "universal") %>%
+  clean_raw_sheet(source = "excel")
 
 
 
@@ -42,20 +42,21 @@ transpose_test <- transpose_clean %>%
 
 # import filtered data and do some renaming
 transpose_raw <- read_excel("data-raw/TRANSPOSE landscape study - 2019-06-02.xlsx",
-                        sheet = "Filtered") %>%
+                        sheet = "Filtered", .name_repair = "universal") %>%
   select(-starts_with("To dis")) %>%
-  select(-`review date...2`, -`review date...4`, -`review 3 date`,
-         top_journals_in = starts_with("Top journals"),
+  select(-`review.date...2`, -`review.date...4`, -`review.3.date`,
+         top_journals_in = starts_with("Top.journals"),
          -publisher)
 
 
 old_names <- names(transpose_raw)
-new_names <- str_replace_all(old_names, "-", "_")
+new_names <- str_replace_all(old_names, "\\.", "_")
 names(transpose_raw) <- new_names
 
-if (all.equal(transpose_test, transpose_raw)) {
+if (identical(transpose_test, transpose_raw)) {
   "Everything is fine!"
 } else {
+  cat(all.equal(transpose_test, transpose_raw), "\n")
   stop("There is a problem here!!", call. = FALSE)
 }
 
