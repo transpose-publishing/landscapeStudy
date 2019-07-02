@@ -76,7 +76,7 @@ write_csv(transpose_clean, "data-transformed/before_manual_fixing.csv")
 # the last one is not very helpful since quoting changes a lot of things...
 # --no-index is needed, since these are two uncommited files
 
-transpose_fixed <- read_csv("data-transformed/after_manual_fixing.csv")
+transpose_fixed <- read_csv("data-transformed/before_manual_fixing.csv")
 
 
 
