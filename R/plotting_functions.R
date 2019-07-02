@@ -1,9 +1,7 @@
 plot_univariate <- function(data, var, nudge_y = 2) {
-  var <- enquo(var)
-
-  pdata <- data %>%
-    count(!!var) %>%
-    mutate(y = str_trunc(!!var, 40))
+    pdata <- data %>%
+    count({{ var }}) %>%
+    mutate(y = str_trunc({{ var }}, 40))
 
 
   pdata %>%
@@ -12,7 +10,7 @@ plot_univariate <- function(data, var, nudge_y = 2) {
     geom_label(aes(label = n),
                hjust = 0, nudge_y = nudge_y, label.size = 0) +
     scale_y_continuous(limits = c(0, max(pdata$n) + max(pdata$n)/10)) +
-    labs(title = paste("Variable:", rlang::as_name(var)),
+    labs(title = paste("Variable:", rlang::as_name(enquo(var))),
          x = NULL, y = NULL)
 }
 
