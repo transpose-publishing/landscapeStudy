@@ -89,3 +89,32 @@ data source. Otherwise the following variables should be inspected:
 
 There is actually a much bigger issue: copying the data led to fields landing in
 the wrong column. The data in the GS is thus not usable.
+
+
+# Highlighting missing data
+
+I created a new excel file (a simple copy of the original) where I highlighted
+problems in the following columns:
+
+- pr-database
+- opr-reports
+- opr-responses
+- preprint-citation
+
+The correct count of missings can be counted as such:
+
+````
+refined %>% 
+  select(pr_database, opr_reports, opr_responses, coreview_policy, 
+         preprint_citation) %>% 
+  summarise_all(~sum(is.na(.)))
+# # A tibble: 1 x 5
+# pr_database opr_reports opr_responses coreview_policy preprint_citation
+#       <int>       <int>         <int>           <int>             <int>
+#           5           3             1              70                10
+```
+
+I checked my highlights and they fit (now) with those counts.
+
+Thus coreview_policy has still many missings.
+
