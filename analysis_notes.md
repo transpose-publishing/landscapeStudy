@@ -86,3 +86,6 @@ a potential loss here as well. The loss is most likely due to errors that had
 already been fixed now being "unfixed" again. Should be solved by a proper 
 data source. Otherwise the following variables should be inspected:
 `coreview_policy` and `preprint_servers`. 
+
+There is actually a much bigger issue: copying the data led to fields landing in
+the wrong column. The data in the GS is thus not usable.

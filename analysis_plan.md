@@ -56,6 +56,6 @@ Timeline: 2-3 weeks
 
 - check in greater detail what changed with the data now we have it from gs
   -> there are some changes to the graphs that shouldn't be there, if the
-  data were the same.
-- merge new info on fields of study
+  data were the same. DONE
+- merge new info on fields of study DONE
 - write down findings (reproducibly)
