@@ -79,3 +79,10 @@ apart from those rows, in most instances data can be copied two rows down
 # Moving from ecxel data to gs data
 Tony will check once more, if there is a more recent file. There are still 
 errors to fix in the columns `opr-reports` and one in `opr-responses`.
+
+The move from excel to googlesheet data lead to two co-review policies being
+lost, furthermore the graph on preprint policies is changed, thus implying
+a potential loss here as well. The loss is most likely due to errors that had
+already been fixed now being "unfixed" again. Should be solved by a proper 
+data source. Otherwise the following variables should be inspected:
+`coreview_policy` and `preprint_servers`. 
