@@ -33,8 +33,8 @@ refined <- refined %>%
 
 
 # data on subject area is a bit messy -> there is no way to split it directly
-# we first create a variable with the full area names. then we squash it into
-# one row and tuck it onto the original data frame.
+# we first create a variable with the full area names. this can be easily joined
+# with the rest of the data via a full_join
 
 recoded <- refined %>%
   select(issn, starts_with("G_"), -G_100_rank) %>%
@@ -53,17 +53,11 @@ recoded <- refined %>%
   select(issn, area = area_clean) %>%
   arrange(issn)
 
-subject_areas <- recoded %>%
-  group_by(issn) %>%
-  mutate(area_combined = list(unique(area))) %>%
-  slice(1) %>%
-  select(-area, area = area_combined)
 
 refined_with_areas <- refined %>%
-  left_join(subject_areas) %>%
-  filter(!map_lgl(area, is.null)) %>%
-  unnest() %>%
-  right_join(refined)
+  full_join(recoded, by = "issn")
+
+
 
 # write augmented datasets to disk
 write_csv(refined, "data-transformed/refined.csv")
