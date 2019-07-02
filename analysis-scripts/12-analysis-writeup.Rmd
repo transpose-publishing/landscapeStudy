@@ -1,0 +1,63 @@
+---
+title: "Analysis Writeup"
+author: "Thomas Klebel"
+date: "7/2/2019"
+output: 
+  bookdown::html_document2:
+    number_sections: false
+    keep_md: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+```
+
+```{r, message=FALSE}
+library(tidyverse)
+library(RColorBrewer)
+library(here)
+library(landscapeStudy)
+
+theme_set(hrbrmisc::theme_hrbrmstr())
+
+
+# import data
+refined <- read_csv(here("data-transformed/refined.csv"))
+refined_with_areas <- read_csv(here("data-transformed/refined_w_areas.csv"))
+
+```
+
+# Subject areas
+The approach taken to create the sample of journals led to a few journals 
+having no data on subject area: some journals like "Gut" were within the top
+100 journals, but not within any of the sub-categories. This is because the
+h-index varies greatly between sub-categories, as can be seen from figure 
+\@ref(fig:h-indices).
+
+```{r h-indices, fig.cap="Distribution of h5-index across disciplines"}
+refined_with_areas %>% 
+  filter(!area_was_scraped) %>% 
+  ggplot(aes(fct_reorder(area, `h5-index`), `h5-index`)) +
+  geom_boxplot() +
+  coord_flip() +
+  geom_jitter(width = .2,aes(colour = area), show.legend = F, alpha = .5) +
+  labs(x = NULL)
+```
+
+The inclusion criteria further mean, that disciplines are not represented 
+equally in the sample. Since many of the top 100 journals belong to the health
+and medical sciences, the sample is slightly skewed in that direction (see 
+figure \@ref(fig:sample-skew)).
+
+
+```{r sample-skew, fig.cap="Sampled journals by discipline"}
+refined_with_areas %>%
+  plot_univariate(area, nudge_y = .5) +
+  coord_flip() +
+  labs(title = NULL) +
+  hrbrmisc::theme_hrbrmstr(grid = "") +
+  theme(axis.text.x = element_blank())
+```
+
+
+
