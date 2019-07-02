@@ -62,12 +62,14 @@ refined_with_areas <- refined %>%
 hand_coded_areas <- read_csv(
   "data-transformed/journals_with_missing_categories.csv"
   ) %>%
-  select(issn, area)
+  select(issn, area) %>%
+  mutate(area_was_scraped = TRUE)
 
 refined_with_areas <- refined_with_areas %>%
   full_join(hand_coded_areas, by = "issn") %>%
   mutate(area = coalesce(area.x, area.y)) %>%
-  select(-area.y, -area.x)
+  select(-area.y, -area.x) %>%
+  replace_na(list(area_was_scraped = FALSE))
 
 
 # write augmented datasets to disk
