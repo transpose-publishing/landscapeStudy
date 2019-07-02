@@ -36,6 +36,12 @@ test_that("data from excel is imported consistently", {
   expect_equal(transpose_test, transpose_raw)
 })
 
+test_that("error is raised when no selection is made", {
+  expect_error(read_excel("TRANSPOSE landscape study - 2019-06-02.xlsx",
+                          sheet = "Raw", .name_repair = "universal") %>%
+                 clean_raw_sheet(), "should either be")
+})
+
 # # Testing whether data from google matches excel makes no sense:
 # # - There are too many spurious differences in regard to line breaks etc.
 # # - The google file *should* change, since we will fix problems there

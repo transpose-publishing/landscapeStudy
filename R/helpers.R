@@ -11,6 +11,10 @@ order_factors <- function(df) {
 
 clean_raw_sheet <- function(df, source = c("excel", "google")) {
 
+  if (!is.character(source) || !identical(length(source), 1L)) {
+    stop("`source` should either be 'excel' or 'google", call. = FALSE)
+  }
+
   transpose_data <- switch(source,
     excel = {df %>%
       slice(-1:-2) %>%
