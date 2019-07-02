@@ -35,6 +35,10 @@ h-index varies greatly between sub-categories, as can be seen from figure
 \@ref(fig:h-indices).
 
 ```{r h-indices, fig.cap="Distribution of h5-index across disciplines"}
+# set seed for jittered points to stay always the same (otherwise annoying for
+# git)
+set.seed(1234)
+
 refined_with_areas %>% 
   filter(!area_was_scraped) %>% 
   ggplot(aes(fct_reorder(area, `h5-index`), `h5-index`)) +
