@@ -57,6 +57,17 @@ recoded <- refined %>%
 refined_with_areas <- refined %>%
   full_join(recoded, by = "issn")
 
+# data on areas for some journals was not included. here we import the scraped
+# data and join it with the rest
+hand_coded_areas <- read_csv(
+  "data-transformed/journals_with_missing_categories.csv"
+  ) %>%
+  select(issn, area)
+
+refined_with_areas <- refined_with_areas %>%
+  full_join(hand_coded_areas, by = "issn") %>%
+  mutate(area = coalesce(area.x, area.y)) %>%
+  select(-area.y, -area.x)
 
 
 # write augmented datasets to disk
