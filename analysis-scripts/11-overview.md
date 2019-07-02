@@ -58,21 +58,18 @@ being due to the publisher when they are due to the subject area.
 
 
 
-
+![](11-overview_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 
 ![](11-overview_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 
-![](11-overview_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
-
-
 
 
 # Open Peer Review
-![](11-overview_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](11-overview_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
-![](11-overview_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![](11-overview_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
 
 
@@ -97,36 +94,34 @@ propensity.
 </div>
 
 
-
-
 The following graph shows the relationship between to most common bigrams (only
 bigrams that occur at least three times).
 
+![](11-overview_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
+
+
+
+
+
+
+
+
 ![](11-overview_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
 
+![](11-overview_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
 
 
 
-
-
-
-
+This doesn't look interesting.
 ![](11-overview_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
 
+This doesn't look interesting.
 ![](11-overview_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
-
-
-
-This doesn't look interesting.
-![](11-overview_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
-
-This doesn't look interesting.
-![](11-overview_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
 
 # Preprints
 ![](11-overview_files/figure-html/preprint version-1.png)<!-- -->
 
-![](11-overview_files/figure-html/unnamed-chunk-23-1.png)<!-- -->
+![](11-overview_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
 
 
 
@@ -138,15 +133,15 @@ This doesn't look interesting.
   </script>
 </div>
 
+![](11-overview_files/figure-html/unnamed-chunk-24-1.png)<!-- -->
+
+
+
+
+![](11-overview_files/figure-html/unnamed-chunk-25-1.png)<!-- -->
+
 ![](11-overview_files/figure-html/unnamed-chunk-26-1.png)<!-- -->
 
 
-
-
 ![](11-overview_files/figure-html/unnamed-chunk-27-1.png)<!-- -->
-
-![](11-overview_files/figure-html/unnamed-chunk-28-1.png)<!-- -->
-
-
-![](11-overview_files/figure-html/unnamed-chunk-29-1.png)<!-- -->
 

@@ -23,7 +23,7 @@ library(here)
 library(tidytext)
 library(igraph)
 library(ggraph)
-source(here("R/helpers.R"))
+library(landscapeStudy)
 
 theme_set(hrbrmisc::theme_hrbrmstr())
 
