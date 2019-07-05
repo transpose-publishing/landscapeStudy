@@ -1,8 +1,8 @@
 variable,description,type,var_number
 reviewer 1,Your initials,"[Initials of first, last name]",1
-review date...3,Entry date,[YYYY-MM-DD],2
+review date,Entry date,[YYYY-MM-DD],2
 reviewer 2,Your initials,"[Initials of first, last name]",3
-review date...5,Entry date,[YYYY-MM-DD],4
+review date_1,Entry date,[YYYY-MM-DD],4
 reviewer 3,NA,NA,5
 review 3 date,NA,NA,6
 To discuss,NA,NA,7
