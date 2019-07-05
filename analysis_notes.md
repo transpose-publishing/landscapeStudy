@@ -96,10 +96,10 @@ the wrong column. The data in the GS is thus not usable.
 I created a new excel file (a simple copy of the original) where I highlighted
 problems in the following columns:
 
-- pr-database
-- opr-reports
-- opr-responses
-- preprint-citation
+- pr-database DONE
+- opr-reports DONE
+- opr-responses DONE
+- preprint-citation DONE
 
 The correct count of missings can be counted as such:
 
@@ -118,3 +118,4 @@ I checked my highlights and they fit (now) with those counts.
 
 Thus coreview_policy has still many missings.
 
+Primary source is now: "TRANSPOSE landscape study - round 3"
