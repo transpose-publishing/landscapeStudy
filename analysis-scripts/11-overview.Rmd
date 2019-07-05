@@ -24,6 +24,8 @@ library(tidytext)
 library(igraph)
 library(ggraph)
 library(landscapeStudy)
+# install.packages("ggchicklet", repos = "https://cinc.rud.is")
+library(ggchicklet)
 
 theme_set(hrbrmisc::theme_hrbrmstr())
 
@@ -110,7 +112,7 @@ refined_with_areas <- refined_with_areas %>%
 ```
 
 
-```{r, fig.width=12, fig.height=5}
+```{r, fig.width=10.5, fig.height=5}
 ggplot(refined_with_areas, aes(str_wrap(area, 20), fill = pr_type_clean)) +
   geom_bar(position = "fill", width = .7) +
   # coord_flip() +
@@ -122,7 +124,7 @@ ggplot(refined_with_areas, aes(str_wrap(area, 20), fill = pr_type_clean)) +
 ```
 
 
-```{r, fig.width=9, fig.height=8}
+```{r, fig.width=9, fig.height=7}
 ggplot(refined_with_areas, aes(fct_rev(area), fill = area)) +
   geom_bar(show.legend = F) +
   facet_wrap(~pr_type_clean) +
@@ -148,7 +150,7 @@ refined %>%
 ```
 
 
-```{r, fig.width=12, fig.height=6}
+```{r, fig.width=10.5, fig.height=6}
 refined_with_areas <- refined_with_areas %>% 
   mutate(pr_database_clean = case_when(
     str_detect(pr_database, "^Yes") ~ "Yes",
@@ -332,7 +334,7 @@ refined %>%
   labs(title = "Can co-reviewers contribute?")
 ```
 
-```{r, fig.width=12, fig.height=5}
+```{r, fig.width=10.5, fig.height=5}
 refined_with_areas %>% 
   mutate(coreview_email = case_when(
     coreview_email == "unsure" ~ "Unsure",
@@ -386,7 +388,7 @@ refined %>%
   labs(title = "What version of a preprint\ncan be posted?")
 ```
 
-```{r, fig.width=12, fig.height=6}
+```{r, fig.width=10.5, fig.height=6}
 refined_with_areas <- refined_with_areas %>% 
   mutate(preprint_version_clean = case_when(
     str_detect(preprint_version, "Unsure") ~ 
@@ -455,7 +457,7 @@ refined %>%
   labs(title = "Can preprints be cited?")
 ```
 
-```{r, fig.width=12, fig.height=6}
+```{r, fig.width=9, fig.height=5}
 refined_with_areas <- refined_with_areas %>% 
   mutate(preprint_citation_clean = case_when(
     str_detect(preprint_citation, "Not spec") ~ "Not specified",
@@ -471,8 +473,21 @@ refined_with_areas %>%
     mutate(preprint_citation_clean = 
              fct_relevel(preprint_citation_clean,
                          "Yes, in the reference list", "Yes, but only in the text",
-                         "No", "Not specified", "Unsure", "Other")) %>% 
-  plot_with_areas(preprint_citation_clean, "Can preprints be cited?")
+                         "No", "Not specified", "Unsure", "Other") %>% 
+             fct_explicit_na()) %>% 
+    group_by(area) %>%
+    count(preprint_citation_clean) %>%
+    mutate(prop = n/sum(n)) %>% 
+    ggplot(aes(area, prop, fill = preprint_citation_clean)) +
+    geom_chicklet(position = "fill", width = .6) +
+    # geom_bar(position = "fill", width = .7) +
+    scale_fill_brewer(palette = "Set3") +
+    scale_y_continuous(labels = scales::percent) +
+    theme(legend.position = "top") +
+    labs(fill = NULL, x = NULL, y = NULL,
+         title = "Can preprints be cited?") +
+    coord_flip()
+# TODO: order areas according to Proportion of Yes
 ```
 
 
