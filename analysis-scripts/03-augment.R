@@ -31,6 +31,10 @@ refined <- refined %>%
   ))
 
 
+# fix missings for coreview_policy
+refined <- refined %>%
+  mutate(coreview_policy = fct_explicit_na(coreview_policy, "Not specified"))
+
 
 # data on subject area is a bit messy -> there is no way to split it directly
 # we first create a variable with the full area names. this can be easily joined
