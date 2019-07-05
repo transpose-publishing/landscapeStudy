@@ -1,7 +1,25 @@
 library(tidyverse)
 
 # import data
-base_data <- read_csv("data-transformed/joined_data.csv")
+base_data <- read_csv(
+  "data-transformed/joined_data.csv",
+  col_types = cols(
+    .default = col_character(),
+    review_date_1 = col_date(format = ""),
+    review_date_2 = col_date(format = ""),
+    review_date_3 = col_date(format = ""),
+    `h5-index` = col_double(),
+    `h5-median` = col_double(),
+    G_100_rank = col_double(),
+    G_BEM_rank = col_double(),
+    G_CMS_rank = col_double(),
+    G_ECS_rank = col_double(),
+    G_HMS_rank = col_double(),
+    G_HLA_rank = col_double(),
+    G_LSES_rank = col_double(),
+    G_PM_rank = col_double(),
+    G_SS_rank = col_double()
+  ))
 
 # create clean variable for peer review type
 refined <- base_data %>%
@@ -64,8 +82,15 @@ refined_with_areas <- refined %>%
 # data on areas for some journals was not included. here we import the scraped
 # data and join it with the rest
 hand_coded_areas <- read_csv(
-  "data-transformed/journals_with_missing_categories.csv"
-  ) %>%
+  "data-transformed/journals_with_missing_categories.csv",
+  col_types = cols(
+    title = col_character(),
+    issn = col_character(),
+    area = col_character(),
+    id = col_character(),
+    `h5-index` = col_double(),
+    `h5-median` = col_double()
+  )) %>%
   select(issn, area) %>%
   mutate(area_was_scraped = TRUE)
 
