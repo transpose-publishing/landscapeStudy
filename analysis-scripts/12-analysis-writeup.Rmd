@@ -133,12 +133,13 @@ p_cols <- c("Single blind" = "#1B9E77", "Double blind" =  "#D95F02",
             "Not blinded" =  "#7570B3",
             "Unsure" = "#A6761D", "Other" = "#666666")
 
-ggplot(peer_type_data, aes(fct_reorder(area, order), prop, fill = pr_type_clean)) +
+ggplot(peer_type_data, aes(fct_reorder(area, order), prop, fill = fct_rev(pr_type_clean))) +
   geom_chicklet(position = "fill", width = .6) +
   coord_flip() +
   scale_fill_manual(values = p_cols) +
   scale_y_continuous(labels = scales::percent) +
   theme(legend.position = "top") +
+  guides(fill = guide_legend(reverse = T)) +
   labs(fill = NULL, x = NULL, y = NULL, 
        caption = "What type of peer review is used?")
 ```
