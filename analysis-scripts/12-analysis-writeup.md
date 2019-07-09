@@ -85,7 +85,38 @@ prevalent in the sciences.
 When it comes to recognition of peer review activity, only 11% of
 all journals deposit reviewer activity into open datdabases. On the other hand,
 the majority of journals (81%) does not state at all, whether peer 
-review  activity is deposited in any kind of database, open or not. 
+review activity is deposited in any kind of database, open or not. 
+
+# Open Peer Review
+
+
+Information on open peer review is similarly sparse (see fig. \@ref(fig:opr)). 
+All surveyed aspects of 
+open peer review lack any kind of information in more than 50% of journals 
+surveyed.
+Furthermore, seven out of eight aspects are not specified in more than three 
+quarters of all journals. When there is information, in most cases it is 
+dismissive of open peer review. No journal in our sample allows public 
+commenting during formal peer review. Other forms of openness are similarly 
+scarce, with the only expection that some journals may reveal reviewer 
+identities to the authors.
+
+<div class="figure">
+<img src="12-analysis-writeup_files/figure-html/opr-1.png" alt="Aspects of open peer review"  />
+<p class="caption">(\#fig:opr)Aspects of open peer review</p>
+</div>
+
+Splitting the aspect of revealed reviewer identities by discipline shows a few
+key distictions (see fig. \@ref(fig:opr-authors)). Whereas revealing reviewer
+identities to the authors is absent from the social sciences, humanities and
+business, it is not unusual in the sciences, at least on an optional basis 
+(for example in case the referee requests it).
+
+
+<div class="figure">
+<img src="12-analysis-writeup_files/figure-html/opr-authors-1.png" alt="Open reviewer identities towards authors"  />
+<p class="caption">(\#fig:opr-authors)Open reviewer identities towards authors</p>
+</div>
 
 
 
