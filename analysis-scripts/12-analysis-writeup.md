@@ -61,4 +61,13 @@ the health and medical sciences, the sample is slightly skewed in that direction
 </div>
 
 
+# Peer Review
+Information on what type of peer review is used by a journal is generally good.
+There are great differences between disciplines, when it comes to which type of
+peer review is used (see figure \@ref(fig:peer-type)). 
+
+<div class="figure">
+<img src="12-analysis-writeup_files/figure-html/peer-type-1.png" alt="Type of peer review used"  />
+<p class="caption">(\#fig:peer-type)Type of peer review used</p>
+</div>
 

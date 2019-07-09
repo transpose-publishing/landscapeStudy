@@ -17,6 +17,8 @@ library(tidyverse)
 library(RColorBrewer)
 library(here)
 library(landscapeStudy)
+# install.packages("ggchicklet", repos = "https://cinc.rud.is")
+library(ggchicklet)
 
 theme_set(hrbrmisc::theme_hrbrmstr())
 
@@ -24,6 +26,10 @@ theme_set(hrbrmisc::theme_hrbrmstr())
 # import data
 refined <- read_csv(here("data-transformed/refined.csv"))
 refined_with_areas <- read_csv(here("data-transformed/refined_w_areas.csv"))
+
+# tweak factor ordering
+refined_with_areas <- refined_with_areas %>% 
+  order_factors()
 
 ```
 
@@ -96,6 +102,47 @@ refined_with_areas %>%
   aes(colour = area) +
   scale_color_brewer(palette = "Dark2")
 ```
+
+
+# Peer Review
+```{r}
+peer_type_data <- refined_with_areas %>% 
+  make_proportion(pr_type_clean, area, order_string = "double|single")
+
+# what is the percentage of "unsure"?
+perc_unsure <- refined_with_areas %>% 
+  make_proportion(pr_type_clean, area, order_string = "unsure") %>% 
+  ungroup() %>% 
+  summarise(unsure = mean(order) %>%  scales::percent(., accuracy = 1))  %>% 
+  as.character()
+
+```
+
+Information on what type of peer review is used by a journal is mixed 
+(see figure \@ref(fig:peer-type)).
+Overall, around `r perc_unsure` of all journals do not provide clear information
+about their peer review process. However, there are major differences between 
+disciplines. In the social sciences and humanities, double blind peer review is
+more prevalent, and the proportion of unclear policies the lowest. Business,
+Economics and Management, along with most disciplines from the sciences, display
+higher levels of unclear policies, with single blind peer review being more 
+prevalent in the sciences.
+
+```{r peer-type, fig.cap="Type of peer review used", fig.asp=.6}
+p_cols <- c("single blind" = "#1B9E77", "double blind" =  "#D95F02",
+            "not blinded" =  "#7570B3",
+            "unsure" = "#A6761D", "other" = "#666666")
+
+ggplot(peer_type_data, aes(fct_reorder(area, order), prop, fill = pr_type_clean)) +
+  geom_chicklet(position = "fill", width = .6) +
+  coord_flip() +
+  scale_fill_manual(values = p_cols) +
+  scale_y_continuous(labels = scales::percent) +
+  theme(legend.position = "top") +
+  labs(fill = NULL, x = NULL, y = NULL)
+```
+
+
 
 
 
