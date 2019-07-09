@@ -6,6 +6,7 @@ output:
   bookdown::html_document2:
     number_sections: false
     keep_md: true
+bibliography: landscape.bib
 ---
 
 
@@ -118,6 +119,99 @@ business, it is not unusual in the sciences, at least on an optional basis
 <p class="caption">(\#fig:opr-authors)Open reviewer identities towards authors</p>
 </div>
 
+# Co-Review Policy
+
+Information on coreview policies is sparse. 
+Only 87 out of 171 journals do have an
+explicit coreview.
+
+Splitting the results by discipline
+reveals noticable differences (see fig. \@ref(fig:co-rev)).
+While in the life and earth sciences more
+than one third of journals permit contributions from co-reviewers, in the 
+humanities, chemical & materials sciences, and in business, economics & 
+management about 90% of journals have no policy on co-reviewing.
+
+<div class="figure">
+<img src="12-analysis-writeup_files/figure-html/co-rev-1.png" alt="Prevalence of co-review"  />
+<p class="caption">(\#fig:co-rev)Prevalence of co-review</p>
+</div>
 
 
+To obtain a more nuanced view of the policies' contents, we also analysed their
+full text via text mining. Due to policies being similar across journals of 
+certain publishers, there are 45
+distinct policies in our dataset (compared to 87 
+policies in total). Since the policies are rather short, we are 
+somewhat limited in regard to what insight we can gain from automated 
+procedures.
+
+
+
+
+To extract meaningful information we first removed common words of the english
+language (via the list of stopwords from the tidytext package
+[@silge_tidytext_2016], except for the word "not", which is relevant since some
+policies state, that it is *not* appropriate to share information with students
+or colleagues). The resulting list contains 1151 words in 
+total. 
+
+For a simple overview, the words were stemmed to reduce similar but not 
+identical versions of certain words (like editor/editors).
+The following table displays the most frequent parts of the distinct policies,
+sorted by propensity.
+
+word            n
+-----------  ----
+review        135
+manuscript     53
+editor         44
+confidenti     34
+not            30
+inform         25
+colleagu       21
+involv         17
+journal        17
+consult        15
+discuss        15
+disclos        14
+permiss        14
+student        14
+author         13
+peer           13
+process        12
+ensur          11
+obtain         11
+person         11
+
+The most prominent themes that emerge are:
+
+- Individuals with varying stakes regarding peer review: editor, colleague, 
+author, student, peer
+- Confidentiality as a central principle
+- Important elements of scholarly publishing: manuscript, journal, review, 
+process
+- Verbal forms pertaining to relationships between the individuals: inform,
+involve, consult, discuss, disclose, ensure, obtain
+
+These directions become more intelligible when we look at bigrams (see fig.
+\@ref(fig:bigrams)). With this procedure the text is
+split into pairs of words (for example the sentence "All humans are equal" 
+becomes "All humans", "humans are", "are equal"). 
+
+
+<div class="figure">
+<img src="12-analysis-writeup_files/figure-html/bigrams-1.png" alt="Bigrams of co-review policies"  />
+<p class="caption">(\#fig:bigrams)Bigrams of co-review policies</p>
+</div>
+
+From both displays it is obvious, that journals stress the importance of 
+"maintaining confidentiality", by "not shar[ing]" or disclosing information,
+neither to "junior researchers", "laboratory colleagues" nor "graduate 
+students". Even if the policies does not explicitly forbid or allow the 
+involvement of other researchers, in many cases they mandate the reviewer to 
+first obtain permission from the editor in case they want to involve someone
+else in their review. 
+
+# Bibliography
 
