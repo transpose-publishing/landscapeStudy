@@ -47,9 +47,7 @@ NOPE! The yellow from Accent is too light for white background
 
 Let's try Dark2:
 `brewer.pal(8, "Dark2")`
-- not specified: "#E7298A"
-- unsure: "#A6761D"
-- other: "#666666"
+"not specified" =  "#E7298A", "unsure" = "#A6761D", "other" = "#666666"
 
 The other colours always take from front (without pink),
 depending on how many we need:
