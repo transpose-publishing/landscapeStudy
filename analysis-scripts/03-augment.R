@@ -24,11 +24,11 @@ base_data <- read_csv(
 # create clean variable for peer review type
 refined <- base_data %>%
   mutate(pr_type_clean = case_when(
-    str_detect(pr_type, "^Double") ~ "double blind",
-    str_detect(pr_type, "^Other") ~ "other",
-    str_detect(pr_type, "^Single") ~ "single blind",
-    str_detect(pr_type, "^Not") ~ "not blinded",
-    TRUE ~ "unsure"
+    str_detect(pr_type, "^Double") ~ "Double blind",
+    str_detect(pr_type, "^Other") ~ "Other",
+    str_detect(pr_type, "^Single") ~ "Single blind",
+    str_detect(pr_type, "^Not") ~ "Not blinded",
+    TRUE ~ "Unsure"
   ))
 
 

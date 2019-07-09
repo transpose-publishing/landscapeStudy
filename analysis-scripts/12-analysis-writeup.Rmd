@@ -107,11 +107,11 @@ refined_with_areas %>%
 # Peer Review
 ```{r pr-computation}
 peer_type_data <- refined_with_areas %>% 
-  make_proportion(pr_type_clean, area, order_string = "double|single")
+  make_proportion(pr_type_clean, area, order_string = "Double|Single")
 
 # what is the percentage of "unsure"?
 perc_unsure <- refined_with_areas %>% 
-  make_proportion(pr_type_clean, area, order_string = "unsure") %>% 
+  make_proportion(pr_type_clean, area, order_string = "Unsure") %>% 
   ungroup() %>% 
   summarise(unsure = mean(order) %>%  scales::percent(., accuracy = 1))  %>% 
   as.character()
@@ -129,9 +129,9 @@ higher levels of unclear policies, with single blind peer review being more
 prevalent in the sciences.
 
 ```{r peer-type, fig.cap="Type of peer review used", fig.asp=.6}
-p_cols <- c("single blind" = "#1B9E77", "double blind" =  "#D95F02",
-            "not blinded" =  "#7570B3",
-            "unsure" = "#A6761D", "other" = "#666666")
+p_cols <- c("Single blind" = "#1B9E77", "Double blind" =  "#D95F02",
+            "Not blinded" =  "#7570B3",
+            "Unsure" = "#A6761D", "Other" = "#666666")
 
 ggplot(peer_type_data, aes(fct_reorder(area, order), prop, fill = pr_type_clean)) +
   geom_chicklet(position = "fill", width = .6) +
