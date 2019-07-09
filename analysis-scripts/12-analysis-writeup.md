@@ -62,12 +62,31 @@ the health and medical sciences, the sample is slightly skewed in that direction
 
 
 # Peer Review
-Information on what type of peer review is used by a journal is generally good.
-There are great differences between disciplines, when it comes to which type of
-peer review is used (see figure \@ref(fig:peer-type)). 
+
+
+Information on what type of peer review is used by a journal is mixed 
+(see figure \@ref(fig:peer-type)).
+Overall, around 30% of all journals do not provide clear information
+about their peer review process. However, there are major differences between 
+disciplines. In the social sciences and humanities, double blind peer review is
+more prevalent, and the proportion of unclear policies the lowest. Business,
+Economics and Management, along with most disciplines from the sciences, display
+higher levels of unclear policies, with single blind peer review being more 
+prevalent in the sciences.
 
 <div class="figure">
 <img src="12-analysis-writeup_files/figure-html/peer-type-1.png" alt="Type of peer review used"  />
 <p class="caption">(\#fig:peer-type)Type of peer review used</p>
 </div>
+
+
+
+
+When it comes to recognition of peer review activity, only 11% of
+all journals deposit reviewer activity into open datdabases. On the other hand,
+the majority of journals (81%) does not state at all, whether peer 
+review  activity is deposited in any kind of database, open or not. 
+
+
+
 
