@@ -8,6 +8,18 @@ order_factors <- function(df) {
       )
 }
 
+make_proportion <- function(df, var, group, order_string) {
+  df %>%
+    group_by({{group}}) %>%
+    count({{var}}) %>%
+    mutate(prop = n/sum(n),
+           order = case_when(
+             str_detect(pr_type_clean, order_string) ~ prop,
+             TRUE ~ 0
+             ),
+           order = sum(order))
+}
+
 
 clean_raw_sheet <- function(df, source = c("excel", "google")) {
 
