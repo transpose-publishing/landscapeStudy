@@ -27,25 +27,29 @@ plot_with_areas <- function(data, var, title = NULL) {
          title = title)
 }
 
-make_bigram_analysis <- function(df, var, cutoff = 2, .distinct = T) {
+make_bigram_analysis <- function(df, var, cutoff = 2, .distinct = T,
+                                 remove = "") {
 
-  var <- enquo(var)
 
   if (.distinct) {
     df <- df %>%
-      distinct(!!var)
+      distinct({{var}})
   }
 
 
   bigrams <- df %>%
-    unnest_tokens(bigram, !!var, token = "ngrams", n = 2)
+    tidytext::unnest_tokens(bigram, {{var}}, token = "ngrams", n = 2)
 
   bigrams_separated <- bigrams %>%
     separate(bigram, c("word1", "word2"), sep = " ")
 
+
+  my_stop_words <- c(remove, tidytext::stop_words$word) %>%
+    str_remove("not")
+
   bigrams_filtered <- bigrams_separated %>%
-    filter(!word1 %in% stop_words$word) %>%
-    filter(!word2 %in% stop_words$word)
+    filter(!word1 %in% my_stop_words) %>%
+    filter(!word2 %in% my_stop_words)
 
   # new bigram counts:
   bigram_counts <- bigrams_filtered %>%
