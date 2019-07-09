@@ -9,7 +9,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, dpi = 400)
 ```
 
 ```{r, message=FALSE}
@@ -44,8 +44,10 @@ refined_with_areas %>%
   ggplot(aes(fct_reorder(area, `h5-index`), `h5-index`)) +
   geom_boxplot() +
   coord_flip() +
-  geom_jitter(width = .2,aes(colour = area), show.legend = F, alpha = .5) +
-  labs(x = NULL)
+  geom_jitter(width = .2, aes(colour = area), show.legend = F, alpha = .7) +
+  labs(x = NULL) +
+  scale_color_brewer(palette = "Dark2") 
+  
 ```
 
 To be able to include all journals for analysis that splits by discipline, the
@@ -84,13 +86,15 @@ the health and medical sciences, the sample is slightly skewed in that direction
 (see figure \@ref(fig:sample-skew)).
 
 
-```{r sample-skew, fig.cap="Sampled journals by discipline"}
+```{r sample-skew, fig.cap="Sampled journals by discipline", fig.height=4, fig.width=7}
 refined_with_areas %>%
   plot_univariate(area, nudge_y = .5) +
   coord_flip() +
   labs(title = NULL) +
   hrbrmisc::theme_hrbrmstr(grid = "") +
-  theme(axis.text.x = element_blank())
+  theme(axis.text.x = element_blank()) +
+  aes(colour = area) +
+  scale_color_brewer(palette = "Dark2")
 ```
 
 
