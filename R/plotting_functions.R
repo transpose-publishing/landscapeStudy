@@ -6,9 +6,10 @@ plot_univariate <- function(data, var, nudge_y = 2) {
 
   pdata %>%
     ggplot(aes(fct_reorder(y, n), n)) +
-    ggalt::geom_lollipop() +
+    ggalt::geom_lollipop(show.legend = F) +
     geom_label(aes(label = n),
-               hjust = 0, nudge_y = nudge_y, label.size = 0) +
+               hjust = 0, nudge_y = nudge_y, label.size = 0,
+               show.legend = F) +
     scale_y_continuous(limits = c(0, max(pdata$n) + max(pdata$n)/10)) +
     labs(title = paste("Variable:", rlang::as_name(enquo(var))),
          x = NULL, y = NULL)
