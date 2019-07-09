@@ -8,16 +8,23 @@ order_factors <- function(df) {
       )
 }
 
-make_proportion <- function(df, var, group, order_string) {
+make_proportion <- function(df, var, group, order_string = NA_character_) {
   df %>%
     group_by({{group}}) %>%
     count({{var}}) %>%
     mutate(prop = n/sum(n),
            order = case_when(
-             str_detect(pr_type_clean, order_string) ~ prop,
+             str_detect({{var}}, order_string) ~ prop,
              TRUE ~ 0
              ),
            order = sum(order))
+}
+
+make_single_proportion <- function(df, var, category) {
+  make_proportion(df, {{var}}, order_string = category) %>%
+    ungroup() %>%
+    summarise(my_cat = mean(order) %>% scales::percent(., accuracy = 1))  %>%
+    as.character()
 }
 
 
