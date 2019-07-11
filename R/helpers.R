@@ -74,3 +74,14 @@ clean_raw_sheet <- function(df, source = c("excel", "google")) {
 
   bind_cols(first_part, second_part)
 }
+
+
+# small helper for displaying percentages
+make_percent <- function(x, significant_digits = 1) {
+  x %>%
+    as.numeric() %>%
+    # to enable extraction of vectors as well
+    head(1) %>%
+    signif(significant_digits) %>%
+    scales::percent()
+}
