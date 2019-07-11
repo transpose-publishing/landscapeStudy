@@ -197,7 +197,9 @@ involve, consult, discuss, disclose, ensure, obtain
 These directions become more intelligible when we look at bigrams (see fig.
 \@ref(fig:bigrams)). With this procedure the text is
 split into pairs of words (for example the sentence "All humans are equal" 
-becomes "All humans", "humans are", "are equal"). 
+becomes "All humans", "humans are", "are equal"). The most prominent bigrams 
+where "peer -> review" and "review -> process". To take a look at the strength 
+of other associations, the term "review" was removed from the figure.
 
 
 <div class="figure">
@@ -208,7 +210,7 @@ becomes "All humans", "humans are", "are equal").
 From both displays it is obvious, that journals stress the importance of 
 "maintaining confidentiality", by "not shar[ing]" or disclosing information,
 neither to "junior researchers", "laboratory colleagues" nor "graduate 
-students". Even if the policies does not explicitly forbid or allow the 
+students". Even if the policies do not explicitly forbid or allow the 
 involvement of other researchers, in many cases they mandate the reviewer to 
 first obtain permission from the editor in case they want to involve someone
 else in their review. 
