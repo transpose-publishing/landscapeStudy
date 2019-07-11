@@ -1,16 +1,18 @@
 plot_univariate <- function(data, var, nudge_y = 2) {
     pdata <- data %>%
-    count({{ var }}) %>%
-    mutate(y = str_trunc({{ var }}, 40))
+    count({{var}}) %>%
+    mutate(y = str_trunc({{var}}, 40),
+           prop = {n/sum(n)} %>% scales::percent(),
+           label = glue::glue("{n} ({prop})"))
 
 
   pdata %>%
     ggplot(aes(fct_reorder(y, n), n)) +
     ggalt::geom_lollipop(show.legend = F) +
-    geom_label(aes(label = n),
+    geom_label(aes(label = label),
                hjust = 0, nudge_y = nudge_y, label.size = 0,
                show.legend = F) +
-    scale_y_continuous(limits = c(0, max(pdata$n) + max(pdata$n)/10)) +
+    scale_y_continuous(limits = c(0, max(pdata$n) + max(pdata$n)/5)) +
     labs(title = paste("Variable:", rlang::as_name(enquo(var))),
          x = NULL, y = NULL)
 }
