@@ -377,7 +377,160 @@ neither to "junior researchers", "laboratory colleagues" nor "graduate
 students". Even if the policies do not explicitly forbid or allow the 
 involvement of other researchers, in many cases they mandate the reviewer to 
 first obtain permission from the editor in case they want to involve someone
-else in their review. 
+else in their review.
+
+# Preprints
+```{r}
+clean_preprint_version <- function(df) {
+  df %>% 
+    mutate(preprint_version_clean = case_when(
+      str_detect(preprint_version, "Unsure") ~ 
+        "Unsure (preprints are allowed, but it's not clear which version)",
+      str_detect(preprint_version, "Any .*? or") ~ "Other",
+      str_detect(preprint_version, "Other|Unclear") ~ "Other",
+      str_detect(preprint_version, "None") ~ "None",
+      str_detect(preprint_version, "First sub") ~ 
+        "First submission only (before peer review)",
+      str_detect(preprint_version, "After peer re") ~ "After peer review",
+      str_detect(preprint_version, "Any|any") ~ "Any",
+      str_detect(preprint_version, "No") ~ "No preprint policy",
+    )) 
+}
+
+preprint_version_univariate <- refined %>% 
+  clean_preprint_version() %>% 
+  make_proportion(preprint_version_clean, order_string = "Any|After|First|Uns")
+```
+
+
+Preprints are more common within our sample than open peer review or co-review
+policies. Almost
+`r preprint_version_univariate %>% pull(order) %>% make_percent()`
+of all journals allow preprints at least in some way. Most of them however only
+allow preprints before peer review 
+(`r preprint_version_univariate[[3, 3]] %>% make_percent(2)`)
+while 
+`r preprint_version_univariate[[4, 3]] %>% make_percent(2)`
+do not have a preprint policy.
+
+
+```{r preprint-version, fig.cap="Allowed preprint versions", fig.asp=.65}
+refined_with_areas <- refined_with_areas %>% 
+  clean_preprint_version() %>% 
+  mutate(preprint_version_clean = fct_relevel(
+    preprint_version_clean, "Any", "After peer review") %>% 
+    fct_relevel("None", "No preprint policy", "Other", after = 4))
+    
+    
+    
+preprint_version <- refined_with_areas %>% 
+  make_proportion(preprint_version_clean, area,
+                  order_string = "Any|After|First|Uns")
+
+
+p_cols <- c("No preprint policy" =  "#E7298A", "Other" = "#666666",
+            "Any" = "#1B9E77", "After peer review" = "#D95F02", 
+             "First submission only (before peer review)" = "#7570B3",
+            "Unsure (preprints are allowed, but it's not clear which version)" = "#66A61E",
+            "None" = "#E6AB02"
+)
+
+ggplot(preprint_version, aes(fct_reorder(area, order), prop, 
+                          fill = fct_rev(preprint_version_clean))) +
+  geom_chicklet(position = "fill", width = .6) +
+  coord_flip() +
+  scale_fill_manual(values = p_cols) +
+  scale_y_continuous(labels = scales::percent) +
+  theme(legend.position = "top") +
+  guides(fill = guide_legend(reverse = T, nrow = 4)) +
+  labs(fill = NULL, x = NULL, y = NULL, 
+       caption = "What version of a preprint can be posted?")
+```
+
+Similar to our earlier results, preprint policies show a wide disciplinary 
+range (see fig. \@ref(fig:preprint-version). While in the life sciences & earth 
+sciences 
+`r preprint_version %>% filter(str_detect(area, "Life Sciences")) %>% pull(order) %>% make_percent()`
+of all journals allow preprints in some way, in the Humanities only 
+`r preprint_version %>% filter(str_detect(area, "Humanities")) %>% pull(order) %>% make_percent(2)`
+do.
+The Sciences in general tend towards allowing preprints only on first submission
+while the social sciences commonly have no clear policy on which version of a
+preprint is allowed. 
+The humanities and also journal from business, economics and management 
+generally have either no preprint policy at all or are more diverse in regard to
+preprint version, often allowing preprints after peer review, which is a lot 
+less common in the sciences.
+
+```{r}
+clean_preprint_citation <- function(df) {
+  df %>% 
+   mutate(preprint_citation_clean = case_when(
+      str_detect(preprint_citation, "Not spec") ~ "Not specified",
+      str_detect(preprint_citation, "Unsure") ~ "Unsure",
+      str_detect(preprint_citation, "No") ~ "No",
+      str_detect(preprint_citation, "only in the text") ~ "Yes, but only in the text",
+      str_detect(preprint_citation, "reference list") ~ "Yes, in the reference list",
+      is.na(preprint_citation) ~ NA_character_,
+      TRUE ~ "Other"
+    )) 
+}
+
+preprint_citation_univariate <- refined %>% 
+  clean_preprint_citation() %>% 
+  make_proportion(preprint_citation_clean, order_string = "Yes")
+```
+
+
+A complementary aspect of using preprints is, whether they can be cited. The
+majority of journals
+(`r preprint_citation_univariate[[2, 3]] %>% make_percent(2)`)
+does not specify, whether this is possible. Unclear policies are also quite 
+common (`r preprint_citation_univariate[[4, 3]] %>% make_percent(2)`). In case
+citations of preprints are allowed, this is commonly possible in the reference,
+with some journals restricting citations of preprints to the text.
+
+
+```{r preprint-citation, fig.cap="Citation of preprints", fig.asp=.65}
+refined_with_areas <- refined_with_areas %>% 
+  clean_preprint_citation()
+
+preprint_citation <- refined_with_areas %>% 
+    mutate(preprint_citation_clean = 
+             fct_relevel(preprint_citation_clean,
+                         "Yes, in the reference list", "Yes, but only in the text",
+                         "No", "Unsure", "Other", "Not specified")) %>% 
+  make_proportion(preprint_citation_clean, area,
+                  order_string = "Yes")
+
+
+p_cols <- c("Not specified" =  "#E7298A", "Other" = "#666666", "Unsure" = "#A6761D",
+            "Yes, in the reference list" = "#1B9E77", 
+            "Yes, but only in the text" = "#D95F02", 
+            "No" = "#E6AB02"
+)
+
+ggplot(preprint_citation, aes(fct_reorder(area, order), prop, 
+                          fill = fct_rev(preprint_citation_clean))) +
+  geom_chicklet(position = "fill", width = .6) +
+  coord_flip() +
+  scale_fill_manual(values = p_cols) +
+  scale_y_continuous(labels = scales::percent) +
+  theme(legend.position = "top") +
+  guides(fill = guide_legend(reverse = T)) +
+  labs(fill = NULL, x = NULL, y = NULL, 
+       caption = "Can preprints be cited?")
+```
+
+Disciplinary differences are again very apparent (see fig.
+\@ref(fig:preprint-citation)). Citing preprints is more common in the sciences,
+with 
+`r preprint_citation %>% filter(str_detect(area, "Life")) %>% pull(order) %>% make_percent()`
+of all journals in the life and earth sciences allowing citations to preprints
+either in the text or in the reference list. In contrast, the social sciences 
+and humanities either have unclear or no policies regarding whether preprints 
+can be cited or not. 
+
 
 # Bibliography
 

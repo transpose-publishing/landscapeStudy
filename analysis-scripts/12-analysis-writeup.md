@@ -213,7 +213,69 @@ neither to "junior researchers", "laboratory colleagues" nor "graduate
 students". Even if the policies do not explicitly forbid or allow the 
 involvement of other researchers, in many cases they mandate the reviewer to 
 first obtain permission from the editor in case they want to involve someone
-else in their review. 
+else in their review.
+
+# Preprints
+
+
+
+Preprints are more common within our sample than open peer review or co-review
+policies. Almost
+70.0%
+of all journals allow preprints at least in some way. Most of them however only
+allow preprints before peer review 
+(39.0%)
+while 
+23.0%
+do not have a preprint policy.
+
+
+<div class="figure">
+<img src="12-analysis-writeup_files/figure-html/preprint-version-1.png" alt="Allowed preprint versions"  />
+<p class="caption">(\#fig:preprint-version)Allowed preprint versions</p>
+</div>
+
+Similar to our earlier results, preprint policies show a wide disciplinary 
+range (see fig. \@ref(fig:preprint-version). While in the life sciences & earth 
+sciences 
+90.0%
+of all journals allow preprints in some way, in the Humanities only 
+45.0%
+do.
+The Sciences in general tend towards allowing preprints only on first submission
+while the social sciences commonly have no clear policy on which version of a
+preprint is allowed. 
+The humanities and also journal from business, economics and management 
+generally have either no preprint policy at all or are more diverse in regard to
+preprint version, often allowing preprints after peer review, which is a lot 
+less common in the sciences.
+
+
+
+
+A complementary aspect of using preprints is, whether they can be cited. The
+majority of journals
+(57.0%)
+does not specify, whether this is possible. Unclear policies are also quite 
+common (15.0%). In case
+citations of preprints are allowed, this is commonly possible in the reference,
+with some journals restricting citations of preprints to the text.
+
+
+<div class="figure">
+<img src="12-analysis-writeup_files/figure-html/preprint-citation-1.png" alt="Citation of preprints"  />
+<p class="caption">(\#fig:preprint-citation)Citation of preprints</p>
+</div>
+
+Disciplinary differences are again very apparent (see fig.
+\@ref(fig:preprint-citation)). Citing preprints is more common in the sciences,
+with 
+50.0%
+of all journals in the life and earth sciences allowing citations to preprints
+either in the text or in the reference list. In contrast, the social sciences 
+and humanities either have unclear or no policies regarding whether preprints 
+can be cited or not. 
+
 
 # Bibliography
 
