@@ -443,7 +443,7 @@ do not have a preprint policy.
 refined_with_areas <- refined_with_areas %>% 
   clean_preprint_version() %>% 
   mutate(preprint_version_clean = fct_relevel(
-    preprint_version_clean, "Any", "After peer review") %>% 
+    preprint_version_clean, "Any", "First submission only (before peer review)") %>% 
     fct_relevel("None", "No preprint policy", "Other", after = 4))
     
     
