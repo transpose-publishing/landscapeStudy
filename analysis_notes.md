@@ -119,3 +119,25 @@ I checked my highlights and they fit (now) with those counts.
 Thus coreview_policy has still many missings.
 
 Primary source is now: "TRANSPOSE landscape study - round 3"
+
+
+# Category system
+For open peer review, it is unclear to me what the difference between "No" and
+"not specified" is. In some instances, it is meaningful (in case of reviewer
+identities being revealed to the authors this is fine, since a "No" is more or
+less equal to single blind peer review. In that sense, this question is not
+very interesting, since it is an approximate translation on the question of
+peer review. It is also unclear, why the social sciences have such a big 
+proportion of "Not specified", since above they mainly are identified as having
+double blind peer review. Thus it should be obviously in majority "No", unless
+the addendum "even if not published" leads coders to mark it as unclear. Here I
+guess there was no *explicit* statement on OPR, but implicitly it should be 
+obvious.)
+
+
+Besides this disgression: for questions like "is there public commenting during
+formal peer review?" the difference between "no" and "not specified" is unclear.
+"not specified" in this case is simply a special type of "no", with no 
+meaningful explanation (to me) how a "no" is different from "not specified". 
+Usually those policies wouldn't explicitly state, that they are not doing 
+something that exists. 
