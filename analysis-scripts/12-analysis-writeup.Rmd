@@ -6,6 +6,7 @@ output:
   bookdown::html_document2:
     number_sections: false
     keep_md: true
+    toc: true
 bibliography: landscape.bib
 ---
 
