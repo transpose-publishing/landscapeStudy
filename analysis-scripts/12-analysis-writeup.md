@@ -73,7 +73,9 @@ disciplines. In the social sciences and humanities, double blind peer review is
 more prevalent, and the proportion of unclear policies the lowest. Business,
 Economics and Management, along with most disciplines from the sciences, display
 higher levels of unclear policies, with single blind peer review being more 
-prevalent in the sciences.
+prevalent in the sciences. Some journals also offer the option for authors to 
+choose whether to use single or double blind peer review. These cases have been
+coded as "Other" and amount to the majority of this category. 
 
 <div class="figure">
 <img src="12-analysis-writeup_files/figure-html/peer-type-1.png" alt="Type of peer review used"  />
@@ -85,13 +87,14 @@ prevalent in the sciences.
 
 When it comes to recognition of peer review activity, only 11% of
 all journals deposit reviewer activity into open datdabases. On the other hand,
-the majority of journals (81%) does not state at all, whether peer 
+the majority of journals (81%) does not state at all whether peer 
 review activity is deposited in any kind of database, open or not. 
 
 # Open Peer Review
 
 
 Information on open peer review is similarly sparse (see fig. \@ref(fig:opr)). 
+<!--- Maybe write here about what aspects where surveyed. --->
 All surveyed aspects of 
 open peer review lack any kind of information in more than 50% of journals 
 surveyed.
@@ -213,7 +216,13 @@ neither to "junior researchers", "laboratory colleagues" nor "graduate
 students". Even if the policies do not explicitly forbid or allow the 
 involvement of other researchers, in many cases they mandate the reviewer to 
 first obtain permission from the editor in case they want to involve someone
-else in their review.
+else in their review. The editor's prominent role can also be observed by the 
+terms frequent appearance in the policies. Almost three quarters of all policies
+contain the term "editor". 
+
+
+
+
 
 # Preprints
 
