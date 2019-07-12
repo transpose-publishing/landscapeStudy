@@ -1,7 +1,7 @@
 ---
 title: "Landscape Study - General Overview"
 author: Thomas Klebel
-date: Last changed 2019-07-05
+date: Last changed 2019-07-12
 output: 
   html_document:
     df_print: paged
@@ -62,6 +62,32 @@ being due to the publisher when they are due to the subject area.
 
 
 ![](11-overview_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+
+
+## Peer review transfer policy
+
+
+
+Only 86 out of 171 do have a 
+policy for manuscript transfer after rejection.
+Due to policies being similar across journals of certain 
+publishers, there are 48
+distinct policies in our dataset.
+
+The following table displays stemmed parts of the distinct policies, sorted by
+propensity.
+<div data-pagedtable="false">
+  <script data-pagedtable-source type="application/json">
+{"columns":[{"label":["word"],"name":[1],"type":["chr"],"align":["left"]},{"label":["n"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"journal","2":"160"},{"1":"review","2":"140"},{"1":"transfer","2":"116"},{"1":"manuscript","2":"87"},{"1":"editor","2":"52"},{"1":"author","2":"51"},{"1":"paper","2":"39"},{"1":"submiss","2":"37"},{"1":"articl","2":"36"},{"1":"peer","2":"26"},{"1":"decis","2":"22"},{"1":"comment","2":"21"},{"1":"ac","2":"20"},{"1":"physic","2":"18"},{"1":"receiv","2":"17"},{"1":"suitabl","2":"17"},{"1":"file","2":"16"},{"1":"ident","2":"16"},{"1":"process","2":"16"},{"1":"public","2":"16"},{"1":"reject","2":"16"},{"1":"servic","2":"16"},{"1":"submit","2":"16"},{"1":"offer","2":"14"},{"1":"report","2":"14"},{"1":"share","2":"13"},{"1":"accept","2":"12"},{"1":"consider","2":"12"},{"1":"letter","2":"12"},{"1":"option","2":"12"},{"1":"declin","2":"11"},{"1":"inform","2":"11"},{"1":"question","2":"11"},{"1":"time","2":"11"},{"1":"addit","2":"10"},{"1":"cell","2":"10"},{"1":"editori","2":"10"},{"1":"note","2":"10"},{"1":"press","2":"10"},{"1":"publish","2":"10"},{"1":"reformat","2":"10"},{"1":"intern","2":"9"},{"1":"bmj","2":"8"},{"1":"refere","2":"8"},{"1":"research","2":"8"},{"1":"agre","2":"7"},{"1":"editor’","2":"7"},{"1":"suggest","2":"7"},{"1":"automat","2":"6"},{"1":"choic","2":"6"},{"1":"contact","2":"6"},{"1":"cover","2":"6"},{"1":"lancet","2":"6"},{"1":"pass","2":"6"},{"1":"revis","2":"6"},{"1":"scienc","2":"6"},{"1":"behalf","2":"5"},{"1":"edit","2":"5"},{"1":"evalu","2":"5"},{"1":"feel","2":"5"},{"1":"free","2":"5"},{"1":"heliyon","2":"5"},{"1":"independ","2":"5"},{"1":"opportun","2":"5"},{"1":"partner","2":"5"},{"1":"pediatr","2":"5"},{"1":"provid","2":"5"},{"1":"reach","2":"5"},{"1":"refer","2":"5"},{"1":"relev","2":"5"},{"1":"respons","2":"5"},{"1":"restart","2":"5"},{"1":"resubmit","2":"5"},{"1":"seek","2":"5"},{"1":"societi","2":"5"},{"1":"access","2":"4"},{"1":"advanc","2":"4"},{"1":"aip","2":"4"},{"1":"base","2":"4"},{"1":"elsevi","2":"4"},{"1":"exist","2":"4"},{"1":"extern","2":"4"},{"1":"famili","2":"4"},{"1":"gastroenterologi","2":"4"},{"1":"hospit","2":"4"},{"1":"includ","2":"4"},{"1":"initi","2":"4"},{"1":"judg","2":"4"},{"1":"mean","2":"4"},{"1":"mention","2":"4"},{"1":"onlin","2":"4"},{"1":"particip","2":"4"},{"1":"plo","2":"4"},{"1":"polici","2":"4"},{"1":"requir","2":"4"},{"1":"shorten","2":"4"},{"1":"target","2":"4"},{"1":"topic","2":"4"},{"1":"aacr","2":"3"},{"1":"assess","2":"3"},{"1":"awar","2":"3"},{"1":"chanc","2":"3"},{"1":"chemistri","2":"3"},{"1":"coauthor","2":"3"},{"1":"consent","2":"3"},{"1":"consum","2":"3"},{"1":"copi","2":"3"},{"1":"deem","2":"3"},{"1":"easili","2":"3"},{"1":"elsevier’","2":"3"},{"1":"faq","2":"3"},{"1":"final","2":"3"},{"1":"guarante","2":"3"},{"1":"http","2":"3"},{"1":"multipl","2":"3"},{"1":"name","2":"3"},{"1":"natur","2":"3"},{"1":"nomin","2":"3"},{"1":"occasion","2":"3"},{"1":"paragon","2":"3"},{"1":"portfolio","2":"3"},{"1":"quickli","2":"3"},{"1":"reason","2":"3"},{"1":"reduc","2":"3"},{"1":"regular","2":"3"},{"1":"royal","2":"3"},{"1":"scope","2":"3"},{"1":"select","2":"3"},{"1":"serial","2":"3"},{"1":"simplifi","2":"3"},{"1":"system","2":"3"},{"1":"team","2":"3"},{"1":"upload","2":"3"},{"1":"ad","2":"2"},{"1":"anonym","2":"2"},{"1":"author’","2":"2"},{"1":"belong","2":"2"},{"1":"choos","2":"2"},{"1":"consid","2":"2"},{"1":"depend","2":"2"},{"1":"detail","2":"2"},{"1":"disciplin","2":"2"},{"1":"draft","2":"2"},{"1":"elect","2":"2"},{"1":"entir","2":"2"},{"1":"esc","2":"2"},{"1":"excel","2":"2"},{"1":"expert","2":"2"},{"1":"fast","2":"2"},{"1":"feedback","2":"2"},{"1":"heliyon’","2":"2"},{"1":"identifi","2":"2"},{"1":"invit","2":"2"},{"1":"jama","2":"2"},{"1":"journal'","2":"2"},{"1":"materi","2":"2"},{"1":"permiss","2":"2"},{"1":"purview","2":"2"},{"1":"qualiti","2":"2"},{"1":"recommend","2":"2"},{"1":"relationship","2":"2"},{"1":"request","2":"2"},{"1":"result","2":"2"},{"1":"reveal","2":"2"},{"1":"send","2":"2"},{"1":"specialti","2":"2"},{"1":"stai","2":"2"},{"1":"suit","2":"2"},{"1":"summari","2":"2"},{"1":"titl","2":"2"},{"1":"undergo","2":"2"},{"1":"version","2":"2"},{"1":"visibl","2":"2"},{"1":"1","2":"1"},{"1":"14","2":"1"},{"1":"2","2":"1"},{"1":"aap.org","2":"1"},{"1":"address","2":"1"},{"1":"adv","2":"1"},{"1":"aip.scitation.org","2":"1"},{"1":"allow","2":"1"},{"1":"altern","2":"1"},{"1":"apl","2":"1"},{"1":"applic","2":"1"},{"1":"assist","2":"1"},{"1":"at","2":"1"},{"1":"author'","2":"1"},{"1":"authors.bmj.com","2":"1"},{"1":"avoid","2":"1"},{"1":"basi","2":"1"},{"1":"benefit","2":"1"},{"1":"board","2":"1"},{"1":"british","2":"1"},{"1":"broader","2":"1"},{"1":"burden","2":"1"},{"1":"cascad","2":"1"},{"1":"cellpress","2":"1"},{"1":"challeng","2":"1"},{"1":"check","2":"1"},{"1":"complet","2":"1"},{"1":"concis","2":"1"},{"1":"condit","2":"1"},{"1":"confid","2":"1"},{"1":"confidenti","2":"1"},{"1":"confirm","2":"1"},{"1":"conflict","2":"1"},{"1":"conform","2":"1"},{"1":"consult","2":"1"},{"1":"conveni","2":"1"},{"1":"cosubmiss","2":"1"},{"1":"criteria","2":"1"},{"1":"critic","2":"1"},{"1":"dai","2":"1"},{"1":"decid","2":"1"},{"1":"delai","2":"1"},{"1":"desk","2":"1"},{"1":"direct","2":"1"},{"1":"discuss","2":"1"},{"1":"disposit","2":"1"},{"1":"download","2":"1"},{"1":"ebiomedicin","2":"1"},{"1":"econometr","2":"1"},{"1":"econometrica","2":"1"},{"1":"elsevier'","2":"1"},{"1":"email","2":"1"},{"1":"encourag","2":"1"},{"1":"estim","2":"1"},{"1":"expect","2":"1"},{"1":"facil","2":"1"},{"1":"fit","2":"1"},{"1":"flagship","2":"1"},{"1":"forward","2":"1"},{"1":"freeli","2":"1"},{"1":"frontlin","2":"1"},{"1":"fulfil","2":"1"},{"1":"guid","2":"1"},{"1":"guidelin","2":"1"},{"1":"gut","2":"1"},{"1":"happi","2":"1"},{"1":"hepatologi","2":"1"},{"1":"home","2":"1"},{"1":"honor","2":"1"},{"1":"i.","2":"1"},{"1":"ii","2":"1"},{"1":"iii","2":"1"},{"1":"indic","2":"1"},{"1":"individu","2":"1"},{"1":"instruct","2":"1"},{"1":"intend","2":"1"},{"1":"iop","2":"1"},{"1":"iv","2":"1"},{"1":"joint","2":"1"},{"1":"link","2":"1"},{"1":"list","2":"1"},{"1":"mind","2":"1"},{"1":"model","2":"1"},{"1":"month","2":"1"},{"1":"network","2":"1"},{"1":"neurologi","2":"1"},{"1":"occas","2":"1"},{"1":"occur","2":"1"},{"1":"offic","2":"1"},{"1":"oncologi","2":"1"},{"1":"opinion","2":"1"},{"1":"pdf","2":"1"},{"1":"pediatricseditori","2":"1"},{"1":"pediatricsreview","2":"1"},{"1":"person","2":"1"},{"1":"preselect","2":"1"},{"1":"primarili","2":"1"},{"1":"proce","2":"1"},{"1":"procedur","2":"1"},{"1":"rare","2":"1"},{"1":"readi","2":"1"},{"1":"realiz","2":"1"},{"1":"reconsid","2":"1"},{"1":"relat","2":"1"},{"1":"resubmiss","2":"1"},{"1":"save","2":"1"},{"1":"scientif","2":"1"},{"1":"sign","2":"1"},{"1":"spend","2":"1"},{"1":"stringent","2":"1"},{"1":"subscript","2":"1"},{"1":"subsequ","2":"1"},{"1":"success","2":"1"},{"1":"supplementari","2":"1"},{"1":"support","2":"1"},{"1":"technic","2":"1"},{"1":"term","2":"1"},{"1":"transmit","2":"1"},{"1":"trust","2":"1"},{"1":"twofold","2":"1"},{"1":"typic","2":"1"},{"1":"unmatch","2":"1"},{"1":"unsuccess","2":"1"},{"1":"unsur","2":"1"},{"1":"vet","2":"1"},{"1":"visit","2":"1"},{"1":"write","2":"1"},{"1":"www.bmj.com","2":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+
+
+The following graph shows the relationship between to most common bigrams (only
+bigrams that occur at least three times).
+
+![](11-overview_files/figure-html/pr-transfer-plot-1.png)<!-- -->
+
 
 
 

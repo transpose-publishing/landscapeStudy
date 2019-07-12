@@ -169,6 +169,43 @@ refined_with_areas %>%
 ```
 
 
+## Peer review transfer policy
+
+```{r pr-transfer-compute}
+pr_transfer <- refined %>% 
+  select(pr_transfer_policy) %>% 
+  filter(!is.na(pr_transfer_policy),
+         !(pr_transfer_policy %in% c("Not specified", "Not found")))
+```
+
+Only `r nrow(pr_transfer)` out of `r nrow(refined)` do have a 
+policy for manuscript transfer after rejection.
+Due to policies being similar across journals of certain 
+publishers, there are `r nrow(distinct(pr_transfer))`
+distinct policies in our dataset.
+
+The following table displays stemmed parts of the distinct policies, sorted by
+propensity.
+```{r pr-transfer-table}
+pr_transfer %>% 
+  distinct() %>%
+  unnest_tokens(word, pr_transfer_policy) %>% 
+  anti_join(stop_words) %>% 
+  mutate(word = SnowballC::wordStem(word)) %>% 
+  count(word, sort = T) 
+```
+
+
+The following graph shows the relationship between to most common bigrams (only
+bigrams that occur at least three times).
+
+```{r pr-transfer-plot, fig.width=7, fig.height=7}
+pr_transfer %>% 
+  make_bigram_analysis(pr_transfer_policy, cutoff = 3)
+```
+
+
+
 
 
 # Open Peer Review
