@@ -130,9 +130,14 @@ very interesting, since it is an approximate translation on the question of
 peer review. It is also unclear, why the social sciences have such a big 
 proportion of "Not specified", since above they mainly are identified as having
 double blind peer review. Thus it should be obviously in majority "No", unless
-the addendum "even if not published" leads coders to mark it as unclear. Here I
-guess there was no *explicit* statement on OPR, but implicitly it should be 
-obvious.)
+the addendum "even if not published" leads coders to mark it as unclear. 
+The question thus is not clear, involving two distinct aspects:
+
+- Are reviewer identities revealed to the author in general?
+- Are they revelead if the paper is not published?
+
+The former should be clearly no for the social sciences (double blind), the 
+latter might be rightfully "not specified".)
 
 
 Besides this disgression: for questions like "is there public commenting during
