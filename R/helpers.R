@@ -83,5 +83,5 @@ make_percent <- function(x, significant_digits = 1) {
     # to enable extraction of vectors as well
     head(1) %>%
     signif(significant_digits) %>%
-    scales::percent()
+    scales::percent(accuracy = 1)
 }
