@@ -1,7 +1,7 @@
 ---
-title: "Analysis Writeup"
+title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: "7/2/2019"
+date: Last updated 2019-07-12
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -25,19 +25,20 @@ h-index varies greatly between sub-categories, as can be seen from figure
 <p class="caption">(\#fig:h-indices)Distribution of h5-index across disciplines</p>
 </div>
 
-To be able to include all journals for analysis that splits by discipline, the
+To be able to include all journals for analysis that distinguishes by 
+discipline, the
 missing categorisations were added afterwards. To this end, we scraped all 
-disciplines and subdisciplines from GoogleScholar and matched those to our data.
-^[The code for collecting the data from GoogleScholar can be found here:
+disciplines and sub-disciplines from Google Scholar and matched those to our data.
+^[The code for collecting the data from Google Scholar can be found here:
 ADD LINKS HERE TO DATA AND SCRIPT]
 
-As stated, the criteria for inclusion into the GoogleScholar rankings are opaque
+As stated, the criteria for inclusion into the Google Scholar rankings are opaque
 and non-reproducible. For example it is possible for a journal to be included in
 different disciplines, which makes a lot of sense
 (for example "Physics & Mathematics" along with 
 "Engineering & Computer Science"). It is however also possible for a journal to
 be included in a sub-discipline, and not in the parent discipline, despite 
-having a higher h-index than all journals listed in the parten discipline.^[As
+having a higher h-index than all journals listed in the parent discipline.^[As
 of 2019-07-02, the "Journal of Cleaner Production" is listed in the social 
 sciences under "sustainable development"
 (https://scholar.google.at/citations?view_op=top_venues&hl=en&vq=soc_sustainabledevelopment). 
@@ -86,7 +87,7 @@ coded as "Other" and amount to the majority of this category.
 
 
 When it comes to recognition of peer review activity, only 11% of
-all journals deposit reviewer activity into open datdabases. On the other hand,
+all journals deposit reviewer activity into open databases. Furthermore,
 the majority of journals (81%) does not state at all whether peer 
 review activity is deposited in any kind of database, open or not. 
 
@@ -94,16 +95,19 @@ review activity is deposited in any kind of database, open or not.
 
 
 Information on open peer review is similarly sparse (see fig. \@ref(fig:opr)). 
-<!--- Maybe write here about what aspects where surveyed. --->
-All surveyed aspects of 
+The survey included questions on common dimensions of open peer review, like
+whether peer review reports, editorial decision letters or previous versions of
+the manuscript are published, or whether there is public commenting during peer
+review, and similar questions. All surveyed aspects of 
 open peer review lack any kind of information in more than 50% of journals 
-surveyed.
-Furthermore, seven out of eight aspects are not specified in more than three 
-quarters of all journals. When there is information, in most cases it is 
+surveyed. 
+Furthermore, three quarters of journals do not provide information on all except
+one aspect. When there is information, in most cases it is 
 dismissive of open peer review. No journal in our sample allows public 
 commenting during formal peer review. Other forms of openness are similarly 
-scarce, with the only expection that some journals may reveal reviewer 
-identities to the authors.
+scarce. With the sole exception that some journals may reveal reviewer 
+identities to the authors, all other aspects are not specified or not
+available in more than 95% of journals.
 
 <div class="figure">
 <img src="12-analysis-writeup_files/figure-html/opr-1.png" alt="Aspects of open peer review"  />
@@ -111,10 +115,10 @@ identities to the authors.
 </div>
 
 Splitting the aspect of revealed reviewer identities by discipline shows a few
-key distictions (see fig. \@ref(fig:opr-authors)). Whereas revealing reviewer
+key distinctions (see fig. \@ref(fig:opr-authors)). Whereas revealing reviewer
 identities to the authors is absent from the social sciences, humanities and
 business, it is not unusual in the sciences, at least on an optional basis 
-(for example in case the referee requests it).
+(for example in case the referee wants to sign their review).
 
 
 <div class="figure">
@@ -124,12 +128,12 @@ business, it is not unusual in the sciences, at least on an optional basis
 
 # Co-Review Policy
 
-Information on coreview policies is sparse. 
+Information on co-review policies is sparse. 
 Only 87 out of 171 journals do have an
-explicit coreview.
+explicit co-review policy.
 
 Splitting the results by discipline
-reveals noticable differences (see fig. \@ref(fig:co-rev)).
+reveals noticeable differences (see fig. \@ref(fig:co-rev)).
 While in the life and earth sciences more
 than one third of journals permit contributions from co-reviewers, in the 
 humanities, chemical & materials sciences, and in business, economics & 
@@ -152,8 +156,8 @@ procedures.
 
 
 
-To extract meaningful information we first removed common words of the english
-language (via the list of stopwords from the tidytext package
+To extract meaningful information we first removed common words of the English
+language (via the list of stop-words from the tidytext package
 [@silge_tidytext_2016], except for the word "not", which is relevant since some
 policies state, that it is *not* appropriate to share information with students
 or colleagues). The resulting list contains 1151 words in 
@@ -161,41 +165,44 @@ total.
 
 For a simple overview, the words were stemmed to reduce similar but not 
 identical versions of certain words (like editor/editors).
-The following table displays the most frequent parts of the distinct policies,
+Table \@ref(tab:co-review-table) displays the most frequent parts of the distinct policies,
 sorted by propensity.
 
-word            n
------------  ----
-review        135
-manuscript     53
-editor         44
-confidenti     34
-not            30
-inform         25
-colleagu       21
-involv         17
-journal        17
-consult        15
-discuss        15
-disclos        14
-permiss        14
-student        14
-author         13
-peer           13
-process        12
-ensur          11
-obtain         11
-person         11
+Table: (\#tab:coreview-table)Propensity of terms in co-review policies
+
+word            n  proportion 
+-----------  ----  -----------
+review        135  11.7%      
+manuscript     53  4.6%       
+editor         44  3.8%       
+confidenti     34  3.0%       
+not            30  2.6%       
+inform         25  2.2%       
+colleagu       21  1.8%       
+involv         17  1.5%       
+journal        17  1.5%       
+consult        15  1.3%       
+discuss        15  1.3%       
+disclos        14  1.2%       
+permiss        14  1.2%       
+student        14  1.2%       
+author         13  1.1%       
+peer           13  1.1%       
+process        12  1.0%       
+ensur          11  1.0%       
+obtain         11  1.0%       
+person         11  1.0%       
+
 
 The most prominent themes that emerge are:
 
 - Individuals with varying stakes regarding peer review: editor, colleague, 
-author, student, peer
-- Confidentiality as a central principle
+author, student, peer.
+- Confidentiality as a central principle.
 - Important elements of scholarly publishing: manuscript, journal, review, 
-process
+process.
 - Verbal forms pertaining to relationships between the individuals: inform,
-involve, consult, discuss, disclose, ensure, obtain
+involve, consult, discuss, disclose, ensure, obtain.
 
 These directions become more intelligible when we look at bigrams (see fig.
 \@ref(fig:bigrams)). With this procedure the text is
@@ -217,8 +224,8 @@ students". Even if the policies do not explicitly forbid or allow the
 involvement of other researchers, in many cases they mandate the reviewer to 
 first obtain permission from the editor in case they want to involve someone
 else in their review. The editor's prominent role can also be observed by the 
-terms frequent appearance in the policies. Almost three quarters of all policies
-contain the term "editor". 
+terms' frequent appearance in the policies. Almost three quarters of all policies
+mention the term "editor". 
 
 
 
@@ -230,12 +237,12 @@ contain the term "editor".
 
 Preprints are more common within our sample than open peer review or co-review
 policies. Almost
-70.0%
+70%
 of all journals allow preprints at least in some way. Most of them however only
 allow preprints before peer review 
-(39.0%)
+(39%)
 while 
-23.0%
+23%
 do not have a preprint policy.
 
 
@@ -245,15 +252,15 @@ do not have a preprint policy.
 </div>
 
 Similar to our earlier results, preprint policies show a wide disciplinary 
-range (see fig. \@ref(fig:preprint-version). While in the life sciences & earth 
+range (see fig. \@ref(fig:preprint-version)). While in the life sciences & earth 
 sciences 
-90.0%
+90%
 of all journals allow preprints in some way, in the Humanities only 
-45.0%
+45%
 do.
-The Sciences in general tend towards allowing preprints only on first submission
-while the social sciences commonly have no clear policy on which version of a
-preprint is allowed. 
+The sciences in general tend towards allowing preprints only on first submission
+while the social sciences predominantly have no clear policy on which version of
+a preprint is allowed. 
 The humanities and also journal from business, economics and management 
 generally have either no preprint policy at all or are more diverse in regard to
 preprint version, often allowing preprints after peer review, which is a lot 
@@ -264,9 +271,10 @@ less common in the sciences.
 
 A complementary aspect of using preprints is, whether they can be cited. The
 majority of journals
-(57.0%)
-does not specify, whether this is possible. Unclear policies are also quite 
-common (15.0%). In case
+(57%)
+does not specify, whether this is possible. Unclear policies on how to cite
+preprints are also quite 
+common (15%). In case
 citations of preprints are allowed, this is commonly possible in the reference,
 with some journals restricting citations of preprints to the text.
 
@@ -279,7 +287,7 @@ with some journals restricting citations of preprints to the text.
 Disciplinary differences are again very apparent (see fig.
 \@ref(fig:preprint-citation)). Citing preprints is more common in the sciences,
 with 
-50.0%
+50%
 of all journals in the life and earth sciences allowing citations to preprints
 either in the text or in the reference list. In contrast, the social sciences 
 and humanities either have unclear or no policies regarding whether preprints 
