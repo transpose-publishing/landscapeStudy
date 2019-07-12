@@ -135,6 +135,38 @@ ggplot(refined_with_areas, aes(fct_rev(area), fill = area)) +
 
 
 
+```{r peer-type-publisher}
+peer_type_publisher <- refined %>% 
+  order_factors() %>% 
+  mutate(has_society = case_when(
+         str_detect(
+           publisher_clean, 
+           "Society|Associa|Union|Academy|College|Instit|School"
+           ) ~ "Published by Society/Association",
+         TRUE ~ "General publisher"
+  )) %>% 
+  make_proportion(pr_type_clean, has_society, order_string = "Double|Single") %>% 
+  drop_na()
+
+p_cols <- c("Single blind" = "#1B9E77", "Double blind" =  "#D95F02",
+            "Not blinded" =  "#7570B3",
+            "Unsure" = "#A6761D", "Other" = "#666666")
+
+ggplot(peer_type_publisher, aes(has_society, prop, 
+                                fill = fct_rev(pr_type_clean))) +
+  geom_chicklet(position = "fill", width = .6) +
+  coord_flip() +
+  scale_fill_manual(values = p_cols) +
+  scale_y_continuous(labels = scales::percent) +
+  theme(legend.position = "top") +
+  guides(fill = guide_legend(reverse = T)) +
+  labs(fill = NULL, x = NULL, y = NULL, 
+       title = "What type of peer review is used?")
+```
+
+I don't think this distinction is very interesting, since it masks disciplinary
+differences, which are more fundamental.
+
 ```{r}
 refined <- refined %>% 
   mutate(pr_database_clean = case_when(

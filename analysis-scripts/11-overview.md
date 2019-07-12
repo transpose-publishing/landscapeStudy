@@ -58,6 +58,11 @@ being due to the publisher when they are due to the subject area.
 
 
 
+![](11-overview_files/figure-html/peer-type-publisher-1.png)<!-- -->
+
+I don't think this distinction is very interesting, since it masks disciplinary
+differences, which are more fundamental.
+
 ![](11-overview_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 
