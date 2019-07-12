@@ -346,8 +346,8 @@ total.
 
 For a simple overview, the words were stemmed to reduce similar but not 
 identical versions of certain words (like editor/editors).
-Table \@ref(tab:co-review-table) displays the most frequent parts of the distinct policies,
-sorted by propensity.
+Table \@ref(tab:coreview-table) displays the most frequent parts of the
+distinct policies, sorted by propensity.
 ```{r coreview-table}
 stemmed_words <- stopped_words %>% 
   mutate(word = SnowballC::wordStem(word)) 
@@ -460,16 +460,32 @@ p_cols <- c("No preprint policy" =  "#E7298A", "Other" = "#666666",
             "None" = "#E6AB02"
 )
 
-ggplot(preprint_version, aes(fct_reorder(area, order), prop, 
+p <- ggplot(preprint_version, aes(fct_reorder(area, order), prop, 
                           fill = fct_rev(preprint_version_clean))) +
   geom_chicklet(position = "fill", width = .6) +
+  geom_step(data = slice(preprint_version, 1),
+            aes(x = area, y = order, group = 1), direction = "vh",
+            position = position_nudge(x = .5)) +
+  geom_step(data = filter(preprint_version, str_detect(area, "Human|Busine")), 
+            aes(x = area, y = order, group = 1), direction = "hv",
+            position = position_nudge(x = -.5)) +
+  annotate("text", x = "Life Sciences & Earth Sciences", y = 1, 
+           label = "Proportion of journals\nthat allow posting of preprints",
+           vjust = -.8, hjust = 1,
+           family = "Hind", size = 3) +
   coord_flip() +
   scale_fill_manual(values = p_cols) +
   scale_y_continuous(labels = scales::percent) +
-  theme(legend.position = "top") +
+  theme(legend.position = "bottom") +
   guides(fill = guide_legend(reverse = T, nrow = 4)) +
   labs(fill = NULL, x = NULL, y = NULL, 
        caption = "What version of a preprint can be posted?")
+
+
+gt <- ggplot_gtable(ggplot_build(p))
+gt$layout$clip[gt$layout$name == "panel"] <- "off"
+grid::grid.draw(gt)
+
 ```
 
 Similar to our earlier results, preprint policies show a wide disciplinary 
@@ -536,16 +552,31 @@ p_cols <- c("Not specified" =  "#E7298A", "Other" = "#666666", "Unsure" = "#A676
             "No" = "#E6AB02"
 )
 
-ggplot(preprint_citation, aes(fct_reorder(area, order), prop, 
+p <- ggplot(preprint_citation, aes(fct_reorder(area, order), prop, 
                           fill = fct_rev(preprint_citation_clean))) +
   geom_chicklet(position = "fill", width = .6) +
+  geom_step(data = slice(preprint_citation, 1),
+            aes(x = area, y = order, group = 1), direction = "vh",
+            position = position_nudge(x = .5)) +
+  geom_step(data = filter(preprint_citation, str_detect(area, "Business|Social")), 
+            aes(x = area, y = order, group = 1), direction = "hv",
+            position = position_nudge(x = -.5)) +
+  annotate("text", x = "Life Sciences & Earth Sciences", y = .5, 
+           label = "Proportion of journals\nthat allow citation of preprints",
+           vjust = -.8,
+           family = "Hind", size = 3) +
   coord_flip() +
   scale_fill_manual(values = p_cols) +
   scale_y_continuous(labels = scales::percent) +
-  theme(legend.position = "top") +
+  theme(legend.position = "bottom") +
   guides(fill = guide_legend(reverse = T)) +
-  labs(fill = NULL, x = NULL, y = NULL, 
+  labs(fill = NULL, x = NULL, y = NULL,
        caption = "Can preprints be cited?")
+
+gt <- ggplot_gtable(ggplot_build(p))
+gt$layout$clip[gt$layout$name == "panel"] <- "off"
+grid::grid.draw(gt)
+
 ```
 
 Disciplinary differences are again very apparent (see fig.

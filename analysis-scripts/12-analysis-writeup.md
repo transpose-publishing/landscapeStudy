@@ -165,8 +165,8 @@ total.
 
 For a simple overview, the words were stemmed to reduce similar but not 
 identical versions of certain words (like editor/editors).
-Table \@ref(tab:co-review-table) displays the most frequent parts of the distinct policies,
-sorted by propensity.
+Table \@ref(tab:coreview-table) displays the most frequent parts of the
+distinct policies, sorted by propensity.
 
 Table: (\#tab:coreview-table)Propensity of terms in co-review policies
 
