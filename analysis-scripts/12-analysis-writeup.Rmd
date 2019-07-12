@@ -213,7 +213,7 @@ scarce. With the sole exception that some journals may reveal reviewer
 identities to the authors, all other aspects are not specified or not
 available in more than 95% of journals.
 
-```{r opr, fig.asp=.6, fig.cap="Aspects of open peer review"}
+```{r opr, fig.asp=.7, fig.cap="Aspects of open peer review"}
 p_cols <- c("Not specified" =  "#E7298A", "Yes" = "#1B9E77",
             "Mandatory" = "#D95F02", "Conditional" =  "#7570B3",
             "Optional" = "#66A61E", "No" = "#E6AB02"
