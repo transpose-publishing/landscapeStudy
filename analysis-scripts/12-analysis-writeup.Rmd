@@ -53,11 +53,22 @@ set.seed(1234)
 refined_with_areas %>% 
   filter(!area_was_scraped) %>% 
   ggplot(aes(fct_reorder(area, `h5-index`), `h5-index`)) +
-  geom_boxplot(width = .6) +
+  geom_boxplot(width = .6, outlier.alpha = 0) +
   coord_flip() +
   geom_jitter(width = .2, aes(colour = area), show.legend = F, alpha = .7) +
+  geom_jitter(data = filter(refined_with_areas, area_was_scraped),
+              width = .2, colour = "black", show.legend = F, alpha = .7, 
+              shape = 17) +
   labs(x = NULL) +
-  scale_color_brewer(palette = "Dark2") 
+  scale_color_brewer(palette = "Dark2")  +
+  ggrepel::geom_text_repel(
+    data = tibble(
+      area = "Health & Medical Sciences", `h5-index` = 115, 
+      label = "Journals added\nby scraping"
+    ), aes(label = label), nudge_y = -60, nudge_x = -.5, family = "Hind",
+    size = 3, arrow = arrow(type = "closed", angle = 20, 
+                            length = unit(.15, "inches"))
+  )
   
 ```
 
