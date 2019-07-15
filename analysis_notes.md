@@ -146,3 +146,13 @@ formal peer review?" the difference between "no" and "not specified" is unclear.
 meaningful explanation (to me) how a "no" is different from "not specified". 
 Usually those policies wouldn't explicitly state, that they are not doing 
 something that exists. 
+
+
+# Follow up on N of articles via crossref
+Idea: scatter plot of h5 index vs. number of articles. This could go in the 
+first section as a general overview of the sample. Depending on the result, this
+could be used as principle of division for the rest of the paper. But I
+suspect it to be not meaningful.
+
+Querying all journals from crossref would take approx. 8 hours.
+
