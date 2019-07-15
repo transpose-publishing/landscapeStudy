@@ -26,6 +26,7 @@ library(ggraph)
 library(landscapeStudy)
 # install.packages("ggchicklet", repos = "https://cinc.rud.is")
 library(ggchicklet)
+library(ggridges)
 
 theme_set(hrbrmisc::theme_hrbrmstr())
 
@@ -131,6 +132,13 @@ ggplot(refined_with_areas, aes(fct_rev(area), fill = area)) +
   coord_flip() +
   labs(x = NULL, y = NULL, 
      title = "What type of peer review is used?")
+```
+
+
+```{r}
+ggplot(refined_with_areas, aes(`h5-index`, pr_type_clean)) +
+  # geom_boxplot()
+  geom_density_ridges()
 ```
 
 
