@@ -137,7 +137,6 @@ ggplot(refined_with_areas, aes(fct_rev(area), fill = area)) +
 
 ```{r}
 ggplot(refined_with_areas, aes(`h5-index`, pr_type_clean)) +
-  # geom_boxplot()
   geom_density_ridges()
 ```
 
