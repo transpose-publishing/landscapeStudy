@@ -54,6 +54,14 @@ refined <- refined %>%
   mutate(coreview_policy = fct_explicit_na(coreview_policy, "Not specified"))
 
 
+
+# add data on open access status
+oa_status <- read_csv(here::here("data-transformed/oa_data.csv"))
+
+refined <- refined %>%
+  left_join(oa_status)
+
+
 # data on subject area is a bit messy -> there is no way to split it directly
 # we first create a variable with the full area names. this can be easily joined
 # with the rest of the data via a full_join
