@@ -38,12 +38,12 @@ refined_with_areas <- refined_with_areas %>%
 
 ```
 
-# Subject areas
+# Sample characteristics
 The approach taken to create the sample of journals led to a few journals 
-having no data on subject area: some journals like "Gut" were within the top
-100 journals, but not within any of the sub-categories. This is because the
-h-index varies greatly between sub-categories, as can be seen from figure 
-\@ref(fig:h-indices).
+having no data on disciplinary area: some journals like "Gut" were within the 
+top 100 journals, but not within any of the sub-categories. This is because the
+h-index varies greatly between sub-categories. Figure \@ref(fig:h-indices)
+shows the top-20 journals of each discipline.
 
 ```{r h-indices, fig.cap="Distribution of h5-index across disciplines", fig.asp=.6}
 # set seed for jittered points to stay always the same (otherwise annoying for
@@ -61,9 +61,8 @@ refined_with_areas %>%
   
 ```
 
-To be able to include all journals for analysis that distinguishes by 
-discipline, the
-missing categorisations were added afterwards. To this end, we scraped all 
+The missing categorisations were added in a second step, to facilitate analysis 
+of all journals that distinguishes by discipline. To this end, we scraped all 
 disciplines and sub-disciplines from Google Scholar and matched those to our data.
 ^[The code for collecting the data from Google Scholar can be found here:
 ADD LINKS HERE TO DATA AND SCRIPT]
@@ -110,36 +109,83 @@ refined_with_areas %>%
 ```
 
 
+
+
+```{r}
+oa_status <- refined %>% 
+  summarise(has_oa = sum(!is.na(bibjson.oa_start.year)),
+            n_total = n())
+```
+
+
+Regarding practices of open access, only `r oa_status$has_oa` of 
+`r oa_status$n_total` journals are listed in the Directory of Open Access 
+Journals (DOAJ) and can thus be considered fully open access. ^[Code and data 
+for querying the DOAJ API and matching to our data can be found here FIXME]
+
+
+
 # Peer Review
 ```{r pr-computation}
 peer_type_data <- refined_with_areas %>% 
   make_proportion(pr_type_clean, area, order_string = "Double|Single")
 
 # what is the percentage of "unsure"?
-perc_unsure <- refined_with_areas %>% 
-  make_proportion(pr_type_clean, area, order_string = "Unsure") %>% 
-  ungroup() %>% 
-  summarise(unsure = mean(order) %>%  scales::percent(., accuracy = 1))  %>% 
-  as.character()
+pr_type_prop <- refined %>% 
+  make_proportion(pr_type_clean)
+
+perc_unsure <- pr_type_prop %>% 
+  filter(pr_type_clean == "Unsure") %>% 
+  pull(prop) %>% 
+  make_percent()
+
+perc_not_blind <- pr_type_prop %>% 
+  filter(pr_type_clean == "Not blinded") %>% 
+  pull(prop) %>% 
+  make_percent()
 
 ```
 
 Information on what type of peer review is used by a journal is mixed 
-(see figure \@ref(fig:peer-type)).
-Overall, around `r perc_unsure` of all journals do not provide clear information
-about their peer review process. However, there are major differences between 
-disciplines. In the social sciences and humanities, double blind peer review is
-more prevalent, and the proportion of unclear policies the lowest. Business,
-Economics and Management, along with most disciplines from the sciences, display
-higher levels of unclear policies, with single blind peer review being more 
-prevalent in the sciences. Some journals also offer the option for authors to 
+(see figure \@ref(fig:peer-type-overall)).
+Overall, more than `r perc_unsure` of all journals do not provide clear 
+information about their peer review process. The most common peer review 
+practice is single blind per review, followed by double blind peer review.
+Some journals offer the option for authors to 
 choose whether to use single or double blind peer review. These cases have been
-coded as "Other" and amount to the majority of this category. 
+coded as "Other" and amount to the majority of this category.  
+`r perc_not_blind` journals do not anonymize papers or reviews during
+review process.
 
-```{r peer-type, fig.cap="Type of peer review used", fig.asp=.6}
+
+```{r pr-type-overall}
 p_cols <- c("Single blind" = "#1B9E77", "Double blind" =  "#D95F02",
             "Not blinded" =  "#7570B3",
             "Unsure" = "#A6761D", "Other" = "#666666")
+
+
+ggplot(pr_type_prop, aes(fct_reorder(pr_type_clean, n), prop, fill = fct_rev(pr_type_clean))) +
+  geom_chicklet(width = .6, show.legend = F) +
+  coord_flip() +
+  scale_fill_manual(values = p_cols) +
+  scale_y_continuous(labels = function(x) scales::percent(x, accuracy = 1)) +
+  theme(legend.position = "top") +
+  guides(fill = guide_legend(reverse = T)) +
+  labs(fill = NULL, x = NULL, y = NULL, 
+       caption = "What type of peer review is used?")
+```
+
+
+However, there are major differences between disciplines (see figure 
+\@ref(fig:peer-type)). In the social sciences, humanities, double blind peer
+review is
+more prevalent, and the proportion of unclear policies the lowest. Business,
+Economics and Management, along with most disciplines from the sciences, display
+higher levels of unclear policies, with single blind peer review being more 
+prevalent in the sciences. 
+
+```{r peer-type, fig.cap="Type of peer review used", fig.asp=.6}
+
 
 ggplot(peer_type_data, aes(fct_reorder(area, order), prop, fill = fct_rev(pr_type_clean))) +
   geom_chicklet(position = "fill", width = .6) +
@@ -198,7 +244,7 @@ mutate_at("label", ~str_wrap(., 40))
 
 ```
 
-Information on open peer review is similarly sparse (see fig. \@ref(fig:opr)). 
+Information on open peer review is similarly scarce (see fig. \@ref(fig:opr)). 
 The survey included questions on common dimensions of open peer review, like
 whether peer review reports, editorial decision letters or previous versions of
 the manuscript are published, or whether there is public commenting during peer
@@ -235,7 +281,7 @@ Splitting the aspect of revealed reviewer identities by discipline shows a few
 key distinctions (see fig. \@ref(fig:opr-authors)). Whereas revealing reviewer
 identities to the authors is absent from the social sciences, humanities and
 business, it is not unusual in the sciences, at least on an optional basis 
-(for example in case the referee wants to sign their review).
+(for example in case the referee wants to sign their review). 
 
 
 ```{r opr-authors, fig.cap="Open reviewer identities towards authors", fig.asp=.6}
@@ -268,6 +314,10 @@ ggplot(rev_identitiy, aes(fct_rev(fct_reorder(area, order)), prop,
   labs(fill = NULL, x = NULL, y = NULL, 
        caption = "Are reviewer identities revealed to the author (even if not published)?")
 ```
+
+TODO: explain differences between Yes, Mandatory, Conditional, Optional. Tony to
+check and explain.
+
 
 # Co-Review Policy
 ```{r}
@@ -348,14 +398,24 @@ total.
 For a simple overview, the words were stemmed to reduce similar but not 
 identical versions of certain words (like editor/editors).
 Table \@ref(tab:coreview-table) displays the most frequent parts of the
-distinct policies, sorted by propensity.
+distinct policies, sorted by the proportion of policies that contain a given
+term.
 ```{r coreview-table}
 stemmed_words <- stopped_words %>% 
   mutate(word = SnowballC::wordStem(word)) 
   
+
 stemmed_words %>% 
-  count(word, sort = T) %>% 
-  mutate(proportion = {n/sum(n)} %>% scales::percent()) %>% 
+  mutate(word_appears = T) %>% 
+  complete(policy_id, word, fill = list(word_appears = FALSE)) %>% 
+  group_by(word) %>% 
+  summarise(n = sum(word_appears),
+            n_policies = max(policy_id),
+            prop_of_texts = mean(word_appears)) %>% 
+  arrange(desc(prop_of_texts)) %>% 
+  mutate(prop_of_texts = scales::percent(prop_of_texts, accuracy = 1)) %>% 
+  select(Term = word, `Term frequency` = n, 
+         `Proportion of policies that contain term` = prop_of_texts) %>% 
   head(20) %>% 
   knitr::kable(caption = "Propensity of terms in co-review policies")
 ```
@@ -391,17 +451,8 @@ students". Even if the policies do not explicitly forbid or allow the
 involvement of other researchers, in many cases they mandate the reviewer to 
 first obtain permission from the editor in case they want to involve someone
 else in their review. The editor's prominent role can also be observed by the 
-terms' frequent appearance in the policies. Almost three quarters of all policies
+terms' frequent appearance in the policies. Three quarters of all policies
 mention the term "editor". 
-
-```{r}
-editor_propensity <- coreview_policies %>% 
-  distinct() %>% 
-  mutate(contains_editor = str_detect(str_to_lower(coreview_policy), "editor")) %>% 
-  summarise(prop_editor = mean(contains_editor)) %>% 
-  make_percent(2)
-# 71%
-```
 
 
 
@@ -444,7 +495,8 @@ do not have a preprint policy.
 refined_with_areas <- refined_with_areas %>% 
   clean_preprint_version() %>% 
   mutate(preprint_version_clean = fct_relevel(
-    preprint_version_clean, "Any", "First submission only (before peer review)") %>% 
+    preprint_version_clean, "Unsure (preprints are allowed, but it's not clear which version)",
+    "Any", "First submission only (before peer review)") %>% 
     fct_relevel("None", "No preprint policy", "Other", after = 4))
     
     
@@ -455,9 +507,9 @@ preprint_version <- refined_with_areas %>%
 
 
 p_cols <- c("No preprint policy" =  "#E7298A", "Other" = "#666666",
-            "Any" = "#1B9E77", "After peer review" = "#D95F02", 
-             "First submission only (before peer review)" = "#7570B3",
-            "Unsure (preprints are allowed, but it's not clear which version)" = "#66A61E",
+            "Any" = "#D95F02", "After peer review" = "#66A61E", 
+            "First submission only (before peer review)" = "#7570B3",
+            "Unsure (preprints are allowed, but it's not clear which version)" = "#1B9E77",
             "None" = "#E6AB02"
 )
 
@@ -481,7 +533,7 @@ p <- ggplot(preprint_version, aes(fct_reorder(area, order), prop,
   guides(fill = guide_legend(reverse = T, nrow = 4)) +
   labs(fill = NULL, x = NULL, y = NULL, 
        caption = "What version of a preprint can be posted?")
-
+p
 
 gt <- ggplot_gtable(ggplot_build(p))
 gt$layout$clip[gt$layout$name == "panel"] <- "off"
@@ -588,6 +640,27 @@ of all journals in the life and earth sciences allowing citations to preprints
 either in the text or in the reference list. In contrast, the social sciences 
 and humanities either have unclear or no policies regarding whether preprints 
 can be cited or not. 
+
+
+# Discussion
+
+
+## Influential role of editor
+The editor's role in all this is higly influential, with a lot of leeway.
+Flexibility is good, uncertainty is bad.
+
+Recall figure 
+\@ref(fig:opr-authors), where we investigated whether reviewer identities are
+revealed to authors, even if they are not made public. The high 
+proportion of journals within SSH that are categorised as "not specified" might
+be surprising, given that most of them conduct double blind peer review. One 
+could thus infer, that reviewer identities are not revealed to the author. This
+inference however is the root problem: there are no clear policies. Reviewers
+might sign their review or not, what the authors receive is at the editor's 
+discretion. 
+
+## Unclear policies
+this is bad, because ...
 
 
 # Bibliography

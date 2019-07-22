@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2019-07-15
+date: Last updated 2019-07-22
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -14,21 +14,20 @@ bibliography: landscape.bib
 
 
 
-# Subject areas
+# Sample characteristics
 The approach taken to create the sample of journals led to a few journals 
-having no data on subject area: some journals like "Gut" were within the top
-100 journals, but not within any of the sub-categories. This is because the
-h-index varies greatly between sub-categories, as can be seen from figure 
-\@ref(fig:h-indices).
+having no data on disciplinary area: some journals like "Gut" were within the 
+top 100 journals, but not within any of the sub-categories. This is because the
+h-index varies greatly between sub-categories. Figure \@ref(fig:h-indices)
+shows the top-20 journals of each discipline.
 
 <div class="figure">
 <img src="12-analysis-writeup_files/figure-html/h-indices-1.png" alt="Distribution of h5-index across disciplines"  />
 <p class="caption">(\#fig:h-indices)Distribution of h5-index across disciplines</p>
 </div>
 
-To be able to include all journals for analysis that distinguishes by 
-discipline, the
-missing categorisations were added afterwards. To this end, we scraped all 
+The missing categorisations were added in a second step, to facilitate analysis 
+of all journals that distinguishes by discipline. To this end, we scraped all 
 disciplines and sub-disciplines from Google Scholar and matched those to our data.
 ^[The code for collecting the data from Google Scholar can be found here:
 ADD LINKS HERE TO DATA AND SCRIPT]
@@ -64,20 +63,43 @@ the health and medical sciences, the sample is slightly skewed in that direction
 </div>
 
 
+
+
+
+
+
+Regarding practices of open access, only 8 of 
+171 journals are listed in the Directory of Open Access 
+Journals (DOAJ) and can thus be considered fully open access. ^[Code and data 
+for querying the DOAJ API and matching to our data can be found here FIXME]
+
+
+
 # Peer Review
 
 
 Information on what type of peer review is used by a journal is mixed 
-(see figure \@ref(fig:peer-type)).
-Overall, around 30% of all journals do not provide clear information
-about their peer review process. However, there are major differences between 
-disciplines. In the social sciences and humanities, double blind peer review is
+(see figure \@ref(fig:peer-type-overall)).
+Overall, more than 30% of all journals do not provide clear 
+information about their peer review process. The most common peer review 
+practice is single blind per review, followed by double blind peer review.
+Some journals offer the option for authors to 
+choose whether to use single or double blind peer review. These cases have been
+coded as "Other" and amount to the majority of this category.  
+1% journals do not anonymize papers or reviews during
+review process.
+
+
+![](12-analysis-writeup_files/figure-html/pr-type-overall-1.png)<!-- -->
+
+
+However, there are major differences between disciplines (see figure 
+\@ref(fig:peer-type)). In the social sciences, humanities, double blind peer
+review is
 more prevalent, and the proportion of unclear policies the lowest. Business,
 Economics and Management, along with most disciplines from the sciences, display
 higher levels of unclear policies, with single blind peer review being more 
-prevalent in the sciences. Some journals also offer the option for authors to 
-choose whether to use single or double blind peer review. These cases have been
-coded as "Other" and amount to the majority of this category. 
+prevalent in the sciences. 
 
 <div class="figure">
 <img src="12-analysis-writeup_files/figure-html/peer-type-1.png" alt="Type of peer review used"  />
@@ -95,7 +117,7 @@ review activity is deposited in any kind of database, open or not.
 # Open Peer Review
 
 
-Information on open peer review is similarly sparse (see fig. \@ref(fig:opr)). 
+Information on open peer review is similarly scarce (see fig. \@ref(fig:opr)). 
 The survey included questions on common dimensions of open peer review, like
 whether peer review reports, editorial decision letters or previous versions of
 the manuscript are published, or whether there is public commenting during peer
@@ -119,13 +141,17 @@ Splitting the aspect of revealed reviewer identities by discipline shows a few
 key distinctions (see fig. \@ref(fig:opr-authors)). Whereas revealing reviewer
 identities to the authors is absent from the social sciences, humanities and
 business, it is not unusual in the sciences, at least on an optional basis 
-(for example in case the referee wants to sign their review).
+(for example in case the referee wants to sign their review). 
 
 
 <div class="figure">
 <img src="12-analysis-writeup_files/figure-html/opr-authors-1.png" alt="Open reviewer identities towards authors"  />
 <p class="caption">(\#fig:opr-authors)Open reviewer identities towards authors</p>
 </div>
+
+TODO: explain differences between Yes, Mandatory, Conditional, Optional. Tony to
+check and explain.
+
 
 # Co-Review Policy
 
@@ -167,32 +193,33 @@ total.
 For a simple overview, the words were stemmed to reduce similar but not 
 identical versions of certain words (like editor/editors).
 Table \@ref(tab:coreview-table) displays the most frequent parts of the
-distinct policies, sorted by propensity.
+distinct policies, sorted by the proportion of policies that contain a given
+term.
 
 Table: (\#tab:coreview-table)Propensity of terms in co-review policies
 
-word            n  proportion 
------------  ----  -----------
-review        135  11.7%      
-manuscript     53  4.6%       
-editor         44  3.8%       
-confidenti     34  3.0%       
-not            30  2.6%       
-inform         25  2.2%       
-colleagu       21  1.8%       
-involv         17  1.5%       
-journal        17  1.5%       
-consult        15  1.3%       
-discuss        15  1.3%       
-disclos        14  1.2%       
-permiss        14  1.2%       
-student        14  1.2%       
-author         13  1.1%       
-peer           13  1.1%       
-process        12  1.0%       
-ensur          11  1.0%       
-obtain         11  1.0%       
-person         11  1.0%       
+Term          Term frequency  Proportion of policies that contain term 
+-----------  ---------------  -----------------------------------------
+review                   135  94%                                      
+editor                    44  75%                                      
+manuscript                53  73%                                      
+confidenti                34  63%                                      
+not                       30  59%                                      
+inform                    25  51%                                      
+colleagu                  21  45%                                      
+journal                   17  35%                                      
+involv                    17  35%                                      
+discuss                   15  32%                                      
+consult                   15  31%                                      
+permiss                   14  31%                                      
+peer                      13  28%                                      
+student                   14  27%                                      
+author                    13  27%                                      
+disclos                   14  27%                                      
+process                   12  26%                                      
+ensur                     11  24%                                      
+person                    11  24%                                      
+obtain                    11  23%                                      
 
 
 The most prominent themes that emerge are:
@@ -225,10 +252,8 @@ students". Even if the policies do not explicitly forbid or allow the
 involvement of other researchers, in many cases they mandate the reviewer to 
 first obtain permission from the editor in case they want to involve someone
 else in their review. The editor's prominent role can also be observed by the 
-terms' frequent appearance in the policies. Almost three quarters of all policies
+terms' frequent appearance in the policies. Three quarters of all policies
 mention the term "editor". 
-
-
 
 
 
@@ -293,6 +318,27 @@ of all journals in the life and earth sciences allowing citations to preprints
 either in the text or in the reference list. In contrast, the social sciences 
 and humanities either have unclear or no policies regarding whether preprints 
 can be cited or not. 
+
+
+# Discussion
+
+
+## Influential role of editor
+The editor's role in all this is higly influential, with a lot of leeway.
+Flexibility is good, uncertainty is bad.
+
+Recall figure 
+\@ref(fig:opr-authors), where we investigated whether reviewer identities are
+revealed to authors, even if they are not made public. The high 
+proportion of journals within SSH that are categorised as "not specified" might
+be surprising, given that most of them conduct double blind peer review. One 
+could thus infer, that reviewer identities are not revealed to the author. This
+inference however is the root problem: there are no clear policies. Reviewers
+might sign their review or not, what the authors receive is at the editor's 
+discretion. 
+
+## Unclear policies
+this is bad, because ...
 
 
 # Bibliography
