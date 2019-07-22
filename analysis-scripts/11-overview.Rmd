@@ -27,6 +27,7 @@ library(landscapeStudy)
 # install.packages("ggchicklet", repos = "https://cinc.rud.is")
 library(ggchicklet)
 library(ggridges)
+library(ca)
 
 theme_set(hrbrmisc::theme_hrbrmstr())
 
@@ -573,4 +574,368 @@ refined %>%
   coord_flip() +
   labs(title = "Is a link provided to the preprint version of a paper?")
 ```
+
+
+
+# Cross tabulations
+Results have until now been examined spearated from each other. To bring them 
+all together, we will employ Correspondence Analysis as a means of visualising
+and investigating adjecent sets of tables. 
+
+Different variables could serve as dependent variables: disciplinary area is
+the first contender. But this could have an overly strong influence. We could
+thus also look at peer review type, and add discipline only as a supplementary 
+variable.
+
+Or we could do multiple correspondence analysis...
+
+The question we have is: are there certain journals that have unclear policies
+in general, or not. Thus: are there pioneers that are open to new concepts and
+clear in their policies and then the others that lag behind.
+
+
+```{r}
+ca_first <- refined %>% 
+  mutate(coreview_email = case_when(
+    coreview_email == "unsure" ~ "Unsure",
+    # lump the two not specified to unsure, since this is similar in this 
+    # instance
+    coreview_email == "Not specified" ~ "Unsure",
+    TRUE ~ coreview_email
+  )) %>% 
+  select(pr_type_clean, coreview_email, opr_indenties_author) %>% 
+  mutate(pr_type_clean = paste0("pr_type-", pr_type_clean),
+         coreview_email = paste0("coreview-", coreview_email),
+         opr = paste0("reviewer_identities-", opr_indenties_author)) %>% 
+  select(-opr_indenties_author) %>% 
+  ca::mjca()
+
+
+ca_first %>% 
+  plot_ca()
+
+```
+
+
+
+
+```{r, fig.width=10, fig.height=8}
+ca_second <- refined %>% 
+    mutate(preprint_version_clean = case_when(
+              str_detect(preprint_version, "Unsure") ~ "Unsure",
+              str_detect(preprint_version, "Any .*? or") ~ "Other",
+              str_detect(preprint_version, "Other|Unclear") ~ "Other",
+              str_detect(preprint_version, "None") ~ "None",
+              str_detect(preprint_version, "First sub") ~ "Yes",
+              str_detect(preprint_version, "After peer re") ~ "Yes",
+              str_detect(preprint_version, "Any|any") ~ "Yes",
+              str_detect(preprint_version, "No") ~ "No policy"),
+           preprint_citation_clean = case_when(
+              str_detect(preprint_citation, "Not spec") ~ "Not specified",
+              str_detect(preprint_citation, "Unsure") ~ "Unsure",
+              str_detect(preprint_citation, "No") ~ "No",
+              str_detect(preprint_citation, "only in the text") ~ "Yes",
+              str_detect(preprint_citation, "reference list") ~ "Yes",
+              is.na(preprint_citation) ~ NA_character_,
+              TRUE ~ "Other"),
+           opr_indenties_author_clean = case_when(
+              str_detect(opr_indenties_author, "Conditional") ~ "Conditional",
+              str_detect(str_to_lower(opr_indenties_author), "not spec") ~ "Not specified",
+              str_detect(opr_indenties_author, "Optional") ~ "Optional",
+              TRUE ~ opr_indenties_author),
+          coreview_email = case_when(
+              coreview_email == "unsure" ~ "Unsure",
+              # lump the two not specified to unsure, since this is similar in this 
+              # instance
+              coreview_email == "Not specified" ~ "Unsure",
+              TRUE ~ coreview_email)
+          ) %>% 
+  select(pr_type_clean, coreview_email, opr_indenties_author_clean, 
+         preprint_version_clean, preprint_citation_clean) %>% 
+  # Filter out these journals since they are very special
+  filter(pr_type_clean != "Not blinded") %>% 
+  mutate(pr_type_clean = paste0("pr_type-", pr_type_clean),
+         coreview_email = paste0("coreview-", coreview_email),
+         opr_indenties_author_clean = paste0("reviewer_identities-", opr_indenties_author_clean),
+         preprint_version_clean = paste0("preprint_version-", preprint_version_clean),
+         preprint_citation_clean = paste0("preprint_citation-", preprint_citation_clean)) %>% 
+  ca::mjca()
+ca_second  
+
+
+ca_second %>% 
+  plot_ca(dimensions = c(1, 2)) +
+  coord_fixed()
+
+
+```
+
+
+```{r, fig.width=10, fig.height=8}
+refined %>% 
+    mutate(preprint_version_clean = case_when(
+              str_detect(preprint_version, "Unsure") ~ "Unsure",
+              str_detect(preprint_version, "Any .*? or") ~ "Other",
+              str_detect(preprint_version, "Other|Unclear") ~ "Other",
+              str_detect(preprint_version, "None") ~ "None",
+              str_detect(preprint_version, "First sub") ~ "Yes",
+              str_detect(preprint_version, "After peer re") ~ "Yes",
+              str_detect(preprint_version, "Any|any") ~ "Yes",
+              str_detect(preprint_version, "No") ~ "No policy"),
+           preprint_citation_clean = case_when(
+              str_detect(preprint_citation, "Not spec") ~ "Not specified",
+              str_detect(preprint_citation, "Unsure") ~ "Unsure",
+              str_detect(preprint_citation, "No") ~ "No",
+              str_detect(preprint_citation, "only in the text") ~ "Yes",
+              str_detect(preprint_citation, "reference list") ~ "Yes",
+              is.na(preprint_citation) ~ NA_character_,
+              TRUE ~ "Other"),
+           opr_indenties_author_clean = case_when(
+              str_detect(opr_indenties_author, "Conditional") ~ "Conditional",
+              str_detect(str_to_lower(opr_indenties_author), "not spec") ~ "Not specified",
+              str_detect(opr_indenties_author, "Optional") ~ "Optional",
+              TRUE ~ opr_indenties_author),
+          coreview_email = case_when(
+              coreview_email == "unsure" ~ "Unsure",
+              # lump the two not specified to unsure, since this is similar in this 
+              # instance
+              coreview_email == "Not specified" ~ "Unsure",
+              TRUE ~ coreview_email)
+          ) %>% 
+  select(pr_type_clean, coreview_email, opr_indenties_author_clean, 
+         preprint_version_clean, preprint_citation_clean) %>% 
+  # Filter out these journals since they are very special
+  filter(pr_type_clean != "Not blinded") %>% 
+  mutate(pr_type_clean = paste0("pr_type-", pr_type_clean),
+         coreview_email = paste0("coreview-", coreview_email),
+         opr_indenties_author_clean = paste0("reviewer_identities-", opr_indenties_author_clean),
+         preprint_version_clean = paste0("preprint_version-", preprint_version_clean),
+         preprint_citation_clean = paste0("preprint_citation-", preprint_citation_clean)) %>% 
+  select(-opr_indenties_author_clean) %>% 
+  ca::mjca() %>% 
+  plot_ca(dimensions = c(1, 2)) +
+  coord_fixed()
+
+
+```
+
+```{r, fig.width=10, fig.height=8}
+refined_with_areas %>% 
+    mutate(preprint_version_clean = case_when(
+              str_detect(preprint_version, "Unsure") ~ "Unsure",
+              str_detect(preprint_version, "Any .*? or") ~ "Other",
+              str_detect(preprint_version, "Other|Unclear") ~ "Other",
+              str_detect(preprint_version, "None") ~ "None",
+              str_detect(preprint_version, "First sub") ~ "Yes",
+              str_detect(preprint_version, "After peer re") ~ "Yes",
+              str_detect(preprint_version, "Any|any") ~ "Yes",
+              str_detect(preprint_version, "No") ~ "No policy"),
+           preprint_citation_clean = case_when(
+              str_detect(preprint_citation, "Not spec") ~ "Not specified",
+              str_detect(preprint_citation, "Unsure") ~ "Unsure",
+              str_detect(preprint_citation, "No") ~ "No",
+              str_detect(preprint_citation, "only in the text") ~ "Yes",
+              str_detect(preprint_citation, "reference list") ~ "Yes",
+              is.na(preprint_citation) ~ NA_character_,
+              TRUE ~ "Other"),
+           opr_indenties_author_clean = case_when(
+              str_detect(opr_indenties_author, "Conditional") ~ "Conditional",
+              str_detect(str_to_lower(opr_indenties_author), "not spec") ~ "Not specified",
+              str_detect(opr_indenties_author, "Optional") ~ "Optional",
+              TRUE ~ opr_indenties_author),
+          coreview_email = case_when(
+              coreview_email == "unsure" ~ "Unsure",
+              # lump the two not specified to unsure, since this is similar in this 
+              # instance
+              coreview_email == "Not specified" ~ "Unsure",
+              TRUE ~ coreview_email)
+          ) %>% 
+  select(pr_type_clean, coreview_email, opr_indenties_author_clean, 
+         preprint_version_clean, preprint_citation_clean, area) %>% 
+  # Filter out these journals since they are very special
+  filter(pr_type_clean != "Not blinded") %>% 
+  mutate(pr_type_clean = paste0("pr_type-", pr_type_clean),
+         coreview_email = paste0("coreview-", coreview_email),
+         opr_indenties_author_clean = paste0("reviewer_identities-", opr_indenties_author_clean),
+         preprint_version_clean = paste0("preprint_version-", preprint_version_clean),
+         preprint_citation_clean = paste0("preprint_citation-", preprint_citation_clean)) %>% 
+  ca::mjca(supcol = 3) %>% 
+  plot_ca(dimensions = c(1, 2)) +
+  coord_fixed()
+
+```
+
+
+```{r, fig.width=10, fig.height=8}
+# try with ca
+start_data <- refined %>% 
+    mutate(preprint_version_clean = case_when(
+              str_detect(preprint_version, "Unsure") ~ "Unsure",
+              str_detect(preprint_version, "Any .*? or") ~ "Other",
+              str_detect(preprint_version, "Other|Unclear") ~ "Other",
+              str_detect(preprint_version, "None") ~ "None",
+              str_detect(preprint_version, "First sub") ~ "Yes",
+              str_detect(preprint_version, "After peer re") ~ "Yes",
+              str_detect(preprint_version, "Any|any") ~ "Yes",
+              str_detect(preprint_version, "No") ~ "No policy"),
+           preprint_citation_clean = case_when(
+              str_detect(preprint_citation, "Not spec") ~ "Not specified",
+              str_detect(preprint_citation, "Unsure") ~ "Unsure",
+              str_detect(preprint_citation, "No") ~ "No",
+              str_detect(preprint_citation, "only in the text") ~ "Yes",
+              str_detect(preprint_citation, "reference list") ~ "Yes",
+              is.na(preprint_citation) ~ NA_character_,
+              TRUE ~ "Other"),
+           opr_indenties_author_clean = case_when(
+              str_detect(opr_indenties_author, "Conditional") ~ "Conditional",
+              str_detect(str_to_lower(opr_indenties_author), "not spec") ~ "Not specified",
+              str_detect(opr_indenties_author, "Optional") ~ "Optional",
+              TRUE ~ opr_indenties_author),
+          coreview_email = case_when(
+              coreview_email == "unsure" ~ "Unsure",
+              # lump the two not specified to unsure, since this is similar in this 
+              # instance
+              coreview_email == "Not specified" ~ "Unsure",
+              TRUE ~ coreview_email)
+          ) %>% 
+  select(pr_type_clean, coreview_email, opr_indenties_author_clean, 
+         preprint_version_clean, preprint_citation_clean) %>% 
+  # Filter out these journals since they are very special
+  filter(pr_type_clean != "Not blinded") %>% 
+  mutate(pr_type_clean = paste0("pr_type-", pr_type_clean),
+         coreview_email = paste0("coreview-", coreview_email),
+         opr_indenties_author_clean = paste0("reviewer_identities-", opr_indenties_author_clean),
+         preprint_version_clean = paste0("preprint_version-", preprint_version_clean),
+         preprint_citation_clean = paste0("preprint_citation-", preprint_citation_clean))
+
+
+obj1 <- with(start_data, table(coreview_email, pr_type_clean))
+obj2 <- with(start_data, table(opr_indenties_author_clean, pr_type_clean))
+obj3 <- with(start_data, table(preprint_version_clean, pr_type_clean))
+obj4 <- with(start_data, table(preprint_citation_clean, pr_type_clean))
+
+rbind(obj1, obj2, obj3, obj4) %>% 
+  ca::ca(suprow = c(13, 17)) %>% 
+  plot_ca() +
+  coord_fixed()
+```
+
+
+```{r, fig.width=10, fig.height=8}
+# try with ca
+start_data <- refined_with_areas %>% 
+    mutate(preprint_version_clean = case_when(
+              str_detect(preprint_version, "Unsure") ~ "Unsure",
+              str_detect(preprint_version, "Any .*? or") ~ "Other",
+              str_detect(preprint_version, "Other|Unclear") ~ "Other",
+              str_detect(preprint_version, "None") ~ "None",
+              str_detect(preprint_version, "First sub") ~ "Yes",
+              str_detect(preprint_version, "After peer re") ~ "Yes",
+              str_detect(preprint_version, "Any|any") ~ "Yes",
+              str_detect(preprint_version, "No") ~ "No policy"),
+           preprint_citation_clean = case_when(
+              str_detect(preprint_citation, "Not spec") ~ "Not specified",
+              str_detect(preprint_citation, "Unsure") ~ "Unsure",
+              str_detect(preprint_citation, "No") ~ "No",
+              str_detect(preprint_citation, "only in the text") ~ "Yes",
+              str_detect(preprint_citation, "reference list") ~ "Yes",
+              is.na(preprint_citation) ~ NA_character_,
+              TRUE ~ "Other"),
+           opr_indenties_author_clean = case_when(
+              str_detect(opr_indenties_author, "Conditional") ~ "Conditional",
+              str_detect(str_to_lower(opr_indenties_author), "not spec") ~ "Not specified",
+              str_detect(opr_indenties_author, "Optional") ~ "Optional",
+              TRUE ~ opr_indenties_author),
+          coreview_email = case_when(
+              # coreview_email == "unsure" ~ "Unsure",
+              # # lump the two not specified to unsure, since this is similar in this 
+              # # instance
+              # coreview_email == "Not specified" ~ "Unsure",
+              str_detect(coreview_email, "Yes|No") ~ "Has policy",
+              TRUE ~ "Has no policy")
+          ) %>% 
+  select(pr_type_clean, coreview_email, opr_indenties_author_clean, 
+         preprint_version_clean, preprint_citation_clean, area) %>% 
+  # Filter out these journals since they are very special
+  filter(pr_type_clean != "Not blinded") %>% 
+  mutate(pr_type_clean = paste0("pr_type-", pr_type_clean),
+         coreview_email = paste0("coreview-", coreview_email),
+         opr_indenties_author_clean = paste0("reviewer_identities-", opr_indenties_author_clean),
+         preprint_version_clean = paste0("preprint_version-", preprint_version_clean),
+         preprint_citation_clean = paste0("preprint_citation-", preprint_citation_clean))
+
+
+obj1 <- with(start_data, table(coreview_email, area))
+obj2 <- with(start_data, table(opr_indenties_author_clean, area))
+obj3 <- with(start_data, table(preprint_version_clean, area))
+obj4 <- with(start_data, table(preprint_citation_clean, area))
+obj5 <- with(start_data, table(pr_type_clean, area))
+
+# look at chisq differences
+res <- rbind(obj1, obj3, obj4, obj5) %>% chisq.test() 
+res
+
+rbind(obj1, obj3, obj4, obj5) %>% questionr::cramer.v()
+
+ca_out <- rbind(obj1, obj3, obj4, obj5) %>%
+  ca::ca()
+
+
+ca_out %>% 
+  plot_ca(dimensions = c(1, 2)) +
+  coord_fixed() +
+  scale_color_manual(values = c("Zeilenprofil" = "#1B9E77", "Spaltenprofil" = "#D95F02"))
+
+```
+
+First axis is distinction between SSH and sciences. Second axis is more 
+difficult in terms of what it means. It also has not that much inertia, thus 
+being not very influential
+
+
+```{r, fig.width=10, fig.height=8}
+ca_out %>% 
+  plot_ca(dimensions = c(1, 2), map = "rowprincipal") +
+  coord_fixed() +
+  scale_color_manual(values = c("Zeilenprofil" = "#1B9E77", "Spaltenprofil" = "#D95F02"))
+
+```
+
+```{r}
+summary(ca_out)
+ca_out
+```
+
+Axis are mainly determined by peer review policy. Maybe remove this variable to
+bring out mor subtle and potentialy more meaningful answers regarding the key 
+topics (that SSH have double blind and Sciences have single blind seems to be 
+well established)
+
+```{r, fig.width=10, fig.height=8}
+# try without peer review type
+
+
+# obj2, obj3, obj4
+ca_out <- rbind(obj1, obj3, obj4) %>%
+  ca::ca()
+
+
+ca_out %>% 
+  plot_ca(dimensions = c(1, 2), map = "rowprincipal") +
+  coord_fixed() +
+  scale_color_manual(values = c("Zeilenprofil" = "#1B9E77", "Spaltenprofil" = "#D95F02"))
+
+```
+
+
+```{r}
+summary(ca_out)
+ca_out %>% 
+  plot_ca(dimensions = c(1, 2)) +
+  coord_fixed() +
+  scale_color_manual(values = c("Zeilenprofil" = "#1B9E77", "Spaltenprofil" = "#D95F02"))
+
+```
+
+There is not much variation left to explain here, somehow.
 
