@@ -147,18 +147,17 @@ perc_not_blind <- pr_type_prop %>%
 ```
 
 Information on what type of peer review is used by a journal is mixed 
-(see figure \@ref(fig:peer-type-overall)).
+(see figure \@ref(fig:pr-type-overall)).
 Overall, more than `r perc_unsure` of all journals do not provide clear 
 information about their peer review process. The most common peer review 
 practice is single blind per review, followed by double blind peer review.
 Some journals offer the option for authors to 
 choose whether to use single or double blind peer review. These cases have been
-coded as "Other" and amount to the majority of this category.  
-`r perc_not_blind` journals do not anonymize papers or reviews during
-review process.
+coded as "Other" and amount to the majority of this category. `r perc_not_blind` 
+journals do not anonymize papers or reviews during review process.
 
 
-```{r pr-type-overall}
+```{r pr-type-overall, fig.asp=.5, fig.cap="Type of peer review"}
 p_cols <- c("Single blind" = "#1B9E77", "Double blind" =  "#D95F02",
             "Not blinded" =  "#7570B3",
             "Unsure" = "#A6761D", "Other" = "#666666")
@@ -184,7 +183,7 @@ Economics and Management, along with most disciplines from the sciences, display
 higher levels of unclear policies, with single blind peer review being more 
 prevalent in the sciences. 
 
-```{r peer-type, fig.cap="Type of peer review used", fig.asp=.6}
+```{r peer-type, fig.cap="Type of peer review by discipline", fig.asp=.6}
 
 
 ggplot(peer_type_data, aes(fct_reorder(area, order), prop, fill = fct_rev(pr_type_clean))) +
@@ -441,7 +440,8 @@ of other associations, the term "review" was removed from the figure.
 
 ```{r bigrams, fig.width=9, fig.height=7, fig.cap="Bigrams of co-review policies"}
 coreview_policies %>% 
-  make_bigram_analysis(coreview_policy, remove = "review", cutoff = 2)
+  make_bigram_analysis(coreview_policy, remove = "review", cutoff = 2,
+                       point_col = "#66A61E")
 ```
 
 From both displays it is obvious, that journals stress the importance of 
@@ -642,9 +642,9 @@ and humanities either have unclear or no policies regarding whether preprints
 can be cited or not. 
 
 
+
+
 # Discussion
-
-
 ## Influential role of editor
 The editor's role in all this is higly influential, with a lot of leeway.
 Flexibility is good, uncertainty is bad.

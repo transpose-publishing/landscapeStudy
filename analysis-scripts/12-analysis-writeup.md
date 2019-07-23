@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2019-07-22
+date: Last updated 2019-07-23
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -79,18 +79,20 @@ for querying the DOAJ API and matching to our data can be found here FIXME]
 
 
 Information on what type of peer review is used by a journal is mixed 
-(see figure \@ref(fig:peer-type-overall)).
+(see figure \@ref(fig:pr-type-overall)).
 Overall, more than 30% of all journals do not provide clear 
 information about their peer review process. The most common peer review 
 practice is single blind per review, followed by double blind peer review.
 Some journals offer the option for authors to 
 choose whether to use single or double blind peer review. These cases have been
-coded as "Other" and amount to the majority of this category.  
-1% journals do not anonymize papers or reviews during
-review process.
+coded as "Other" and amount to the majority of this category. 1% 
+journals do not anonymize papers or reviews during review process.
 
 
-![](12-analysis-writeup_files/figure-html/pr-type-overall-1.png)<!-- -->
+<div class="figure">
+<img src="12-analysis-writeup_files/figure-html/pr-type-overall-1.png" alt="Type of peer review"  />
+<p class="caption">(\#fig:pr-type-overall)Type of peer review</p>
+</div>
 
 
 However, there are major differences between disciplines (see figure 
@@ -102,8 +104,8 @@ higher levels of unclear policies, with single blind peer review being more
 prevalent in the sciences. 
 
 <div class="figure">
-<img src="12-analysis-writeup_files/figure-html/peer-type-1.png" alt="Type of peer review used"  />
-<p class="caption">(\#fig:peer-type)Type of peer review used</p>
+<img src="12-analysis-writeup_files/figure-html/peer-type-1.png" alt="Type of peer review by discipline"  />
+<p class="caption">(\#fig:peer-type)Type of peer review by discipline</p>
 </div>
 
 
@@ -320,9 +322,11 @@ and humanities either have unclear or no policies regarding whether preprints
 can be cited or not. 
 
 
+
+
+
+
 # Discussion
-
-
 ## Influential role of editor
 The editor's role in all this is higly influential, with a lot of leeway.
 Flexibility is good, uncertainty is bad.
