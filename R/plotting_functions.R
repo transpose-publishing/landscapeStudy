@@ -30,7 +30,7 @@ plot_with_areas <- function(data, var, title = NULL) {
 }
 
 make_bigram_analysis <- function(df, var, cutoff = 2, .distinct = T,
-                                 remove = "") {
+                                 remove = "", point_col = "lightblue") {
 
 
   if (.distinct) {
@@ -69,7 +69,7 @@ make_bigram_analysis <- function(df, var, cutoff = 2, .distinct = T,
   ggraph::ggraph(bigram_graph, layout = "fr") +
     ggraph::geom_edge_link(aes(edge_alpha = n), show.legend = FALSE,
                            arrow = a, end_cap = circle(.07, 'inches')) +
-    ggraph::geom_node_point(color = "lightblue", size = 4) +
+    ggraph::geom_node_point(color = point_col, size = 4) +
     ggraph::geom_node_text(aes(label = name), vjust = 1, hjust = 1, repel = T) +
     theme_void()
 }
