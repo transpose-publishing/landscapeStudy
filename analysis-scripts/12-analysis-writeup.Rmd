@@ -642,6 +642,106 @@ and humanities either have unclear or no policies regarding whether preprints
 can be cited or not. 
 
 
+# The Landscape of Open Science Practices
+Results so far have revealed that in many cases policies are unclear. But in
+which ways are policies related to each other? Do journals that allow co-review
+also allow preprints? Is there a gradient between journals that are pioneers in
+regard to open science, and others that lag behind? Or are there certain groups
+of journals, open in one area, reluctant in the second and maybe unclear in the
+third?
+
+To answer these question, we employ Multiple Correspondence Analysis (MCA). 
+The technique allows us to explore the different policies jointly
+(Greenacre & Blasius 2006: 27) and thus paint
+a landscape of open science practices among journals.
+
+To facilitate interpration of the figures, variables had to be recoded. 
+Categories with low counts were merged. Where feasible, we focused on whether 
+certain  policies were clear or not, thus omitting the subtle differences within
+the policies (for example whether journals allowed citations of preprints was 
+simplified for whether the policy was clear (references allowed in text, 
+reference list or not allowed) versus unclear (unsure about policy, no policy 
+and other)). 
+
+It should be noted that the procedure is strictly exploratory. We are exploring,
+not testing any hypothesis.
+
+
+```{r recode-for-mca}
+mca_data <- refined_with_areas %>%
+  mutate(
+    co_review = case_when(
+      coreview_email == "Yes" | coreview_email == "No" ~ "Coreview ++",
+      TRUE ~ "Coreview ??"
+    ),
+    preprint_posting = case_when(
+      str_detect(preprint_version, "Unsure") ~ "Preprints posting ??",
+      str_detect(preprint_version, "Other|Unclear") ~ "Preprints posting ??",
+      str_detect(preprint_version, "None") ~ "Preprints posting ++",
+      str_detect(preprint_version, "First sub") ~ "Preprints posting ++",
+      str_detect(preprint_version, "After peer re") ~ "Preprints posting ++",
+      str_detect(preprint_version, "Any|any") ~ "Preprints posting ++",
+      str_detect(preprint_version, "No preprint policy") ~ "Preprints posting ??"
+    ),
+    preprint_citing = case_when(
+      str_detect(preprint_citation, "Not spec") ~ "Citing preprints ??",
+      str_detect(preprint_citation, "Unsure") ~ "Citing preprints ??",
+      str_detect(preprint_citation, "No") ~ "Citing preprints ++",
+      str_detect(preprint_citation, "only in the text") ~ "Citing preprints ++",
+      str_detect(preprint_citation, "reference list") ~ "Citing preprints ++",
+      preprint_citation == "Yes" ~ "Citing preprints ++",
+      TRUE ~ "Citing preprints ??"
+    ),
+    identities_revealed = case_when(
+      opr_indenties_author == "No" | opr_indenties_author == "Not specified" ~ "Reviewer identities not revealed to authors",
+      TRUE ~ "Reviewer identities revealed to authors"
+    ),
+    pr_type_clean = fct_recode(pr_type_clean, 
+                               `Other type of peer review` = "Other",
+                               `Peer review ??` = "Unsure")
+    
+  )
+```
+
+
+```{r compute-mca}
+final_4 <- mca_data %>%
+  mutate(publisher_cat = fct_lump(publisher_clean, n = 2,
+                                  other_level = "Other publishers")) %>%
+  select(co_review, preprint_posting, preprint_citing, identities_revealed,
+         pr_type_clean, area, publisher_cat) %>%
+  ca::mjca(supcol = 6:7)
+```
+
+
+
+```{r mca-table}
+summary(final_4) %>%
+  .[["columns"]] %>%
+  as_tibble(.name_repair = "unique") %>%
+  mutate(name = str_remove(name, ".*?\\:")) %>%
+  select(-` qlt`, inertia = ` inr`,
+         `correlation with dim 1` = "cor...6",
+         `contribution to dim 1` = "ctr...7",
+         `correlation with dim 2` = "cor...9",
+         `contribution to dim 2` = "ctr...10",) %>%
+  knitr::kable()
+```
+
+```{r plot-mca, fig.width=12, fig.height=8}
+final_4 %>%
+  plot_ca(font_size = 3.5) +
+  coord_fixed() +
+  theme(legend.position = "top") +
+  scale_color_manual(values = c("Initial Variables" = "#1B9E77",
+                                "Supplementary Variables" = "#D95F02")) +
+  labs(title = "The Landscape of Open Science Practices",
+       caption = paste(
+         "Disciplines and publishers were added as supplementary (passive) and have no impact on the space.",
+         "`++` means that there is a clear policy, `??` that there is no clear policy",
+         sep = "\n"))
+```
+
 
 
 # Discussion

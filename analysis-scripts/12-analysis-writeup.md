@@ -322,7 +322,67 @@ and humanities either have unclear or no policies regarding whether preprints
 can be cited or not. 
 
 
+# The Landscape of Open Science Practices
+Results so far have revealed that in many cases policies are unclear. But in
+which ways are policies related to each other? Do journals that allow co-review
+also allow preprints? Is there a gradient between journals that are pioneers in
+regard to open science, and others that lag behind? Or are there certain groups
+of journals, open in one area, reluctant in the second and maybe unclear in the
+third?
 
+To answer these question, we employ Multiple Correspondence Analysis (MCA). 
+The technique allows us to explore the different policies jointly
+(Greenacre & Blasius 2006: 27) and thus paint
+a landscape of open science practices among journals.
+
+To facilitate interpration of the figures, variables had to be recoded. 
+Categories with low counts were merged. Where feasible, we focused on whether 
+certain  policies were clear or not, thus omitting the subtle differences within
+the policies (for example whether journals allowed citations of preprints was 
+simplified for whether the policy was clear (references allowed in text, 
+reference list or not allowed) versus unclear (unsure about policy, no policy 
+and other)). 
+
+It should be noted that the procedure is strictly exploratory. We are exploring,
+not testing any hypothesis.
+
+
+
+
+
+
+
+
+
+
+name                                           mass   inertia    k=1   correlation with dim 1   contribution to dim 1    k=2   correlation with dim 2   contribution to dim 2
+--------------------------------------------  -----  --------  -----  -----------------------  ----------------------  -----  -----------------------  ----------------------
+Coreview ??                                     151        27     20                       42                       1     71                      522                     107
+Coreview ++                                      49        84    -62                       42                       3   -220                      522                     332
+Preprints posting ??                             72        76    251                      769                      65    -29                       10                       9
+Preprints posting ++                            128        42   -140                      769                      36     16                       10                       5
+Citing preprints ??                             147        37    172                      821                      63    -23                       14                      11
+Citing preprints ++                              53       103   -479                      821                     175     63                       14                      30
+Reviewer identities not revealed to authors     148        39    184                      780                      72     27                       17                      16
+Reviewer identities revealed to authors          52       110   -525                      780                     207    -78                       17                      45
+Single blind                                     64        75   -126                      268                      15   -145                      357                     191
+Double blind                                     49        94    359                      686                      91     56                       17                      22
+Not blinded                                       2       102   -303                      100                       3   -541                      320                      86
+Peer review ??                                   62        74    173                      656                      27     52                       59                      24
+Other type of peer review                        23       137   -859                      688                     243    196                       36                     124
+Business, Economics & Management                 NA        NA    521                      794                      NA    229                      153                      NA
+Chemical & Materials Sciences                    NA        NA   -381                      678                      NA     47                       10                      NA
+Engineering & Computer Science                   NA        NA    -97                      131                      NA     98                      132                      NA
+Health & Medical Sciences                        NA        NA    -80                       68                      NA   -234                      576                      NA
+Humanities, Literature & Arts                    NA        NA    437                      450                      NA    280                      186                      NA
+Life Sciences & Earth Sciences                   NA        NA   -593                      964                      NA   -101                       28                      NA
+Physics & Mathematics                            NA        NA    -88                      113                      NA   -169                      421                      NA
+Social Sciences                                  NA        NA    458                      456                      NA    125                       34                      NA
+Elsevier                                         NA        NA    355                      785                      NA    168                      176                      NA
+Springer Nature                                  NA        NA   -942                      818                      NA    281                       73                      NA
+Other publishers                                 NA        NA    120                      438                      NA   -107                      348                      NA
+
+![](12-analysis-writeup_files/figure-html/plot-mca-1.png)<!-- -->
 
 
 
