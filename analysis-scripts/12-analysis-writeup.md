@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2019-07-23
+date: Last updated 2019-07-24
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -359,12 +359,14 @@ name                                           mass   inertia    k=1   correlati
 --------------------------------------------  -----  --------  -----  -----------------------  ----------------------  -----  -----------------------  ----------------------
 Coreview ??                                     151        27     20                       42                       1     71                      522                     107
 Coreview ++                                      49        84    -62                       42                       3   -220                      522                     332
-Preprints posting ??                             72        76    251                      769                      65    -29                       10                       9
-Preprints posting ++                            128        42   -140                      769                      36     16                       10                       5
+Posting preprints ??                             72        76    251                      769                      65    -29                       10                       9
+Posting preprints ++                            128        42   -140                      769                      36     16                       10                       5
 Citing preprints ??                             147        37    172                      821                      63    -23                       14                      11
 Citing preprints ++                              53       103   -479                      821                     175     63                       14                      30
-Reviewer identities not revealed to authors     148        39    184                      780                      72     27                       17                      16
-Reviewer identities revealed to authors          52       110   -525                      780                     207    -78                       17                      45
+Reviewer identities
+revealed to authors          52       110   -525                      780                     207    -78                       17                      45
+Reviewer identities not
+revealed to authors     148        39    184                      780                      72     27                       17                      16
 Single blind                                     64        75   -126                      268                      15   -145                      357                     191
 Double blind                                     49        94    359                      686                      91     56                       17                      22
 Not blinded                                       2       102   -303                      100                       3   -541                      320                      86

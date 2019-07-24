@@ -675,13 +675,13 @@ mca_data <- refined_with_areas %>%
       TRUE ~ "Coreview ??"
     ),
     preprint_posting = case_when(
-      str_detect(preprint_version, "Unsure") ~ "Preprints posting ??",
-      str_detect(preprint_version, "Other|Unclear") ~ "Preprints posting ??",
-      str_detect(preprint_version, "None") ~ "Preprints posting ++",
-      str_detect(preprint_version, "First sub") ~ "Preprints posting ++",
-      str_detect(preprint_version, "After peer re") ~ "Preprints posting ++",
-      str_detect(preprint_version, "Any|any") ~ "Preprints posting ++",
-      str_detect(preprint_version, "No preprint policy") ~ "Preprints posting ??"
+      str_detect(preprint_version, "Unsure") ~ "Posting preprints ??",
+      str_detect(preprint_version, "Other|Unclear") ~ "Posting preprints ??",
+      str_detect(preprint_version, "None") ~ "Posting preprints ++",
+      str_detect(preprint_version, "First sub") ~ "Posting preprints ++",
+      str_detect(preprint_version, "After peer re") ~ "Posting preprints ++",
+      str_detect(preprint_version, "Any|any") ~ "Posting preprints ++",
+      str_detect(preprint_version, "No preprint policy") ~ "Posting preprints ??"
     ),
     preprint_citing = case_when(
       str_detect(preprint_citation, "Not spec") ~ "Citing preprints ??",
@@ -693,8 +693,8 @@ mca_data <- refined_with_areas %>%
       TRUE ~ "Citing preprints ??"
     ),
     identities_revealed = case_when(
-      opr_indenties_author == "No" | opr_indenties_author == "Not specified" ~ "Reviewer identities not revealed to authors",
-      TRUE ~ "Reviewer identities revealed to authors"
+      opr_indenties_author == "No" | opr_indenties_author == "Not specified" ~ "Reviewer identities not\nrevealed to authors",
+      TRUE ~ "Reviewer identities\nrevealed to authors"
     ),
     pr_type_clean = fct_recode(pr_type_clean, 
                                `Other type of peer review` = "Other",
