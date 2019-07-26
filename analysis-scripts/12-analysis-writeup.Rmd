@@ -764,7 +764,8 @@ to have single blind policies regarding peer review or "Other" types of peer
 review. These other types of peer review are (with three exepctions) all 
 journals from Springer Nature. On the other side of the spectrum there are 
 journals which are above average in regard to unclear policies, that tend to 
-follow the policy of double blind peer review. Regarding disciplinary area,
+follow the policy of double blind peer review or are unclear about their model 
+of peer review. Regarding disciplinary area,
 there is a clear divide between journals from the SSH and all other disciplines.
 Journals from the SSH have on average less clear policies than their 
 counterparts from the natural sciences.
@@ -807,9 +808,30 @@ final_4 %>%
 
 
 # Discussion
-## Influential role of editor
-The editor's role in all this is higly influential, with a lot of leeway.
-Flexibility is good, uncertainty is bad.
+Our results suggest that policies regarding various aspects of scholarly 
+publishing are unclear. In the majority of cases, information on pracitces of
+open peer review, coreview and usage of preprints could not be found on the
+journal website. This is problematic, since it hinders the uptake of open 
+science practices on several fronts. Authors might be reluctant to post or cite
+preprints if they cannot be sure, how this will impact their submission.
+
+Our resutls further suggest that there is a gradient between journals that 
+embrace open science practices and others that are slower in taking up those
+trends. 
+
+---
+
+Another theme that emerged during analysis is the highly influential role of 
+editors. Analysing the policies for coreview revealed that many of them 
+reference confidentiality as a core principle. If a manuscript is to be shown to
+or discussed with another researcher, reviewers frequently have to ask the 
+editor for permission. This is problematic, since co-reviewing and ghostwriting
+is a practice very common among early career researchers [@McDowell617373], who
+will probably not contact the journal's editor if their superior asks them 
+to help with or write the review.
+
+---
+
 
 Recall figure 
 \@ref(fig:opr-authors), where we investigated whether reviewer identities are
@@ -817,12 +839,19 @@ revealed to authors, even if they are not made public. The high
 proportion of journals within SSH that are categorised as "not specified" might
 be surprising, given that most of them conduct double blind peer review. One 
 could thus infer, that reviewer identities are not revealed to the author. This
-inference however is the root problem: there are no clear policies. Reviewers
+inference however is the root problem: there is no clear policy. Reviewers
 might sign their review or not, what the authors receive is at the editor's 
 discretion. 
 
-## Unclear policies
-this is bad, because ...
+
+This is not to say, that policies should be an iron cage, with not flexibility
+for editorial decisions. Professional judgement is an important part of 
+performing the tasks of an editor. Uncertainty for authors and reviewers alike
+is bad however. If there is no guidance on whether certain practices are 
+encouraged or prohibited, submitting and reviewing for journals become a 
+minefiled that is not easily navigated. This might furtehr hinder scholarly 
+participation from early career researchers which are less accustomed to and
+aware of certain norms in their field. 
 
 
 # Bibliography
