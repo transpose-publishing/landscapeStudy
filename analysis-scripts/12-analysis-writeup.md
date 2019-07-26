@@ -96,12 +96,11 @@ journals do not anonymize papers or reviews during review process.
 
 
 However, there are major differences between disciplines (see figure 
-\@ref(fig:peer-type)). In the social sciences, humanities, double blind peer
-review is
-more prevalent, and the proportion of unclear policies the lowest. Business,
-Economics and Management, along with most disciplines from the sciences, display
-higher levels of unclear policies, with single blind peer review being more 
-prevalent in the sciences. 
+\@ref(fig:peer-type)). In the social sciences, humanities, and business, double
+blind peer review is generally the norm, while in the sciences it is single
+blind peer review. Business, economics & management displays the highest level
+of unclear policies, with social science and humanities being very clear and the
+other sciences somehwere in between. 
 
 <div class="figure">
 <img src="12-analysis-writeup_files/figure-html/peer-type-1.png" alt="Type of peer review by discipline"  />
@@ -114,7 +113,9 @@ prevalent in the sciences.
 When it comes to recognition of peer review activity, only 11% of
 all journals deposit reviewer activity into open databases. Furthermore,
 the majority of journals (81%) does not state at all whether peer 
-review activity is deposited in any kind of database, open or not. 
+review activity is deposited in any kind of database, open or not. The remaining
+8% of journals deposit reviewer activity into databases which are not 
+open. 
 
 # Open Peer Review
 
@@ -139,10 +140,12 @@ available in more than 95% of journals.
 <p class="caption">(\#fig:opr)Aspects of open peer review</p>
 </div>
 
-Splitting the aspect of revealed reviewer identities by discipline shows a few
-key distinctions (see fig. \@ref(fig:opr-authors)). Whereas revealing reviewer
+Since the aspect of revealed reviewer identities is the only one with 
+substantive variation, we also examine it for each discipline separately
+(see fig. \@ref(fig:opr-authors)). Whereas revealing reviewer
 identities to the authors is absent from the social sciences, humanities and
-business, it is not unusual in the sciences, at least on an optional basis 
+business in the investigated subset of journals, it is not unusual in the
+sciences, at least on an optional basis 
 (for example in case the referee wants to sign their review). 
 
 
@@ -163,8 +166,9 @@ explicit co-review policy.
 
 Splitting the results by discipline
 reveals noticeable differences (see fig. \@ref(fig:co-rev)).
-While in the life and earth sciences more
-than one third of journals permit contributions from co-reviewers, in the 
+While in the life and earth sciences, health & medical sciences as well as 
+physics & mathematics more then a quarter of journals permit contributions 
+from co-reviewers, in the 
 humanities, chemical & materials sciences, and in business, economics & 
 management about 90% of journals have no policy on co-reviewing.
 
@@ -239,7 +243,9 @@ These directions become more intelligible when we look at bigrams (see fig.
 split into pairs of words (for example the sentence "All humans are equal" 
 becomes "All humans", "humans are", "are equal"). The most prominent bigrams 
 where "peer -> review" and "review -> process". To take a look at the strength 
-of other associations, the term "review" was removed from the figure.
+of other associations, the term "review" was removed from the figure. The 
+strength of association in the figure is depicted by bold arrows, which are more
+common than the others.
 
 
 <div class="figure">
