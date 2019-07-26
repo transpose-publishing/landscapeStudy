@@ -652,7 +652,7 @@ third?
 
 To answer these question, we employ Multiple Correspondence Analysis (MCA). 
 The technique allows us to explore the different policies jointly
-(Greenacre & Blasius 2006: 27) and thus paint
+[@greenacre_multiple_2006, 27] and thus paint
 a landscape of open science practices among journals.
 
 To facilitate interpration of the figures, variables had to be recoded. 
@@ -713,22 +713,74 @@ final_4 <- mca_data %>%
   ca::mjca(supcol = 6:7)
 ```
 
+We included the following active categories:
 
+- Type of peer review.
+- Whether there is a clear policy for coreview or not.
+- Whether there is a clear policy for if reviewer identities are revealed to the 
+authors
+- Whether there is a clear policy for posting preprints or not.
+- Whether there is a clear policy for citing preprints or not
+
+The geometric layout of the space displayed in figure \@ref(fig:plot-mca) is 
+determined by these five active categories. Interpretation of the points 
+displayed is done by projecting them onto the axes. Furthermore, only statements
+regarding the average are possible. From the previous sections it is apparent 
+that policies in general are not very clear. Thus all interpretations pertain 
+only to whether a given group of journals is above or below average within our
+sample.
+To further illuminate some of the results,
+the disciplinary areas and the two most common publishers (Elsevier and Springer
+Nature) were added as passive categories. They have no influence on the 
+geometric layout but allow us to draw conclusions which practices are more 
+prevalent in one area or another.
+
+Numerical output from the MCA is shown in table \@ref(tab:mca-table). We can
+see, that the contribution to the geometric layout is highest for the types of
+peer review, policies for citing prepreints and whether reviewer identities are
+revealed to authors (column inertia). 
+These are also the strongest contributors to the first
+dimension of the space, which explains 67.8% of total variance. The second
+dimension which explains 6.9% of total variance is mainly driven by whether 
+there is a clear policy on coreview, and to some extent by type of peer review.
+We do not consider more than two dimensions since they do not account for much
+of the residual variance.
+
+Considering figure \@ref(fig:plot-mca), we can conclude that there exists a 
+clear opposition in our data between journals that are above average in regard 
+to clear policies on citing and posting preprints and whether
+reviewer identities are revealed to authors or not. These journals also tend 
+to have single blind policies regarding peer review or "Other" types of peer
+review. These other types of peer review are (with three exepctions) all 
+journals from Springer Nature. On the other side of the spectrum there are 
+journals which are above average in regard to unclear policies, that tend to 
+follow the policy of double blind peer review. Regarding disciplinary area,
+there is a clear divide between journals from the SSH and all other disciplines.
+Journals from the SSH have on average less clear policies than their 
+counterparts from the sciences.
+
+The second dimension, mainly driven by the distinction whether journals have a
+clear policy on whether coreviewers can contribute or not, is of less importance
+compared to the first dimension. Journals from the Life and Earth Sciences,
+Physics & Mathematics as well as Health & Medical Sciences are above average in
+regard to how clear their coreview policies are. Journals from Chemical & 
+Materials Sciences, Engeneering & Computer Science and especially the journals 
+from the SSH are below average in this regard.
 
 ```{r mca-table}
 summary(final_4) %>%
   .[["columns"]] %>%
   as_tibble(.name_repair = "unique") %>%
-  mutate(name = str_remove(name, ".*?\\:")) %>%
+  mutate(name = str_remove(name, ".*?\\:") %>% str_replace("\\n", " ")) %>%
   select(-` qlt`, inertia = ` inr`,
          `correlation with dim 1` = "cor...6",
          `contribution to dim 1` = "ctr...7",
          `correlation with dim 2` = "cor...9",
          `contribution to dim 2` = "ctr...10",) %>%
-  knitr::kable()
+  knitr::kable(caption = "Numerical output from Multiple Correspondence analysis")
 ```
 
-```{r plot-mca, fig.width=12, fig.height=8}
+```{r plot-mca, fig.width=12, fig.height=8, fig.cap="Joint analysis of open science practices"}
 final_4 %>%
   plot_ca(font_size = 3.5) +
   coord_fixed() +
