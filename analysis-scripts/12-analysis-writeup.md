@@ -97,7 +97,8 @@ journals do not anonymize papers or reviews during review process.
 
 However, there are major differences between disciplines (see figure 
 \@ref(fig:peer-type)). In the social sciences, humanities, and business, double
-blind peer review is generally the norm, while in the sciences it is single
+blind peer review is generally the norm, while in the natural sciences it is
+single
 blind peer review. Business, economics & management displays the highest level
 of unclear policies, with social science and humanities being very clear and the
 other sciences somehwere in between. 
@@ -292,13 +293,13 @@ sciences
 of all journals allow preprints in some way, in the Humanities only 
 45%
 do.
-The sciences in general tend towards allowing preprints only on first submission
+The natural sciences in general tend towards allowing preprints only on first submission
 while the social sciences predominantly have no clear policy on which version of
 a preprint is allowed. 
-The humanities and also journal from business, economics and management 
+The humanities and also journals from business, economics and management 
 generally have either no preprint policy at all or are more diverse in regard to
 preprint version, often allowing preprints after peer review, which is a lot 
-less common in the sciences.
+less common in the natural sciences.
 
 
 
@@ -319,8 +320,8 @@ with some journals restricting citations of preprints to the text.
 </div>
 
 Disciplinary differences are again very apparent (see fig.
-\@ref(fig:preprint-citation)). Citing preprints is more common in the sciences,
-with 
+\@ref(fig:preprint-citation)). Citing preprints is more common in the natural
+sciences, with 
 50%
 of all journals in the life and earth sciences allowing citations to preprints
 either in the text or in the reference list. In contrast, the social sciences 
@@ -402,7 +403,7 @@ journals which are above average in regard to unclear policies, that tend to
 follow the policy of double blind peer review. Regarding disciplinary area,
 there is a clear divide between journals from the SSH and all other disciplines.
 Journals from the SSH have on average less clear policies than their 
-counterparts from the sciences.
+counterparts from the natural sciences.
 
 The second dimension, mainly driven by the distinction whether journals have a
 clear policy on whether coreviewers can contribute or not, is of less importance
