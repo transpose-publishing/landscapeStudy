@@ -260,8 +260,8 @@ students". Even if the policies do not explicitly forbid or allow the
 involvement of other researchers, in many cases they mandate the reviewer to 
 first obtain permission from the editor in case they want to involve someone
 else in their review. The editor's prominent role can also be observed by the 
-terms' frequent appearance in the policies. Three quarters of all policies
-mention the term "editor". 
+terms' frequent appearance in the policies. Almost three quarters of all 
+policies mention the term "editor". 
 
 
 
@@ -272,10 +272,9 @@ mention the term "editor".
 Preprints are more common within our sample than open peer review or co-review
 policies. Almost
 70%
-of all journals allow preprints at least in some way. Most of them however only
-allow preprints before peer review 
+of all journals allow preprints at least in some way. Most of them
 (39%)
-while 
+however only allow preprints before peer review while 
 23%
 do not have a preprint policy.
 
@@ -285,9 +284,9 @@ do not have a preprint policy.
 <p class="caption">(\#fig:preprint-version)Allowed preprint versions</p>
 </div>
 
-Similar to our earlier results, preprint policies show a wide disciplinary 
-range (see fig. \@ref(fig:preprint-version)). While in the life sciences & earth 
-sciences 
+Similar to our earlier results, preprint policies vary considerably between
+disciplines (see fig. \@ref(fig:preprint-version)). While in the life sciences
+& earth sciences 
 90%
 of all journals allow preprints in some way, in the Humanities only 
 45%
@@ -297,13 +296,13 @@ while the social sciences predominantly have no clear policy on which version of
 a preprint is allowed. 
 The humanities and also journals from business, economics and management 
 generally have either no preprint policy at all or are more diverse in regard to
-preprint version, often allowing preprints after peer review, which is a lot 
-less common in the natural sciences.
+preprint version, also allowing preprints after peer review, which is less
+common in the natural sciences.
 
 
 
 
-A complementary aspect of using preprints is, whether they can be cited. The
+A complementary aspect of using preprints is whether they can be cited. The
 majority of journals
 (57%)
 does not specify, whether this is possible. Unclear policies on how to cite
@@ -338,32 +337,31 @@ third?
 
 To answer these question, we employ Multiple Correspondence Analysis (MCA). 
 The technique allows us to explore the different policies jointly
-[@greenacre_multiple_2006, 27] and thus paint
+[@greenacre_multiple_2006] and thus paint
 a landscape of open science practices among journals.
 
 To facilitate interpration of the figures, variables had to be recoded. 
-Categories with low counts were merged. Where feasible, we focused on whether 
-certain  policies were clear or not, thus omitting the subtle differences within
-the policies (for example whether journals allowed citations of preprints was 
+We selectively recoded variables in regard to whether 
+certain policies were clear or not, thus omitting the subtle differences within
+the policies (for example "which version of a preperint can be cited" was 
 simplified for whether the policy was clear (references allowed in text, 
 reference list or not allowed) versus unclear (unsure about policy, no policy 
-and other)). 
-
-It should be noted that the procedure is strictly exploratory. We are exploring,
-not testing any hypothesis.
-
+and other)). It should be noted that the procedure is strictly exploratory. We 
+are exploring possible associations between the policies, not testing any
+hypothesis.
 
 
 
 
 
 
-We included the following active categories:
+
+We included the following active categories in our model:
 
 - Type of peer review.
 - Whether there is a clear policy for coreview or not.
 - Whether there is a clear policy for if reviewer identities are revealed to the 
-authors
+authors or not.
 - Whether there is a clear policy for posting preprints or not.
 - Whether there is a clear policy for citing preprints or not
 
@@ -377,7 +375,7 @@ sample.
 To further illuminate some of the results,
 the disciplinary areas and the two most common publishers (Elsevier and Springer
 Nature) were added as passive categories. They have no influence on the 
-geometric layout but allow us to draw conclusions which practices are more 
+geometric layout but allow us to draw conclusions on which practices are more 
 prevalent in one area or another.
 
 Numerical output from the MCA is shown in table \@ref(tab:mca-table). We can
@@ -452,40 +450,42 @@ Other publishers                                 NA        NA    120            
 
 # Discussion
 Our results suggest that policies regarding various aspects of scholarly 
-publishing are unclear. In the majority of cases, information on pracitces of
-open peer review, coreview and usage of preprints could not be found on the
-journal website. This is problematic, since it hinders the uptake of open 
+publishing are very often unclear. In the majority of cases, information on
+pracitces of open peer review, coreview and usage of preprints could not be 
+found on the journal website. 
+This is problematic, since it hinders the uptake of open 
 science practices on several fronts. Authors might be reluctant to post or cite
 preprints if they cannot be sure, how this will impact their submission.
 
-Our resutls further suggest that there is a gradient between journals that 
+Our results further suggest that there is a gradient between journals that 
 embrace open science practices and others that are slower in taking up those
-trends. 
+trends. This gradient is roughly structured along the distinction between
+social sciences and humanities on the slower side, and the remaining disciplines
+from the natural sciences on the other side. 
 
----
+**How can this be explained?**
 
-Another theme that emerged during analysis is the highly influential role of 
-editors. Analysing the policies for coreview revealed that many of them 
-reference confidentiality as a core principle. If a manuscript is to be shown to
-or discussed with another researcher, reviewers frequently have to ask the 
-editor for permission. This is problematic, since co-reviewing and ghostwriting
-is a practice very common among early career researchers [@McDowell617373], who
-will probably not contact the journal's editor if their superior asks them 
-to help with or write the review.
-
----
-
-
-Recall figure 
+One of our findings helps to further illustrate this point. Recall figure 
 \@ref(fig:opr-authors), where we investigated whether reviewer identities are
 revealed to authors, even if they are not made public. The high 
-proportion of journals within SSH that are categorised as "not specified" might
+proportion of journals within SSH that are categorised as "Not specified" might
 be surprising, given that most of them conduct double blind peer review. One 
-could thus infer, that reviewer identities are not revealed to the author. This
+could thus infer that reviewer identities are not revealed to the author. This
 inference however is the root problem: there is no clear policy. Reviewers
 might sign their review or not, what the authors receive is at the editor's 
 discretion. 
 
+The higly influential role of editors in what practices are ok or prohibited is
+the second major theme that emerged during analysis.
+Analysing the policies for coreview revealed that many of them 
+reference confidentiality as a core principle. If a manuscript is to be shown to
+or discussed with another researcher, reviewers frequently have to ask the 
+editor for permission. This is problematic, since co-reviewing and ghostwriting
+is a practice very common among early career researchers [@McDowell617373], who
+will probably hesitate to contact the journal's editor if their superior asks 
+them to help with or write the review. In turn, their contribution might be
+prohibited by informal editorial policy or it might go unnoticed, since 
+acknowledging efforts made by multiple revieweres is very rare too. 
 
 This is not to say, that policies should be an iron cage, with not flexibility
 for editorial decisions. Professional judgement is an important part of 
@@ -493,11 +493,9 @@ performing the tasks of an editor. Uncertainty for authors and reviewers alike
 is bad however. If there is no guidance on whether certain practices are 
 encouraged or prohibited, submitting and reviewing for journals become a 
 minefiled that is not easily navigated. This might furtehr hinder scholarly 
-participation from early career researchers which are less accustomed to and
+participation from early career researchers which are less accustomed and
 aware of certain norms in their field. 
 
-
-Disciplinary differences are to be appreciated.
 
 
 # Bibliography
