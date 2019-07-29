@@ -833,6 +833,11 @@ from the natural sciences on the other side.
 
 **How can this be explained?**
 
+Note however, that the analysis builds on journal policies, not the actual 
+practice within a given journal or field. It might thus be the case, that 
+in physics & mathematics citing preprints is very common, although it is not 
+reflected in respective journal policies.
+
 One of our findings helps to further illustrate this point. Recall figure 
 \@ref(fig:opr-authors), where we investigated whether reviewer identities are
 revealed to authors, even if they are not made public. The high 
