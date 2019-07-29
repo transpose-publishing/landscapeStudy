@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2019-07-26
+date: Last updated 2019-07-29
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -86,7 +86,7 @@ practice is single blind per review, followed by double blind peer review.
 Some journals offer the option for authors to 
 choose whether to use single or double blind peer review. These cases have been
 coded as "Other" and amount to the majority of this category. 1% 
-journals do not anonymize papers or reviews during review process.
+of journals do not anonymize papers or reviews during review process.
 
 
 <div class="figure">
@@ -132,7 +132,7 @@ Furthermore, three quarters of journals do not provide information on all except
 one aspect. When there is information, in most cases it is 
 dismissive of open peer review. No journal in our sample allows public 
 commenting during formal peer review. Other forms of openness are similarly 
-scarce. With the sole exception that some journals may reveal reviewer 
+rare With the sole exception that some journals may reveal reviewer 
 identities to the authors, all other aspects are not specified or not
 available in more than 95% of journals.
 
@@ -146,7 +146,7 @@ substantive variation, we also examine it for each discipline separately
 (see fig. \@ref(fig:opr-authors)). Whereas revealing reviewer
 identities to the authors is absent from the social sciences, humanities and
 business in the investigated subset of journals, it is not unusual in the
-sciences, at least on an optional basis 
+natural sciences, at least on an optional basis 
 (for example in case the referee wants to sign their review). 
 
 
@@ -181,7 +181,7 @@ management about 90% of journals have no policy on co-reviewing.
 
 To obtain a more nuanced view of the policies' contents, we also analysed their
 full text via text mining. Due to policies being similar across journals of 
-certain publishers, there are 45
+certain publishers, there are 35
 distinct policies in our dataset (compared to 87 
 policies in total). Since the policies are rather short, we are 
 somewhat limited in regard to what insight we can gain from automated 
@@ -194,7 +194,7 @@ To extract meaningful information we first removed common words of the English
 language (via the list of stop-words from the tidytext package
 [@silge_tidytext_2016], except for the word "not", which is relevant since some
 policies state, that it is *not* appropriate to share information with students
-or colleagues). The resulting list contains 1151 words in 
+or colleagues). The resulting list contains 886 words in 
 total. 
 
 For a simple overview, the words were stemmed to reduce similar but not 
@@ -207,46 +207,45 @@ Table: (\#tab:coreview-table)Propensity of terms in co-review policies
 
 Term          Term frequency  Proportion of policies that contain term 
 -----------  ---------------  -----------------------------------------
-review                   135  94%                                      
-editor                    44  75%                                      
-manuscript                53  73%                                      
-confidenti                34  63%                                      
-not                       30  59%                                      
-inform                    25  51%                                      
-colleagu                  21  45%                                      
-journal                   17  35%                                      
-involv                    17  35%                                      
-discuss                   15  32%                                      
-consult                   15  31%                                      
-permiss                   14  31%                                      
-peer                      13  28%                                      
-student                   14  27%                                      
-author                    13  27%                                      
-disclos                   14  27%                                      
-process                   12  26%                                      
-ensur                     11  24%                                      
-person                    11  24%                                      
-obtain                    11  23%                                      
+review                   100  93%                                      
+manuscript                43  75%                                      
+editor                    33  73%                                      
+confidenti                26  63%                                      
+not                       24  60%                                      
+inform                    19  51%                                      
+colleagu                  18  49%                                      
+student                   14  34%                                      
+discuss                   12  32%                                      
+involv                    12  32%                                      
+consult                   12  32%                                      
+permiss                   11  31%                                      
+disclos                   12  29%                                      
+author                    11  29%                                      
+peer                      10  29%                                      
+journal                   10  28%                                      
+share                      9  25%                                      
+collabor                  10  24%                                      
+advic                      8  23%                                      
+ident                      8  23%                                      
 
 
 The most prominent themes that emerge are:
 
 - Individuals with varying stakes regarding peer review: editor, colleague, 
-author, student, peer.
+collaborator, student, peer.
 - Confidentiality as a central principle.
 - Important elements of scholarly publishing: manuscript, journal, review, 
 process.
 - Verbal forms pertaining to relationships between the individuals: inform,
-involve, consult, discuss, disclose, ensure, obtain.
+involve, consult, discuss, obtain, ensure.
 
 These directions become more intelligible when we look at bigrams (see fig.
 \@ref(fig:bigrams)). With this procedure the text is
 split into pairs of words (for example the sentence "All humans are equal" 
 becomes "All humans", "humans are", "are equal"). The most prominent bigrams 
-where "peer -> review" and "review -> process". To take a look at the strength 
+were "peer -> review" and "review -> process". To take a look at the strength 
 of other associations, the term "review" was removed from the figure. The 
-strength of association in the figure is depicted by bold arrows, which are more
-common than the others.
+most frequent associations in the figure are depicted by bold arrows.
 
 
 <div class="figure">
@@ -496,6 +495,9 @@ encouraged or prohibited, submitting and reviewing for journals become a
 minefiled that is not easily navigated. This might furtehr hinder scholarly 
 participation from early career researchers which are less accustomed to and
 aware of certain norms in their field. 
+
+
+Disciplinary differences are to be appreciated.
 
 
 # Bibliography

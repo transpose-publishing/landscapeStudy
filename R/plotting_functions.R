@@ -67,8 +67,8 @@ make_bigram_analysis <- function(df, var, cutoff = 2, .distinct = T,
   a <- grid::arrow(type = "closed", length = unit(.15, "inches"))
 
   ggraph::ggraph(bigram_graph, layout = "fr") +
-    ggraph::geom_edge_link(aes(edge_alpha = n), show.legend = FALSE,
-                           arrow = a, end_cap = circle(.07, 'inches')) +
+    ggraph::geom_edge_link(aes(edge_alpha = as.factor(n)), arrow = a,
+                           end_cap = circle(.07, 'inches')) +
     ggraph::geom_node_point(color = point_col, size = 4) +
     ggraph::geom_node_text(aes(label = name), vjust = 1, hjust = 1, repel = T) +
     theme_void()
