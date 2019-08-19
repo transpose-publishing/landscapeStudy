@@ -712,8 +712,8 @@ mca_data <- refined_with_areas %>%
       TRUE ~ "Citing preprints ??"
     ),
     identities_revealed = case_when(
-      opr_indenties_author == "No" | opr_indenties_author == "Not specified" ~ "Reviewer identities not\nrevealed to authors",
-      TRUE ~ "Reviewer identities\nrevealed to authors"
+      opr_indenties_author == "Not specified" ~ "Revealing reviewer\nidentities to authors ??",
+      TRUE ~ "Revealing reviewer\nidentities to authors ++"
     ),
     pr_type_clean = fct_recode(pr_type_clean, 
                                `Other type of peer review` = "Other",
@@ -758,8 +758,10 @@ see, that the contribution to the geometric layout is highest for the types of
 peer review, policies for citing prepreints and whether reviewer identities are
 revealed to authors (column inertia). 
 These are also the strongest contributors to the first
-dimension of the space, which explains 67.8% of total variance. The second
-dimension which explains 6.9% of total variance is mainly driven by whether 
+dimension of the space, which explains 
+`r final_4$inertia.e[1] %>% scales::percent()` of total variance. The second
+dimension which explains 
+`r final_4$inertia.e[2] %>% scales::percent()` of total variance is mainly driven by whether 
 there is a clear policy on coreview, and to some extent by type of peer review.
 We do not consider more than two dimensions since they do not account for much
 of the residual variance.
@@ -799,7 +801,7 @@ summary(final_4) %>%
   knitr::kable(caption = "Numerical output from Multiple Correspondence analysis")
 ```
 
-```{r plot-mca, fig.width=12, fig.height=8, fig.cap="Joint analysis of open science policies"}
+```{r plot-mca, fig.width=12, fig.height=11, fig.cap="Joint analysis of open science policies"}
 final_4 %>%
   plot_ca(font_size = 3.5) +
   coord_fixed() +
