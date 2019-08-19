@@ -1,0 +1,15 @@
+library(tidyverse)
+library(RColorBrewer)
+library(here)
+library(landscapeStudy)
+# install.packages("ggchicklet", repos = "https://cinc.rud.is")
+library(ggchicklet)
+library(tidytext)
+library(ggraph)
+library(rvest)
+library(visdat)
+library(ca)
+library(ggrepel)
+
+knitr::write_bib(file = "packages.bib")
+
