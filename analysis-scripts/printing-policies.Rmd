@@ -1,0 +1,30 @@
+---
+title: "Printing policies"
+author: "Thomas Klebel"
+date: "7/29/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r}
+library(tidyverse)
+refined <- read_csv(here::here("data-transformed/refined.csv"))
+
+coreview_policies <- refined %>% 
+  select(coreview_policy) %>% 
+  filter(!is.na(coreview_policy),
+         !(coreview_policy %in% c("Not specified", "Not found")))
+
+starting_set <- coreview_policies %>%
+  distinct() %>%
+  mutate(index1 = 1:n(),
+         coreview_policy = str_remove_all(coreview_policy, '"|\\n'))
+
+starting_set %>% 
+  select(index1, coreview_policy) %>% 
+  knitr::kable()
+```
+
