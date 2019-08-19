@@ -578,20 +578,51 @@ refined %>%
 
 
 # Cross tabulations
-Results have until now been examined spearated from each other. To bring them 
-all together, we will employ Correspondence Analysis as a means of visualising
-and investigating adjecent sets of tables. 
+Results so far have revealed that in many cases policies are unclear. But in
+which ways are policies related to each other? Do journals that allow co-review
+also allow preprints? Is there a gradient between journals that are pioneers in
+regard to open science, and others that lag behind? Or are there certain groups
+of journals, open in one area, reluctant in the second and maybe unclear in the
+third?
 
-Different variables could serve as dependent variables: disciplinary area is
-the first contender. But this could have an overly strong influence. We could
-thus also look at peer review type, and add discipline only as a supplementary 
-variable.
+To answer these question, we employ Multiple Correspondence Analysis (MCA). 
+The technique allows us to explore the different policies jointly
+(Greenacre & Blasius 2006: 27) and thus paint
+a landscape of open science practices among journals.
 
-Or we could do multiple correspondence analysis...
+To facilitate interpration of the figures, variables had to be recoded. 
+Categories with low counts were merged. Where feasible, we focused on whether 
+certain  policies were clear or not, thus omitting the subtle differences within
+the policies (for example whether journals allowed citations of preprints was 
+simplified for whether the policy was clear (references allowed in text, 
+reference list or not allowed) versus unclear (unsure about policy, no policy 
+and other)). 
 
-The question we have is: are there certain journals that have unclear policies
-in general, or not. Thus: are there pioneers that are open to new concepts and
-clear in their policies and then the others that lag behind.
+It should be noted that the procedure is strictly exploratory. We are exploring,
+not testing any hypothesis.
+
+
+<!-- Results have until now been examined spearated from each other. To bring them  -->
+<!-- all together, we will employ Correspondence Analysis as a means of visualising -->
+<!-- and investigating adjecent sets of tables.  -->
+
+<!-- Different variables could serve as dependent variables: disciplinary area is -->
+<!-- the first contender. But this could have an overly strong influence. We could -->
+<!-- thus also look at peer review type, and add discipline only as a supplementary  -->
+<!-- variable. -->
+
+<!-- Or we could do multiple correspondence analysis... -->
+
+<!-- The question we have is: are there certain journals that have unclear policies -->
+<!-- in general, or not. Thus: are there pioneers that are open to new concepts and -->
+<!-- clear in their policies and then the others that lag behind. -->
+
+<!-- From Greenacre & Blasius 2006: 27, we should conclude that MCA is the preferred -->
+<!-- method for this question, because it allows us to investigate the relationship -->
+<!-- between different aspects of open science. CA would only allow investigation of -->
+<!-- these aspects relative to the disciplines, but not relative to one another. -->
+
+
 
 
 ```{r}
@@ -660,7 +691,7 @@ ca_second <- refined %>%
          preprint_version_clean = paste0("preprint_version-", preprint_version_clean),
          preprint_citation_clean = paste0("preprint_citation-", preprint_citation_clean)) %>% 
   ca::mjca()
-ca_second  
+summary(ca_second)
 
 
 ca_second %>% 
@@ -719,8 +750,8 @@ refined %>%
 
 ```
 
-```{r, fig.width=10, fig.height=8}
-refined_with_areas %>% 
+```{r, fig.width=9, fig.height=13}
+multiple_ca <- refined_with_areas %>% 
     mutate(preprint_version_clean = case_when(
               str_detect(preprint_version, "Unsure") ~ "Unsure",
               str_detect(preprint_version, "Any .*? or") ~ "Other",
@@ -750,7 +781,59 @@ refined_with_areas %>%
               coreview_email == "Not specified" ~ "Unsure",
               TRUE ~ coreview_email)
           ) %>% 
-  select(pr_type_clean, coreview_email, opr_indenties_author_clean, 
+  select(pr_type_clean, coreview_email, 
+         preprint_version_clean, preprint_citation_clean, area) %>% 
+  # Filter out these journals since they are very special
+  filter(pr_type_clean != "Not blinded") %>% 
+  mutate(pr_type_clean = paste0("pr_type-", pr_type_clean),
+         coreview_email = paste0("coreview-", coreview_email),
+         # opr_indenties_author_clean = paste0("reviewer_identities-", opr_indenties_author_clean),
+         preprint_version_clean = paste0("preprint_version-", preprint_version_clean),
+         preprint_citation_clean = paste0("preprint_citation-", preprint_citation_clean)) %>% 
+  ca::mjca(supcol = c(5))
+
+summary(multiple_ca)  
+
+
+multiple_ca %>% 
+  plot_ca(dimensions = c(1, 2)) +
+  coord_fixed()
+
+```
+This looks intelligble, but lets try one more time with this crude variable
+
+```{r, fig.width=10, fig.height=8}
+multiple_ca <- refined_with_areas %>% 
+    mutate(preprint_version_clean = case_when(
+              str_detect(preprint_version, "Unsure") ~ "Unsure",
+              str_detect(preprint_version, "Any .*? or") ~ "Other",
+              str_detect(preprint_version, "Other|Unclear") ~ "Other",
+              str_detect(preprint_version, "None") ~ "None",
+              str_detect(preprint_version, "First sub") ~ "Yes",
+              str_detect(preprint_version, "After peer re") ~ "Yes",
+              str_detect(preprint_version, "Any|any") ~ "Yes",
+              str_detect(preprint_version, "No") ~ "No policy"),
+           preprint_citation_clean = case_when(
+              str_detect(preprint_citation, "Not spec") ~ "Not specified",
+              str_detect(preprint_citation, "Unsure") ~ "Unsure",
+              str_detect(preprint_citation, "No") ~ "No",
+              str_detect(preprint_citation, "only in the text") ~ "Yes",
+              str_detect(preprint_citation, "reference list") ~ "Yes",
+              is.na(preprint_citation) ~ NA_character_,
+              TRUE ~ "Other"),
+           opr_indenties_author_clean = case_when(
+              str_detect(opr_indenties_author, "Conditional") ~ "Conditional",
+              str_detect(str_to_lower(opr_indenties_author), "not spec") ~ "Not specified",
+              str_detect(opr_indenties_author, "Optional") ~ "Optional",
+              TRUE ~ opr_indenties_author),
+          coreview_email = case_when(
+              coreview_email == "unsure" ~ "Unsure",
+              # lump the two not specified to unsure, since this is similar in this 
+              # instance
+              coreview_email == "Not specified" ~ "Unsure",
+              TRUE ~ coreview_email)
+          ) %>% 
+  select(pr_type_clean, coreview_email, opr_indenties_author_clean,
          preprint_version_clean, preprint_citation_clean, area) %>% 
   # Filter out these journals since they are very special
   filter(pr_type_clean != "Not blinded") %>% 
@@ -759,11 +842,18 @@ refined_with_areas %>%
          opr_indenties_author_clean = paste0("reviewer_identities-", opr_indenties_author_clean),
          preprint_version_clean = paste0("preprint_version-", preprint_version_clean),
          preprint_citation_clean = paste0("preprint_citation-", preprint_citation_clean)) %>% 
-  ca::mjca(supcol = 3) %>% 
+  ca::mjca(supcol = c(6))
+
+summary(multiple_ca)  
+
+
+multiple_ca %>% 
   plot_ca(dimensions = c(1, 2)) +
   coord_fixed()
 
 ```
+
+
 
 
 ```{r, fig.width=10, fig.height=8}
@@ -893,9 +983,9 @@ difficult in terms of what it means. It also has not that much inertia, thus
 being not very influential
 
 
-```{r, fig.width=10, fig.height=8}
+```{r, fig.width=8, fig.height=12}
 ca_out %>% 
-  plot_ca(dimensions = c(1, 2), map = "rowprincipal") +
+  plot_ca(dimensions = c(1, 2), map = "colprincipal") +
   coord_fixed() +
   scale_color_manual(values = c("Zeilenprofil" = "#1B9E77", "Spaltenprofil" = "#D95F02"))
 
@@ -938,4 +1028,26 @@ ca_out %>%
 ```
 
 There is not much variation left to explain here, somehow.
+
+
+```{r, fig.width=9, fig.height=12}
+# explore starting with one variable
+ca_out <- rbind(obj5, obj1, obj3) %>%
+  ca::ca()
+
+
+ca_out %>% 
+  plot_ca(dimensions = c(1, 2), map = "colprincipal") +
+  coord_fixed() +
+  scale_color_manual(values = c("Zeilenprofil" = "#1B9E77", "Spaltenprofil" = "#D95F02"))
+
+```
+
+```{r}
+summary(ca_out)
+```
+
+```{r}
+rbind(obj5, obj1) %>% chisq.test() 
+```
 
