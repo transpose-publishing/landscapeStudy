@@ -662,7 +662,7 @@ and humanities either have unclear or no policies regarding whether preprints
 can be cited or not. 
 
 
-# The Landscape of Open Science Practices
+# The Landscape of Open Science Policies
 Results so far have revealed that in many cases policies are unclear. But in
 which ways are policies related to each other? Do journals that allow co-review
 also allow preprints? Is there a gradient between journals that are pioneers in
@@ -718,7 +718,6 @@ mca_data <- refined_with_areas %>%
     pr_type_clean = fct_recode(pr_type_clean, 
                                `Other type of peer review` = "Other",
                                `Peer review ??` = "Unsure")
-    
   )
 ```
 
@@ -800,14 +799,14 @@ summary(final_4) %>%
   knitr::kable(caption = "Numerical output from Multiple Correspondence analysis")
 ```
 
-```{r plot-mca, fig.width=12, fig.height=8, fig.cap="Joint analysis of open science practices"}
+```{r plot-mca, fig.width=12, fig.height=8, fig.cap="Joint analysis of open science policies"}
 final_4 %>%
   plot_ca(font_size = 3.5) +
   coord_fixed() +
   theme(legend.position = "top") +
   scale_color_manual(values = c("Initial Variables" = "#1B9E77",
                                 "Supplementary Variables" = "#D95F02")) +
-  labs(title = "The Landscape of Open Science Practices",
+  labs(title = "The Landscape of Open Science Policies",
        caption = paste(
          "Disciplines and publishers were added as supplementary (passive) and have no impact on the space.",
          "`++` means that there is a clear policy, `??` that there is no clear policy",

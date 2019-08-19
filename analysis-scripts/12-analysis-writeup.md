@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2019-07-29
+date: Last updated 2019-08-19
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -327,7 +327,7 @@ and humanities either have unclear or no policies regarding whether preprints
 can be cited or not. 
 
 
-# The Landscape of Open Science Practices
+# The Landscape of Open Science Policies
 Results so far have revealed that in many cases policies are unclear. But in
 which ways are policies related to each other? Do journals that allow co-review
 also allow preprints? Is there a gradient between journals that are pioneers in
@@ -442,8 +442,8 @@ Springer Nature                                  NA        NA   -942            
 Other publishers                                 NA        NA    120                      438                      NA   -107                      348                      NA
 
 <div class="figure">
-<img src="12-analysis-writeup_files/figure-html/plot-mca-1.png" alt="Joint analysis of open science practices"  />
-<p class="caption">(\#fig:plot-mca)Joint analysis of open science practices</p>
+<img src="12-analysis-writeup_files/figure-html/plot-mca-1.png" alt="Joint analysis of open science policies"  />
+<p class="caption">(\#fig:plot-mca)Joint analysis of open science policies</p>
 </div>
 
 
