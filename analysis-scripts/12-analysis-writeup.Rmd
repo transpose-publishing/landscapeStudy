@@ -885,34 +885,56 @@ final_4 %>%
 clarity_data <- refined %>%
   mutate(
     co_review = case_when(
-      coreview_email == "Yes" | coreview_email == "No" ~ "Coreview ++",
-      TRUE ~ "Coreview ??"
+      coreview_email == "Yes" | coreview_email == "No" ~ "Yes",
+      TRUE ~ "No"
     ),
     preprint_posting = case_when(
-      str_detect(preprint_version, "Unsure") ~ "Posting preprints ??",
-      str_detect(preprint_version, "Other|Unclear") ~ "Posting preprints ??",
-      str_detect(preprint_version, "None") ~ "Posting preprints ++",
-      str_detect(preprint_version, "First sub") ~ "Posting preprints ++",
-      str_detect(preprint_version, "After peer re") ~ "Posting preprints ++",
-      str_detect(preprint_version, "Any|any") ~ "Posting preprints ++",
-      str_detect(preprint_version, "No preprint policy") ~ "Posting preprints ??"
+      str_detect(preprint_version, "Unsure") ~ "No", 
+      str_detect(preprint_version, "Other|Unclear") ~ "No", 
+      str_detect(preprint_version, "None") ~ "Yes",
+      str_detect(preprint_version, "First sub") ~ "Yes",
+      str_detect(preprint_version, "After peer re") ~ "Yes",
+      str_detect(preprint_version, "Any|any") ~ "Yes",
+      str_detect(preprint_version, "No preprint policy") ~ "No", 
     ),
     preprint_citing = case_when(
-      str_detect(preprint_citation, "Not spec") ~ "Citing preprints ??",
-      str_detect(preprint_citation, "Unsure") ~ "Citing preprints ??",
-      str_detect(preprint_citation, "No") ~ "Citing preprints ++",
-      str_detect(preprint_citation, "only in the text") ~ "Citing preprints ++",
-      str_detect(preprint_citation, "reference list") ~ "Citing preprints ++",
-      preprint_citation == "Yes" ~ "Citing preprints ++",
-      TRUE ~ "Citing preprints ??"
+      str_detect(preprint_citation, "Not spec") ~ "No",
+      str_detect(preprint_citation, "Unsure") ~ "No",
+      str_detect(preprint_citation, "No") ~ "Yes",
+      str_detect(preprint_citation, "only in the text") ~ "Yes",
+      str_detect(preprint_citation, "reference list") ~ "Yes",
+      preprint_citation == "Yes" ~ "Yes",
+      TRUE ~ "No"
     ),
     identities_revealed = case_when(
-      opr_indenties_author == "Not specified" ~ "Revealing reviewer\nidentities to authors ??",
-      TRUE ~ "Revealing reviewer\nidentities to authors ++"
+      opr_indenties_author == "Not specified" ~ "No",
+      TRUE ~ "Yes"
     ),
-    pr_type_clean = case_when(pr_type_clean == "Unsure" ~ "Peer review ??",
-                               TRUE ~ "Peer review ++")
-  )
+    pr_type_clean = case_when(pr_type_clean == "Unsure" ~ "No",
+                               TRUE ~ "Yes")
+  ) %>% 
+  select(co_review, preprint_posting, preprint_citing, identities_revealed, 
+         pr_type_clean) %>% 
+  gather(var, val) %>% 
+  make_proportion(val, var, "Yes")
+
+
+
+ggplot(clarity_data, aes(fct_reorder(var, order), prop, fill = fct_rev(val))) +
+  geom_chicklet(position = "fill", width = .6) +
+  coord_flip() +
+  scale_y_continuous(labels = scales::percent) +
+  # scale_fill_manual(values = p_cols) +
+  theme(legend.position = "top") +
+  guides(fill = guide_legend(reverse = T)) +
+  labs(x = NULL, y = NULL, fill = NULL) 
+
+
+# change colours
+# add labels
+# add questions from opr from above
+# add title
+
 ```
 
 
