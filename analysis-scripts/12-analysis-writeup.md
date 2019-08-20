@@ -462,6 +462,24 @@ Other publishers                                 NA        NA     93            
 (This will go on top in the manuscript, down here for convenience.)
 
 
+Table: (\#tab:graph for clarity)Are policies clear?
+
+label                                                             No            Yes         
+----------------------------------------------------------------  ------------  ------------
+Are author responses to reviews being published?                  150 (87.7%)   21 (12.3%)  
+Are editorial decision letters being published?                   150 (87.7%)   21 (12.3%)  
+Are peer review reports being published?                          142 (83.0%)   29 (17.0%)  
+Are previous versions of the manuscript being published?          154 (90.1%)   17 (9.9%)   
+Are reviewer identities being published?                          130 (76.0%)   41 (24.0%)  
+Are reviewer identities revealed to the authors?                  92 (53.80%)   79 (46.20%) 
+Can co-reviewers contribute?                                      130 (76.0%)   41 (24.0%)  
+Can preprints be cited?                                           127 (74.3%)   44 (25.7%)  
+Can preprints be posted?                                          67 (39.2%)    104 (60.8%) 
+Is there open interaction (reviewers consult with one another)?   154 (90.1%)   17 (9.9%)   
+Is there public commenting during formal peer review?             156 (91.2%)   15 (8.8%)   
+Which type of peer review is used?                                54 (31.6%)    117 (68.4%) 
+
+![](12-analysis-writeup_files/figure-html/clarity-graph-1.png)<!-- -->
 
 
 

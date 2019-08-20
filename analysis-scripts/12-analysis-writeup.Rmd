@@ -881,7 +881,7 @@ final_4 %>%
 # Overview of all policies
 (This will go on top in the manuscript, down here for convenience.)
 
-```{r graph for clarity}
+```{r graph for clarity, warning=FALSE}
 clarity_data <- refined %>%
   mutate(
     co_review = case_when(
@@ -913,27 +913,62 @@ clarity_data <- refined %>%
     pr_type_clean = case_when(pr_type_clean == "Unsure" ~ "No",
                                TRUE ~ "Yes")
   ) %>% 
-  select(co_review, preprint_posting, preprint_citing, identities_revealed, 
-         pr_type_clean) %>% 
+  select(co_review, preprint_posting, preprint_citing, 
+         pr_type_clean, starts_with("opr")) %>% 
+  select(-opr_additional) %>% 
+  mutate_at(vars(starts_with("opr")), function(x) case_when(
+      x == "Not specified" ~ "No",
+      TRUE ~ "Yes"
+    )) %>% 
   gather(var, val) %>% 
   make_proportion(val, var, "Yes")
 
 
+labels <- clarity_data %>% 
+  distinct(var) %>% 
+  mutate(label = case_when(
+    var == "co_review" ~ "Can co-reviewers contribute?",
+    var == "opr_indenties_author" ~ "Are reviewer identities revealed to the authors?",
+    var == "pr_type_clean" ~ "Which type of peer review is used?",
+    var == "preprint_posting" ~ "Can preprints be posted?",
+    var == "preprint_citing" ~ "Can preprints be cited?",
+    var == "opr_reports" ~ "Are peer review reports being published?",
+    var == "opr_responses" ~ "Are author responses to reviews being published?",
+    var == "opr_letters" ~ "Are editorial decision letters being published?",
+    var == "opr_versions" ~ "Are previous versions of the manuscript being published?",
+    var == "opr_identities_published" ~ "Are reviewer identities being published?",
+    var == "opr_comments" ~ "Is there public commenting during formal peer review?",
+    var == "opr_interaction" ~ "Is there open interaction (reviewers consult with one another)?"
+  ))
 
-ggplot(clarity_data, aes(fct_reorder(var, order), prop, fill = fct_rev(val))) +
+clarity_data %>% 
+  left_join(labels) %>% 
+  mutate(tabulation = glue::glue("{n} ({scales::percent(prop)})")) %>% 
+  ungroup() %>% 
+  select(label, val, tabulation) %>% 
+  spread(val, tabulation) %>% 
+  knitr::kable(caption = "Are policies clear?")
+```
+
+```{r clarity-graph, fig.width=8, fig.height=6.5}
+labels <- labels %>%
+  mutate_at("label", ~str_wrap(., 40))
+
+p_cols <- c("Clear policy" = "#1B9E77",
+            "No clear policy" = "#E6AB02"
+)
+
+clarity_data %>% 
+  mutate(val = recode(val, Yes = "Clear policy", .default = "No clear policy")) %>% 
+  left_join(labels) %>% 
+  ggplot(aes(fct_reorder(label, order), prop, fill = val)) +
   geom_chicklet(position = "fill", width = .6) +
   coord_flip() +
   scale_y_continuous(labels = scales::percent) +
-  # scale_fill_manual(values = p_cols) +
+  scale_fill_manual(values = p_cols) +
   theme(legend.position = "top") +
   guides(fill = guide_legend(reverse = T)) +
-  labs(x = NULL, y = NULL, fill = NULL) 
-
-
-# change colours
-# add labels
-# add questions from opr from above
-# add title
+  labs(x = NULL, y = NULL, fill = NULL, title = "Clarity of policies") 
 
 ```
 
