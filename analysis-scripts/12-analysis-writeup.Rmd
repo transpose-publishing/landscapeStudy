@@ -831,6 +831,44 @@ final_4 %>%
 ```
 
 
+# Overview of all policies
+(This will go on top in the manuscript, down here for convenience.)
+
+```{r graph for clarity}
+clarity_data <- refined %>%
+  mutate(
+    co_review = case_when(
+      coreview_email == "Yes" | coreview_email == "No" ~ "Coreview ++",
+      TRUE ~ "Coreview ??"
+    ),
+    preprint_posting = case_when(
+      str_detect(preprint_version, "Unsure") ~ "Posting preprints ??",
+      str_detect(preprint_version, "Other|Unclear") ~ "Posting preprints ??",
+      str_detect(preprint_version, "None") ~ "Posting preprints ++",
+      str_detect(preprint_version, "First sub") ~ "Posting preprints ++",
+      str_detect(preprint_version, "After peer re") ~ "Posting preprints ++",
+      str_detect(preprint_version, "Any|any") ~ "Posting preprints ++",
+      str_detect(preprint_version, "No preprint policy") ~ "Posting preprints ??"
+    ),
+    preprint_citing = case_when(
+      str_detect(preprint_citation, "Not spec") ~ "Citing preprints ??",
+      str_detect(preprint_citation, "Unsure") ~ "Citing preprints ??",
+      str_detect(preprint_citation, "No") ~ "Citing preprints ++",
+      str_detect(preprint_citation, "only in the text") ~ "Citing preprints ++",
+      str_detect(preprint_citation, "reference list") ~ "Citing preprints ++",
+      preprint_citation == "Yes" ~ "Citing preprints ++",
+      TRUE ~ "Citing preprints ??"
+    ),
+    identities_revealed = case_when(
+      opr_indenties_author == "Not specified" ~ "Revealing reviewer\nidentities to authors ??",
+      TRUE ~ "Revealing reviewer\nidentities to authors ++"
+    ),
+    pr_type_clean = case_when(pr_type_clean == "Unsure" ~ "Peer review ??",
+                               TRUE ~ "Peer review ++")
+  )
+```
+
+
 
 # Discussion
 Our results suggest that policies regarding various aspects of scholarly 
