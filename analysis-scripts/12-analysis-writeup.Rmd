@@ -855,7 +855,7 @@ summary(final_4) %>%
   .[["columns"]] %>%
   as_tibble(.name_repair = "unique") %>%
   mutate(name = str_remove(name, ".*?\\:") %>% str_replace("\\n", " ")) %>%
-  select(-` qlt`, inertia = ` inr`,
+  select(-` qlt`, inertia = ` inr`, Variable = name,
          `correlation with dim 1` = "cor...6",
          `contribution to dim 1` = "ctr...7",
          `correlation with dim 2` = "cor...9",

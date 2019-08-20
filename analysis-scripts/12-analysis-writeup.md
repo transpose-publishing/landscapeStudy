@@ -425,7 +425,7 @@ from the SSH are below average in this regard.
 
 Table: (\#tab:mca-table)Numerical output from Multiple Correspondence analysis
 
-name                                           mass   inertia    k=1   correlation with dim 1   contribution to dim 1    k=2   correlation with dim 2   contribution to dim 2
+Variable                                       mass   inertia    k=1   correlation with dim 1   contribution to dim 1    k=2   correlation with dim 2   contribution to dim 2
 --------------------------------------------  -----  --------  -----  -----------------------  ----------------------  -----  -----------------------  ----------------------
 Coreview ??                                     151        48     79                      611                      38     28                       80                      74
 Coreview ++                                      49       149   -244                      611                     117    -88                       80                     229
