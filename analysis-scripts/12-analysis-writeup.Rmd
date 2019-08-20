@@ -727,30 +727,30 @@ mca_data <- refined_with_areas %>%
       opr_indenties_author == "Not specified" ~ "Revealing reviewer\nidentities to authors ??",
       TRUE ~ "Revealing reviewer\nidentities to authors ++"
     ),
-    pr_type_clean = fct_recode(pr_type_clean, 
-                               `Other type of peer review` = "Other",
-                               `Peer review ??` = "Unsure")
+    pr_type_clean = case_when(pr_type_clean == "Unsure" ~ "Peer review ??",
+                               TRUE ~ "Peer review ++")
   )
 ```
 
 
 ```{r compute-mca}
 final_4 <- mca_data %>%
-  mutate(publisher_cat = fct_lump(publisher_clean, n = 2,
+  mutate(publisher_cat = fct_lump(publisher_clean, n = 5,
                                   other_level = "Other publishers")) %>%
   select(co_review, preprint_posting, preprint_citing, identities_revealed,
-         pr_type_clean, area, publisher_cat) %>%
+         pr_type_clean, area, publisher_cat) %>% 
   ca::mjca(supcol = 6:7)
 ```
 
-We included the following active categories in our model:
+We included five active categories in our model. All were recoded in terms of
+whether there was a clear policy on:
+
 
 - Type of peer review.
-- Whether there is a clear policy for coreview or not.
-- Whether there is a clear policy for if reviewer identities are revealed to the 
-authors or not.
-- Whether there is a clear policy for posting preprints or not.
-- Whether there is a clear policy for citing preprints or not
+- Coreviewing.
+- Revealing reviewer identities to authors.
+- Posting preprints.
+- Posting preperints. 
 
 The geometric layout of the space displayed in figure \@ref(fig:plot-mca) is 
 determined by these five active categories. Interpretation of the points 
@@ -765,6 +765,7 @@ Nature) were added as passive categories. They have no influence on the
 geometric layout but allow us to draw conclusions on which practices are more 
 prevalent in one area or another.
 
+<!-- The following sections are outdated. -->
 Numerical output from the MCA is shown in table \@ref(tab:mca-table). We can
 see, that the contribution to the geometric layout is highest for the types of
 peer review, policies for citing prepreints and whether reviewer identities are
@@ -799,6 +800,8 @@ Physics & Mathematics as well as Health & Medical Sciences are above average in
 regard to how clear their coreview policies are. Journals from Chemical & 
 Materials Sciences, Engeneering & Computer Science and especially the journals 
 from the SSH are below average in this regard.
+
+<!-- This goes into the appendix. -->
 
 ```{r mca-table}
 summary(final_4) %>%

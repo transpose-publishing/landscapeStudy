@@ -358,14 +358,15 @@ hypothesis.
 
 
 
-We included the following active categories in our model:
+We included five active categories in our model. All were recoded in terms of
+whether there was a clear policy on:
+
 
 - Type of peer review.
-- Whether there is a clear policy for coreview or not.
-- Whether there is a clear policy for if reviewer identities are revealed to the 
-authors or not.
-- Whether there is a clear policy for posting preprints or not.
-- Whether there is a clear policy for citing preprints or not
+- Coreviewing.
+- Revealing reviewer identities to authors.
+- Posting preprints.
+- Posting preperints. 
 
 The geometric layout of the space displayed in figure \@ref(fig:plot-mca) is 
 determined by these five active categories. Interpretation of the points 
@@ -380,15 +381,16 @@ Nature) were added as passive categories. They have no influence on the
 geometric layout but allow us to draw conclusions on which practices are more 
 prevalent in one area or another.
 
+<!-- The following sections are outdated. -->
 Numerical output from the MCA is shown in table \@ref(tab:mca-table). We can
 see, that the contribution to the geometric layout is highest for the types of
 peer review, policies for citing prepreints and whether reviewer identities are
 revealed to authors (column inertia). 
 These are also the strongest contributors to the first
 dimension of the space, which explains 
-57.1% of total variance. The second
+70.8% of total variance. The second
 dimension which explains 
-14.0% of total variance is mainly driven by whether 
+4.71% of total variance is mainly driven by whether 
 there is a clear policy on coreview, and to some extent by type of peer review.
 We do not consider more than two dimensions since they do not account for much
 of the residual variance.
@@ -415,35 +417,37 @@ regard to how clear their coreview policies are. Journals from Chemical &
 Materials Sciences, Engeneering & Computer Science and especially the journals 
 from the SSH are below average in this regard.
 
+<!-- This goes into the appendix. -->
+
 
 Table: (\#tab:mca-table)Numerical output from Multiple Correspondence analysis
 
 name                                           mass   inertia    k=1   correlation with dim 1   contribution to dim 1    k=2   correlation with dim 2   contribution to dim 2
 --------------------------------------------  -----  --------  -----  -----------------------  ----------------------  -----  -----------------------  ----------------------
-Coreview ??                                     151        30     46                      137                       6     89                      508                      93
-Coreview ++                                      49        92   -143                      137                      19   -275                      508                     288
-Posting preprints ??                             72        76    212                      594                      62    -90                      108                      45
-Posting preprints ++                            128        42   -118                      594                      34     50                      108                      25
-Citing preprints ??                             147        37    154                      733                      67    -39                       47                      17
-Citing preprints ++                              53       102   -428                      733                     186    108                       47                      48
-Revealing reviewer identities to authors ??     105        67    243                      671                     119     88                       87                      63
-Revealing reviewer identities to authors ++      95        74   -267                      671                     131    -96                       87                      69
-Single blind                                     64        78   -162                      368                      32   -150                      317                     113
-Double blind                                     49        88    256                      573                      61    -36                       12                       5
-Not blinded                                       2       103   -126                       33                       1   -549                      634                      49
-Peer review ??                                   62        81    230                      609                      63    101                      116                      49
-Other type of peer review                        23       130   -708                      588                     219    276                       89                     135
-Business, Economics & Management                 NA        NA    459                      803                      NA     75                       21                      NA
-Chemical & Materials Sciences                    NA        NA   -278                      459                      NA    168                      168                      NA
-Engineering & Computer Science                   NA        NA    -91                      124                      NA    145                      313                      NA
-Health & Medical Sciences                        NA        NA    -72                       57                      NA   -166                      304                      NA
-Humanities, Literature & Arts                    NA        NA    390                      391                      NA    103                       28                      NA
-Life Sciences & Earth Sciences                   NA        NA   -531                      974                      NA     -3                        0                      NA
-Physics & Mathematics                            NA        NA   -146                      291                      NA   -121                      201                      NA
-Social Sciences                                  NA        NA    423                      412                      NA    -30                        2                      NA
-Elsevier                                         NA        NA    276                      798                      NA     65                       44                      NA
-Springer Nature                                  NA        NA   -797                      726                      NA    325                      121                      NA
-Other publishers                                 NA        NA    110                      385                      NA    -87                      242                      NA
+Coreview ??                                     151        48     79                      611                      38     28                       80                      74
+Coreview ++                                      49       149   -244                      611                     117    -88                       80                     229
+Posting preprints ??                             72       117     60                      194                      10    -86                      395                     321
+Posting preprints ++                            128        65    -34                      194                       6     48                      395                     179
+Citing preprints ??                             147        51     86                      838                      43    -23                       62                      48
+Citing preprints ++                              53       142   -238                      838                     121     65                       62                     135
+Revealing reviewer identities to authors ??     105       107    214                      720                     193     10                        1                       6
+Revealing reviewer identities to authors ++      95       117   -235                      720                     212    -11                        1                       6
+Peer review ??                                   62       140    268                      821                     179     -6                        0                       1
+Peer review ++                                  138        63   -121                      821                      81      3                        0                       1
+Business, Economics & Management                 NA        NA    310                      848                      NA   -131                      152                      NA
+Chemical & Materials Sciences                    NA        NA    -85                       68                      NA    312                      932                      NA
+Engineering & Computer Science                   NA        NA     31                       23                      NA    202                      977                      NA
+Health & Medical Sciences                        NA        NA    -27                       60                      NA   -108                      940                      NA
+Humanities, Literature & Arts                    NA        NA    185                      781                      NA    -98                      219                      NA
+Life Sciences & Earth Sciences                   NA        NA   -373                      938                      NA     96                       62                      NA
+Physics & Mathematics                            NA        NA    -92                      748                      NA    -54                      252                      NA
+Social Sciences                                  NA        NA    115                      388                      NA   -144                      612                      NA
+American Chemical Society                        NA        NA      4                        0                      NA    217                     1000                      NA
+Elsevier                                         NA        NA    184                      903                      NA     61                       97                      NA
+IEEE                                             NA        NA    181                      764                      NA    101                      236                      NA
+Royal Society of Chemistry                       NA        NA   -251                      562                      NA    222                      438                      NA
+Springer Nature                                  NA        NA   -504                      874                      NA    192                      126                      NA
+Other publishers                                 NA        NA     93                      379                      NA   -119                      621                      NA
 
 <div class="figure">
 <img src="12-analysis-writeup_files/figure-html/plot-mca-1.png" alt="Joint analysis of open science policies"  />
