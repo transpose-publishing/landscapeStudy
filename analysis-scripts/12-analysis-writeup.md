@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2019-08-19
+date: Last updated 2019-08-20
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -82,11 +82,13 @@ Information on what type of peer review is used by a journal is mixed
 (see figure \@ref(fig:pr-type-overall)).
 Overall, more than 30% of all journals do not provide clear 
 information about their peer review process. The most common peer review 
-practice is single blind per review, followed by double blind peer review.
+practice is single blind per review (29.8%), followed by double blind
+peer review (26.9%).
 Some journals offer the option for authors to 
 choose whether to use single or double blind peer review. These cases have been
 coded as "Other" and amount to the majority of this category. 1% 
-of journals do not anonymize papers or reviews during review process.
+of journals ("The BMJ" and "The Cochrane Database of Systematic Reviews") do not 
+anonymize papers or reviews during review process.
 
 
 <div class="figure">
@@ -386,7 +388,7 @@ These are also the strongest contributors to the first
 dimension of the space, which explains 
 57.1% of total variance. The second
 dimension which explains 
-14.0%of total variance is mainly driven by whether 
+14.0% of total variance is mainly driven by whether 
 there is a clear policy on coreview, and to some extent by type of peer review.
 We do not consider more than two dimensions since they do not account for much
 of the residual variance.

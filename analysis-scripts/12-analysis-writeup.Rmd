@@ -144,17 +144,29 @@ perc_not_blind <- pr_type_prop %>%
   pull(prop) %>% 
   make_percent()
 
+perc_single <- pr_type_prop %>% 
+  filter(pr_type_clean == "Single blind") %>% 
+  pull(prop) %>% 
+  scales::percent()
+
+perc_double <- pr_type_prop %>% 
+  filter(pr_type_clean == "Double blind") %>% 
+  pull(prop) %>% 
+  scales::percent()
+
 ```
 
 Information on what type of peer review is used by a journal is mixed 
 (see figure \@ref(fig:pr-type-overall)).
 Overall, more than `r perc_unsure` of all journals do not provide clear 
 information about their peer review process. The most common peer review 
-practice is single blind per review, followed by double blind peer review.
+practice is single blind per review (`r perc_single`), followed by double blind
+peer review (`r perc_double`).
 Some journals offer the option for authors to 
 choose whether to use single or double blind peer review. These cases have been
 coded as "Other" and amount to the majority of this category. `r perc_not_blind` 
-of journals do not anonymize papers or reviews during review process.
+of journals ("The BMJ" and "The Cochrane Database of Systematic Reviews") do not 
+anonymize papers or reviews during review process.
 
 
 ```{r pr-type-overall, fig.asp=.5, fig.cap="Type of peer review"}
