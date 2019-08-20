@@ -381,6 +381,9 @@ Nature) were added as passive categories. They have no influence on the
 geometric layout but allow us to draw conclusions on which practices are more 
 prevalent in one area or another.
 
+
+![](12-analysis-writeup_files/figure-html/plot mca one dimensionally-1.png)<!-- -->
+
 <!-- The following sections are outdated. -->
 Numerical output from the MCA is shown in table \@ref(tab:mca-table). We can
 see, that the contribution to the geometric layout is highest for the types of
@@ -453,6 +456,12 @@ Other publishers                                 NA        NA     93            
 <img src="12-analysis-writeup_files/figure-html/plot-mca-1.png" alt="Joint analysis of open science policies"  />
 <p class="caption">(\#fig:plot-mca)Joint analysis of open science policies</p>
 </div>
+
+
+# Overview of all policies
+(This will go on top in the manuscript, down here for convenience.)
+
+
 
 
 
