@@ -487,6 +487,15 @@ else in their review. The editor's prominent role can also be observed by the
 terms' frequent appearance in the policies. Almost three quarters of all 
 policies mention the term "editor". 
 
+```{r}
+distinct_coreview %>% 
+  pull(coreview_policy) %>% 
+  # regex from https://stackoverflow.com/a/15586010/3149349
+  str_extract_all(., "(?:[^ ]+ ){0,5}editor(?: [^ ]+){0,2}") %>% 
+  flatten_chr()
+```
+
+
 
 
 # Preprints
@@ -968,7 +977,7 @@ clarity_data %>%
   scale_fill_manual(values = p_cols) +
   theme(legend.position = "top") +
   guides(fill = guide_legend(reverse = T)) +
-  labs(x = NULL, y = NULL, fill = NULL, title = "Clarity of policies") 
+  labs(x = NULL, y = NULL, fill = NULL, title = "Clarity of Policies") 
 
 ```
 

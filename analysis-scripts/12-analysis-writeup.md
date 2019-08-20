@@ -266,6 +266,47 @@ terms' frequent appearance in the policies. Almost three quarters of all
 policies mention the term "editor". 
 
 
+```
+##  [1] "review), you must contact the editor"                        
+##  [2] "the manuscript as confidential. The editor must be"          
+##  [3] "obtain permission from the journal editor prior to"          
+##  [4] "should be submitted to the editor so that"                   
+##  [5] "reviewers (like members of the editor"                       
+##  [6] "with the permission of the editor"                           
+##  [7] "without prior authorization from the editor"                 
+##  [8] "anyone without permission from the editor"                   
+##  [9] "that the reviewer contact the editor in advance"             
+## [10] "to ensure that the editor has the"                           
+## [11] "in the “comments to the editor"                              
+## [12] "that the reviewer contact the editor in advance"             
+## [13] "to ensure that the editor has the"                           
+## [14] "in the “comments to the editor"                              
+## [15] "sought; in that event the editor must be"                    
+## [16] "prior permission from the journal editor"                    
+## [17] "prior permission from the journal editor"                    
+## [18] "conflicts of interest to the editor"                         
+## [19] "before proceeding. Please contact the editor who requested"  
+## [20] "circumstances. Please consult your associate editor if you’d"
+## [21] "sure to contact the handling editor and indicate"            
+## [22] "anyone without permission from the editor"                   
+## [23] "sought; in that event the editor must be"                    
+## [24] "consulted should\nbe disclosed to the editor in advance\""   
+## [25] "please identify them to the editor"                          
+## [26] "but please check with the editor"                            
+## [27] "please identify them to the editor"                          
+## [28] "but please check with the editor"                            
+## [29] "please identify them to the editor"                          
+## [30] "that the reviewer contact the editor in advance"             
+## [31] "to ensure that the editor has the"                           
+## [32] "in the “comments to the editor"                              
+## [33] "unless previously agreed with the editor"                    
+## [34] "the explicit permission of the editor"                       
+## [35] "must request permission from the editor and abide"           
+## [36] "by the editor"
+```
+
+
+
 
 # Preprints
 
