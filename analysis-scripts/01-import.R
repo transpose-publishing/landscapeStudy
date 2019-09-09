@@ -116,7 +116,8 @@ transpose_db_clean <- transpose_db_clean %>%
 transpose_db_selection <- transpose_db_clean %>%
   filter(verified == "Yes")
 
-write_csv(transpose_db_selection, "data-transformed/transpose_db_data.csv")
+write_csv(transpose_db_selection,
+          "data-transformed/transpose_db_data_verified.csv")
 
 
 
