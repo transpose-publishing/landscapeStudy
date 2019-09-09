@@ -293,8 +293,10 @@ pdata %>%
   labs(x = NULL, y = NULL, fill = NULL) 
 ```
 
-Since the aspect of revealed reviewer identities is the only one with 
-substantive variation, we also examine it for each discipline separately
+Since the aspect of revealed reviewer identities is the only one that is
+explicitly allowed by a substantive number of journals 
+(`r pdata %>% filter(var == "opr_indenties_author") %>% pull(order) %>% unique() %>%  scales::percent()`), we examine it
+separately for each discipline
 (see fig. \@ref(fig:opr-authors)). Whereas revealing reviewer
 identities to the authors is absent from the social sciences, humanities and
 business in the investigated subset of journals, it is not unusual in the
