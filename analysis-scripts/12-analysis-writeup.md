@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2019-08-20
+date: Last updated 2019-09-09
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -143,8 +143,10 @@ available in more than 95% of journals.
 <p class="caption">(\#fig:opr)Aspects of open peer review</p>
 </div>
 
-Since the aspect of revealed reviewer identities is the only one with 
-substantive variation, we also examine it for each discipline separately
+Since the aspect of revealed reviewer identities is the only one that is
+explicitly allowed by a substantive number of journals 
+(23.4%), we examine it
+separately for each discipline
 (see fig. \@ref(fig:opr-authors)). Whereas revealing reviewer
 identities to the authors is absent from the social sciences, humanities and
 business in the investigated subset of journals, it is not unusual in the
@@ -521,6 +523,83 @@ Is there public commenting during formal peer review?             156 (91.2%)   
 Which type of peer review is used?                                54 (31.6%)    117 (68.4%) 
 
 ![](12-analysis-writeup_files/figure-html/clarity-graph-1.png)<!-- -->
+
+
+
+# The bigger picture
+
+preprint_citation                                                                                         n  prop  
+-----------------------------------------------------------------------------------------------------  ----  ------
+Yes, in the reference list                                                                              323  43.2% 
+Yes, but journal does not mandate that they are in reference list, can be within text instead.          231  30.9% 
+Not specified                                                                                            67  9.0%  
+Yes, but only in the text (not the reference list)                                                       62  8.3%  
+Papers should make proper and sufficient reference to the relevant formal literature. Informal or...     43  5.8%  
+Unsure                                                                                                   11  1.5%  
+NA                                                                                                        8  1.1%  
+It depends on the context of the pre-print. But also the things we publish are not traditional sc...      1  0.1%  
+No policy but this ed would permit reference to anything persistent                                       1  0.1%  
+
+
+
+preprint_version                                                                                                                                                        n  prop  
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------  ----  ------
+Any                                                                                                                                                                   375  50.2% 
+Any manuscript version (preprint or postprint)                                                                                                                        241  32.3% 
+No preprint policy                                                                                                                                                     91  12.2% 
+First submission only (before peer review)                                                                                                                             28  3.7%  
+NA                                                                                                                                                                      6  0.8%  
+After peer review (but not final, copyedited version)                                                                                                                   3  0.4%  
+None (preprints not allowed)                                                                                                                                            1  0.1%  
+Quantum is an arXiv overlay journal, this means that both the initially submitted and the finally published version must be deposited on the arXiv preprint server      1  0.1%  
+Unsure (preprints are allowed, but it's not clear what version)                                                                                                         1  0.1%  
+
+
+
+opr_indenties_author      n  prop  
+---------------------  ----  ------
+No                      584  78.2% 
+Optional                121  16.2% 
+Mandatory                18  2.4%  
+Conditional              10  1.3%  
+No, No                    6  0.8%  
+Not specified             5  0.7%  
+No,                       1  0.1%  
+No, Unsure                1  0.1%  
+NA                        1  0.1%  
+
+
+
+opr_identities_published                                              n  prop  
+-----------------------------------------------------------------  ----  ------
+No                                                                  352  47.1% 
+Optional                                                            239  32.0% 
+Mandatory                                                            82  11.0% 
+NA                                                                   64  8.6%  
+Conditional                                                           6  0.8%  
+Not specified                                                         3  0.4%  
+Conditional, Plagiarism check and editorial comments also public      1  0.1%  
+
+
+
+pr_type                                                                                                                                           n  prop  
+---------------------------------------------------------------------------------------------------------------------------------------------  ----  ------
+Single blind                                                                                                                                    489  65.5% 
+Double blind                                                                                                                                    184  24.6% 
+Other                                                                                                                                            21  2.8%  
+Referees can choose to stay anonymous                                                                                                            20  2.7%  
+open (not blinded) post publication                                                                                                              14  1.9%  
+Not blinded                                                                                                                                       8  1.1%  
+Optional single blind (reviewers can choose to name themselves)                                                                                   2  0.3%  
+Unsure/not specified                                                                                                                              2  0.3%  
+collaborative, open                                                                                                                               1  0.1%  
+Consultative peer review (reviewers discuss their independent reports with one another and can optionally reveal their names to the authors)      1  0.1%  
+Double blind during the peer review, not  blind when published                                                                                    1  0.1%  
+Double blind if submitted blind.                                                                                                                  1  0.1%  
+single blind                                                                                                                                      1  0.1%  
+Transparent                                                                                                                                       1  0.1%  
+NA                                                                                                                                                1  0.1%  
+
 
 
 
