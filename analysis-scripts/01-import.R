@@ -94,3 +94,29 @@ part1 %>%
   mutate(var_number = 1:n())   -> var_overview
 
 write_csv(var_overview, "data-transformed/var_overview.csv")
+
+
+# import and munge overall data from transpose database
+transpose_db <- read_csv("data-raw/Transpose download-2019-09-09.csv")
+
+transpose_db_clean <- transpose_db %>%
+  pivot_longer(cols = starts_with("X"),
+               names_to = "journal_id",
+               values_to = "content") %>%
+  select(Property, content, journal_id) %>%
+  pivot_wider(names_from = "Property", values_from = "content") %>%
+  # remove a test journal
+  filter(journal_id != "X6") %>%
+  select(-journal_id)
+
+transpose_db_clean <- transpose_db_clean %>%
+  mutate(date = lubridate::mdy(date)) %>%
+  janitor::clean_names("snake")
+
+transpose_db_selection <- transpose_db_clean %>%
+  filter(verified == "Yes")
+
+write_csv(transpose_db_selection, "data-transformed/transpose_db_data.csv")
+
+
+
