@@ -985,39 +985,6 @@ clarity_data %>%
 
 
 
-# The bigger picture
-```{r}
-transpose_db <- read_csv(here::here("data-transformed/transpose_db_data_verified.csv"))
-
-display_table <- function(df, var) {
-  df %>% 
-    count({{var}}, sort = T) %>% 
-    mutate(prop = scales::percent(n/sum(n))) %>% 
-    knitr::kable()
-}
-
-transpose_db %>% 
-  mutate(preprint_citation = str_trunc(preprint_citation, width = 100)) %>% 
-  display_table(preprint_citation)
-
-
-transpose_db %>% 
-  display_table(preprint_version)
-
-transpose_db %>% 
-  display_table(opr_indenties_author)
-
-transpose_db %>% 
-  display_table(opr_identities_published)
-
-transpose_db %>% 
-  display_table(pr_type)
-
-```
-
-
-
-
 # Discussion
 Our results suggest that policies regarding various aspects of scholarly 
 publishing are very often unclear. In the majority of cases, information on
