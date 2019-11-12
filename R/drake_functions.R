@@ -1,3 +1,6 @@
+# data import functions ------
+
+
 import_raw_data <- function(out_file) {
   # Import data on google scholar rankings of journals ----
   gsm_sheet <- gs_title("Compiled_Landscape study journals list")
@@ -81,4 +84,31 @@ import_raw_data <- function(out_file) {
     # write result to disk
     write_csv(joined_dataset, out_file)
   }
+}
+
+
+create_var_overview <- function(out_file) {
+  ls_sheet <- gs_title("TRANSPOSE landscape study - round 3")
+
+  # import list of variables for ease of use
+  transpose_vars <- gs_read(
+    ls_sheet,
+    col_types = cols(.default = col_character()),
+    ws = "Raw", n_max = 2)
+
+  part1 <- transpose_vars %>%
+    slice(1) %>%
+    gather(variable, description) %>%
+    slice(-1)
+
+  part2 <- transpose_vars %>%
+    slice(2) %>%
+    gather(variable, type) %>%
+    slice(-1)
+
+  part1 %>%
+    left_join(part2, by = "variable") %>%
+    mutate(var_number = 1:n())   -> var_overview
+
+  write_csv(var_overview, out_file)
 }
