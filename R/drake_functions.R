@@ -113,29 +113,8 @@ create_var_overview <- function(out_file) {
 }
 
 recode_vars <- function(raw_data, oa_data, out_path) {
-  # import data
-  base_data <- read_csv(
-    raw_data,
-    col_types = cols(
-      .default = col_character(),
-      review_date_1 = col_character(),
-      review_date_2 = col_character(),
-      review_date_3 = col_character(),
-      `h5-index` = col_double(),
-      `h5-median` = col_double(),
-      G_100_rank = col_double(),
-      G_BEM_rank = col_double(),
-      G_CMS_rank = col_double(),
-      G_ECS_rank = col_double(),
-      G_HMS_rank = col_double(),
-      G_HLA_rank = col_double(),
-      G_LSES_rank = col_double(),
-      G_PM_rank = col_double(),
-      G_SS_rank = col_double()
-    ))
-
   # create clean variable for peer review type
-  refined <- base_data %>%
+  refined <- raw_data %>%
     mutate(pr_type_clean = case_when(
       str_detect(pr_type, "^Double") ~ "Double blind",
       str_detect(pr_type, "^Other") ~ "Other",
@@ -183,7 +162,7 @@ recode_vars <- function(raw_data, oa_data, out_path) {
     write_csv(out_path)
 }
 
-recode_to_areas <- function(refined, missing_categories, out_path) {
+recode_to_areas <- function(refined) {
 
   recoded <- refined %>%
     select(issn, starts_with("G_"), -G_100_rank) %>%
@@ -206,28 +185,64 @@ recode_to_areas <- function(refined, missing_categories, out_path) {
   refined_with_areas <- refined %>%
     full_join(recoded, by = "issn")
 
-  # data on areas for some journals was not included. here we import the scraped
-  # data and join it with the rest
-  hand_coded_areas <- read_csv(
-    missing_categories,
+  refined_with_areas
+}
+
+
+add_missing_areas <- function(data_with_areas, data_on_missing_areas, out_path) {
+  missing_areas <- data_with_areas %>%
+    select(title, issn, area) %>%
+    filter(is.na(area))
+
+
+  data_from_gs <- read_csv(
+    data_on_missing_areas,
     col_types = cols(
-      title = col_character(),
-      issn = col_character(),
-      area = col_character(),
       id = col_character(),
+      Publication = col_character(),
       `h5-index` = col_double(),
       `h5-median` = col_double()
     )) %>%
+    rename(title = Publication) %>%
+    mutate(title = str_remove(title, "[^[:alnum:] ]") %>%
+             str_remove('"'))
+
+  with_matched <- missing_areas %>%
+    mutate(title = str_remove(title, "[^[:alnum:] ]")) %>%
+    full_join(data_from_gs, by = "title") %>%
+    filter(!is.na(issn))
+
+  with_matched <- with_matched %>%
+    mutate(parent_field = str_extract(id, ".{3}")) %>%
+    mutate(area = case_when(
+      str_detect(parent_field, "bus") ~ "Business, Economics & Management",
+      str_detect(parent_field, "chm") ~ "Chemical & Materials Sciences",
+      str_detect(parent_field, "eng") ~ "Engineering & Computer Science",
+      str_detect(parent_field, "med") ~ "Health & Medical Sciences",
+      str_detect(parent_field, "hum") ~ "Humanities, Literature & Arts",
+      str_detect(parent_field, "bio") ~ "Life Sciences & Earth Sciences",
+      str_detect(parent_field, "phy") ~ "Physics & Mathematics",
+      str_detect(parent_field, "soc") ~ "Social Sciences"
+    )) %>%
+    select(-parent_field) %>%
+    arrange(title)
+
+
+  # # only 3 journals are in two categories, which is not too much
+  # with_matched %>%
+  #   group_by(title) %>%
+  #   mutate(n = n()) %>%
+  #   filter(n > 1)
+
+  hand_coded_areas <- with_matched %>%
     select(issn, area) %>%
     mutate(area_was_scraped = TRUE)
 
-  refined_with_areas <- refined_with_areas %>%
+  refined_with_areas <- data_with_areas %>%
     full_join(hand_coded_areas, by = "issn") %>%
     mutate(area = coalesce(area.x, area.y)) %>%
     select(-area.y, -area.x) %>%
     replace_na(list(area_was_scraped = FALSE))
-
-
 
   write_csv(refined_with_areas, out_path)
 }
