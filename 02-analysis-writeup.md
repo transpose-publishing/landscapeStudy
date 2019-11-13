@@ -22,7 +22,7 @@ h-index varies greatly between sub-categories. Figure \@ref(fig:h-indices)
 shows the top-20 journals of each discipline.
 
 <div class="figure">
-<img src="12-analysis-writeup_files/figure-html/h-indices-1.png" alt="Distribution of h5-index across disciplines"  />
+<img src="02-analysis-writeup_files/figure-html/h-indices-1.png" alt="Distribution of h5-index across disciplines"  />
 <p class="caption">(\#fig:h-indices)Distribution of h5-index across disciplines</p>
 </div>
 
@@ -58,7 +58,7 @@ the health and medical sciences, the sample is slightly skewed in that direction
 
 
 <div class="figure">
-<img src="12-analysis-writeup_files/figure-html/sample-skew-1.png" alt="Sampled journals by discipline"  />
+<img src="02-analysis-writeup_files/figure-html/sample-skew-1.png" alt="Sampled journals by discipline"  />
 <p class="caption">(\#fig:sample-skew)Sampled journals by discipline</p>
 </div>
 
@@ -92,7 +92,7 @@ anonymize papers or reviews during review process.
 
 
 <div class="figure">
-<img src="12-analysis-writeup_files/figure-html/pr-type-overall-1.png" alt="Type of peer review"  />
+<img src="02-analysis-writeup_files/figure-html/pr-type-overall-1.png" alt="Type of peer review"  />
 <p class="caption">(\#fig:pr-type-overall)Type of peer review</p>
 </div>
 
@@ -106,7 +106,7 @@ of unclear policies, with social science and humanities being very clear and the
 other sciences somehwere in between. 
 
 <div class="figure">
-<img src="12-analysis-writeup_files/figure-html/peer-type-1.png" alt="Type of peer review by discipline"  />
+<img src="02-analysis-writeup_files/figure-html/peer-type-1.png" alt="Type of peer review by discipline"  />
 <p class="caption">(\#fig:peer-type)Type of peer review by discipline</p>
 </div>
 
@@ -139,7 +139,7 @@ identities to the authors, all other aspects are not specified or not
 available in more than 95% of journals.
 
 <div class="figure">
-<img src="12-analysis-writeup_files/figure-html/opr-1.png" alt="Aspects of open peer review"  />
+<img src="02-analysis-writeup_files/figure-html/opr-1.png" alt="Aspects of open peer review"  />
 <p class="caption">(\#fig:opr)Aspects of open peer review</p>
 </div>
 
@@ -155,7 +155,7 @@ natural sciences, at least on an optional basis
 
 
 <div class="figure">
-<img src="12-analysis-writeup_files/figure-html/opr-authors-1.png" alt="Open reviewer identities towards authors"  />
+<img src="02-analysis-writeup_files/figure-html/opr-authors-1.png" alt="Open reviewer identities towards authors"  />
 <p class="caption">(\#fig:opr-authors)Open reviewer identities towards authors</p>
 </div>
 
@@ -178,7 +178,7 @@ humanities, chemical & materials sciences, and in business, economics &
 management about 90% of journals have no policy on co-reviewing.
 
 <div class="figure">
-<img src="12-analysis-writeup_files/figure-html/co-rev-1.png" alt="Prevalence of co-review"  />
+<img src="02-analysis-writeup_files/figure-html/co-rev-1.png" alt="Prevalence of co-review"  />
 <p class="caption">(\#fig:co-rev)Prevalence of co-review</p>
 </div>
 
@@ -253,7 +253,7 @@ most frequent associations in the figure are depicted by bold arrows.
 
 
 <div class="figure">
-<img src="12-analysis-writeup_files/figure-html/bigrams-1.png" alt="Bigrams of co-review policies"  />
+<img src="02-analysis-writeup_files/figure-html/bigrams-1.png" alt="Bigrams of co-review policies"  />
 <p class="caption">(\#fig:bigrams)Bigrams of co-review policies</p>
 </div>
 
@@ -325,7 +325,7 @@ do not have a preprint policy.
 
 
 <div class="figure">
-<img src="12-analysis-writeup_files/figure-html/preprint-version-1.png" alt="Allowed preprint versions"  />
+<img src="02-analysis-writeup_files/figure-html/preprint-version-1.png" alt="Allowed preprint versions"  />
 <p class="caption">(\#fig:preprint-version)Allowed preprint versions</p>
 </div>
 
@@ -358,7 +358,7 @@ with some journals restricting citations of preprints to the text.
 
 
 <div class="figure">
-<img src="12-analysis-writeup_files/figure-html/preprint-citation-1.png" alt="Citation of preprints"  />
+<img src="02-analysis-writeup_files/figure-html/preprint-citation-1.png" alt="Citation of preprints"  />
 <p class="caption">(\#fig:preprint-citation)Citation of preprints</p>
 </div>
 
@@ -425,7 +425,7 @@ geometric layout but allow us to draw conclusions on which practices are more
 prevalent in one area or another.
 
 
-![](12-analysis-writeup_files/figure-html/plot-mca-one-dimensionally-1.png)<!-- -->
+![](02-analysis-writeup_files/figure-html/plot-mca-one-dimensionally-1.png)<!-- -->
 
 <!-- The following sections are outdated. -->
 Numerical output from the MCA is shown in table \@ref(tab:mca-table). We can
@@ -496,7 +496,7 @@ Springer Nature                                  NA        NA   -504            
 Other publishers                                 NA        NA     93                      379                      NA   -119                      621                      NA
 
 <div class="figure">
-<img src="12-analysis-writeup_files/figure-html/plot-mca-1.png" alt="Joint analysis of open science policies"  />
+<img src="02-analysis-writeup_files/figure-html/plot-mca-1.png" alt="Joint analysis of open science policies"  />
 <p class="caption">(\#fig:plot-mca)Joint analysis of open science policies</p>
 </div>
 
@@ -522,7 +522,7 @@ Is there open interaction (reviewers consult with one another)?   154 (90.1%)   
 Is there public commenting during formal peer review?             156 (91.2%)   15 (8.8%)   
 Which type of peer review is used?                                54 (31.6%)    117 (68.4%) 
 
-![](12-analysis-writeup_files/figure-html/clarity-graph-1.png)<!-- -->
+![](02-analysis-writeup_files/figure-html/clarity-graph-1.png)<!-- -->
 
 
 

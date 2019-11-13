@@ -20,7 +20,7 @@ specific policy regarding the aspect under question, or it was unclear for our
 reviewers if there was a policy or not or how to interpret it.
 
 # Missing data
-![](11-overview_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 There is quite some missing data, which shouldn't be like this. For example
 the field U30 in excel (table RAW), which has the opr-responses for the journal
@@ -29,7 +29,7 @@ the field U30 in excel (table RAW), which has the opr-responses for the journal
 The following are all variables, where implicit missings should be checked and
 converted to explicit ones (as for opr_responses), or fixed (as for publishers).
 
-![](11-overview_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 # Publisher versus subject area
 The question is, whether it is reasonable to split results by publisher.
@@ -42,7 +42,7 @@ being due to the publisher when they are due to the subject area.
 - The only thing to compare would be thus Springer Nature vs. Elsevier
 
 
-![](11-overview_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 
 
@@ -51,25 +51,25 @@ being due to the publisher when they are due to the subject area.
 
 
 
-![](11-overview_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 
-![](11-overview_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 
-![](11-overview_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 
 
-![](11-overview_files/figure-html/peer-type-publisher-1.png)<!-- -->
+![](01-overview_files/figure-html/peer-type-publisher-1.png)<!-- -->
 
 I don't think this distinction is very interesting, since it masks disciplinary
 differences, which are more fundamental.
 
-![](11-overview_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 
-![](11-overview_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 
 ## Peer review transfer policy
@@ -94,16 +94,16 @@ propensity.
 The following graph shows the relationship between to most common bigrams (only
 bigrams that occur at least three times).
 
-![](11-overview_files/figure-html/pr-transfer-plot-1.png)<!-- -->
+![](01-overview_files/figure-html/pr-transfer-plot-1.png)<!-- -->
 
 
 
 
 
 # Open Peer Review
-![](11-overview_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
-![](11-overview_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
 
 
@@ -131,7 +131,7 @@ propensity.
 The following graph shows the relationship between to most common bigrams (only
 bigrams that occur at least three times).
 
-![](11-overview_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 
 
 
@@ -140,22 +140,22 @@ bigrams that occur at least three times).
 
 
 
-![](11-overview_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
 
-![](11-overview_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
 
 
 
 This doesn't look interesting.
-![](11-overview_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
 
 This doesn't look interesting.
-![](11-overview_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
 
 # Preprints
-![](11-overview_files/figure-html/preprint version-1.png)<!-- -->
+![](01-overview_files/figure-html/preprint version-1.png)<!-- -->
 
-![](11-overview_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
 
 
 
@@ -167,17 +167,17 @@ This doesn't look interesting.
   </script>
 </div>
 
-![](11-overview_files/figure-html/unnamed-chunk-25-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-25-1.png)<!-- -->
 
 
 
 
-![](11-overview_files/figure-html/unnamed-chunk-26-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-26-1.png)<!-- -->
 
-![](11-overview_files/figure-html/unnamed-chunk-27-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-27-1.png)<!-- -->
 
 
-![](11-overview_files/figure-html/unnamed-chunk-28-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-28-1.png)<!-- -->
 
 
 
@@ -229,7 +229,7 @@ not testing any hypothesis.
 
 
 
-![](11-overview_files/figure-html/unnamed-chunk-29-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-29-1.png)<!-- -->
 
 
 
@@ -297,10 +297,10 @@ not testing any hypothesis.
 ## 21  857   60 |  609 853 208 |  -40   4   4 |
 ```
 
-![](11-overview_files/figure-html/unnamed-chunk-30-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-30-1.png)<!-- -->
 
 
-![](11-overview_files/figure-html/unnamed-chunk-31-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-31-1.png)<!-- -->
 
 
 ```
@@ -373,7 +373,7 @@ not testing any hypothesis.
 ## 25 <NA> |  285 151 <NA> | -226  95 <NA> |
 ```
 
-![](11-overview_files/figure-html/unnamed-chunk-32-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-32-1.png)<!-- -->
 
 This looks intelligble, but lets try one more time with this crude variable
 
@@ -456,12 +456,12 @@ This looks intelligble, but lets try one more time with this crude variable
 ## 29  313 <NA> | -368 297 <NA> |  -85  16 <NA> |
 ```
 
-![](11-overview_files/figure-html/unnamed-chunk-33-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-33-1.png)<!-- -->
 
 
 
 
-![](11-overview_files/figure-html/unnamed-chunk-34-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-34-1.png)<!-- -->
 
 
 
@@ -487,14 +487,14 @@ This looks intelligble, but lets try one more time with this crude variable
 ## [1] 0.2201843
 ```
 
-![](11-overview_files/figure-html/unnamed-chunk-35-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-35-1.png)<!-- -->
 
 First axis is distinction between SSH and sciences. Second axis is more 
 difficult in terms of what it means. It also has not that much inertia, thus 
 being not very influential
 
 
-![](11-overview_files/figure-html/unnamed-chunk-36-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-36-1.png)<!-- -->
 
 
 ```
@@ -635,7 +635,7 @@ bring out mor subtle and potentialy more meaningful answers regarding the key
 topics (that SSH have double blind and Sciences have single blind seems to be 
 well established)
 
-![](11-overview_files/figure-html/unnamed-chunk-38-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-38-1.png)<!-- -->
 
 
 
@@ -682,12 +682,12 @@ well established)
 ## 8 | SclS |  110  299   94 | -227 284  68 |   52  15   5 |
 ```
 
-![](11-overview_files/figure-html/unnamed-chunk-39-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-39-1.png)<!-- -->
 
 There is not much variation left to explain here, somehow.
 
 
-![](11-overview_files/figure-html/unnamed-chunk-40-1.png)<!-- -->
+![](01-overview_files/figure-html/unnamed-chunk-40-1.png)<!-- -->
 
 
 ```
