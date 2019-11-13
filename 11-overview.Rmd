@@ -16,14 +16,13 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 
 ```{r, message=FALSE}
 library(tidyverse)
+library(drake)
 library(RColorBrewer)
 library(ggalt)
 library(visdat)
-library(here)
 library(tidytext)
 library(igraph)
 library(ggraph)
-library(landscapeStudy)
 # install.packages("ggchicklet", repos = "https://cinc.rud.is")
 library(ggchicklet)
 library(ggridges)
@@ -33,8 +32,8 @@ theme_set(hrbrmisc::theme_hrbrmstr())
 
 
 # import data
-refined <- read_csv(here("data-transformed/refined.csv"))
-refined_with_areas <- read_csv(here("data-transformed/refined_w_areas.csv"))
+refined <- readd(clean_data)
+refined_with_areas <- readd(clean_areas)
 
 ```
 
@@ -800,6 +799,7 @@ multiple_ca %>%
   coord_fixed()
 
 ```
+
 This looks intelligble, but lets try one more time with this crude variable
 
 ```{r, fig.width=10, fig.height=8}
@@ -996,7 +996,7 @@ summary(ca_out)
 ca_out
 ```
 
-Axis are mainly determined by peer review policy. Maybe remove this variable to
+Axes are mainly determined by peer review policy. Maybe remove this variable to
 bring out mor subtle and potentialy more meaningful answers regarding the key 
 topics (that SSH have double blind and Sciences have single blind seems to be 
 well established)
@@ -1018,7 +1018,7 @@ ca_out %>%
 ```
 
 
-```{r}
+```{r, fig.width=9, fig.height=12}
 summary(ca_out)
 ca_out %>% 
   plot_ca(dimensions = c(1, 2)) +
