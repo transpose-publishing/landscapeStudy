@@ -1,5 +1,8 @@
+# Coreview policies have duplicates. This file computes string distances to aid
+# in detecting duplicates.
+
 library(tidyverse)
-refined <- read_csv(here::here("data-transformed/refined.csv"))
+refined <- read_csv(here::here("data/refined.csv"))
 
 coreview_policies <- refined %>%
   select(coreview_policy) %>%
