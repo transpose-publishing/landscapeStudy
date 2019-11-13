@@ -26,5 +26,10 @@ plan <- drake_plan(
     input = knitr_in("11-overview.Rmd"),
     output_file = file_out("11-overview.html"),
     quiet = TRUE
+  ),
+  paper_draft = rmarkdown::render(
+    input = knitr_in("12-analysis-writeup.Rmd"),
+    output_file = file_out("12-analysis-writeup.html"),
+    quiet = TRUE
   )
 )

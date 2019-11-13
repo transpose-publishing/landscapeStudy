@@ -17,8 +17,6 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, dpi = 400)
 ```{r import, message=FALSE}
 library(tidyverse)
 library(RColorBrewer)
-library(here)
-library(landscapeStudy)
 # install.packages("ggchicklet", repos = "https://cinc.rud.is")
 library(ggchicklet)
 library(tidytext)
@@ -29,8 +27,8 @@ theme_set(hrbrmisc::theme_hrbrmstr())
 
 
 # import data
-refined <- read_csv(here("data-transformed/refined.csv"))
-refined_with_areas <- read_csv(here("data-transformed/refined_w_areas.csv"))
+refined <- readd(clean_data)
+refined_with_areas <- readd(clean_areas)
 
 # tweak factor ordering
 refined_with_areas <- refined_with_areas %>% 
