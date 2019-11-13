@@ -139,7 +139,7 @@ extract_ca_data <- function(object, dimensions = c(1, 2),
       mutate(Profil = rep("Zeilenprofil", length(rowname)))
 
     if (length(object$rowsup) > 0) {
-      row_data <<- row_data %>%
+      row_data <- row_data %>%
         slice(object$rowsup) %>%
         mutate(sup_var = factor("Supplementary Variables", levels =
                                   c("Initial Variables", "Supplementary Variables"))) %>%
