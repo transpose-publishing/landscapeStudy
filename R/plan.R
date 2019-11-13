@@ -23,13 +23,13 @@ plan <- drake_plan(
     out_path = file_out("data/refined_w_areas.csv")
   ),
   descriptive_report = rmarkdown::render(
-    input = knitr_in("11-overview.Rmd"),
-    output_file = file_out("11-overview.html"),
+    input = knitr_in("01-overview.Rmd"),
+    output_file = file_out("01-overview.html"),
     quiet = TRUE
   ),
   paper_draft = rmarkdown::render(
-    input = knitr_in("12-analysis-writeup.Rmd"),
-    output_file = file_out("12-analysis-writeup.html"),
+    input = knitr_in("02-analysis-writeup.Rmd"),
+    output_file = file_out("02-analysis-writeup.html"),
     quiet = TRUE
   )
 )
