@@ -425,7 +425,7 @@ geometric layout but allow us to draw conclusions on which practices are more
 prevalent in one area or another.
 
 
-![](12-analysis-writeup_files/figure-html/plot mca one dimensionally-1.png)<!-- -->
+![](12-analysis-writeup_files/figure-html/plot-mca-one-dimensionally-1.png)<!-- -->
 
 <!-- The following sections are outdated. -->
 Numerical output from the MCA is shown in table \@ref(tab:mca-table). We can

@@ -775,7 +775,7 @@ geometric layout but allow us to draw conclusions on which practices are more
 prevalent in one area or another.
 
 
-```{r plot mca one dimensionally, fig.width=10, fig.height=8, warning=FALSE}
+```{r plot-mca-one-dimensionally, fig.width=10, fig.height=8, warning=FALSE}
 # get data from MCA
 data_for_one_dimension <- extract_ca_data(final_4) %>% 
   .$col_data %>% 
