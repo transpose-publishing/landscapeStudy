@@ -11,5 +11,5 @@ library(visdat)
 library(ca)
 library(ggrepel)
 
-knitr::write_bib(file = "packages.bib")
+knitr::write_bib(file = "documentation/packages.bib")
 
