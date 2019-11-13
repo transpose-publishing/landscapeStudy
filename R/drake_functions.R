@@ -148,7 +148,7 @@ recode_vars <- function(raw_data, oa_data, out_path) {
 
 
   # add data on open access status
-  oa_status <- read_csv(here::here(oa_data),
+  oa_status <- read_csv(oa_data,
                         col_types = cols(
                           issn = col_character(),
                           bibjson.title = col_character(),
