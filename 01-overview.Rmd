@@ -15,26 +15,11 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 
 
 ```{r, message=FALSE}
-library(tidyverse)
-library(drake)
-library(RColorBrewer)
-library(ggalt)
-library(visdat)
-library(tidytext)
-library(igraph)
-library(ggraph)
-# install.packages("ggchicklet", repos = "https://cinc.rud.is")
-library(ggchicklet)
-library(ggridges)
-library(ca)
-
-theme_set(hrbrmisc::theme_hrbrmstr())
-
+theme_set(theme_hrbrmstr())
 
 # import data
 refined <- readd(clean_data)
 refined_with_areas <- readd(clean_areas)
-
 ```
 
 # Summary

@@ -15,15 +15,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, dpi = 400)
 ```
 
 ```{r import, message=FALSE}
-library(tidyverse)
-library(RColorBrewer)
-# install.packages("ggchicklet", repos = "https://cinc.rud.is")
-library(ggchicklet)
-library(tidytext)
-library(ggraph)
-
-
-theme_set(hrbrmisc::theme_hrbrmstr())
+theme_set(theme_hrbrmstr())
 
 
 # import data
@@ -33,7 +25,6 @@ refined_with_areas <- readd(clean_areas)
 # tweak factor ordering
 refined_with_areas <- refined_with_areas %>% 
   order_factors()
-
 ```
 
 # Sample characteristics
