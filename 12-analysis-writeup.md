@@ -425,23 +425,6 @@ geometric layout but allow us to draw conclusions on which practices are more
 prevalent in one area or another.
 
 
-
-```
-## Warning in min(x): kein nicht-fehlendes Argument für min; gebe Inf zurück
-```
-
-```
-## Warning in max(x): kein nicht-fehlendes Argument für max; gebe -Inf zurück
-```
-
-```
-## Warning in min(x): kein nicht-fehlendes Argument für min; gebe Inf zurück
-```
-
-```
-## Warning in max(x): kein nicht-fehlendes Argument für max; gebe -Inf zurück
-```
-
 ![](12-analysis-writeup_files/figure-html/plot mca one dimensionally-1.png)<!-- -->
 
 <!-- The following sections are outdated. -->

@@ -775,7 +775,7 @@ geometric layout but allow us to draw conclusions on which practices are more
 prevalent in one area or another.
 
 
-```{r plot mca one dimensionally, fig.width=10, fig.height=8}
+```{r plot mca one dimensionally, fig.width=10, fig.height=8, warning=FALSE}
 # get data from MCA
 data_for_one_dimension <- extract_ca_data(final_4) %>% 
   .$col_data %>% 
@@ -811,8 +811,7 @@ data_for_one_dimension %>%
   scale_y_continuous(labels = "Clear Policies",
                      breaks = 1,
                      expand = c(0, .6),
-                     sec.axis = sec_axis(~., breaks = 1,
-                                         labels = "Unclear Policies")) +
+                     sec.axis = dup_axis(labels = "Unclear Policies")) +
   facet_wrap(~type, nrow = 2, scales = "free_y") +
   theme(
     panel.grid.major.y = element_blank(), panel.grid.major.x = element_blank(), 
