@@ -2,7 +2,8 @@
 
 import_raw_data <- function(out_file) {
   # Import data on google scholar rankings of journals ----
-  gsm_sheet <- gs_title("Compiled_Landscape study journals list")
+  gsm_sheet <- gs_key("1Dluo5DNWU4UrmwIZLzqcToioRdyZ1qc1EofAk4ypiW8")
+
   gs_dat <- gs_read(gsm_sheet, ws = "G_ALL_dedup",
                     col_types = cols(
                       `Journal Title` = col_character(),
@@ -36,7 +37,7 @@ import_raw_data <- function(out_file) {
   # we are re-doing the import which was done by Jessica inside the sheet.
   # so we have to import the raw sheet, and then take either the first or the
   # third row.
-  ls_sheet <- gs_title("TRANSPOSE landscape study - round 3")
+  ls_sheet <- gs_key("1WcvxxmDhaV3BwBiIfwC_nEAr6-EKCDD11R6eJ5vZElA")
 
   transpose_fixed <- gs_read(ls_sheet,
                              col_types = cols(.default = col_character())) %>%
@@ -87,7 +88,7 @@ import_raw_data <- function(out_file) {
 
 
 create_var_overview <- function(out_file) {
-  ls_sheet <- gs_title("TRANSPOSE landscape study - round 3")
+  ls_sheet <- gs_key("1WcvxxmDhaV3BwBiIfwC_nEAr6-EKCDD11R6eJ5vZElA")
 
   # import list of variables for ease of use
   transpose_vars <- gs_read(
