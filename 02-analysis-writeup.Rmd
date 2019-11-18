@@ -532,7 +532,7 @@ refined_with_areas <- refined_with_areas %>%
   mutate(preprint_version_clean = fct_relevel(
     preprint_version_clean, "Unsure (preprints are allowed, but it's not clear which version)",
     "Any", "First submission only (before peer review)") %>% 
-    fct_relevel("None", "No preprint policy", "Other", after = 4))
+    fct_relevel("Other" ,"None", "No preprint policy", after = 4))
     
     
     
