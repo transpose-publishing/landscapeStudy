@@ -494,14 +494,17 @@ distinct_coreview %>%
 clean_preprint_version <- function(df) {
   df %>% 
     mutate(preprint_version_clean = case_when(
-      str_detect(preprint_version, "Unsure") ~ 
+      # there is just one mention of "Unclear". Looking through the policy, 
+      # preprints are clearly allowed, but it is unsure, which version. We can
+      # therefore safely group it to "Unsure".
+      str_detect(preprint_version, "Unsure|Unclear") ~ 
         "Unsure (preprints are allowed, but it's not clear which version)",
-      str_detect(preprint_version, "Any .*? or") ~ "Other",
-      str_detect(preprint_version, "Other|Unclear") ~ "Other",
+      # str_detect(preprint_version, "Any .*? or") ~ "Other",
+      str_detect(preprint_version, "Other") ~ "Other",
       str_detect(preprint_version, "None") ~ "None",
       str_detect(preprint_version, "First sub") ~ 
         "First submission only (before peer review)",
-      str_detect(preprint_version, "After peer re") ~ "After peer review",
+      str_detect(preprint_version, "^After peer re") ~ "After peer review",
       str_detect(preprint_version, "Any|any") ~ "Any",
       str_detect(preprint_version, "No") ~ "No preprint policy",
     )) 
