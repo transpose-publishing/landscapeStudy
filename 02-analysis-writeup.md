@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2019-11-13
+date: Last updated 2019-11-18
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -368,7 +368,7 @@ sciences, with
 50%
 of all journals in the life and earth sciences allowing citations to preprints
 either in the text or in the reference list. In contrast, the social sciences 
-and humanities either have unclear or no policies regarding whether preprints 
+and humanities largely have unclear or no policies regarding whether preprints 
 can be cited or not. 
 
 

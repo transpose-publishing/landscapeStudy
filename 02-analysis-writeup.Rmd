@@ -626,9 +626,9 @@ preprint_citation <- refined_with_areas %>%
     mutate(preprint_citation_clean = 
              fct_relevel(preprint_citation_clean,
                          "Yes, in the reference list", "Yes, but only in the text",
-                         "No", "Other", "Unsure", "Not specified")) %>% 
+                         "Other", "No", "Unsure", "Not specified")) %>% 
   make_proportion(preprint_citation_clean, area,
-                  order_string = "Yes")
+                  order_string = "Yes|Other")
 
 
 p_cols <- c("Not specified" =  "#E7298A", "Other" = "#666666", "Unsure" = "#A6761D",
@@ -646,7 +646,7 @@ p <- ggplot(preprint_citation, aes(fct_reorder(area, order), prop,
   geom_step(data = filter(preprint_citation, str_detect(area, "Business|Social")), 
             aes(x = area, y = order, group = 1), direction = "hv",
             position = position_nudge(x = -.5)) +
-  annotate("text", x = "Life Sciences & Earth Sciences", y = .5, 
+  annotate("text", x = "Life Sciences & Earth Sciences", y = .55, 
            label = "Proportion of journals\nthat allow citation of preprints",
            vjust = -.8,
            family = "Hind", size = 3) +
@@ -670,7 +670,7 @@ sciences, with
 `r preprint_citation %>% filter(str_detect(area, "Life")) %>% pull(order) %>% make_percent()`
 of all journals in the life and earth sciences allowing citations to preprints
 either in the text or in the reference list. In contrast, the social sciences 
-and humanities either have unclear or no policies regarding whether preprints 
+and humanities largely have unclear or no policies regarding whether preprints 
 can be cited or not. 
 
 
