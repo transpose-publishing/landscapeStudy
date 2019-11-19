@@ -5,7 +5,7 @@ This repository holds code and data for this paper: LINK TO PREPRINT/PAPER.
 
 ## Reproducible code
 The whole analytic pipeline is reproducible throug the `drake` package. 
-Executing the file `drake.R` will rebuild the analysis.
+Executing `r_make("drake.R")` will rebuild the analysis.
 
 The pipeline is specified in the file `R/plan.R`. You can visualise the 
 dependencies with the following code:
