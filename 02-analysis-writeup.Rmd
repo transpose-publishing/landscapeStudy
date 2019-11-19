@@ -205,7 +205,7 @@ ggplot(peer_type_data, aes(fct_reorder(area, order), prop, fill = fct_rev(pr_typ
 
 ```{r pr-stats}
 pr_recognition <- refined %>% 
-  make_single_proportion(pr_database, "Yes")
+  make_single_proportion(pr_database, "Yes", .1)
 
 pr_unsure <- refined %>% 
   make_single_proportion(pr_database, "Unsure")
@@ -333,7 +333,7 @@ TODO: explain differences between Yes, Mandatory, Conditional, Optional. Tony to
 check and explain.
 
 
-# Co-Review Policy
+# Co-Review 
 ```{r}
 coreview_policies <- refined %>% 
   select(coreview_policy) %>% 
@@ -361,7 +361,7 @@ While in the life and earth sciences, health & medical sciences as well as
 physics & mathematics more then a quarter of journals permit contributions 
 from co-reviewers, in the 
 humanities, chemical & materials sciences, and in business, economics & 
-management about 90% of journals have no policy on co-reviewing.
+management 90% of journals have no policy on co-reviewing.
 
 ```{r co-rev, fig.cap="Prevalence of co-review", fig.asp=.6}
 co_rev <- refined_with_areas %>% 

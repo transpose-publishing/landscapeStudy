@@ -20,10 +20,10 @@ make_proportion <- function(df, var, group, order_string = NA_character_) {
            order = sum(order))
 }
 
-make_single_proportion <- function(df, var, category) {
+make_single_proportion <- function(df, var, category, accuracy = 1) {
   make_proportion(df, {{var}}, order_string = category) %>%
     ungroup() %>%
-    summarise(my_cat = mean(order) %>% scales::percent(., accuracy = 1))  %>%
+    summarise(my_cat = mean(order) %>% scales::percent(., accuracy = accuracy))  %>%
     as.character()
 }
 
