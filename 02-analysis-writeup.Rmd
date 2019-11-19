@@ -123,10 +123,15 @@ peer_type_data <- refined_with_areas %>%
 pr_type_prop <- refined %>% 
   make_proportion(pr_type_clean)
 
-perc_unsure <- pr_type_prop %>% 
-  filter(pr_type_clean == "Unsure") %>% 
+unsure <- pr_type_prop %>% 
+  filter(pr_type_clean == "Unsure")
+
+n_unsure <- unsure %>% 
+  pull(n)
+
+perc_unsure <- unsure %>% 
   pull(prop) %>% 
-  make_percent()
+  make_percent2(round_to = "comma")
 
 perc_not_blind <- pr_type_prop %>% 
   filter(pr_type_clean == "Not blinded") %>% 
@@ -147,7 +152,7 @@ perc_double <- pr_type_prop %>%
 
 Information on what type of peer review is used by a journal is mixed 
 (see figure \@ref(fig:pr-type-overall)).
-Overall, more than `r perc_unsure` of all journals do not provide clear 
+Overall, `r n_unsure` out of 171 journals (`r perc_unsure`)  do not provide clear 
 information about their peer review process. The most common peer review 
 practice is single blind per review (`r perc_single`), followed by double blind
 peer review (`r perc_double`).
