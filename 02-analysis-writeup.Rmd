@@ -24,7 +24,7 @@ refined_with_areas <- readd(clean_areas)
 
 # tweak factor ordering
 refined_with_areas <- refined_with_areas %>% 
-  order_factors()
+  order_pr_type()
 ```
 
 # Sample characteristics
@@ -117,7 +117,7 @@ for querying the DOAJ API and matching to our data can be found here FIXME]
 # Peer Review
 ```{r pr-computation}
 peer_type_data <- refined_with_areas %>% 
-  make_proportion(pr_type_clean, area, order_string = "Double|Single")
+  make_proportion(pr_type_clean, area, order_string = "blind|Other")
 
 # what is the percentage of "unsure"?
 pr_type_prop <- refined %>% 

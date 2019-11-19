@@ -1,10 +1,10 @@
-order_factors <- function(df) {
+order_pr_type <- function(df) {
   df %>%
     mutate(
       pr_type_clean = factor(
         pr_type_clean,
-        levels = c("Single blind", "Double blind", "Not blinded", "Unsure",
-                   "Other"))
+        levels = c("Single blind", "Double blind", "Not blinded", "Other",
+                   "Unsure"))
       )
 }
 
@@ -84,4 +84,20 @@ make_percent <- function(x, significant_digits = 1) {
     head(1) %>%
     signif(significant_digits) %>%
     scales::percent(accuracy = 1)
+}
+
+make_percent2 <- function(x, round_to = c("ten", "one", "comma")) {
+
+  round_to <- match.arg(round_to)
+  accuracy <- switch(round_to,
+    ten = 10,
+    one = 1,
+    comma = .1
+  )
+
+  x %>%
+    as.numeric() %>%
+    # to enable extraction of vectors as well
+    head(1) %>%
+    scales::percent(accuracy = accuracy)
 }
