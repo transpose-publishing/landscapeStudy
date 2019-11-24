@@ -103,7 +103,7 @@ problems in the following columns:
 
 The correct count of missings can be counted as such:
 
-````
+```
 refined %>% 
   select(pr_database, opr_reports, opr_responses, coreview_policy, 
          preprint_citation) %>% 
