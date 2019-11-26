@@ -203,25 +203,6 @@ ggplot(peer_type_data, aes(fct_reorder(area, order), prop, fill = fct_rev(pr_typ
        caption = "What type of peer review is used?")
 ```
 
-```{r pr-stats}
-pr_recognition <- refined %>% 
-  make_single_proportion(pr_database, "Yes", .1)
-
-pr_unsure <- refined %>% 
-  make_single_proportion(pr_database, "Unsure")
-
-pr_no <- refined %>% 
-  make_single_proportion(pr_database, "No")
-```
-
-
-When it comes to recognition of peer review activity, only `r pr_recognition` of
-all journals deposit reviewer activity into open databases. Furthermore,
-the majority of journals (`r pr_unsure`) does not state at all whether peer 
-review activity is deposited in any kind of database, open or not. The remaining
-`r pr_no` of journals deposit reviewer activity into databases which are not 
-open. 
-
 # Open Peer Review
 ```{r opr-computation}
 pdata <- refined %>% 
