@@ -19,6 +19,11 @@ vis_drake_graph(config)
 ```
 
 All packages that are used during the analysis are specified in `R/packages.R`.
+For the analysis files to render you will need to install the font "Hind" (for
+example from [Google Fonts](https://fonts.google.com/)) and 
+register it with
+[`extrafont`](https://cran.r-project.org/web/packages/extrafont/README.html). 
+
 
 The basis for the paper was `02-analysis-writeup.html`. Since writing the paper
 was a collaborative effort, we used a GoogleSheet to work on the manuscript. For
