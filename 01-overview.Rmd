@@ -94,7 +94,7 @@ refined %>%
 ```{r}
 # small tweaks
 refined_with_areas <- refined_with_areas %>% 
-  order_factors()
+  order_pr_type()
 ```
 
 
@@ -129,7 +129,7 @@ ggplot(refined_with_areas, aes(`h5-index`, pr_type_clean)) +
 
 ```{r peer-type-publisher}
 peer_type_publisher <- refined %>% 
-  order_factors() %>% 
+  order_pr_type() %>% 
   mutate(has_society = case_when(
          str_detect(
            publisher_clean, 
