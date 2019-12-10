@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2019-11-18
+date: Last updated 2019-11-26
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -80,10 +80,10 @@ for querying the DOAJ API and matching to our data can be found here FIXME]
 
 Information on what type of peer review is used by a journal is mixed 
 (see figure \@ref(fig:pr-type-overall)).
-Overall, more than 30% of all journals do not provide clear 
+Overall, 54 out of 171 journals (31.6%)  do not provide clear 
 information about their peer review process. The most common peer review 
-practice is single blind per review (29.8%), followed by double blind
-peer review (26.9%).
+practice is single blind per review (30%), followed by double blind
+peer review (27%).
 Some journals offer the option for authors to 
 choose whether to use single or double blind peer review. These cases have been
 coded as "Other" and amount to the majority of this category. 1% 
@@ -110,16 +110,6 @@ other sciences somehwere in between.
 <p class="caption">(\#fig:peer-type)Type of peer review by discipline</p>
 </div>
 
-
-
-
-When it comes to recognition of peer review activity, only 11% of
-all journals deposit reviewer activity into open databases. Furthermore,
-the majority of journals (81%) does not state at all whether peer 
-review activity is deposited in any kind of database, open or not. The remaining
-8% of journals deposit reviewer activity into databases which are not 
-open. 
-
 # Open Peer Review
 
 
@@ -145,7 +135,7 @@ available in more than 95% of journals.
 
 Since the aspect of revealed reviewer identities is the only one that is
 explicitly allowed by a substantive number of journals 
-(23.4%), we examine it
+(23%), we examine it
 separately for each discipline
 (see fig. \@ref(fig:opr-authors)). Whereas revealing reviewer
 identities to the authors is absent from the social sciences, humanities and
@@ -163,7 +153,7 @@ TODO: explain differences between Yes, Mandatory, Conditional, Optional. Tony to
 check and explain.
 
 
-# Co-Review Policy
+# Co-Review 
 
 Information on co-review policies is sparse. 
 Only 87 out of 171 journals do have an
@@ -175,7 +165,7 @@ While in the life and earth sciences, health & medical sciences as well as
 physics & mathematics more then a quarter of journals permit contributions 
 from co-reviewers, in the 
 humanities, chemical & materials sciences, and in business, economics & 
-management about 90% of journals have no policy on co-reviewing.
+management 90% of journals have no policy on co-reviewing.
 
 <div class="figure">
 <img src="02-analysis-writeup_files/figure-html/co-rev-1.png" alt="Prevalence of co-review"  />
@@ -269,42 +259,24 @@ policies mention the term "editor".
 
 
 ```
-##  [1] "review), you must contact the editor"                        
-##  [2] "the manuscript as confidential. The editor must be"          
-##  [3] "obtain permission from the journal editor prior to"          
-##  [4] "should be submitted to the editor so that"                   
-##  [5] "reviewers (like members of the editor"                       
-##  [6] "with the permission of the editor"                           
-##  [7] "without prior authorization from the editor"                 
-##  [8] "anyone without permission from the editor"                   
-##  [9] "that the reviewer contact the editor in advance"             
-## [10] "to ensure that the editor has the"                           
-## [11] "in the “comments to the editor"                              
-## [12] "that the reviewer contact the editor in advance"             
-## [13] "to ensure that the editor has the"                           
-## [14] "in the “comments to the editor"                              
-## [15] "sought; in that event the editor must be"                    
-## [16] "prior permission from the journal editor"                    
-## [17] "prior permission from the journal editor"                    
-## [18] "conflicts of interest to the editor"                         
-## [19] "before proceeding. Please contact the editor who requested"  
-## [20] "circumstances. Please consult your associate editor if you’d"
-## [21] "sure to contact the handling editor and indicate"            
-## [22] "anyone without permission from the editor"                   
-## [23] "sought; in that event the editor must be"                    
-## [24] "consulted should\nbe disclosed to the editor in advance\""   
-## [25] "please identify them to the editor"                          
-## [26] "but please check with the editor"                            
-## [27] "please identify them to the editor"                          
-## [28] "but please check with the editor"                            
-## [29] "please identify them to the editor"                          
-## [30] "that the reviewer contact the editor in advance"             
-## [31] "to ensure that the editor has the"                           
-## [32] "in the “comments to the editor"                              
-## [33] "unless previously agreed with the editor"                    
-## [34] "the explicit permission of the editor"                       
-## [35] "must request permission from the editor and abide"           
-## [36] "by the editor"
+##  [1] "review), you must contact the editor"                         "the manuscript as confidential. The editor must be"          
+##  [3] "obtain permission from the journal editor prior to"           "should be submitted to the editor so that"                   
+##  [5] "reviewers (like members of the editor"                        "with the permission of the editor"                           
+##  [7] "without prior authorization from the editor"                  "anyone without permission from the editor"                   
+##  [9] "that the reviewer contact the editor in advance"              "to ensure that the editor has the"                           
+## [11] "in the “comments to the editor"                               "that the reviewer contact the editor in advance"             
+## [13] "to ensure that the editor has the"                            "in the “comments to the editor"                              
+## [15] "sought; in that event the editor must be"                     "prior permission from the journal editor"                    
+## [17] "prior permission from the journal editor"                     "conflicts of interest to the editor"                         
+## [19] "before proceeding. Please contact the editor who requested"   "circumstances. Please consult your associate editor if you’d"
+## [21] "sure to contact the handling editor and indicate"             "anyone without permission from the editor"                   
+## [23] "sought; in that event the editor must be"                     "consulted should\nbe disclosed to the editor in advance\""   
+## [25] "please identify them to the editor"                           "but please check with the editor"                            
+## [27] "please identify them to the editor"                           "but please check with the editor"                            
+## [29] "please identify them to the editor"                           "that the reviewer contact the editor in advance"             
+## [31] "to ensure that the editor has the"                            "in the “comments to the editor"                              
+## [33] "unless previously agreed with the editor"                     "the explicit permission of the editor"                       
+## [35] "must request permission from the editor and abide"            "by the editor"
 ```
 
 
@@ -425,7 +397,7 @@ geometric layout but allow us to draw conclusions on which practices are more
 prevalent in one area or another.
 
 
-![](02-analysis-writeup_files/figure-html/plot-mca-one-dimensionally-1.png)<!-- -->
+![](02-analysis-writeup_files/figure-html/plot-mca-one-dimensionally-1.png)<!-- -->![](02-analysis-writeup_files/figure-html/plot-mca-one-dimensionally-2.png)<!-- -->
 
 <!-- The following sections are outdated. -->
 Numerical output from the MCA is shown in table \@ref(tab:mca-table). We can
@@ -434,9 +406,9 @@ peer review, policies for citing prepreints and whether reviewer identities are
 revealed to authors (column inertia). 
 These are also the strongest contributors to the first
 dimension of the space, which explains 
-70.8% of total variance. The second
+71% of total variance. The second
 dimension which explains 
-4.71% of total variance is mainly driven by whether 
+5% of total variance is mainly driven by whether 
 there is a clear policy on coreview, and to some extent by type of peer review.
 We do not consider more than two dimensions since they do not account for much
 of the residual variance.
@@ -495,10 +467,7 @@ Royal Society of Chemistry                       NA        NA   -251            
 Springer Nature                                  NA        NA   -504                      874                      NA    192                      126                      NA
 Other publishers                                 NA        NA     93                      379                      NA   -119                      621                      NA
 
-<div class="figure">
-<img src="02-analysis-writeup_files/figure-html/plot-mca-1.png" alt="Joint analysis of open science policies"  />
-<p class="caption">(\#fig:plot-mca)Joint analysis of open science policies</p>
-</div>
+
 
 
 # Overview of all policies
@@ -507,20 +476,20 @@ Other publishers                                 NA        NA     93            
 
 Table: (\#tab:graph for clarity)Are policies clear?
 
-label                                                             No            Yes         
-----------------------------------------------------------------  ------------  ------------
-Are author responses to reviews being published?                  150 (87.7%)   21 (12.3%)  
-Are editorial decision letters being published?                   150 (87.7%)   21 (12.3%)  
-Are peer review reports being published?                          142 (83.0%)   29 (17.0%)  
-Are previous versions of the manuscript being published?          154 (90.1%)   17 (9.9%)   
-Are reviewer identities being published?                          130 (76.0%)   41 (24.0%)  
-Are reviewer identities revealed to the authors?                  92 (53.80%)   79 (46.20%) 
-Can co-reviewers contribute?                                      130 (76.0%)   41 (24.0%)  
-Can preprints be cited?                                           127 (74.3%)   44 (25.7%)  
-Can preprints be posted?                                          67 (39.2%)    104 (60.8%) 
-Is there open interaction (reviewers consult with one another)?   154 (90.1%)   17 (9.9%)   
-Is there public commenting during formal peer review?             156 (91.2%)   15 (8.8%)   
-Which type of peer review is used?                                54 (31.6%)    117 (68.4%) 
+label                                                             No           Yes        
+----------------------------------------------------------------  -----------  -----------
+Are author responses to reviews being published?                  150 (88%)    21 (12%)   
+Are editorial decision letters being published?                   150 (88%)    21 (12%)   
+Are peer review reports being published?                          142 (83%)    29 (17%)   
+Are previous versions of the manuscript being published?          154 (90%)    17 (10%)   
+Are reviewer identities being published?                          130 (76%)    41 (24%)   
+Are reviewer identities revealed to the authors?                  92 (53.8%)   79 (46.2%) 
+Can co-reviewers contribute?                                      130 (76%)    41 (24%)   
+Can preprints be cited?                                           127 (74%)    44 (26%)   
+Can preprints be posted?                                          67 (39%)     104 (61%)  
+Is there open interaction (reviewers consult with one another)?   154 (90%)    17 (10%)   
+Is there public commenting during formal peer review?             156 (91%)    15 (9%)    
+Which type of peer review is used?                                54 (32%)     117 (68%)  
 
 ![](02-analysis-writeup_files/figure-html/clarity-graph-1.png)<!-- -->
 

@@ -10,12 +10,12 @@ output:
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, dev.args = list(type = "cairo"))
 ```
 
 
 ```{r, message=FALSE}
-theme_set(theme_hrbrmstr())
+theme_set(hrbrmisc::theme_hrbrmstr())
 
 # import data
 refined <- readd(clean_data)
