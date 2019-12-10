@@ -148,6 +148,40 @@ recode_vars <- function(raw_data, oa_data, out_path) {
 
 
 
+  # unify "no" and "not speccified" for opr-variables where feasible. TRH
+  # suggested early on, that this needs to be done. Until now, this was not done
+  # since this cannot be done without making some judgement on what should have
+  # been coded differently. Nevertheless, a few cases need to be changed, in an
+  # attempt to still use the data. otherwise we would need to remove any results
+  # for OPR.
+  # The approach will be as follows: if all variables for opr (except
+  # opr_additional) are coded as "No", this will be changed to "Not specified",
+  # since the assumption seems plausible, that it was in fact not specified, but
+  # was coded as "No", since the assessors made no difference in this case.
+  # In all other cases, values will stay the same. We will furthermore only use
+  # the variable regarding whether reviewer identities are revealed to the
+  # authors, since this is probably the most reliable one (there is a clear
+  # conceptual difference between "Not found" and "No" here. In all other cases,
+  # it is unclear which of the two the assesor was referring to.)
+
+  to_fix <- refined %>%
+    select(issn, starts_with("opr_"), -opr_additional)
+
+  refined <- to_fix %>%
+    mutate_at(vars(starts_with("opr")), str_detect, "No$") %>%
+    mutate(only_no = rowSums(select(., starts_with("opr"))),
+           # set to recode if all vars are "No"
+           recode_opr = if_else(only_no == 8, T, F)) %>%
+    select(issn, recode_opr) %>%
+    left_join(refined, .) %>%
+    # recode those that were determined to be recoded
+    mutate_at(vars(starts_with("opr"), -opr_additional),
+              ~case_when(recode_opr ~ "Not specified",
+                         TRUE ~ .)) %>%
+    rename(opr_was_recoded = recode_opr)
+
+
+
   # add data on open access status
   oa_status <- read_csv(oa_data,
                         col_types = cols(
