@@ -902,7 +902,7 @@ clarity_data <- refined %>%
                                TRUE ~ "Yes")
   ) %>% 
   select(co_review, preprint_posting, preprint_citing, 
-         pr_type_clean, starts_with("opr")) %>% 
+         pr_type_clean, starts_with("opr"), -opr_was_recoded) %>% 
   select(-opr_additional) %>% 
   mutate_at(vars(starts_with("opr")), function(x) case_when(
       x == "Not specified" ~ "No",
