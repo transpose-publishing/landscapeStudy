@@ -931,7 +931,7 @@ labels <- clarity_data %>%
 
 clarity_data %>% 
   left_join(labels) %>% 
-  mutate(tabulation = glue::glue("{n} ({scales::percent(prop)})")) %>% 
+  mutate(tabulation = glue::glue("{n} ({scales::percent(prop, .1)})")) %>% 
   ungroup() %>% 
   select(label, val, tabulation) %>% 
   spread(val, tabulation) %>% 

@@ -497,20 +497,20 @@ Other publishers                                 NA        NA     70            
 
 Table: (\#tab:graph for clarity)Are policies clear?
 
-label                                                             No          Yes       
-----------------------------------------------------------------  ----------  ----------
-Are author responses to reviews being published?                  158 (92%)   13 (8%)   
-Are editorial decision letters being published?                   158 (92%)   13 (8%)   
-Are peer review reports being published?                          150 (88%)   21 (12%)  
-Are previous versions of the manuscript being published?          162 (95%)   9 (5%)    
-Are reviewer identities being published?                          138 (81%)   33 (19%)  
-Are reviewer identities revealed to the authors?                  100 (58%)   71 (42%)  
-Can co-reviewers contribute?                                      130 (76%)   41 (24%)  
-Can preprints be cited?                                           127 (74%)   44 (26%)  
-Can preprints be posted?                                          67 (39%)    104 (61%) 
-Is there open interaction (reviewers consult with one another)?   162 (95%)   9 (5%)    
-Is there public commenting during formal peer review?             164 (96%)   7 (4%)    
-Which type of peer review is used?                                54 (32%)    117 (68%) 
+label                                                             No            Yes         
+----------------------------------------------------------------  ------------  ------------
+Are author responses to reviews being published?                  158 (92.4%)   13 (7.6%)   
+Are editorial decision letters being published?                   158 (92.4%)   13 (7.6%)   
+Are peer review reports being published?                          150 (87.7%)   21 (12.3%)  
+Are previous versions of the manuscript being published?          162 (94.7%)   9 (5.3%)    
+Are reviewer identities being published?                          138 (80.7%)   33 (19.3%)  
+Are reviewer identities revealed to the authors?                  100 (58.5%)   71 (41.5%)  
+Can co-reviewers contribute?                                      130 (76.0%)   41 (24.0%)  
+Can preprints be cited?                                           127 (74.3%)   44 (25.7%)  
+Can preprints be posted?                                          67 (39.2%)    104 (60.8%) 
+Is there open interaction (reviewers consult with one another)?   162 (94.7%)   9 (5.3%)    
+Is there public commenting during formal peer review?             164 (95.9%)   7 (4.1%)    
+Which type of peer review is used?                                54 (31.6%)    117 (68.4%) 
 
 ![](02-analysis-writeup_files/figure-html/clarity-graph-1.png)<!-- -->
 
