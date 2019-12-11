@@ -18,13 +18,9 @@ bibliography: landscape.bib
 The approach taken to create the sample of journals led to a few journals 
 having no data on disciplinary area: some journals like "Gut" were within the 
 top 100 journals, but not within any of the sub-categories. This is because the
-h-index varies greatly between sub-categories. Figure \@ref(fig:h-indices)
+h-index varies greatly between sub-categories. Subfigure A in figure
+\@ref(fig:h-indices)
 shows the top-20 journals of each discipline.
-
-<div class="figure">
-<img src="02-analysis-writeup_files/figure-html/h-indices-1.png" alt="Distribution of h5-index across disciplines"  />
-<p class="caption">(\#fig:h-indices)Distribution of h5-index across disciplines</p>
-</div>
 
 The missing categorisations were added in a second step, to facilitate analysis 
 of all journals that distinguishes by discipline. To this end, we scraped all 
@@ -54,14 +50,15 @@ The nature of our selection means that
 disciplines. The inclusion criteria further mean, that disciplines are not 
 represented equally in the sample. Since many of the top 100 journals belong to 
 the health and medical sciences, the sample is slightly skewed in that direction
-(see figure \@ref(fig:sample-skew)).
-
+(see subfigure B in figure \@ref(fig:h-indices)).
 
 <div class="figure">
-<img src="02-analysis-writeup_files/figure-html/sample-skew-1.png" alt="Sampled journals by discipline"  />
-<p class="caption">(\#fig:sample-skew)Sampled journals by discipline</p>
+<img src="02-analysis-writeup_files/figure-html/h-indices-1.png" alt="Sample characteristics"  />
+<p class="caption">(\#fig:h-indices)Sample characteristics</p>
 </div>
 
+(A): The distribution of h5-indices across disciplines. (B) Number and 
+proportion of journals sampled by discipline
 
 
 
