@@ -807,9 +807,9 @@ peer review, policies for citing prepreints and whether reviewer identities are
 revealed to authors (column inertia). 
 These are also the strongest contributors to the first
 dimension of the space, which explains 
-`r final_4$inertia.e[1] %>% scales::percent()` of total variance. The second
+`r final_4$inertia.e[1] %>% scales::percent(., .1)` of total variance. The second
 dimension which explains 
-`r final_4$inertia.e[2] %>% scales::percent()` of total variance is mainly driven by whether 
+`r final_4$inertia.e[2] %>% scales::percent(., .1)` of total variance is mainly driven by whether 
 there is a clear policy on coreview, and to some extent by type of peer review.
 We do not consider more than two dimensions since they do not account for much
 of the residual variance.
