@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2019-11-26
+date: Last updated 2019-12-11
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -259,24 +259,42 @@ policies mention the term "editor".
 
 
 ```
-##  [1] "review), you must contact the editor"                         "the manuscript as confidential. The editor must be"          
-##  [3] "obtain permission from the journal editor prior to"           "should be submitted to the editor so that"                   
-##  [5] "reviewers (like members of the editor"                        "with the permission of the editor"                           
-##  [7] "without prior authorization from the editor"                  "anyone without permission from the editor"                   
-##  [9] "that the reviewer contact the editor in advance"              "to ensure that the editor has the"                           
-## [11] "in the “comments to the editor"                               "that the reviewer contact the editor in advance"             
-## [13] "to ensure that the editor has the"                            "in the “comments to the editor"                              
-## [15] "sought; in that event the editor must be"                     "prior permission from the journal editor"                    
-## [17] "prior permission from the journal editor"                     "conflicts of interest to the editor"                         
-## [19] "before proceeding. Please contact the editor who requested"   "circumstances. Please consult your associate editor if you’d"
-## [21] "sure to contact the handling editor and indicate"             "anyone without permission from the editor"                   
-## [23] "sought; in that event the editor must be"                     "consulted should\nbe disclosed to the editor in advance\""   
-## [25] "please identify them to the editor"                           "but please check with the editor"                            
-## [27] "please identify them to the editor"                           "but please check with the editor"                            
-## [29] "please identify them to the editor"                           "that the reviewer contact the editor in advance"             
-## [31] "to ensure that the editor has the"                            "in the “comments to the editor"                              
-## [33] "unless previously agreed with the editor"                     "the explicit permission of the editor"                       
-## [35] "must request permission from the editor and abide"            "by the editor"
+##  [1] "review), you must contact the editor"                        
+##  [2] "the manuscript as confidential. The editor must be"          
+##  [3] "obtain permission from the journal editor prior to"          
+##  [4] "should be submitted to the editor so that"                   
+##  [5] "reviewers (like members of the editor"                       
+##  [6] "with the permission of the editor"                           
+##  [7] "without prior authorization from the editor"                 
+##  [8] "anyone without permission from the editor"                   
+##  [9] "that the reviewer contact the editor in advance"             
+## [10] "to ensure that the editor has the"                           
+## [11] "in the “comments to the editor"                              
+## [12] "that the reviewer contact the editor in advance"             
+## [13] "to ensure that the editor has the"                           
+## [14] "in the “comments to the editor"                              
+## [15] "sought; in that event the editor must be"                    
+## [16] "prior permission from the journal editor"                    
+## [17] "prior permission from the journal editor"                    
+## [18] "conflicts of interest to the editor"                         
+## [19] "before proceeding. Please contact the editor who requested"  
+## [20] "circumstances. Please consult your associate editor if you’d"
+## [21] "sure to contact the handling editor and indicate"            
+## [22] "anyone without permission from the editor"                   
+## [23] "sought; in that event the editor must be"                    
+## [24] "consulted should\nbe disclosed to the editor in advance\""   
+## [25] "please identify them to the editor"                          
+## [26] "but please check with the editor"                            
+## [27] "please identify them to the editor"                          
+## [28] "but please check with the editor"                            
+## [29] "please identify them to the editor"                          
+## [30] "that the reviewer contact the editor in advance"             
+## [31] "to ensure that the editor has the"                           
+## [32] "in the “comments to the editor"                              
+## [33] "unless previously agreed with the editor"                    
+## [34] "the explicit permission of the editor"                       
+## [35] "must request permission from the editor and abide"           
+## [36] "by the editor"
 ```
 
 
@@ -397,7 +415,7 @@ geometric layout but allow us to draw conclusions on which practices are more
 prevalent in one area or another.
 
 
-![](02-analysis-writeup_files/figure-html/plot-mca-one-dimensionally-1.png)<!-- -->![](02-analysis-writeup_files/figure-html/plot-mca-one-dimensionally-2.png)<!-- -->
+![](02-analysis-writeup_files/figure-html/plot-mca-one-dimensionally-1.png)<!-- -->
 
 <!-- The following sections are outdated. -->
 Numerical output from the MCA is shown in table \@ref(tab:mca-table). We can
@@ -406,9 +424,9 @@ peer review, policies for citing prepreints and whether reviewer identities are
 revealed to authors (column inertia). 
 These are also the strongest contributors to the first
 dimension of the space, which explains 
-71% of total variance. The second
+72% of total variance. The second
 dimension which explains 
-5% of total variance is mainly driven by whether 
+4% of total variance is mainly driven by whether 
 there is a clear policy on coreview, and to some extent by type of peer review.
 We do not consider more than two dimensions since they do not account for much
 of the residual variance.
@@ -442,32 +460,35 @@ Table: (\#tab:mca-table)Numerical output from Multiple Correspondence analysis
 
 Variable                                       mass   inertia    k=1   correlation with dim 1   contribution to dim 1    k=2   correlation with dim 2   contribution to dim 2
 --------------------------------------------  -----  --------  -----  -----------------------  ----------------------  -----  -----------------------  ----------------------
-Coreview ??                                     151        48     79                      611                      38     28                       80                      74
-Coreview ++                                      49       149   -244                      611                     117    -88                       80                     229
-Posting preprints ??                             72       117     60                      194                      10    -86                      395                     321
-Posting preprints ++                            128        65    -34                      194                       6     48                      395                     179
-Citing preprints ??                             147        51     86                      838                      43    -23                       62                      48
-Citing preprints ++                              53       142   -238                      838                     121     65                       62                     135
-Revealing reviewer identities to authors ??     105       107    214                      720                     193     10                        1                       6
-Revealing reviewer identities to authors ++      95       117   -235                      720                     212    -11                        1                       6
-Peer review ??                                   62       140    268                      821                     179     -6                        0                       1
-Peer review ++                                  138        63   -121                      821                      81      3                        0                       1
-Business, Economics & Management                 NA        NA    310                      848                      NA   -131                      152                      NA
-Chemical & Materials Sciences                    NA        NA    -85                       68                      NA    312                      932                      NA
-Engineering & Computer Science                   NA        NA     31                       23                      NA    202                      977                      NA
-Health & Medical Sciences                        NA        NA    -27                       60                      NA   -108                      940                      NA
-Humanities, Literature & Arts                    NA        NA    185                      781                      NA    -98                      219                      NA
-Life Sciences & Earth Sciences                   NA        NA   -373                      938                      NA     96                       62                      NA
-Physics & Mathematics                            NA        NA    -92                      748                      NA    -54                      252                      NA
-Social Sciences                                  NA        NA    115                      388                      NA   -144                      612                      NA
-American Chemical Society                        NA        NA      4                        0                      NA    217                     1000                      NA
-Elsevier                                         NA        NA    184                      903                      NA     61                       97                      NA
-IEEE                                             NA        NA    181                      764                      NA    101                      236                      NA
-Royal Society of Chemistry                       NA        NA   -251                      562                      NA    222                      438                      NA
-Springer Nature                                  NA        NA   -504                      874                      NA    192                      126                      NA
-Other publishers                                 NA        NA     93                      379                      NA   -119                      621                      NA
+Coreview ??                                     151        48     75                      586                      33     29                       87                      86
+Coreview ++                                      49       148   -233                      586                     103    -90                       87                     267
+Posting preprints ??                             72       118     81                      305                      18    -81                      302                     320
+Posting preprints ++                            128        66    -45                      305                      10     45                      302                     178
+Citing preprints ??                             147        52     95                      861                      52    -19                       35                      37
+Citing preprints ++                              53       144   -264                      861                     143     53                       35                     102
+Revealing reviewer identities to authors ??     115        95    195                      728                     171      7                        1                       4
+Revealing reviewer identities to authors ++      85       129   -264                      728                     231    -10                        1                       6
+Peer review ??                                   62       138    260                      853                     164      0                        0                       0
+Peer review ++                                  138        62   -117                      853                      74      0                        0                       0
+Business, Economics & Management                 NA        NA    376                      936                      NA    -98                       64                      NA
+Chemical & Materials Sciences                    NA        NA   -109                      108                      NA    313                      892                      NA
+Engineering & Computer Science                   NA        NA     59                       70                      NA    216                      930                      NA
+Health & Medical Sciences                        NA        NA    -29                       67                      NA   -107                      933                      NA
+Humanities, Literature & Arts                    NA        NA    169                      749                      NA    -98                      251                      NA
+Life Sciences & Earth Sciences                   NA        NA   -388                      965                      NA     74                       35                      NA
+Physics & Mathematics                            NA        NA   -121                      757                      NA    -68                      243                      NA
+Social Sciences                                  NA        NA    105                      310                      NA   -157                      690                      NA
+American Chemical Society                        NA        NA    -36                       24                      NA    233                      976                      NA
+Elsevier                                         NA        NA    268                      903                      NA     88                       97                      NA
+IEEE                                             NA        NA    206                      727                      NA    126                      273                      NA
+Royal Society of Chemistry                       NA        NA   -158                      317                      NA    231                      683                      NA
+Springer Nature                                  NA        NA   -532                      915                      NA    163                       85                      NA
+Other publishers                                 NA        NA     70                      243                      NA   -123                      757                      NA
 
-
+<div class="figure">
+<img src="02-analysis-writeup_files/figure-html/plot-mca-1.png" alt="Joint analysis of open science policies"  />
+<p class="caption">(\#fig:plot-mca)Joint analysis of open science policies</p>
+</div>
 
 
 # Overview of all policies
@@ -476,20 +497,21 @@ Other publishers                                 NA        NA     93            
 
 Table: (\#tab:graph for clarity)Are policies clear?
 
-label                                                             No           Yes        
-----------------------------------------------------------------  -----------  -----------
-Are author responses to reviews being published?                  150 (88%)    21 (12%)   
-Are editorial decision letters being published?                   150 (88%)    21 (12%)   
-Are peer review reports being published?                          142 (83%)    29 (17%)   
-Are previous versions of the manuscript being published?          154 (90%)    17 (10%)   
-Are reviewer identities being published?                          130 (76%)    41 (24%)   
-Are reviewer identities revealed to the authors?                  92 (53.8%)   79 (46.2%) 
-Can co-reviewers contribute?                                      130 (76%)    41 (24%)   
-Can preprints be cited?                                           127 (74%)    44 (26%)   
-Can preprints be posted?                                          67 (39%)     104 (61%)  
-Is there open interaction (reviewers consult with one another)?   154 (90%)    17 (10%)   
-Is there public commenting during formal peer review?             156 (91%)    15 (9%)    
-Which type of peer review is used?                                54 (32%)     117 (68%)  
+label                                                             No          Yes        
+----------------------------------------------------------------  ----------  -----------
+Are author responses to reviews being published?                  158 (92%)   13 (8%)    
+Are editorial decision letters being published?                   158 (92%)   13 (8%)    
+Are peer review reports being published?                          150 (88%)   21 (12%)   
+Are previous versions of the manuscript being published?          162 (95%)   9 (5%)     
+Are reviewer identities being published?                          138 (81%)   33 (19%)   
+Are reviewer identities revealed to the authors?                  100 (58%)   71 (42%)   
+Can co-reviewers contribute?                                      130 (76%)   41 (24%)   
+Can preprints be cited?                                           127 (74%)   44 (26%)   
+Can preprints be posted?                                          67 (39%)    104 (61%)  
+Is there open interaction (reviewers consult with one another)?   162 (95%)   9 (5%)     
+Is there public commenting during formal peer review?             164 (96%)   7 (4%)     
+Which type of peer review is used?                                54 (32%)    117 (68%)  
+NA                                                                NA          171 (100%) 
 
 ![](02-analysis-writeup_files/figure-html/clarity-graph-1.png)<!-- -->
 
