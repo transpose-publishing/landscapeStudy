@@ -71,7 +71,6 @@ the health and medical sciences, the sample is slightly skewed in that direction
 (see subfigure B in figure \@ref(fig:h-indices)).
 
 ```{r h-indices, fig.cap="Sample characteristics", fig.width=8, fig.height=8}
-# fig.asp=.6
 # set seed for jittered points to stay always the same (otherwise annoying for
 # git)
 set.seed(1234)
