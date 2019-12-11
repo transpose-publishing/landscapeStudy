@@ -135,7 +135,7 @@ available in more than 95% of journals.
 
 Since the aspect of revealed reviewer identities is the only one that is
 explicitly allowed by a substantive number of journals 
-(23%), we examine it
+(23.4%), we examine it
 separately for each discipline
 (see fig. \@ref(fig:opr-authors)). Whereas revealing reviewer
 identities to the authors is absent from the social sciences, humanities and

@@ -270,7 +270,7 @@ pdata %>%
 
 Since the aspect of revealed reviewer identities is the only one that is
 explicitly allowed by a substantive number of journals 
-(`r pdata %>% filter(var == "opr_indenties_author") %>% pull(order) %>% unique() %>%  scales::percent()`), we examine it
+(`r pdata %>% filter(var == "opr_indenties_author") %>% pull(order) %>% unique() %>%  scales::percent(., .1)`), we examine it
 separately for each discipline
 (see fig. \@ref(fig:opr-authors)). Whereas revealing reviewer
 identities to the authors is absent from the social sciences, humanities and
