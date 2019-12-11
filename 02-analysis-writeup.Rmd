@@ -507,11 +507,11 @@ preprint_version_univariate <- refined %>%
 
 Preprints are more common within our sample than open peer review or co-review
 policies. Almost
-`r preprint_version_univariate %>% pull(order) %>% make_percent()`
+`r preprint_version_univariate %>% pull(order) %>% make_percent2(., "comma")`
 of all journals allow preprints at least in some way. Most of them
-(`r preprint_version_univariate[[3, 3]] %>% make_percent(2)`)
+(`r preprint_version_univariate[[3, 3]] %>% make_percent2(., "comma")`)
 however only allow preprints before peer review while 
-`r preprint_version_univariate[[4, 3]] %>% make_percent(2)`
+`r preprint_version_univariate[[4, 3]] %>% make_percent2(., "comma")`
 do not have a preprint policy.
 
 
@@ -568,9 +568,9 @@ grid::grid.draw(gt)
 Similar to our earlier results, preprint policies vary considerably between
 disciplines (see fig. \@ref(fig:preprint-version)). While in the life sciences
 & earth sciences 
-`r preprint_version %>% filter(str_detect(area, "Life Sciences")) %>% pull(order) %>% make_percent()`
+`r preprint_version %>% filter(str_detect(area, "Life Sciences")) %>% pull(order) %>% make_percent2(., "comma")`
 of all journals allow preprints in some way, in the Humanities only 
-`r preprint_version %>% filter(str_detect(area, "Humanities")) %>% pull(order) %>% make_percent(2)`
+`r preprint_version %>% filter(str_detect(area, "Humanities")) %>% pull(order) %>% make_percent2(., "comma")`
 do.
 The natural sciences in general tend towards allowing preprints only on first submission
 while the social sciences predominantly have no clear policy on which version of
@@ -602,10 +602,10 @@ preprint_citation_univariate <- refined %>%
 
 A complementary aspect of using preprints is whether they can be cited. The
 majority of journals
-(`r preprint_citation_univariate[[2, 3]] %>% make_percent(2)`)
+(`r preprint_citation_univariate[[2, 3]] %>% make_percent2("comma")`)
 does not specify, whether this is possible. Unclear policies on how to cite
 preprints are also quite 
-common (`r preprint_citation_univariate[[4, 3]] %>% make_percent(2)`). In case
+common (`r preprint_citation_univariate[[4, 3]] %>% make_percent2("comma")`). In case
 citations of preprints are allowed, this is commonly possible in the reference,
 with some journals restricting citations of preprints to the text.
 
@@ -659,7 +659,7 @@ grid::grid.draw(gt)
 Disciplinary differences are again very apparent (see fig.
 \@ref(fig:preprint-citation)). Citing preprints is more common in the natural
 sciences, with 
-`r preprint_citation %>% filter(str_detect(area, "Life")) %>% pull(order) %>% make_percent()`
+`r preprint_citation %>% filter(str_detect(area, "Life")) %>% pull(order) %>% make_percent2("one")`
 of all journals in the life and earth sciences allowing citations to preprints
 either in the text or in the reference list. In contrast, the social sciences 
 and humanities largely have unclear or no policies regarding whether preprints 

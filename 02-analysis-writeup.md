@@ -303,11 +303,11 @@ policies mention the term "editor".
 
 Preprints are more common within our sample than open peer review or co-review
 policies. Almost
-70%
+70.2%
 of all journals allow preprints at least in some way. Most of them
-(39%)
+(39.2%)
 however only allow preprints before peer review while 
-23%
+22.8%
 do not have a preprint policy.
 
 
@@ -319,9 +319,9 @@ do not have a preprint policy.
 Similar to our earlier results, preprint policies vary considerably between
 disciplines (see fig. \@ref(fig:preprint-version)). While in the life sciences
 & earth sciences 
-90%
+90.9%
 of all journals allow preprints in some way, in the Humanities only 
-45%
+45.0%
 do.
 The natural sciences in general tend towards allowing preprints only on first submission
 while the social sciences predominantly have no clear policy on which version of
@@ -336,10 +336,10 @@ common in the natural sciences.
 
 A complementary aspect of using preprints is whether they can be cited. The
 majority of journals
-(57%)
+(57.3%)
 does not specify, whether this is possible. Unclear policies on how to cite
 preprints are also quite 
-common (15%). In case
+common (15.2%). In case
 citations of preprints are allowed, this is commonly possible in the reference,
 with some journals restricting citations of preprints to the text.
 
@@ -352,7 +352,7 @@ with some journals restricting citations of preprints to the text.
 Disciplinary differences are again very apparent (see fig.
 \@ref(fig:preprint-citation)). Citing preprints is more common in the natural
 sciences, with 
-50%
+55%
 of all journals in the life and earth sciences allowing citations to preprints
 either in the text or in the reference list. In contrast, the social sciences 
 and humanities largely have unclear or no policies regarding whether preprints 
