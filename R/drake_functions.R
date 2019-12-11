@@ -275,7 +275,7 @@ add_missing_areas <- function(data_with_areas, data_on_missing_areas, out_path) 
 
   refined_with_areas <- data_with_areas %>%
     full_join(hand_coded_areas, by = "issn") %>%
-    mutate(area = coalesce(area.x, area.y)) %>%
+    mutate(area = dplyr::coalesce(area.x, area.y)) %>%
     select(-area.y, -area.x) %>%
     replace_na(list(area_was_scraped = FALSE))
 
