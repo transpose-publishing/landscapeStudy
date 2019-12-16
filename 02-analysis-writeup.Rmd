@@ -744,7 +744,8 @@ whether there was a clear policy on:
 - Posting preprints.
 - Posting preperints. 
 
-The geometric layout of the space displayed in figure \@ref(fig:plot-mca) is 
+The geometric layout of the space displayed in subfigure A of figure 
+\@ref(fig:mca-figures) is 
 determined by these five active categories. Interpretation of the points 
 displayed is done by projecting them onto the axes. Furthermore, only statements
 regarding the average are possible. From the previous sections it is apparent 
@@ -821,10 +822,16 @@ mca_two_dimension_plot / mca_one_dimension_plot +
 ```
 
 
-(A)
-Disciplines and publishers were added as supplementary (passive) and have no impact on the space.",
-         "`++` means that there is a clear policy, `??` that there is no clear policy",
-(B) 
+(A) Result of a Multiple Correspondence Analysis. The contributing variables are
+the basis for the model and determine the layout of the space. "++" means that 
+there is a clear policy, "??" that there is no clear policy. Disciplines and
+publishers were added as supplementary (passive) variables and have no impact on
+the space. Dimension 1 (horizontal) explains 72.2% of the variance, Dimension 2
+explains 4.1% of the variance in the contributing variables.
+(B) The supplementary variables from (A) projected onto the horizontal axis.
+Journals from disciplines and publishers with policies that are more clear than
+the average journal in our sample are on the left, journals with less clear
+policies than the average on the right.
 
 
 
@@ -842,7 +849,7 @@ there is a clear policy on coreview, and to some extent by type of peer review.
 We do not consider more than two dimensions since they do not account for much
 of the residual variance.
 
-Considering figure \@ref(fig:plot-mca), we can conclude that there exists a 
+Considering subfigure B of figure \@ref(fig:mca-figures), we can conclude that there exists a 
 clear opposition in our data between journals that are above average in regard 
 to clear policies on citing and posting preprints and whether
 reviewer identities are revealed to authors or not. These journals also tend 
