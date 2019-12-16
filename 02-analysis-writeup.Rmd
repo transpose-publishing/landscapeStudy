@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, dpi = 400, dev.args = list(
 ```
 
 ```{r import, message=FALSE}
-theme_set(theme_hrbrmstr())
+theme_set(theme_hrbrmstr(plot_margin = margin(15, 15, 15, 15)))
 
 
 # import data
