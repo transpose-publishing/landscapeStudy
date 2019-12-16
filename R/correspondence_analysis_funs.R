@@ -126,10 +126,10 @@ extract_ca_data <- function(object, dimensions = c(1, 2),
     col_data <- col_data %>%
       slice(object$colsup) %>%
       mutate(sup_var = factor("Supplementary Variables", levels =
-                                c("Initial Variables", "Supplementary Variables"))) %>%
+                                c("Contributing Variables", "Supplementary Variables"))) %>%
       dplyr::select(rowname, sup_var) %>%
       full_join(col_data, by = "rowname") %>%
-      replace_na(list(sup_var = "Initial Variables"))
+      replace_na(list(sup_var = "Contributing Variables"))
 
     return(list(col_data = col_data))
 
@@ -142,13 +142,13 @@ extract_ca_data <- function(object, dimensions = c(1, 2),
       row_data <- row_data %>%
         slice(object$rowsup) %>%
         mutate(sup_var = factor("Supplementary Variables", levels =
-                                  c("Initial Variables", "Supplementary Variables"))) %>%
+                                  c("Contributing Variables", "Supplementary Variables"))) %>%
         dplyr::select(rowname, sup_var) %>%
         full_join(row_data, by = "rowname") %>%
-        replace_na(list(sup_var = "Initial Variables"))
+        replace_na(list(sup_var = "Contributing Variables"))
     }
     full_data <- bind_rows(col_data, row_data) %>%
-      replace_na(list(sup_var = "Initial Variables"))
+      replace_na(list(sup_var = "Contributing Variables"))
   }
 
   list(full_data = full_data, col_data = col_data, row_data = row_data)
