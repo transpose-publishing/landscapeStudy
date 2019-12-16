@@ -768,7 +768,7 @@ data_for_one_dimension <- extract_ca_data(final_4) %>%
          rowname = str_wrap(rowname, 20)) %>% 
   select(-sup_var, -Profil)
 
-data_for_one_dimension %>% 
+mca_one_dimension_plot <- data_for_one_dimension %>% 
   ggplot(aes(y = 1, x = x)) +
   # add horizontal lines and annotation
   geom_segment(data = tibble(
@@ -800,8 +800,33 @@ data_for_one_dimension %>%
     panel.grid.major.y = element_blank(), panel.grid.major.x = element_blank(), 
     panel.grid.minor.x = element_blank(), axis.text.x = element_blank()
   ) +
-  labs(x = NULL, y = NULL, title = "Clarity of Policies")
+  labs(x = NULL, y = NULL)
 ```
+
+
+
+```{r plot-mca, fig.width=12, fig.height=11, fig.cap="Joint analysis of open science policies"}
+mca_two_dimension_plot <- final_4 %>%
+  plot_ca(font_size = 4) +
+  coord_fixed() +
+  theme(legend.position = "top") +
+  scale_color_manual(values = c("Initial Variables" = "#1B9E77",
+                                "Supplementary Variables" = "#D95F02")) 
+```
+
+```{r mca-figures, fig.width=15, fig.height=17, fig.cap="The Landscape of Open Science Policies"}
+mca_two_dimension_plot / mca_one_dimension_plot +
+  plot_annotation(tag_levels = "A") +
+  plot_layout(heights = c(1.8, 1))
+```
+
+
+(A)
+Disciplines and publishers were added as supplementary (passive) and have no impact on the space.",
+         "`++` means that there is a clear policy, `??` that there is no clear policy",
+(B) 
+
+
 
 <!-- The following sections are outdated. -->
 Numerical output from the MCA is shown in table \@ref(tab:mca-table). We can
@@ -854,19 +879,7 @@ summary(final_4) %>%
   knitr::kable(caption = "Numerical output from Multiple Correspondence analysis")
 ```
 
-```{r plot-mca, fig.width=12, fig.height=11, fig.cap="Joint analysis of open science policies"}
-final_4 %>%
-  plot_ca(font_size = 3.5) +
-  coord_fixed() +
-  theme(legend.position = "top") +
-  scale_color_manual(values = c("Initial Variables" = "#1B9E77",
-                                "Supplementary Variables" = "#D95F02")) +
-  labs(title = "The Landscape of Open Science Policies",
-       caption = paste(
-         "Disciplines and publishers were added as supplementary (passive) and have no impact on the space.",
-         "`++` means that there is a clear policy, `??` that there is no clear policy",
-         sep = "\n"))
-```
+
 
 
 # Overview of all policies

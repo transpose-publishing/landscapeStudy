@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2019-12-11
+date: Last updated 2019-12-16
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -412,7 +412,24 @@ geometric layout but allow us to draw conclusions on which practices are more
 prevalent in one area or another.
 
 
-![](02-analysis-writeup_files/figure-html/plot-mca-one-dimensionally-1.png)<!-- -->
+
+
+
+
+
+
+<div class="figure">
+<img src="02-analysis-writeup_files/figure-html/mca-figures-1.png" alt="The Landscape of Open Science Policies"  />
+<p class="caption">(\#fig:mca-figures)The Landscape of Open Science Policies</p>
+</div>
+
+
+(A)
+Disciplines and publishers were added as supplementary (passive) and have no impact on the space.",
+         "`++` means that there is a clear policy, `??` that there is no clear policy",
+(B) 
+
+
 
 <!-- The following sections are outdated. -->
 Numerical output from the MCA is shown in table \@ref(tab:mca-table). We can
@@ -482,10 +499,7 @@ Royal Society of Chemistry                       NA        NA   -158            
 Springer Nature                                  NA        NA   -532                      915                      NA    163                       85                      NA
 Other publishers                                 NA        NA     70                      243                      NA   -123                      757                      NA
 
-<div class="figure">
-<img src="02-analysis-writeup_files/figure-html/plot-mca-1.png" alt="Joint analysis of open science policies"  />
-<p class="caption">(\#fig:plot-mca)Joint analysis of open science policies</p>
-</div>
+
 
 
 # Overview of all policies
