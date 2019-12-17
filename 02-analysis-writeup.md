@@ -317,7 +317,7 @@ do not have a preprint policy.
 </div>
 
 (A) Results on whether a preprint can be posted, and which version is allowed (n = 193).
-(B) Results on wehther preprints can be cited (n = 193)
+(B) Results on whether preprints can be cited (n = 193)
 
 
 
