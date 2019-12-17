@@ -312,12 +312,17 @@ do not have a preprint policy.
 
 
 <div class="figure">
-<img src="02-analysis-writeup_files/figure-html/preprint-version-1.png" alt="Allowed preprint versions"  />
-<p class="caption">(\#fig:preprint-version)Allowed preprint versions</p>
+<img src="02-analysis-writeup_files/figure-html/preprint-combined-1.png" alt="Posting and citing of preprints"  />
+<p class="caption">(\#fig:preprint-combined)Posting and citing of preprints</p>
 </div>
 
+(A) Results on whether a preprint can be posted, and which version is allowed (n = 193).
+(B) Results on wehther preprints can be cited (n = 193)
+
+
+
 Similar to our earlier results, preprint policies vary considerably between
-disciplines (see fig. \@ref(fig:preprint-version)). While in the life sciences
+disciplines (see fig. \@ref(fig:preprint-combined)A). While in the life sciences
 & earth sciences 
 90.9%
 of all journals allow preprints in some way, in the Humanities only 
@@ -332,8 +337,6 @@ preprint version, also allowing preprints after peer review, which is less
 common in the natural sciences.
 
 
-
-
 A complementary aspect of using preprints is whether they can be cited. The
 majority of journals
 (57.3%)
@@ -345,9 +348,8 @@ with some journals restricting citations of preprints to the text.
 
 
 
-
 Disciplinary differences are again very apparent (see fig.
-\@ref(fig:preprint-citation)). Citing preprints is more common in the natural
+\@ref(fig:preprint-combined)B). Citing preprints is more common in the natural
 sciences, with 
 55%
 of all journals in the life and earth sciences allowing citations to preprints

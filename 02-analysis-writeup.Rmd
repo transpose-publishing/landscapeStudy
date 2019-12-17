@@ -544,7 +544,7 @@ however only allow preprints before peer review while
 do not have a preprint policy.
 
 
-```{r preprint-version, fig.cap="Allowed preprint versions", fig.height=10, fig.width=8}
+```{r preprint-combined, fig.cap="Posting and citing of preprints", fig.height=10, fig.width=8}
 refined_with_areas <- refined_with_areas %>% 
   clean_preprint_version() %>% 
   mutate(preprint_version_clean = fct_relevel(
@@ -647,8 +647,13 @@ gridExtra::grid.arrange(gt1, gt2)
 
 ```
 
+(A) Results on whether a preprint can be posted, and which version is allowed (n = 193).
+(B) Results on wehther preprints can be cited (n = 193)
+
+
+
 Similar to our earlier results, preprint policies vary considerably between
-disciplines (see fig. \@ref(fig:preprint-version)). While in the life sciences
+disciplines (see fig. \@ref(fig:preprint-combined)A). While in the life sciences
 & earth sciences 
 `r preprint_version %>% filter(str_detect(area, "Life Sciences")) %>% pull(order) %>% make_percent2(., "comma")`
 of all journals allow preprints in some way, in the Humanities only 
@@ -663,8 +668,6 @@ preprint version, also allowing preprints after peer review, which is less
 common in the natural sciences.
 
 
-
-
 A complementary aspect of using preprints is whether they can be cited. The
 majority of journals
 (`r preprint_citation_univariate[[2, 3]] %>% make_percent2("comma")`)
@@ -675,13 +678,9 @@ citations of preprints are allowed, this is commonly possible in the reference,
 with some journals restricting citations of preprints to the text.
 
 
-```{r preprint-citation, fig.cap="Citation of preprints", fig.asp=.65}
-
-
-```
 
 Disciplinary differences are again very apparent (see fig.
-\@ref(fig:preprint-citation)). Citing preprints is more common in the natural
+\@ref(fig:preprint-combined)B). Citing preprints is more common in the natural
 sciences, with 
 `r preprint_citation %>% filter(str_detect(area, "Life")) %>% pull(order) %>% make_percent2("one")`
 of all journals in the life and earth sciences allowing citations to preprints
