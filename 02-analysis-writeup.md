@@ -300,6 +300,7 @@ policies mention the term "editor".
 
 
 
+
 Preprints are more common within our sample than open peer review or co-review
 policies. Almost
 70.2%
@@ -343,10 +344,7 @@ citations of preprints are allowed, this is commonly possible in the reference,
 with some journals restricting citations of preprints to the text.
 
 
-<div class="figure">
-<img src="02-analysis-writeup_files/figure-html/preprint-citation-1.png" alt="Citation of preprints"  />
-<p class="caption">(\#fig:preprint-citation)Citation of preprints</p>
-</div>
+
 
 Disciplinary differences are again very apparent (see fig.
 \@ref(fig:preprint-citation)). Citing preprints is more common in the natural

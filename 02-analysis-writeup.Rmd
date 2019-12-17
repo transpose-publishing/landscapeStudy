@@ -487,6 +487,7 @@ distinct_coreview %>%
 
 # Preprints
 ```{r}
+# prepare data on preprint versions
 clean_preprint_version <- function(df) {
   df %>% 
     mutate(preprint_version_clean = case_when(
@@ -509,85 +510,10 @@ clean_preprint_version <- function(df) {
 preprint_version_univariate <- refined %>% 
   clean_preprint_version() %>% 
   make_proportion(preprint_version_clean, order_string = "Any|After|First|Uns")
-```
 
 
-Preprints are more common within our sample than open peer review or co-review
-policies. Almost
-`r preprint_version_univariate %>% pull(order) %>% make_percent2(., "comma")`
-of all journals allow preprints at least in some way. Most of them
-(`r preprint_version_univariate[[3, 3]] %>% make_percent2(., "comma")`)
-however only allow preprints before peer review while 
-`r preprint_version_univariate[[4, 3]] %>% make_percent2(., "comma")`
-do not have a preprint policy.
 
-
-```{r preprint-version, fig.cap="Allowed preprint versions", fig.asp=.7}
-refined_with_areas <- refined_with_areas %>% 
-  clean_preprint_version() %>% 
-  mutate(preprint_version_clean = fct_relevel(
-    preprint_version_clean, "Unsure (preprints are allowed, but it's not clear which version)",
-    "Any", "First submission only (before peer review)") %>% 
-    fct_relevel("Other" ,"None", "No preprint policy", after = 4))
-    
-    
-    
-preprint_version <- refined_with_areas %>% 
-  make_proportion(preprint_version_clean, area,
-                  order_string = "Any|After|First|Uns")
-
-
-p_cols <- c("No preprint policy" =  "#E7298A", "Other" = "#666666",
-            "Any" = "#D95F02", "After peer review" = "#66A61E", 
-            "First submission only (before peer review)" = "#7570B3",
-            "Unsure (preprints are allowed, but it's not clear which version)" = "#1B9E77",
-            "None" = "#E6AB02"
-)
-
-p <- ggplot(preprint_version, aes(fct_reorder(area, order), prop, 
-                          fill = fct_rev(preprint_version_clean))) +
-  geom_chicklet(position = "fill", width = .6) +
-  geom_step(data = slice(preprint_version, 1),
-            aes(x = area, y = order, group = 1), direction = "vh",
-            position = position_nudge(x = .5)) +
-  geom_step(data = filter(preprint_version, str_detect(area, "Human|Busine")), 
-            aes(x = area, y = order, group = 1), direction = "hv",
-            position = position_nudge(x = -.5)) +
-  annotate("text", x = "Life Sciences & Earth Sciences", y = 1, 
-           label = "Proportion of journals\nthat allow posting of preprints",
-           vjust = -.8, hjust = 1,
-           family = "Hind", size = 3) +
-  coord_flip() +
-  scale_fill_manual(values = p_cols) +
-  scale_y_continuous(labels = scales::percent) +
-  theme(legend.position = "bottom", plot.margin = margin(25, 15, 15, 15)) +
-  guides(fill = guide_legend(reverse = T, nrow = 4)) +
-  labs(fill = NULL, x = NULL, y = NULL, 
-       caption = "What version of a preprint can be posted?")
-p
-
-gt <- ggplot_gtable(ggplot_build(p))
-gt$layout$clip[gt$layout$name == "panel"] <- "off"
-grid::grid.draw(gt)
-
-```
-
-Similar to our earlier results, preprint policies vary considerably between
-disciplines (see fig. \@ref(fig:preprint-version)). While in the life sciences
-& earth sciences 
-`r preprint_version %>% filter(str_detect(area, "Life Sciences")) %>% pull(order) %>% make_percent2(., "comma")`
-of all journals allow preprints in some way, in the Humanities only 
-`r preprint_version %>% filter(str_detect(area, "Humanities")) %>% pull(order) %>% make_percent2(., "comma")`
-do.
-The natural sciences in general tend towards allowing preprints only on first submission
-while the social sciences predominantly have no clear policy on which version of
-a preprint is allowed. 
-The humanities and also journals from business, economics and management 
-generally have either no preprint policy at all or are more diverse in regard to
-preprint version, also allowing preprints after peer review, which is less
-common in the natural sciences.
-
-```{r}
+# prepare data on citing preprints
 clean_preprint_citation <- function(df) {
   df %>% 
    mutate(preprint_citation_clean = case_when(
@@ -607,17 +533,72 @@ preprint_citation_univariate <- refined %>%
 ```
 
 
-A complementary aspect of using preprints is whether they can be cited. The
-majority of journals
-(`r preprint_citation_univariate[[2, 3]] %>% make_percent2("comma")`)
-does not specify, whether this is possible. Unclear policies on how to cite
-preprints are also quite 
-common (`r preprint_citation_univariate[[4, 3]] %>% make_percent2("comma")`). In case
-citations of preprints are allowed, this is commonly possible in the reference,
-with some journals restricting citations of preprints to the text.
+
+Preprints are more common within our sample than open peer review or co-review
+policies. Almost
+`r preprint_version_univariate %>% pull(order) %>% make_percent2(., "comma")`
+of all journals allow preprints at least in some way. Most of them
+(`r preprint_version_univariate[[3, 3]] %>% make_percent2(., "comma")`)
+however only allow preprints before peer review while 
+`r preprint_version_univariate[[4, 3]] %>% make_percent2(., "comma")`
+do not have a preprint policy.
 
 
-```{r preprint-citation, fig.cap="Citation of preprints", fig.asp=.65}
+```{r preprint-version, fig.cap="Allowed preprint versions", fig.height=10, fig.width=8}
+refined_with_areas <- refined_with_areas %>% 
+  clean_preprint_version() %>% 
+  mutate(preprint_version_clean = fct_relevel(
+    preprint_version_clean, "Unsure (preprints are allowed, but it's not clear which version)",
+    "Any", "First submission only (before peer review)") %>% 
+    fct_relevel("Other" ,"None", "No preprint policy", after = 4))
+    
+    
+
+# plot preprint version    
+preprint_version <- refined_with_areas %>% 
+  make_proportion(preprint_version_clean, area,
+                  order_string = "Any|After|First|Uns")
+
+
+p1_cols <- c("No preprint policy" =  "#E7298A", "Other" = "#666666",
+            "Any" = "#D95F02", "After peer review" = "#66A61E", 
+            "First submission only (before peer review)" = "#7570B3",
+            "Unsure (preprints are allowed, but it's not clear which version)" = "#1B9E77",
+            "None" = "#E6AB02"
+)
+
+p1 <- ggplot(preprint_version, aes(fct_reorder(area, order), prop, 
+                          fill = fct_rev(preprint_version_clean))) +
+  geom_chicklet(position = "fill", width = .6) +
+  geom_step(data = slice(preprint_version, 1),
+            aes(x = area, y = order, group = 1), direction = "vh",
+            position = position_nudge(x = .5)) +
+  geom_step(data = filter(preprint_version, str_detect(area, "Human|Busine")), 
+            aes(x = area, y = order, group = 1), direction = "hv",
+            position = position_nudge(x = -.5)) +
+  annotate("text", x = "Life Sciences & Earth Sciences", y = 1, 
+           label = "Proportion of journals\nthat allow posting of preprints",
+           vjust = -.8, hjust = 1,
+           family = "Hind", size = 3) +
+  coord_flip() +
+  scale_fill_manual(values = p1_cols) +
+  scale_y_continuous(labels = scales::percent) +
+  theme(legend.position = "bottom", plot.margin = margin(25, 15, 30, 15)) +
+  guides(fill = guide_legend(reverse = T, nrow = 4)) +
+  labs(fill = NULL, x = NULL, y = NULL, tag = "A",
+       caption = "What version of a preprint can be posted?")
+
+
+gt1 <- ggplot_gtable(ggplot_build(p1))
+gt1$layout$clip[gt1$layout$name == "panel"] <- "off"
+# grid::grid.draw(gt1)
+
+
+
+
+
+
+# plot citing preprints
 refined_with_areas <- refined_with_areas %>% 
   clean_preprint_citation()
 
@@ -630,13 +611,13 @@ preprint_citation <- refined_with_areas %>%
                   order_string = "Yes|Other")
 
 
-p_cols <- c("Not specified" =  "#E7298A", "Other" = "#666666", "Unsure" = "#A6761D",
+p2_cols <- c("Not specified" =  "#E7298A", "Other" = "#666666", "Unsure" = "#A6761D",
             "Yes, in the reference list" = "#1B9E77", 
             "Yes, but only in the text" = "#D95F02", 
             "No" = "#E6AB02"
 )
 
-p <- ggplot(preprint_citation, aes(fct_reorder(area, order), prop, 
+p2 <- ggplot(preprint_citation, aes(fct_reorder(area, order), prop, 
                           fill = fct_rev(preprint_citation_clean))) +
   geom_chicklet(position = "fill", width = .6) +
   geom_step(data = slice(preprint_citation, 1),
@@ -650,16 +631,52 @@ p <- ggplot(preprint_citation, aes(fct_reorder(area, order), prop,
            vjust = -.8,
            family = "Hind", size = 3) +
   coord_flip() +
-  scale_fill_manual(values = p_cols) +
+  scale_fill_manual(values = p2_cols) +
   scale_y_continuous(labels = scales::percent) +
-  theme(legend.position = "bottom", plot.margin = margin(25, 15, 15, 15)) +
+  theme(legend.position = "bottom", plot.margin = margin(30, 30, 30, 30)) +
   guides(fill = guide_legend(reverse = T)) +
-  labs(fill = NULL, x = NULL, y = NULL,
+  labs(fill = NULL, x = NULL, y = NULL, tag = "B",
        caption = "Can preprints be cited?")
 
-gt <- ggplot_gtable(ggplot_build(p))
-gt$layout$clip[gt$layout$name == "panel"] <- "off"
-grid::grid.draw(gt)
+gt2 <- ggplot_gtable(ggplot_build(p2))
+gt2$layout$clip[gt2$layout$name == "panel"] <- "off"
+# grid::grid.draw(gt2)
+
+
+gridExtra::grid.arrange(gt1, gt2)
+
+```
+
+Similar to our earlier results, preprint policies vary considerably between
+disciplines (see fig. \@ref(fig:preprint-version)). While in the life sciences
+& earth sciences 
+`r preprint_version %>% filter(str_detect(area, "Life Sciences")) %>% pull(order) %>% make_percent2(., "comma")`
+of all journals allow preprints in some way, in the Humanities only 
+`r preprint_version %>% filter(str_detect(area, "Humanities")) %>% pull(order) %>% make_percent2(., "comma")`
+do.
+The natural sciences in general tend towards allowing preprints only on first submission
+while the social sciences predominantly have no clear policy on which version of
+a preprint is allowed. 
+The humanities and also journals from business, economics and management 
+generally have either no preprint policy at all or are more diverse in regard to
+preprint version, also allowing preprints after peer review, which is less
+common in the natural sciences.
+
+
+
+
+A complementary aspect of using preprints is whether they can be cited. The
+majority of journals
+(`r preprint_citation_univariate[[2, 3]] %>% make_percent2("comma")`)
+does not specify, whether this is possible. Unclear policies on how to cite
+preprints are also quite 
+common (`r preprint_citation_univariate[[4, 3]] %>% make_percent2("comma")`). In case
+citations of preprints are allowed, this is commonly possible in the reference,
+with some journals restricting citations of preprints to the text.
+
+
+```{r preprint-citation, fig.cap="Citation of preprints", fig.asp=.65}
+
 
 ```
 
