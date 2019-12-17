@@ -357,6 +357,45 @@ either in the text or in the reference list. In contrast, the social sciences
 and humanities largely have unclear or no policies regarding whether preprints 
 can be cited or not. 
 
+Besides posting and citing of preprints we surveyed other aspects of preprints
+as well: 
+whether there is information on which licenses are permitted for the preprint,
+or if there is scoop protection, e.g. if a preprint will still be considered for
+publication even if a competing work is published in another journal after the 
+date of preprinting. Further aspects were whether a published paper includes a
+link to the preprint version, what type of media coverage of the preprint is
+permitted and if there is a policy on community review for preprints. Overall,
+guidance on these issues is rarely provided: 
+
+
+
+var                  no_info_perc 
+-------------------  -------------
+preprint_media       72.5%        
+preprint_link        88.3%        
+preprint_licensing   94.7%        
+preprint_review      98.2%        
+preprint_scoop       98.2%        
+
+
+72.5%
+of journals provide no information on permitted media coverage and
+88.3%
+of journals provide no information on whether the publication will include a
+link to the preprint. 
+94.7%
+of journals provide no guidance on which license is permitted for the preprint,
+98.2%
+give no information on scoop protection and 
+98.2%
+of journals give no indication whether public comments on preprints will have 
+any effect on manuscript acceptance.
+
+
+
+
+
+
 
 # The Landscape of Open Science Policies
 Results so far have revealed that in many cases policies are unclear. But in

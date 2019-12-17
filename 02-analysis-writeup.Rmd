@@ -688,6 +688,54 @@ either in the text or in the reference list. In contrast, the social sciences
 and humanities largely have unclear or no policies regarding whether preprints 
 can be cited or not. 
 
+Besides posting and citing of preprints we surveyed other aspects of preprints
+as well: 
+whether there is information on which licenses are permitted for the preprint,
+or if there is scoop protection, e.g. if a preprint will still be considered for
+publication even if a competing work is published in another journal after the 
+date of preprinting. Further aspects were whether a published paper includes a
+link to the preprint version, what type of media coverage of the preprint is
+permitted and if there is a policy on community review for preprints. Overall,
+guidance on these issues is rarely provided: 
+
+
+```{r}
+preprint_leftovers <- refined %>% 
+  select(preprint_link:preprint_review) %>% 
+  mutate(preprint_link = case_when(is.na(preprint_link) ~ "Unsure",
+                                   TRUE ~ preprint_link)) %>% 
+  mutate_at(vars(-preprint_link), ~case_when(is.na(.) ~ "Not specified",
+                                             TRUE ~  .))
+
+preprint_no_info <- preprint_leftovers %>% 
+  gather(var, val) %>% 
+  mutate(no_info = str_detect(val, "^Unsure|Not specified")) %>% 
+  group_by(var) %>% 
+  summarise(no_info_perc = mean(no_info) %>% scales::percent(accuracy = .1)) %>% 
+  arrange(no_info_perc)
+
+knitr::kable(preprint_no_info)
+```
+
+
+`r preprint_no_info %>% filter(var == "preprint_media") %>% pull(no_info_perc)`
+of journals provide no information on permitted media coverage and
+`r preprint_no_info %>% filter(var == "preprint_link") %>% pull(no_info_perc)`
+of journals provide no information on whether the publication will include a
+link to the preprint. 
+`r preprint_no_info %>% filter(var == "preprint_licensing") %>% pull(no_info_perc)`
+of journals provide no guidance on which license is permitted for the preprint,
+`r preprint_no_info %>% filter(var == "preprint_review") %>% pull(no_info_perc)`
+give no information on scoop protection and 
+`r preprint_no_info %>% filter(var == "preprint_scoop") %>% pull(no_info_perc)`
+of journals give no indication whether public comments on preprints will have 
+any effect on manuscript acceptance.
+
+
+
+
+
+
 
 # The Landscape of Open Science Policies
 Results so far have revealed that in many cases policies are unclear. But in
