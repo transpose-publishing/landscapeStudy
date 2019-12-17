@@ -109,7 +109,7 @@ other sciences somehwere in between.
 # Open Peer Review
 
 
-Information on open peer review is similarly scarce (see fig. \@ref(fig:opr)). 
+Information on open peer review is similarly scarce (see fig. \@ref(fig:opr-combined)A). 
 The survey included questions on common dimensions of open peer review, like
 whether peer review reports, editorial decision letters or previous versions of
 the manuscript are published, or whether there is public commenting during peer
@@ -125,25 +125,25 @@ identities to the authors, all other aspects are not specified or not
 available in more than 95% of journals.
 
 <div class="figure">
-<img src="02-analysis-writeup_files/figure-html/opr-1.png" alt="Aspects of open peer review"  />
-<p class="caption">(\#fig:opr)Aspects of open peer review</p>
+<img src="02-analysis-writeup_files/figure-html/opr-combined-1.png" alt="Aspects of open peer review"  />
+<p class="caption">(\#fig:opr-combined)Aspects of open peer review</p>
 </div>
+
+(A) Aspects of open peer review across all journals in the sample (n = 171)
+(B) Results on whether reviewer identitities are revealed to the authors, even if
+they are not published. (n = 193)
+
 
 Since the aspect of revealed reviewer identities is the only one that is
 explicitly allowed by a substantive number of journals 
 (23.4%), we examine it
 separately for each discipline
-(see fig. \@ref(fig:opr-authors)). Whereas revealing reviewer
+(see fig. \@ref(fig:opr-combined)B). Whereas revealing reviewer
 identities to the authors is absent from the social sciences, humanities and
 business in the investigated subset of journals, it is not unusual in the
 natural sciences, at least on an optional basis 
 (for example in case the referee wants to sign their review). 
 
-
-<div class="figure">
-<img src="02-analysis-writeup_files/figure-html/opr-authors-1.png" alt="Open reviewer identities towards authors"  />
-<p class="caption">(\#fig:opr-authors)Open reviewer identities towards authors</p>
-</div>
 
 TODO: explain differences between Yes, Mandatory, Conditional, Optional. Tony to
 check and explain.

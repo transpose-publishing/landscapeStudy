@@ -241,7 +241,7 @@ mutate_at("label", ~str_wrap(., 40))
 
 ```
 
-Information on open peer review is similarly scarce (see fig. \@ref(fig:opr)). 
+Information on open peer review is similarly scarce (see fig. \@ref(fig:opr-combined)A). 
 The survey included questions on common dimensions of open peer review, like
 whether peer review reports, editorial decision letters or previous versions of
 the manuscript are published, or whether there is public commenting during peer
@@ -256,36 +256,24 @@ rare With the sole exception that some journals may reveal reviewer
 identities to the authors, all other aspects are not specified or not
 available in more than 95% of journals.
 
-```{r opr, fig.asp=.7, fig.cap="Aspects of open peer review"}
+```{r opr-combined, fig.width=7, fig.height=8, fig.cap="Aspects of open peer review"}
 p_cols <- c("Not specified" =  "#E7298A", "Yes" = "#1B9E77",
             "Mandatory" = "#D95F02", "Conditional" =  "#7570B3",
             "Optional" = "#66A61E", "No" = "#E6AB02"
 )
 
-pdata %>% 
+p1 <- pdata %>% 
   left_join(labels) %>% 
   ggplot(., aes(fct_reorder(label, order), prop, fill = fct_rev(val_clean))) +
   geom_chicklet(position = "fill", width = .6) +
   coord_flip() +
   scale_y_continuous(labels = scales::percent) +
   scale_fill_manual(values = p_cols) +
-  theme(legend.position = "top") +
+  theme(legend.position = "bottom") +
   guides(fill = guide_legend(reverse = T)) +
   labs(x = NULL, y = NULL, fill = NULL) 
-```
-
-Since the aspect of revealed reviewer identities is the only one that is
-explicitly allowed by a substantive number of journals 
-(`r pdata %>% filter(var == "opr_indenties_author") %>% pull(order) %>% unique() %>%  scales::percent(., .1)`), we examine it
-separately for each discipline
-(see fig. \@ref(fig:opr-authors)). Whereas revealing reviewer
-identities to the authors is absent from the social sciences, humanities and
-business in the investigated subset of journals, it is not unusual in the
-natural sciences, at least on an optional basis 
-(for example in case the referee wants to sign their review). 
 
 
-```{r opr-authors, fig.cap="Open reviewer identities towards authors", fig.asp=.6}
 rev_identitiy <- refined_with_areas %>% 
   mutate(opr_indenties_author_clean = case_when(
     str_detect(opr_indenties_author, "Conditional") ~ "Conditional",
@@ -299,22 +287,38 @@ rev_identitiy <- refined_with_areas %>%
   make_proportion(opr_indenties_author_clean, area, order_string = "Not")
 
 
-p_cols <- c("Not specified" =  "#E7298A", "Yes" = "#1B9E77",
-            "Mandatory" = "#D95F02", "Conditional" =  "#7570B3",
-            "Optional" = "#66A61E", "No" = "#E6AB02"
-)
 
-ggplot(rev_identitiy, aes(fct_rev(fct_reorder(area, order)), prop, 
+
+p2 <- ggplot(rev_identitiy, aes(fct_rev(fct_reorder(area, order)), prop, 
                           fill = fct_rev(opr_indenties_author_clean))) +
-  geom_chicklet(position = "fill", width = .6) +
+  geom_chicklet(position = "fill", width = .6, show.legend = F) +
   coord_flip() +
   scale_fill_manual(values = p_cols) +
   scale_y_continuous(labels = scales::percent) +
   theme(legend.position = "top") +
   guides(fill = guide_legend(reverse = T)) +
-  labs(fill = NULL, x = NULL, y = NULL, 
-       caption = "Are reviewer identities revealed to the author (even if not published)?")
+  labs(fill = NULL, x = NULL, y = NULL)
+
+
+p1 / p2 +
+  plot_annotation(tag_levels = "A")
 ```
+
+(A) Aspects of open peer review across all journals in the sample (n = 171)
+(B) Results on whether reviewer identitities are revealed to the authors, even if
+they are not published. (n = 193)
+
+
+Since the aspect of revealed reviewer identities is the only one that is
+explicitly allowed by a substantive number of journals 
+(`r pdata %>% filter(var == "opr_indenties_author") %>% pull(order) %>% unique() %>%  scales::percent(., .1)`), we examine it
+separately for each discipline
+(see fig. \@ref(fig:opr-combined)B). Whereas revealing reviewer
+identities to the authors is absent from the social sciences, humanities and
+business in the investigated subset of journals, it is not unusual in the
+natural sciences, at least on an optional basis 
+(for example in case the referee wants to sign their review). 
+
 
 TODO: explain differences between Yes, Mandatory, Conditional, Optional. Tony to
 check and explain.
