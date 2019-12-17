@@ -154,7 +154,7 @@ perc_double <- pr_type_prop %>%
 ```
 
 Information on what type of peer review is used by a journal is mixed 
-(see figure \@ref(fig:pr-type-overall)).
+(see subfigure A in figure \@ref(fig:peer-type-combined)).
 Overall, `r n_unsure` out of 171 journals (`r perc_unsure`)  do not provide clear 
 information about their peer review process. The most common peer review 
 practice is single blind per review (`r perc_single`), followed by double blind
@@ -166,45 +166,48 @@ of journals ("The BMJ" and "The Cochrane Database of Systematic Reviews") do not
 anonymize papers or reviews during review process.
 
 
-```{r pr-type-overall, fig.asp=.5, fig.cap="Type of peer review"}
+```{r peer-type-combined, fig.width=6, fig.height=6, fig.cap="Type of peer review employed by journals"}
 p_cols <- c("Single blind" = "#1B9E77", "Double blind" =  "#D95F02",
             "Not blinded" =  "#7570B3",
             "Unsure" = "#A6761D", "Other" = "#666666")
 
 
-ggplot(pr_type_prop, aes(fct_reorder(pr_type_clean, n), prop, fill = fct_rev(pr_type_clean))) +
+p1 <- ggplot(pr_type_prop, aes(fct_reorder(pr_type_clean, n), prop, fill = fct_rev(pr_type_clean))) +
   geom_chicklet(width = .6, show.legend = F) +
   coord_flip() +
   scale_fill_manual(values = p_cols) +
   scale_y_continuous(labels = function(x) scales::percent(x, accuracy = 1)) +
   theme(legend.position = "top") +
   guides(fill = guide_legend(reverse = T)) +
-  labs(fill = NULL, x = NULL, y = NULL, 
-       caption = "What type of peer review is used?")
+  labs(fill = NULL, x = NULL, y = NULL)
+
+
+p2 <- ggplot(peer_type_data, aes(fct_reorder(area, order), prop, fill = fct_rev(pr_type_clean))) +
+  geom_chicklet(position = "fill", width = .6, show.legend = F) +
+  coord_flip() +
+  scale_fill_manual(values = p_cols) +
+  scale_y_continuous(labels = scales::percent) +
+  theme(legend.position = "top") +
+  guides(fill = guide_legend(reverse = T)) +
+  labs(fill = NULL, x = NULL, y = NULL)
+
+p1 / p2 +
+  plot_annotation(tag_levels = "A") +
+  plot_layout(heights = c(.75, 1))
 ```
 
+(A) Type of peer review used overall (n = 171)
+(B) Type of peer review used by disciplines (n = 193)
 
-However, there are major differences between disciplines (see figure 
-\@ref(fig:peer-type)). In the social sciences, humanities, and business, double
+
+However, there are major differences between disciplines (see subfigure B in figure 
+\@ref(fig:peer-type-combined)). In the social sciences, humanities, and business, double
 blind peer review is generally the norm, while in the natural sciences it is
 single
 blind peer review. Business, economics & management displays the highest level
 of unclear policies, with social science and humanities being very clear and the
 other sciences somehwere in between. 
 
-```{r peer-type, fig.cap="Type of peer review by discipline", fig.asp=.6}
-
-
-ggplot(peer_type_data, aes(fct_reorder(area, order), prop, fill = fct_rev(pr_type_clean))) +
-  geom_chicklet(position = "fill", width = .6) +
-  coord_flip() +
-  scale_fill_manual(values = p_cols) +
-  scale_y_continuous(labels = scales::percent) +
-  theme(legend.position = "top") +
-  guides(fill = guide_legend(reverse = T)) +
-  labs(fill = NULL, x = NULL, y = NULL, 
-       caption = "What type of peer review is used?")
-```
 
 # Open Peer Review
 ```{r opr-computation}

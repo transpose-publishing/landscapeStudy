@@ -76,7 +76,7 @@ for querying the DOAJ API and matching to our data can be found here FIXME]
 
 
 Information on what type of peer review is used by a journal is mixed 
-(see figure \@ref(fig:pr-type-overall)).
+(see subfigure A in figure \@ref(fig:peer-type-combined)).
 Overall, 54 out of 171 journals (31.6%)  do not provide clear 
 information about their peer review process. The most common peer review 
 practice is single blind per review (30%), followed by double blind
@@ -89,23 +89,22 @@ anonymize papers or reviews during review process.
 
 
 <div class="figure">
-<img src="02-analysis-writeup_files/figure-html/pr-type-overall-1.png" alt="Type of peer review"  />
-<p class="caption">(\#fig:pr-type-overall)Type of peer review</p>
+<img src="02-analysis-writeup_files/figure-html/peer-type-combined-1.png" alt="Type of peer review employed by journals"  />
+<p class="caption">(\#fig:peer-type-combined)Type of peer review employed by journals</p>
 </div>
 
+(A) Type of peer review used overall (n = 171)
+(B) Type of peer review used by disciplines (n = 193)
 
-However, there are major differences between disciplines (see figure 
-\@ref(fig:peer-type)). In the social sciences, humanities, and business, double
+
+However, there are major differences between disciplines (see subfigure B in figure 
+\@ref(fig:peer-type-combined)). In the social sciences, humanities, and business, double
 blind peer review is generally the norm, while in the natural sciences it is
 single
 blind peer review. Business, economics & management displays the highest level
 of unclear policies, with social science and humanities being very clear and the
 other sciences somehwere in between. 
 
-<div class="figure">
-<img src="02-analysis-writeup_files/figure-html/peer-type-1.png" alt="Type of peer review by discipline"  />
-<p class="caption">(\#fig:peer-type)Type of peer review by discipline</p>
-</div>
 
 # Open Peer Review
 
