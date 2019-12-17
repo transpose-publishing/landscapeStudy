@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2019-12-16
+date: Last updated 2019-12-17
 output: 
   bookdown::html_document2:
     number_sections: false

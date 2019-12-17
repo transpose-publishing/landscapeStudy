@@ -553,7 +553,7 @@ p <- ggplot(preprint_version, aes(fct_reorder(area, order), prop,
   coord_flip() +
   scale_fill_manual(values = p_cols) +
   scale_y_continuous(labels = scales::percent) +
-  theme(legend.position = "bottom") +
+  theme(legend.position = "bottom", plot.margin = margin(25, 15, 15, 15)) +
   guides(fill = guide_legend(reverse = T, nrow = 4)) +
   labs(fill = NULL, x = NULL, y = NULL, 
        caption = "What version of a preprint can be posted?")
@@ -645,7 +645,7 @@ p <- ggplot(preprint_citation, aes(fct_reorder(area, order), prop,
   coord_flip() +
   scale_fill_manual(values = p_cols) +
   scale_y_continuous(labels = scales::percent) +
-  theme(legend.position = "bottom") +
+  theme(legend.position = "bottom", plot.margin = margin(25, 15, 15, 15)) +
   guides(fill = guide_legend(reverse = T)) +
   labs(fill = NULL, x = NULL, y = NULL,
        caption = "Can preprints be cited?")
