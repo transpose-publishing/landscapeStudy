@@ -18,8 +18,8 @@ bibliography: landscape.bib
 The approach taken to create the sample of journals led to a few journals 
 having no data on disciplinary area: some journals like "Gut" were within the 
 top 100 journals, but not within any of the sub-categories. This is because the
-h-index varies greatly between sub-categories. Subfigure A in figure
-\@ref(fig:h-indices)
+h-index varies greatly between sub-categories. Figure
+\@ref(fig:h-indices)A
 shows the top-20 journals of each discipline.
 
 The missing categorisations were added in a second step, to facilitate analysis 
@@ -50,7 +50,7 @@ The nature of our selection means that
 disciplines. The inclusion criteria further mean, that disciplines are not 
 represented equally in the sample. Since many of the top 100 journals belong to 
 the health and medical sciences, the sample is slightly skewed in that direction
-(see subfigure B in figure \@ref(fig:h-indices)).
+(see figure \@ref(fig:h-indices)B).
 
 <div class="figure">
 <img src="02-analysis-writeup_files/figure-html/h-indices-1.png" alt="Sample characteristics"  />
@@ -76,7 +76,7 @@ for querying the DOAJ API and matching to our data can be found here FIXME]
 
 
 Information on what type of peer review is used by a journal is mixed 
-(see subfigure A in figure \@ref(fig:peer-type-combined)).
+(see figure \@ref(fig:peer-type-combined)A).
 Overall, 54 out of 171 journals (31.6%)  do not provide clear 
 information about their peer review process. The most common peer review 
 practice is single blind per review (30%), followed by double blind
@@ -97,8 +97,8 @@ anonymize papers or reviews during review process.
 (B) Type of peer review used by disciplines (n = 193)
 
 
-However, there are major differences between disciplines (see subfigure B in figure 
-\@ref(fig:peer-type-combined)). In the social sciences, humanities, and business, double
+However, there are major differences between disciplines (see figure 
+\@ref(fig:peer-type-combined)B). In the social sciences, humanities, and business, double
 blind peer review is generally the norm, while in the natural sciences it is
 single
 blind peer review. Business, economics & management displays the highest level
@@ -397,8 +397,8 @@ whether there was a clear policy on:
 - Posting preprints.
 - Posting preperints. 
 
-The geometric layout of the space displayed in subfigure A of figure 
-\@ref(fig:mca-figures) is 
+The geometric layout of the space displayed in figure 
+\@ref(fig:mca-figures)A is 
 determined by these five active categories. Interpretation of the points 
 displayed is done by projecting them onto the axes. Furthermore, only statements
 regarding the average are possible. From the previous sections it is apparent 
@@ -451,7 +451,7 @@ there is a clear policy on coreview, and to some extent by type of peer review.
 We do not consider more than two dimensions since they do not account for much
 of the residual variance.
 
-Considering subfigure B of figure \@ref(fig:mca-figures), we can conclude that there exists a 
+Considering figure \@ref(fig:mca-figures)B, we can conclude that there exists a 
 clear opposition in our data between journals that are above average in regard 
 to clear policies on citing and posting preprints and whether
 reviewer identities are revealed to authors or not. These journals also tend 
