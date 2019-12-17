@@ -993,9 +993,11 @@ clarity_data <- refined %>%
       TRUE ~ "Yes"
     ),
     pr_type_clean = case_when(pr_type_clean == "Unsure" ~ "No",
-                               TRUE ~ "Yes")
+                               TRUE ~ "Yes"),
+    preprint_link = case_when(preprint_link %in% c("Yes", "No") ~ "Yes",
+                              TRUE ~ "No")
   ) %>% 
-  select(co_review, preprint_posting, preprint_citing, 
+  select(co_review, preprint_posting, preprint_citing, preprint_link,
          pr_type_clean, starts_with("opr"), -opr_was_recoded) %>% 
   select(-opr_additional) %>% 
   mutate_at(vars(starts_with("opr")), function(x) case_when(
@@ -1020,7 +1022,8 @@ labels <- clarity_data %>%
     var == "opr_versions" ~ "Are previous versions of the manuscript being published?",
     var == "opr_identities_published" ~ "Are reviewer identities being published?",
     var == "opr_comments" ~ "Is there public commenting during formal peer review?",
-    var == "opr_interaction" ~ "Is there open interaction (reviewers consult with one another)?"
+    var == "opr_interaction" ~ "Is there open interaction (reviewers consult with one another)?",
+    var == "preprint_link" ~ "Is there a link provided to the preprint version of a paper?"
   ))
 
 clarity_data %>% 
@@ -1050,7 +1053,7 @@ clarity_data %>%
   scale_fill_manual(values = p_cols) +
   theme(legend.position = "top") +
   guides(fill = guide_legend(reverse = T)) +
-  labs(x = NULL, y = NULL, fill = NULL, title = "Clarity of Policies") 
+  labs(x = NULL, y = NULL, fill = NULL) 
 
 ```
 
