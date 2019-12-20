@@ -45,7 +45,7 @@ clean_raw_sheet <- function(df, source = c("excel", "google")) {
                 ~suppressWarnings(janitor::excel_numeric_to_date(as.numeric(.))))},
     google = {df %>%
       slice(-1:-2) %>%
-      rename(review_date_1 = `review.date`, review_date_2 = `review.date_1`,
+      rename(review_date_1 = `review.date...3`, review_date_2 = `review.date...5`,
              review_date_3 = `review.3.date`,
              top_journals_in = starts_with("Top.journals"))}
   )

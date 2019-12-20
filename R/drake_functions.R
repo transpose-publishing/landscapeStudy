@@ -2,26 +2,10 @@
 
 import_raw_data <- function(out_file) {
   # Import data on google scholar rankings of journals ----
-  gsm_sheet <- gs_key("1Dluo5DNWU4UrmwIZLzqcToioRdyZ1qc1EofAk4ypiW8")
+  gsm_sheet <- "1Dluo5DNWU4UrmwIZLzqcToioRdyZ1qc1EofAk4ypiW8"
 
-  gs_dat <- gs_read(gsm_sheet, ws = "G_ALL_dedup",
-                    col_types = cols(
-                      `Journal Title` = col_character(),
-                      ISSN = col_character(),
-                      `h5-index` = col_double(),
-                      `h5-median` = col_double(),
-                      G_100_rank = col_double(),
-                      G_BEM_rank = col_double(),
-                      G_CMS_rank = col_double(),
-                      G_ECS_rank = col_double(),
-                      G_HMS_rank = col_double(),
-                      G_HLA_rank = col_double(),
-                      G_LSES_rank = col_double(),
-                      G_PM_rank = col_double(),
-                      G_SS_rank = col_double(),
-                      Reviewer1 = col_character(),
-                      Reviewer2 = col_character()
-                    ))
+  gs_dat <- read_sheet(gsm_sheet, sheet = "G_ALL_dedup",
+                       col_types = "ccdddddddddddcc")
 
   gs_dat <- select(gs_dat, -contains("Reviewer"), issn = ISSN,
                    gs_title = `Journal Title`)
@@ -37,10 +21,9 @@ import_raw_data <- function(out_file) {
   # we are re-doing the import which was done by Jessica inside the sheet.
   # so we have to import the raw sheet, and then take either the first or the
   # third row.
-  ls_sheet <- gs_key("1WcvxxmDhaV3BwBiIfwC_nEAr6-EKCDD11R6eJ5vZElA")
+  ls_sheet <- "1WcvxxmDhaV3BwBiIfwC_nEAr6-EKCDD11R6eJ5vZElA"
 
-  transpose_fixed <- gs_read(ls_sheet,
-                             col_types = cols(.default = col_character())) %>%
+  transpose_fixed <- read_sheet(ls_sheet, col_types = "c") %>%
     as_tibble(.name_repair = "universal") %>%
     clean_raw_sheet(source = "google")
 
@@ -88,13 +71,16 @@ import_raw_data <- function(out_file) {
 
 
 create_var_overview <- function(out_file) {
-  ls_sheet <- gs_key("1WcvxxmDhaV3BwBiIfwC_nEAr6-EKCDD11R6eJ5vZElA")
+  ls_sheet <- "1WcvxxmDhaV3BwBiIfwC_nEAr6-EKCDD11R6eJ5vZElA"
 
   # import list of variables for ease of use
-  transpose_vars <- gs_read(
-    ls_sheet,
-    col_types = cols(.default = col_character()),
-    ws = "Raw", n_max = 2)
+  transpose_vars <- read_sheet(
+    ls_sheet, col_types = "c",
+    sheet = "Raw", n_max = 2)
+
+  # fix some var names
+  transpose_vars <- transpose_vars %>%
+    rename(`review date` = `review date...3`, `review date_1` = `review date...5`)
 
   part1 <- transpose_vars %>%
     slice(1) %>%
