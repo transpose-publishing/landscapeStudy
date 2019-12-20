@@ -218,11 +218,13 @@ pdata <- refined %>%
     str_detect(val, "Conditional") ~ "Conditional",
     str_detect(str_to_lower(val), "not spec") ~ "Not specified",
     str_detect(val, "Optional") ~ "Optional",
+    # recode mandatory to yes, since the meaning is the same
+    str_detect(val, "Mandatory") ~ "Yes",
     TRUE ~ val
   )) %>% 
-  make_proportion(val_clean, var, order_string = "Yes|Mand|Condi|Optio") %>% 
+  make_proportion(val_clean, var, order_string = "Yes|Condi|Optio") %>% 
   mutate(val_clean = factor(val_clean, 
-                      levels = c("Yes", "Mandatory", "Conditional", "Optional",
+                      levels = c("Yes", "Conditional", "Optional",
                                  "No", "Not specified")))
 
 labels <- pdata %>% 
@@ -258,7 +260,7 @@ available in more than 95% of journals.
 
 ```{r opr-combined, fig.width=7, fig.height=8, fig.cap="Aspects of open peer review"}
 p_cols <- c("Not specified" =  "#E7298A", "Yes" = "#1B9E77",
-            "Mandatory" = "#D95F02", "Conditional" =  "#7570B3",
+            "Conditional" =  "#7570B3",
             "Optional" = "#66A61E", "No" = "#E6AB02"
 )
 
@@ -279,10 +281,12 @@ rev_identitiy <- refined_with_areas %>%
     str_detect(opr_indenties_author, "Conditional") ~ "Conditional",
     str_detect(str_to_lower(opr_indenties_author), "not spec") ~ "Not specified",
     str_detect(opr_indenties_author, "Optional") ~ "Optional",
+    # recode mandatory to yes, since the meaning is the same
+    str_detect(opr_indenties_author, "Mandatory") ~ "Yes",
     TRUE ~ opr_indenties_author
   )) %>% 
   mutate(opr_indenties_author_clean = factor(opr_indenties_author_clean, 
-                      levels = c("Yes", "Mandatory", "Conditional", "Optional",
+                      levels = c("Yes", "Conditional", "Optional",
                                  "No", "Not specified"))) %>% 
   make_proportion(opr_indenties_author_clean, area, order_string = "Not")
 
