@@ -1,4 +1,4 @@
-# Working title: Publishing policies are unclear in the majority of journals
+# Publishing policies are unclear in most major journals
 
 This repository holds code and data for this paper: LINK TO PREPRINT/PAPER.
 
