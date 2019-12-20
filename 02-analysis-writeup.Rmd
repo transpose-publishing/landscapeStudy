@@ -259,7 +259,7 @@ identities to the authors, all other aspects are not specified or not
 available in more than 95% of journals.
 
 ```{r opr-combined, fig.width=7, fig.height=8, fig.cap="Aspects of open peer review"}
-p_cols <- c("Not specified" =  "#E7298A", "Yes" = "#1B9E77",
+p_cols <- c("Not specified" =  "#E7298A", "Yes" = "#D95F02",
             "Conditional" =  "#7570B3",
             "Optional" = "#66A61E", "No" = "#E6AB02"
 )
