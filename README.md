@@ -73,7 +73,7 @@ The analysis was last rendered with the following package versions:
  collate  German_Austria.1252         
  ctype    German_Austria.1252         
  tz       Europe/Berlin               
- date     2019-12-11                  
+ date     2019-12-20                  
 
 ─ Packages ─────────────────────────────────────────────
  package       * version  date       lib source                            
@@ -82,7 +82,7 @@ The analysis was last rendered with the following package versions:
  backports       1.1.5    2019-10-02 [1] CRAN (R 3.6.1)                    
  base64enc       0.1-3    2015-07-28 [1] CRAN (R 3.6.0)                    
  base64url       1.4      2018-05-14 [1] CRAN (R 3.6.1)                    
- broom           0.5.2    2019-04-07 [1] CRAN (R 3.6.1)                    
+ broom           0.5.3    2019-12-14 [1] CRAN (R 3.6.1)                    
  ca            * 0.71     2018-10-10 [1] CRAN (R 3.6.1)                    
  callr           3.4.0    2019-12-09 [1] CRAN (R 3.6.1)                    
  cellranger      1.1.0    2016-07-27 [1] CRAN (R 3.6.1)                    
@@ -90,7 +90,7 @@ The analysis was last rendered with the following package versions:
  colorspace      1.4-1    2019-03-18 [1] CRAN (R 3.6.1)                    
  crayon          1.3.4    2017-09-16 [1] CRAN (R 3.6.1)                    
  curl            4.3      2019-12-02 [1] CRAN (R 3.6.1)                    
- DBI             1.0.0    2018-05-02 [1] CRAN (R 3.6.1)                    
+ DBI             1.1.0    2019-12-15 [1] CRAN (R 3.6.1)                    
  dbplyr          1.4.2    2019-06-17 [1] CRAN (R 3.6.1)                    
  desc            1.2.0    2018-05-01 [1] CRAN (R 3.6.1)                    
  devtools        2.2.1    2019-09-24 [1] CRAN (R 3.6.1)                    
@@ -108,6 +108,7 @@ The analysis was last rendered with the following package versions:
  forcats       * 0.4.0    2019-02-17 [1] CRAN (R 3.6.1)                    
  formatR         1.7      2019-06-11 [1] CRAN (R 3.6.1)                    
  fs              1.3.1    2019-05-06 [1] CRAN (R 3.6.1)                    
+ gargle        * 0.4.0.9002 2019-12-20 [1] Github (r-lib/gargle@13c2549)
  generics        0.0.2    2018-11-29 [1] CRAN (R 3.6.1)                    
  ggalt         * 0.4.0    2017-02-15 [1] CRAN (R 3.6.1)                    
  ggchicklet    * 0.2.0    2019-09-14 [1] local                             
@@ -117,7 +118,7 @@ The analysis was last rendered with the following package versions:
  ggrepel         0.8.1    2019-05-07 [1] CRAN (R 3.6.1)                    
  ggridges      * 0.5.1    2018-09-27 [1] CRAN (R 3.6.1)                    
  glue            1.3.1    2019-03-12 [1] CRAN (R 3.6.1)                    
- googlesheets  * 0.3.0    2018-06-29 [1] CRAN (R 3.6.1)                    
+ googlesheets4 * 0.1.0    2019-11-04 [1] CRAN (R 3.6.1)                    
  graphlayouts    0.5.0    2019-08-20 [1] CRAN (R 3.6.1)                    
  gridExtra       2.3      2017-09-09 [1] CRAN (R 3.6.1)                    
  gtable          0.3.0    2019-03-25 [1] CRAN (R 3.6.1)                    
@@ -150,11 +151,11 @@ The analysis was last rendered with the following package versions:
  munsell         0.5.0    2018-06-12 [1] CRAN (R 3.6.1)                    
  nlme            3.1-140  2019-05-12 [2] CRAN (R 3.6.1)                    
  patchwork     * 1.0.0    2019-12-01 [1] CRAN (R 3.6.1)                    
- pillar          1.4.2    2019-06-29 [1] CRAN (R 3.6.1)                    
+ pillar          1.4.3    2019-12-20 [1] CRAN (R 3.6.1)                    
  pkgbuild        1.0.6    2019-10-09 [1] CRAN (R 3.6.1)                    
  pkgconfig       2.0.3    2019-09-22 [1] CRAN (R 3.6.1)                    
  pkgload         1.0.2    2018-10-29 [1] CRAN (R 3.6.1)                    
- plyr            1.8.4    2016-06-08 [1] CRAN (R 3.6.1)                    
+ plyr            1.8.5    2019-12-10 [1] CRAN (R 3.6.1)                    
  polyclip        1.10-0   2019-03-14 [1] CRAN (R 3.6.0)                    
  prettyunits     1.0.2    2015-07-13 [1] CRAN (R 3.6.1)                    
  processx        3.4.1    2019-07-18 [1] CRAN (R 3.6.1)                    
