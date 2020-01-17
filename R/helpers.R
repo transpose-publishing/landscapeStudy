@@ -28,7 +28,7 @@ make_single_proportion <- function(df, var, category, accuracy = 1) {
 }
 
 
-clean_raw_sheet <- function(df, source = c("excel", "google")) {
+clean_raw_sheet <- function(df, source = c("excel", "google", "csv")) {
 
   if (!is.character(source) || !identical(length(source), 1L)) {
     stop("`source` should either be 'excel' or 'google", call. = FALSE)
@@ -47,7 +47,13 @@ clean_raw_sheet <- function(df, source = c("excel", "google")) {
       slice(-1:-2) %>%
       rename(review_date_1 = `review.date...3`, review_date_2 = `review.date...5`,
              review_date_3 = `review.3.date`,
-             top_journals_in = starts_with("Top.journals"))}
+             top_journals_in = starts_with("Top.journals"))},
+    csv = {df %>%
+      slice(-1:-2) %>%
+        rename(review_date_1 = `review.date`, review_date_2 = `review.date_1`,
+               review_date_3 = `review.3.date`,
+               top_journals_in = starts_with("Top.journals"))},
+
   )
 
 
