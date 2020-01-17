@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2019-12-20
+date: Last updated 2020-01-17
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -337,14 +337,19 @@ preprint version, also allowing preprints after peer review, which is less
 common in the natural sciences.
 
 
+
+
+
 A complementary aspect of using preprints is whether they can be cited. The
 majority of journals
 (57.3%)
 does not specify, whether this is possible. Unclear policies on how to cite
 preprints are also quite 
 common (15.2%). In case
-citations of preprints are allowed, this is commonly possible in the reference,
-with some journals restricting citations of preprints to the text.
+citations of preprints are allowed, this is possible in the reference for 
+78% of journals,
+with some journals restricting citations of preprints to the text 
+14%.
 
 
 

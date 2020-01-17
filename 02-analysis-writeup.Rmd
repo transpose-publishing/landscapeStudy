@@ -683,7 +683,7 @@ preprint_citation_type <- preprint_citation %>%
   summarise(n = sum(n)) %>% 
   mutate(prop = n/sum(n))
 
-preprint_citation_references <- preprint_citation_type
+preprint_citation_references <- preprint_citation_type %>% 
   filter(str_detect(preprint_citation_clean, "reference")) %>% 
   pull(prop) %>% 
   make_percent2("one")

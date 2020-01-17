@@ -1,7 +1,7 @@
 ---
 title: "Landscape Study - General Overview"
 author: Thomas Klebel
-date: Last changed 2019-12-20
+date: Last changed 2020-01-17
 output: 
   html_document:
     df_print: paged
