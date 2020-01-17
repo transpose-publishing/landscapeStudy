@@ -672,14 +672,39 @@ preprint version, also allowing preprints after peer review, which is less
 common in the natural sciences.
 
 
+
+```{r}
+# compute percentages for those journals that allow citing preprints
+preprint_citation_type <- preprint_citation %>% 
+  filter(str_detect(preprint_citation_clean, "Yes|Other")) %>%
+  ungroup() %>% 
+  select(-area, -prop, -order) %>% 
+  group_by(preprint_citation_clean) %>% 
+  summarise(n = sum(n)) %>% 
+  mutate(prop = n/sum(n))
+
+preprint_citation_references <- preprint_citation_type
+  filter(str_detect(preprint_citation_clean, "reference")) %>% 
+  pull(prop) %>% 
+  make_percent2("one")
+
+preprint_citation_text <- preprint_citation_type %>% 
+  filter(str_detect(preprint_citation_clean, "text")) %>% 
+  pull(prop) %>% 
+  make_percent2("one")
+  
+```
+
 A complementary aspect of using preprints is whether they can be cited. The
 majority of journals
 (`r preprint_citation_univariate[[2, 3]] %>% make_percent2("comma")`)
 does not specify, whether this is possible. Unclear policies on how to cite
 preprints are also quite 
 common (`r preprint_citation_univariate[[4, 3]] %>% make_percent2("comma")`). In case
-citations of preprints are allowed, this is commonly possible in the reference,
-with some journals restricting citations of preprints to the text.
+citations of preprints are allowed, this is possible in the reference for 
+`r preprint_citation_references` of journals,
+with some journals restricting citations of preprints to the text 
+`r preprint_citation_text`.
 
 
 
