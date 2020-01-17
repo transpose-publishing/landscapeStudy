@@ -659,9 +659,9 @@ gridExtra::grid.arrange(gt1, gt2)
 Similar to our earlier results, preprint policies vary considerably between
 disciplines (see fig. \@ref(fig:preprint-combined)A). While in the life sciences
 & earth sciences 
-`r preprint_version %>% filter(str_detect(area, "Life Sciences")) %>% pull(order) %>% make_percent2(., "comma")`
+`r preprint_version %>% filter(str_detect(area, "Life Sciences")) %>% pull(order) %>% make_percent2(., "one")`
 of all journals allow preprints in some way, in the Humanities only 
-`r preprint_version %>% filter(str_detect(area, "Humanities")) %>% pull(order) %>% make_percent2(., "comma")`
+`r preprint_version %>% filter(str_detect(area, "Humanities")) %>% pull(order) %>% make_percent2(., "one")`
 do.
 The natural sciences in general tend towards allowing preprints only on first submission
 while the social sciences predominantly have no clear policy on which version of

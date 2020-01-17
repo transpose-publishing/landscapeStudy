@@ -324,9 +324,9 @@ do not have a preprint policy.
 Similar to our earlier results, preprint policies vary considerably between
 disciplines (see fig. \@ref(fig:preprint-combined)A). While in the life sciences
 & earth sciences 
-90.9%
+91%
 of all journals allow preprints in some way, in the Humanities only 
-45.0%
+45%
 do.
 The natural sciences in general tend towards allowing preprints only on first submission
 while the social sciences predominantly have no clear policy on which version of
