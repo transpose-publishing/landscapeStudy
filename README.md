@@ -45,6 +45,11 @@ is available here: https://docs.google.com/spreadsheets/d/1WcvxxmDhaV3BwBiIfwC_n
 The original file with data on which journals are included is available here:
 https://docs.google.com/spreadsheets/d/1Dluo5DNWU4UrmwIZLzqcToioRdyZ1qc1EofAk4ypiW8/edit?usp=sharing
 
+The files were downloaded as `.csv` and `.xlsx` for archival. The analysis 
+builds on the `.csv` files, while the `.xlsx` files are supposed to preserve as
+much of the original formatting as possible, should the GoogleSheets become 
+unavailable one day. 
+
 
 Some data wrangling was necessary before conducting the analysis. The output of
 these operations are the files `data/refined.csv` and `data/refined_w_areas.csv`.
