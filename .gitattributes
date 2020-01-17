@@ -1,4 +1,5 @@
+*.html linguist-detectable=false
+
 *.csv diff=daff-csv
 *.csv merge=daff-csv
 
-*.html linguist-detectable=false
