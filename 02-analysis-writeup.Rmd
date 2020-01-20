@@ -18,7 +18,8 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, dpi = 400, dev.args = list(
 theme_set(theme_hrbrmstr(plot_margin = margin(15, 15, 15, 15)))
 
 # define colours
-unsure_col = "#A6761D"
+not_spec_col = "#D95F02"
+unsure_col = "#FDE725"
 
 # import data
 refined <- readd(clean_data)
@@ -269,7 +270,7 @@ identities to the authors, all other aspects are not specified or not
 available in more than 95% of journals.
 
 ```{r opr-combined, fig.width=7, fig.height=8, fig.cap="Aspects of open peer review"}
-p_cols <- c("Not specified" =  "#FDE725", "Yes" = "#414487",
+p_cols <- c("Not specified" =  not_spec_col, "Yes" = "#414487",
             "Conditional" =  "#2A788E",
             "Optional" = "#22A884", "No" = "#7AD151"
 )
@@ -573,7 +574,7 @@ preprint_version <- refined_with_areas %>%
   make_proportion(preprint_version_clean, area,
                   order_string = "Any|After|First|Uns")
 
-p1_cols <- c("No preprint policy" =  "#FDE725", "Other" = "#666666",
+p1_cols <- c("No preprint policy" =  not_spec_col, "Other" = "#666666",
             "Any" = "#414487", "After peer review" = "#2A788E", 
             "First submission only (before peer review)" = "#22A884",
             "Unsure (preprints are allowed, but it's not clear which version)" = "#440154",
@@ -623,7 +624,7 @@ preprint_citation <- refined_with_areas %>%
   make_proportion(preprint_citation_clean, area,
                   order_string = "Yes|Other")
 
-p2_cols <- c("Not specified" =  "#FDE725", "Other" = "#666666", "Unsure" = unsure_col,
+p2_cols <- c("Not specified" =  not_spec_col, "Other" = "#666666", "Unsure" = unsure_col,
             "Yes, in the reference list" = "#414487", 
             "Yes, but only in the text" = "#22A884", 
             "No" = "#7AD151"
