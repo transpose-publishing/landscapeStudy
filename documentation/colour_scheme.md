@@ -64,6 +64,6 @@ easily, and which are fine in terms of colour blindness, except for monocromacy.
 `c(viridis(n, option = "D"), "Unsure" = "#A6761D", "Other" = "#666666")`
 
 ````
-Violet                    Green                               Yellow         Unsure       Other 
-"#440154FF" "#414487FF" "#2A788EFF" "#22A884FF" "#7AD151FF" "#FDE725FF"   "#A6761D"   "#666666" 
+# Violet                    Green                               Yellow         Unsure       Other 
+# "#440154FF" "#414487FF" "#2A788EFF" "#22A884FF" "#7AD151FF" "#FDE725FF"   "#A6761D"   "#666666" 
 ````
