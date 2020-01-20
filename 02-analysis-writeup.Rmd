@@ -176,8 +176,8 @@ anonymize papers or reviews during review process.
 
 
 ```{r peer-type-combined, fig.width=6, fig.height=6, fig.cap="Type of peer review employed by journals"}
-p_cols <- c("Single blind" = "#7AD151FF", "Double blind" =  "#2A788EFF",
-            "Not blinded" =  "#414487FF",
+p_cols <- c("Single blind" = "#7AD151", "Double blind" =  "#2A788E",
+            "Not blinded" =  "#414487",
             "Unsure" = "#A6761D", "Other" = "#666666")
 
 p1 <- ggplot(pr_type_prop, aes(fct_reorder(pr_type_clean, n), prop, fill = fct_rev(pr_type_clean))) +
@@ -267,13 +267,13 @@ identities to the authors, all other aspects are not specified or not
 available in more than 95% of journals.
 
 ```{r opr-combined, fig.width=7, fig.height=8, fig.cap="Aspects of open peer review"}
-p_cols <- c("Not specified" =  "#FDE725FF", "Yes" = "#414487FF",
-            "Conditional" =  "#2A788EFF",
-            "Optional" = "#22A884FF", "No" = "#7AD151FF"
+p_cols <- c("Not specified" =  "#FDE725", "Yes" = "#414487",
+            "Conditional" =  "#2A788E",
+            "Optional" = "#22A884", "No" = "#7AD151"
 )
 
 # Violet                    Green                               Yellow         Unsure       Other 
-# "#440154FF" "#414487FF" "#2A788EFF" "#22A884FF" "#7AD151FF" "#FDE725FF"   "#A6761D"   "#666666" 
+# "#440154" "#414487" "#2A788E" "#22A884" "#7AD151" "#FDE725"   "#A6761D"   "#666666" 
 
 p1 <- pdata %>% 
   left_join(labels) %>% 
@@ -383,8 +383,8 @@ co_rev <- refined_with_areas %>%
   make_proportion(coreview_email, area, order_string = "Yes")
 
 
-p_cols <- c("Unsure" = "#A6761D", "Yes" = "#414487FF",
-            "No" = "#7AD151FF"
+p_cols <- c("Unsure" = "#A6761D", "Yes" = "#414487",
+            "No" = "#7AD151"
 )
 
 ggplot(co_rev, aes(fct_reorder(area, order), prop, 
@@ -474,7 +474,7 @@ most frequent associations in the figure are depicted by bold arrows.
 ```{r bigrams, fig.width=9, fig.height=7, fig.cap="Bigrams of co-review policies"}
 distinct_coreview %>% 
   make_bigram_analysis(coreview_policy, remove = "review", cutoff = 1,
-                       point_col = "#7AD151FF") +
+                       point_col = "#7AD151") +
   theme(legend.position = "bottom") +
   labs(edge_alpha = "How many times each bigram occured:")
 ```
@@ -574,22 +574,22 @@ preprint_version <- refined_with_areas %>%
   make_proportion(preprint_version_clean, area,
                   order_string = "Any|After|First|Uns")
 
-# p_cols <- c("Not specified" =  "#FDE725FF", "Yes" = "#414487FF",
-#             "Conditional" =  "#2A788EFF",
-#             "Optional" = "#22A884FF", "No" = "#7AD151FF"
+# p_cols <- c("Not specified" =  "#FDE725", "Yes" = "#414487",
+#             "Conditional" =  "#2A788E",
+#             "Optional" = "#22A884", "No" = "#7AD151"
 # )
 
 # Violet                    Green                               Yellow         Unsure       Other 
-# "#440154FF" "#414487FF" "#2A788EFF" "#22A884FF" "#7AD151FF" "#FDE725FF"   "#A6761D"   "#666666" 
+# "#440154" "#414487" "#2A788E" "#22A884" "#7AD151" "#FDE725"   "#A6761D"   "#666666" 
 
 
 
 
-p1_cols <- c("No preprint policy" =  "#FDE725FF", "Other" = "#666666",
-            "Any" = "#414487FF", "After peer review" = "#2A788EFF", 
-            "First submission only (before peer review)" = "#22A884FF",
-            "Unsure (preprints are allowed, but it's not clear which version)" = "#440154FF",
-            "None" = "#7AD151FF"
+p1_cols <- c("No preprint policy" =  "#FDE725", "Other" = "#666666",
+            "Any" = "#414487", "After peer review" = "#2A788E", 
+            "First submission only (before peer review)" = "#22A884",
+            "Unsure (preprints are allowed, but it's not clear which version)" = "#440154",
+            "None" = "#7AD151"
 )
 
 p1 <- ggplot(preprint_version, aes(fct_reorder(area, order), prop, 
@@ -637,30 +637,30 @@ preprint_citation <- refined_with_areas %>%
 
 
 
-# p_cols <- c("Not specified" =  "#FDE725FF", "Yes" = "#414487FF",
-#             "Conditional" =  "#2A788EFF",
-#             "Optional" = "#22A884FF", "No" = "#7AD151FF"
+# p_cols <- c("Not specified" =  "#FDE725", "Yes" = "#414487",
+#             "Conditional" =  "#2A788E",
+#             "Optional" = "#22A884", "No" = "#7AD151"
 # )
 
 # Violet                    Green                               Yellow         Unsure       Other 
-# "#440154FF" "#414487FF" "#2A788EFF" "#22A884FF" "#7AD151FF" "#FDE725FF"   "#A6761D"   "#666666" 
+# "#440154" "#414487" "#2A788E" "#22A884" "#7AD151" "#FDE725"   "#A6761D"   "#666666" 
 
 
 
 # 
-# p1_cols <- c("No preprint policy" =  "#FDE725FF", "Other" = "#666666",
-#             "Any" = "#414487FF", "After peer review" = "#2A788EFF", 
-#             "First submission only (before peer review)" = "#22A884FF",
-#             "Unsure (preprints are allowed, but it's not clear which version)" = "#440154FF",
-#             "None" = "#7AD151FF"
+# p1_cols <- c("No preprint policy" =  "#FDE725", "Other" = "#666666",
+#             "Any" = "#414487", "After peer review" = "#2A788E", 
+#             "First submission only (before peer review)" = "#22A884",
+#             "Unsure (preprints are allowed, but it's not clear which version)" = "#440154",
+#             "None" = "#7AD151"
 # )
 
 
 
-p2_cols <- c("Not specified" =  "#FDE725FF", "Other" = "#666666", "Unsure" = "#A6761D",
-            "Yes, in the reference list" = "#414487FF", 
-            "Yes, but only in the text" = "#22A884FF", 
-            "No" = "#7AD151FF"
+p2_cols <- c("Not specified" =  "#FDE725", "Other" = "#666666", "Unsure" = "#A6761D",
+            "Yes, in the reference list" = "#414487", 
+            "Yes, but only in the text" = "#22A884", 
+            "No" = "#7AD151"
 )
 
 p2 <- ggplot(preprint_citation, aes(fct_reorder(area, order), prop, 
@@ -953,8 +953,8 @@ mca_two_dimension_plot <- final_4 %>%
   plot_ca(font_size = 4, show.legend = T) +
   coord_fixed() +
   theme(legend.position = "top") +
-  scale_color_manual(values = c("Contributing Variables" = "#440154FF",
-                                "Supplementary Variables" = "#22A884FF")) 
+  scale_color_manual(values = c("Contributing Variables" = "#440154",
+                                "Supplementary Variables" = "#22A884")) 
 ```
 
 ```{r mca-figures, fig.width=15, fig.height=15, fig.cap="The Landscape of Open Science Policies"}
@@ -1110,8 +1110,8 @@ clarity_data %>%
 labels <- labels %>%
   mutate_at("label", ~str_wrap(., 40))
 
-p_cols <- c("Clear policy" = "#414487FF",
-            "No clear policy" = "#7AD151FF"
+p_cols <- c("Clear policy" = "#414487",
+            "No clear policy" = "#7AD151"
 )
 
 clarity_data %>% 
