@@ -625,7 +625,7 @@ preprint_citation <- refined_with_areas %>%
                   order_string = "Yes|Other")
 
 p2_cols <- c("Not specified" =  not_spec_col, "Other" = "#666666", "Unsure" = unsure_col,
-            "Yes, in the reference list" = "#414487", 
+            "Yes, in the reference list" = "#2A788E", 
             "Yes, but only in the text" = "#22A884", 
             "No" = "#7AD151"
 )
@@ -884,15 +884,15 @@ mca_one_dimension_plot <- data_for_one_dimension %>%
   geom_segment(data = tibble(
     x = 0, xend = 0, y = -7, yend = 7, type = "Disciplines",
     ), aes(x = x, y = y, xend = xend, yend = yend), linetype = "dashed", 
-    colour = "#E7298A") +
+    colour = not_spec_col) +
   geom_segment(data = tibble(
     x = 0, xend = 0, y = 0, yend = 2, type = "Publishers",
     ), aes(x = x, y = y, xend = xend, yend = yend), linetype = "dashed", 
-    colour = "#E7298A") +
+    colour = not_spec_col) +
   geom_text(data = tibble(
     type = "Publishers",
     x = 0, y = 2, label = "Sample Average"
-  ), aes(x = x, y = y, label  = label), nudge_y = .1, colour = "#E7298A") +
+  ), aes(x = x, y = y, label  = label), nudge_y = .1, colour = not_spec_col) +
   geom_hline(yintercept = 1) +
   # add points and labels
   geom_point() +
@@ -1078,7 +1078,7 @@ labels <- labels %>%
   mutate_at("label", ~str_wrap(., 40))
 
 p_cols <- c("Clear policy" = "#414487",
-            "No clear policy" = "#7AD151"
+            "No clear policy" = not_spec_col
 )
 
 clarity_data %>% 
