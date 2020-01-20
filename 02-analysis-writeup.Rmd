@@ -17,6 +17,8 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, dpi = 400, dev.args = list(
 ```{r import, message=FALSE}
 theme_set(theme_hrbrmstr(plot_margin = margin(15, 15, 15, 15)))
 
+# define colours
+unsure_col = "#A6761D"
 
 # import data
 refined <- readd(clean_data)
@@ -178,7 +180,7 @@ anonymize papers or reviews during review process.
 ```{r peer-type-combined, fig.width=6, fig.height=6, fig.cap="Type of peer review employed by journals"}
 p_cols <- c("Single blind" = "#7AD151", "Double blind" =  "#2A788E",
             "Not blinded" =  "#414487",
-            "Unsure" = "#A6761D", "Other" = "#666666")
+            "Unsure" = unsure_col, "Other" = "#666666")
 
 p1 <- ggplot(pr_type_prop, aes(fct_reorder(pr_type_clean, n), prop, fill = fct_rev(pr_type_clean))) +
   geom_chicklet(width = .6, show.legend = F) +
@@ -271,9 +273,6 @@ p_cols <- c("Not specified" =  "#FDE725", "Yes" = "#414487",
             "Conditional" =  "#2A788E",
             "Optional" = "#22A884", "No" = "#7AD151"
 )
-
-# Violet                    Green                               Yellow         Unsure       Other 
-# "#440154" "#414487" "#2A788E" "#22A884" "#7AD151" "#FDE725"   "#A6761D"   "#666666" 
 
 p1 <- pdata %>% 
   left_join(labels) %>% 
@@ -383,7 +382,7 @@ co_rev <- refined_with_areas %>%
   make_proportion(coreview_email, area, order_string = "Yes")
 
 
-p_cols <- c("Unsure" = "#A6761D", "Yes" = "#414487",
+p_cols <- c("Unsure" = unsure_col, "Yes" = "#414487",
             "No" = "#7AD151"
 )
 
@@ -574,17 +573,6 @@ preprint_version <- refined_with_areas %>%
   make_proportion(preprint_version_clean, area,
                   order_string = "Any|After|First|Uns")
 
-# p_cols <- c("Not specified" =  "#FDE725", "Yes" = "#414487",
-#             "Conditional" =  "#2A788E",
-#             "Optional" = "#22A884", "No" = "#7AD151"
-# )
-
-# Violet                    Green                               Yellow         Unsure       Other 
-# "#440154" "#414487" "#2A788E" "#22A884" "#7AD151" "#FDE725"   "#A6761D"   "#666666" 
-
-
-
-
 p1_cols <- c("No preprint policy" =  "#FDE725", "Other" = "#666666",
             "Any" = "#414487", "After peer review" = "#2A788E", 
             "First submission only (before peer review)" = "#22A884",
@@ -635,29 +623,7 @@ preprint_citation <- refined_with_areas %>%
   make_proportion(preprint_citation_clean, area,
                   order_string = "Yes|Other")
 
-
-
-# p_cols <- c("Not specified" =  "#FDE725", "Yes" = "#414487",
-#             "Conditional" =  "#2A788E",
-#             "Optional" = "#22A884", "No" = "#7AD151"
-# )
-
-# Violet                    Green                               Yellow         Unsure       Other 
-# "#440154" "#414487" "#2A788E" "#22A884" "#7AD151" "#FDE725"   "#A6761D"   "#666666" 
-
-
-
-# 
-# p1_cols <- c("No preprint policy" =  "#FDE725", "Other" = "#666666",
-#             "Any" = "#414487", "After peer review" = "#2A788E", 
-#             "First submission only (before peer review)" = "#22A884",
-#             "Unsure (preprints are allowed, but it's not clear which version)" = "#440154",
-#             "None" = "#7AD151"
-# )
-
-
-
-p2_cols <- c("Not specified" =  "#FDE725", "Other" = "#666666", "Unsure" = "#A6761D",
+p2_cols <- c("Not specified" =  "#FDE725", "Other" = "#666666", "Unsure" = unsure_col,
             "Yes, in the reference list" = "#414487", 
             "Yes, but only in the text" = "#22A884", 
             "No" = "#7AD151"
