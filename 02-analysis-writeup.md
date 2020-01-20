@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2020-01-17
+date: Last updated 2020-01-20
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -57,8 +57,8 @@ the health and medical sciences, the sample is slightly skewed in that direction
 <p class="caption">(\#fig:h-indices)Sample characteristics</p>
 </div>
 
-(A): The distribution of h5-indices across disciplines. (B) Number and 
-proportion of journals sampled by discipline
+(A): The distribution of h5-indices across the top-20 journals of each 
+discipline. (B) Number and proportion of journals sampled by discipline in total.
 
 
 

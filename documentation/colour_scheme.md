@@ -55,3 +55,15 @@ depending on how many we need:
 ````
 "#1B9E77" "#D95F02" "#7570B3" "#66A61E" "#E6AB02"
 ```
+
+There was still some problem with the brownish vs. the reddish colour. The new 
+idea is to combine viridis with grey and brown, i.e. to keep "Unsure" and "Other"
+but add the other colours. -> only 6 viridis colours which can be distinguished
+easily, and which are fine in terms of colour blindness, except for monocromacy.
+
+`c(viridis(n, option = "D"), "Unsure" = "#A6761D", "Other" = "#666666")`
+
+````
+Violet                    Green                               Yellow         Unsure       Other 
+"#440154FF" "#414487FF" "#2A788EFF" "#22A884FF" "#7AD151FF" "#FDE725FF"   "#A6761D"   "#666666" 
+````

@@ -75,6 +75,15 @@ the health and medical sciences, the sample is slightly skewed in that direction
 # git)
 set.seed(1234)
 
+# compute colours
+disc_cols <- refined_with_areas %>% 
+  filter(!area_was_scraped) %>% 
+  mutate(area = fct_reorder(area, `h5-index`)) %>% 
+  pull(area) %>% 
+  levels() %>% 
+  rev() %>% 
+  set_names(viridis(8), nm = .)
+
 p1 <- refined_with_areas %>% 
   filter(!area_was_scraped) %>% 
   ggplot(aes(fct_reorder(area, `h5-index`), `h5-index`)) +
@@ -82,7 +91,7 @@ p1 <- refined_with_areas %>%
   coord_flip() +
   geom_jitter(width = .2, aes(colour = area), show.legend = F, alpha = .7) +
   labs(x = NULL) +
-  scale_color_brewer(palette = "Dark2") 
+  scale_color_manual(values = disc_cols)
 
 p2 <- refined_with_areas %>%
   plot_univariate(area, nudge_y = .5) +
@@ -91,15 +100,15 @@ p2 <- refined_with_areas %>%
   hrbrmisc::theme_hrbrmstr(grid = "") +
   theme(axis.text.x = element_blank()) +
   aes(colour = area) +
-  scale_color_brewer(palette = "Dark2")
+  scale_color_manual(values = disc_cols)
   
 p1 / p2 + plot_annotation(tag_levels = "A")
 
 
 ```
 
-(A): The distribution of h5-indices across disciplines. (B) Number and 
-proportion of journals sampled by discipline
+(A): The distribution of h5-indices across the top-20 journals of each 
+discipline. (B) Number and proportion of journals sampled by discipline in total.
 
 
 
@@ -167,10 +176,9 @@ anonymize papers or reviews during review process.
 
 
 ```{r peer-type-combined, fig.width=6, fig.height=6, fig.cap="Type of peer review employed by journals"}
-p_cols <- c("Single blind" = "#1B9E77", "Double blind" =  "#D95F02",
-            "Not blinded" =  "#7570B3",
+p_cols <- c("Single blind" = "#7AD151FF", "Double blind" =  "#2A788EFF",
+            "Not blinded" =  "#414487FF",
             "Unsure" = "#A6761D", "Other" = "#666666")
-
 
 p1 <- ggplot(pr_type_prop, aes(fct_reorder(pr_type_clean, n), prop, fill = fct_rev(pr_type_clean))) +
   geom_chicklet(width = .6, show.legend = F) +
