@@ -889,16 +889,21 @@ mca_one_dimension_plot <- data_for_one_dimension %>%
     x = 0, xend = 0, y = 0, yend = 2, type = "Publishers",
     ), aes(x = x, y = y, xend = xend, yend = yend), linetype = "dashed", 
     colour = not_spec_col) +
-  geom_text(data = tibble(
-    type = "Publishers",
-    x = 0, y = 2, label = "Sample Average"
-  ), aes(x = x, y = y, label  = label), nudge_y = .1, colour = not_spec_col) +
+  geom_text(
+    data = tibble(
+      type = "Publishers",
+      x = 0, y = 2, label = "Sample Average"
+    ), 
+    aes(x = x, y = y, label  = label), 
+    nudge_y = .1, 
+    colour = not_spec_col,
+    size = 5) +
   geom_hline(yintercept = 1) +
   # add points and labels
   geom_point() +
   ggrepel::geom_label_repel(aes(label = rowname, fill = x),
                            direction = "y", show.legend = FALSE,
-                           force = 8, seed = 3) +
+                           force = 8, seed = 3, size = 4.5) +
   scale_fill_viridis(alpha = .5) +
   # add secondary axis
   scale_y_continuous(labels = "Clear Policies",
@@ -908,7 +913,9 @@ mca_one_dimension_plot <- data_for_one_dimension %>%
   facet_wrap(~type, nrow = 2, scales = "free_y") +
   theme(
     panel.grid.major.y = element_blank(), panel.grid.major.x = element_blank(), 
-    panel.grid.minor.x = element_blank(), axis.text.x = element_blank()
+    panel.grid.minor.x = element_blank(), axis.text.x = element_blank(),
+    axis.text = element_text(size = rel(1.2)), 
+    strip.text = element_text(size = rel(2))
   ) +
   labs(x = NULL, y = NULL)
 ```
@@ -917,17 +924,22 @@ mca_one_dimension_plot <- data_for_one_dimension %>%
 
 ```{r plot-mca, fig.width=12, fig.height=11, fig.cap="Joint analysis of open science policies"}
 mca_two_dimension_plot <- final_4 %>%
-  plot_ca(font_size = 4, show.legend = T) +
+  plot_ca(font_size = 5, show.legend = T) +
   coord_fixed() +
-  theme(legend.position = "top") +
+  theme(legend.position = "top",
+        axis.title.x = element_text(size = rel(1.8)),
+        axis.title.y = element_text(size = rel(1.8)),
+        axis.text = element_text(size = rel(1.2)),
+        legend.text = element_text(size = rel(1.2))) +
   scale_color_manual(values = c("Contributing Variables" = "#440154",
                                 "Supplementary Variables" = "#22A884")) 
 ```
 
-```{r mca-figures, fig.width=15, fig.height=15, fig.cap="The Landscape of Open Science Policies"}
+```{r mca-figures, fig.width=15, fig.height=18, fig.cap="The Landscape of Open Science Policies"}
 mca_two_dimension_plot / mca_one_dimension_plot +
   plot_annotation(tag_levels = "A") +
-  plot_layout(heights = c(1.3, 1))
+  plot_layout(heights = c(1.3, 1)) & 
+  theme(plot.tag = element_text(size = rel(2.5)))
 ```
 
 
