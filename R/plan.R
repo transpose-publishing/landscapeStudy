@@ -1,5 +1,5 @@
 plan <- drake_plan(
-  # initial import of data from Google Drive
+  # initial import of data
   data = import_raw_data(
     out_file = file_out("data/joined_data.csv")
   ),
@@ -16,7 +16,8 @@ plan <- drake_plan(
   # expand data so we have a single row per journal per disciplinary area
   data_with_areas = recode_to_areas(clean_data),
   # add areas to journals that were formerly missing
-  # for the algorithm to scrape the area categories, see the file XXX
+  # for the algorithm to scrape the area categories, see the file
+  # analysis-scripts/04-scrape-gs-fields.R
   clean_areas = add_missing_areas(
     data_with_areas = data_with_areas,
     data_on_missing_areas = file_in("data/gs_scraped_total.csv"),
