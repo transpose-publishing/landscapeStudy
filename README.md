@@ -4,7 +4,7 @@ This repository holds code and data for this paper: LINK TO PREPRINT/PAPER.
 
 
 ## Reproducible code
-The whole analytic pipeline is reproducible throug the `drake` package. 
+The whole analytic pipeline is reproducible through the `drake` package. 
 Executing `r_make("drake.R")` will rebuild the analysis.
 
 The pipeline is specified in the file `R/plan.R`. You can visualise the 
@@ -58,7 +58,7 @@ one area in GoogleScholarMetrics (GSM). Those journals have duplicate entries
 except for the column `area` which specifies the GSM area.
 
 
-## Further ressources
+## Further resources
 You can find more information on the `drake` package here: 
 https://books.ropensci.org/drake/
 
