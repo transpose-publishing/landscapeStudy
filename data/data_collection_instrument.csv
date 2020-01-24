@@ -1,0 +1,65 @@
+Group,Property,Description/Instructions,Allowed entries,Example
+Entry,reviewer,Your initials,"[Initials of first, last name]",TRH
+Entry,date,Entry date,[YYYY-MM-DD],2018-11-05
+Global,issn,"Journal ISSN 
+(optional. Please enter just one ISSN associated with your journal, which can be print or electronic)",,0000-0000
+Global,title,"Journal title 
+(one per column)",[string],Example Journal
+Global,publisher,Publisher,[string],Example Publisher
+Peer review,pr-type,"Type of peer review
+Single blind - reviewers are anonymous to the author. Double blind - reviewers and authors are
+anonymous to each other.","Single blind, Double blind, Not blinded, unsure, other",Single blind
+Peer review,pr-policy,Peer review policy URL,[link],http://examplejournal.com/peerreview
+Peer review,pr-form-url,Peer review form URL (a copy of the peer review form),[link],http://examplejournal.com/peerreviewform
+Peer review,pr-credit-url,Peer review credit policy URL,[link],http://examplejournal.com/peerreview
+Peer review,pr-database,"Peer reviewer activity deposited into open databases?
+Examples include Publons and ORCID","Yes, No, Unsure",No
+Peer review,pr-transfer-policy,Peer review transfer policy,[string],Some text copied from the website or a few sentences describing the policy
+Peer review,pr-transfer-url,Peer review transfer policy URL,[link],http://examplejournal.com/peerreviewtransfer
+OPR,opr-reports,"Peer review reports - published?, attributes
+(An example of ""Conditional"" publication: reviews are published unless the reviewer recommends rejection or withdraws.)","Mandatory, Conditional, Optional, No, Not specified
+Attributes: Have date, Have DOI, Free to read (not paywalled), Under a Creative Commons License, Deposited into PubMed Central","Mandatory, Have date, deposited into Pubmed Central"
+OPR,opr-responses,"Author responses to reviews - published?, attributes",,"Optional, Have date"
+OPR,opr-letters,"Editorial decision letters - published?, attributes",,No
+OPR,opr-versions,"Previous versions of the manuscript - published?, attributes",,No
+OPR,opr-identities-published,Reviewer identities published?,"Mandatory, Conditional, Optional, No, Not specified",Optional
+OPR,opr-indenties-author,Reviewer identities revealed to the author (even if not published)?,,Optional
+OPR,opr-comments,Public commenting during formal peer review?,,No
+OPR,opr-interaction,Open interaction (reviewers consult with one another)?,,No
+OPR,opr-additional,"Additional OPR information
+Add any notes here about the nature of ""conditional"" publishing, etc",[string],Some text copied from the website or a few sentences describing the policy
+Co-review,coreview-policy,"Co-reviewer policy
+Co-reviewers are people whom a peer reviewer invites to help them write a peer review. Often these are junior scholars in the same lab/group as the peer reviewer.",[string],Some text copied from the website or a few sentences describing the policy
+Co-review,coreview-url,Co-reviewer policy URL,[link],http://examplejournal.com/coreviewers
+Co-review,coreview-email,Co-reviewers can contribute?,"Yes, No, Unsure",Yes
+Co-review,coreview-form,Dedicated place in the peer review form to identify co-reviewers?,"Yes, No, Unsure",No
+Co-review,coreview-database,Peer reviewer activity for co-reviewers deposited into open databases?,"Yes, No, Unsure",No
+Preprint,preprint-url,Preprint policy URL(s),"[link or links, separated by commas]","http://examplejournal.com/preprint, http://examplejournal.com/mediacoverage"
+Preprint,preprint-version,Version of the paper that can be posted to a preprint server,"No preprint policy
+None (preprints not allowed)
+First submission only (before peer review)
+After peer review (but not final, copyedited version)
+Any
+Unsure (preprints are allowed, but it's not clear what version)
+Other","After peer review (but not final, copyedited version)"
+Preprint,preprint-servers,Acceptable servers or characteristics of preprint servers,[string],Some text copied from the website or a few sentences describing the policy
+Preprint,preprint-citation,"Preprints allowed in citation list?
+If citations are only permitted to preprints that appear in certain servers, please select and describe in
+""Other.""","Yes, in the reference list
+Yes, but only in the text (not the reference list)
+No
+Not specified
+Unsure
+Other","Yes, in the reference list"
+Preprint,preprint-link,Link provided to preprint version of a paper?,"Yes, No, Unsure",No
+Preprint,preprint-media,"Preprint media coverage policy
+What type of coverage about preprints is permitted? (eg blog posts, social media, news outlets, etc).
+Paste the policy here.",[string],Some text copied from the website or a few sentences describing the policy
+Preprint,preprint-licensing,"Preprint licensing policy
+What licenses (CC BY, etc) are permitted for preprints? ",[string],Some text copied from the website or a few sentences describing the policy
+Preprint,preprint-scoop,"Scoop protection policy
+""Scoop protection"" refers to policies about whether submitted preprint will be rejected if a competing
+work comes out in another journal after the date of preprinting.",[string],Some text copied from the website or a few sentences describing the policy
+Preprint,preprint-review,Community review policy for preprints,[string],Some text copied from the website or a few sentences describing the policy
+,,,,
+"Overall Instruction: Enter information with one column per journal.  Please enter only information that is opely available and represented on the journal websites.",,,,
