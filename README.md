@@ -1,4 +1,4 @@
-# Publishing policies are unclear in most major journals
+# Peer review and preprint policies are unclear at most major journals
 
 This repository holds code and data for this paper: LINK TO PREPRINT/PAPER.
 
