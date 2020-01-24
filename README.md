@@ -1,5 +1,7 @@
 # Peer review and preprint policies are unclear at most major journals
 
+[![DOI](https://zenodo.org/badge/191401145.svg)](https://zenodo.org/badge/latestdoi/191401145)
+
 This repository holds code and data for this paper: LINK TO PREPRINT/PAPER.
 
 
