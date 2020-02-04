@@ -400,6 +400,11 @@ ggplot(co_rev, aes(fct_reorder(area, order), prop,
 ```
 
 
+```{r corev-table}
+knitr::kable(co_rev)
+```
+
+
 To obtain a more nuanced view of the policies' contents, we also analysed their
 full text via text mining. Due to policies being similar across journals of 
 certain publishers, there are `r nrow(distinct_coreview)`
@@ -662,6 +667,13 @@ gridExtra::grid.arrange(gt1, gt2)
 
 (A) Results on whether a preprint can be posted, and which version is allowed (n = 193).
 (B) Results on whether preprints can be cited (n = 193)
+
+
+
+```{r preprint-tables}
+knitr::kable(preprint_version, caption = "Posting of prepritns")
+knitr::kable(preprint_citation, caption = "Citing of prepritns")
+```
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2020-01-24
+date: Last updated 2020-02-04
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -169,6 +169,30 @@ management 90% of journals have no policy on co-reviewing.
 </div>
 
 
+
+area                               coreview_email     n        prop       order
+---------------------------------  ---------------  ---  ----------  ----------
+Business, Economics & Management   Yes                1   0.0500000   0.0500000
+Business, Economics & Management   No                 1   0.0500000   0.0500000
+Business, Economics & Management   Unsure            18   0.9000000   0.0500000
+Chemical & Materials Sciences      Yes                2   0.0952381   0.0952381
+Chemical & Materials Sciences      Unsure            19   0.9047619   0.0952381
+Engineering & Computer Science     Yes                4   0.1666667   0.1666667
+Engineering & Computer Science     Unsure            20   0.8333333   0.1666667
+Health & Medical Sciences          Yes               14   0.3111111   0.3111111
+Health & Medical Sciences          No                 2   0.0444444   0.3111111
+Health & Medical Sciences          Unsure            29   0.6444444   0.3111111
+Humanities, Literature & Arts      Yes                2   0.1000000   0.1000000
+Humanities, Literature & Arts      Unsure            18   0.9000000   0.1000000
+Life Sciences & Earth Sciences     Yes                9   0.4090909   0.4090909
+Life Sciences & Earth Sciences     Unsure            13   0.5909091   0.4090909
+Physics & Mathematics              Yes                6   0.3000000   0.3000000
+Physics & Mathematics              No                 1   0.0500000   0.3000000
+Physics & Mathematics              Unsure            13   0.6500000   0.3000000
+Social Sciences                    Yes                5   0.2380952   0.2380952
+Social Sciences                    Unsure            16   0.7619048   0.2380952
+
+
 To obtain a more nuanced view of the policies' contents, we also analysed their
 full text via text mining. Due to policies being similar across journals of 
 certain publishers, there are 35
@@ -318,6 +342,93 @@ do not have a preprint policy.
 
 (A) Results on whether a preprint can be posted, and which version is allowed (n = 193).
 (B) Results on whether preprints can be cited (n = 193)
+
+
+
+
+Table: (\#tab:preprint-tables)Posting of prepritns
+
+area                               preprint_version_clean                                               n        prop       order
+---------------------------------  -----------------------------------------------------------------  ---  ----------  ----------
+Business, Economics & Management   Unsure (preprints are allowed, but it's not clear which version)     4   0.2000000   0.5500000
+Business, Economics & Management   First submission only (before peer review)                           4   0.2000000   0.5500000
+Business, Economics & Management   After peer review                                                    3   0.1500000   0.5500000
+Business, Economics & Management   Other                                                                1   0.0500000   0.5500000
+Business, Economics & Management   None                                                                 2   0.1000000   0.5500000
+Business, Economics & Management   No preprint policy                                                   6   0.3000000   0.5500000
+Chemical & Materials Sciences      Unsure (preprints are allowed, but it's not clear which version)     1   0.0476190   0.7619048
+Chemical & Materials Sciences      First submission only (before peer review)                          14   0.6666667   0.7619048
+Chemical & Materials Sciences      After peer review                                                    1   0.0476190   0.7619048
+Chemical & Materials Sciences      Other                                                                1   0.0476190   0.7619048
+Chemical & Materials Sciences      None                                                                 4   0.1904762   0.7619048
+Engineering & Computer Science     Unsure (preprints are allowed, but it's not clear which version)     3   0.1250000   0.8750000
+Engineering & Computer Science     Any                                                                  4   0.1666667   0.8750000
+Engineering & Computer Science     First submission only (before peer review)                          14   0.5833333   0.8750000
+Engineering & Computer Science     None                                                                 3   0.1250000   0.8750000
+Health & Medical Sciences          Unsure (preprints are allowed, but it's not clear which version)     7   0.1555556   0.7111111
+Health & Medical Sciences          Any                                                                  2   0.0444444   0.7111111
+Health & Medical Sciences          First submission only (before peer review)                          20   0.4444444   0.7111111
+Health & Medical Sciences          After peer review                                                    3   0.0666667   0.7111111
+Health & Medical Sciences          None                                                                 3   0.0666667   0.7111111
+Health & Medical Sciences          No preprint policy                                                  10   0.2222222   0.7111111
+Humanities, Literature & Arts      Unsure (preprints are allowed, but it's not clear which version)     1   0.0500000   0.4500000
+Humanities, Literature & Arts      First submission only (before peer review)                           5   0.2500000   0.4500000
+Humanities, Literature & Arts      After peer review                                                    3   0.1500000   0.4500000
+Humanities, Literature & Arts      No preprint policy                                                  11   0.5500000   0.4500000
+Life Sciences & Earth Sciences     Unsure (preprints are allowed, but it's not clear which version)     2   0.0909091   0.9090909
+Life Sciences & Earth Sciences     Any                                                                  3   0.1363636   0.9090909
+Life Sciences & Earth Sciences     First submission only (before peer review)                          15   0.6818182   0.9090909
+Life Sciences & Earth Sciences     No preprint policy                                                   2   0.0909091   0.9090909
+Physics & Mathematics              Unsure (preprints are allowed, but it's not clear which version)     1   0.0500000   0.6500000
+Physics & Mathematics              Any                                                                  5   0.2500000   0.6500000
+Physics & Mathematics              First submission only (before peer review)                           5   0.2500000   0.6500000
+Physics & Mathematics              After peer review                                                    2   0.1000000   0.6500000
+Physics & Mathematics              No preprint policy                                                   7   0.3500000   0.6500000
+Social Sciences                    Unsure (preprints are allowed, but it's not clear which version)     7   0.3333333   0.7619048
+Social Sciences                    Any                                                                  3   0.1428571   0.7619048
+Social Sciences                    First submission only (before peer review)                           4   0.1904762   0.7619048
+Social Sciences                    After peer review                                                    2   0.0952381   0.7619048
+Social Sciences                    Other                                                                1   0.0476190   0.7619048
+Social Sciences                    No preprint policy                                                   4   0.1904762   0.7619048
+
+
+
+Table: (\#tab:preprint-tables)Citing of prepritns
+
+area                               preprint_citation_clean        n        prop       order
+---------------------------------  ---------------------------  ---  ----------  ----------
+Business, Economics & Management   Other                          1   0.0500000   0.0500000
+Business, Economics & Management   Unsure                         3   0.1500000   0.0500000
+Business, Economics & Management   Not specified                 16   0.8000000   0.0500000
+Chemical & Materials Sciences      Yes, in the reference list     8   0.3809524   0.3809524
+Chemical & Materials Sciences      No                             1   0.0476190   0.3809524
+Chemical & Materials Sciences      Unsure                         6   0.2857143   0.3809524
+Chemical & Materials Sciences      Not specified                  6   0.2857143   0.3809524
+Engineering & Computer Science     Yes, in the reference list     7   0.2916667   0.2916667
+Engineering & Computer Science     Unsure                         3   0.1250000   0.2916667
+Engineering & Computer Science     Not specified                 14   0.5833333   0.2916667
+Health & Medical Sciences          Yes, in the reference list     5   0.1111111   0.2000000
+Health & Medical Sciences          Yes, but only in the text      3   0.0666667   0.2000000
+Health & Medical Sciences          Other                          1   0.0222222   0.2000000
+Health & Medical Sciences          No                             2   0.0444444   0.2000000
+Health & Medical Sciences          Unsure                         4   0.0888889   0.2000000
+Health & Medical Sciences          Not specified                 30   0.6666667   0.2000000
+Humanities, Literature & Arts      Yes, in the reference list     1   0.0500000   0.1500000
+Humanities, Literature & Arts      Yes, but only in the text      2   0.1000000   0.1500000
+Humanities, Literature & Arts      Unsure                         4   0.2000000   0.1500000
+Humanities, Literature & Arts      Not specified                 13   0.6500000   0.1500000
+Life Sciences & Earth Sciences     Yes, in the reference list    10   0.4545455   0.5454545
+Life Sciences & Earth Sciences     Yes, but only in the text      1   0.0454545   0.5454545
+Life Sciences & Earth Sciences     Other                          1   0.0454545   0.5454545
+Life Sciences & Earth Sciences     Not specified                 10   0.4545455   0.5454545
+Physics & Mathematics              Yes, in the reference list     7   0.3500000   0.4000000
+Physics & Mathematics              Other                          1   0.0500000   0.4000000
+Physics & Mathematics              Unsure                         4   0.2000000   0.4000000
+Physics & Mathematics              Not specified                  8   0.4000000   0.4000000
+Social Sciences                    Yes, in the reference list     2   0.0952381   0.1428571
+Social Sciences                    Yes, but only in the text      1   0.0476190   0.1428571
+Social Sciences                    Unsure                         4   0.1904762   0.1428571
+Social Sciences                    Not specified                 14   0.6666667   0.1428571
 
 
 
