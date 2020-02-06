@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2020-02-04
+date: Last updated 2020-02-06
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -132,6 +132,45 @@ available in more than 95% of journals.
 (A) Aspects of open peer review across all journals in the sample (n = 171)
 (B) Results on whether reviewer identitities are revealed to the authors, even if
 they are not published. (n = 193)
+
+
+
+Table: (\#tab:opr-table)Aspects of Open Peer Review (A)
+
+label                                                                     val_clean          n        prop
+------------------------------------------------------------------------  --------------  ----  ----------
+Is there public commenting during formal peer review?                     No                 7   0.0409357
+Is there public commenting during formal peer review?                     Not specified    164   0.9590643
+Are reviewer identities being published?                                  Conditional        3   0.0175439
+Are reviewer identities being published?                                  No                28   0.1637427
+Are reviewer identities being published?                                  Not specified    138   0.8070175
+Are reviewer identities being published?                                  Optional           2   0.0116959
+Are reviewer identities revealed to the author (even if not published)?   Conditional        6   0.0350877
+Are reviewer identities revealed to the author (even if not published)?   No                31   0.1812865
+Are reviewer identities revealed to the author (even if not published)?   Not specified    100   0.5847953
+Are reviewer identities revealed to the author (even if not published)?   Optional          32   0.1871345
+Are reviewer identities revealed to the author (even if not published)?   Yes                2   0.0116959
+Is there open interaction (reviewers consult with one another)?           Conditional        1   0.0058480
+Is there open interaction (reviewers consult with one another)?           No                 5   0.0292398
+Is there open interaction (reviewers consult with one another)?           Not specified    162   0.9473684
+Is there open interaction (reviewers consult with one another)?           Yes                3   0.0175439
+Are editorial decision letters being published?                           Conditional        1   0.0058480
+Are editorial decision letters being published?                           No                10   0.0584795
+Are editorial decision letters being published?                           Not specified    159   0.9298246
+Are editorial decision letters being published?                           Yes                1   0.0058480
+Are peer review reports being published?                                  Conditional        2   0.0116959
+Are peer review reports being published?                                  No                17   0.0994152
+Are peer review reports being published?                                  Not specified    150   0.8771930
+Are peer review reports being published?                                  Optional           1   0.0058480
+Are peer review reports being published?                                  Yes                1   0.0058480
+Are author responses to reviews being published?                          Conditional        1   0.0058480
+Are author responses to reviews being published?                          No                 9   0.0526316
+Are author responses to reviews being published?                          Not specified    158   0.9239766
+Are author responses to reviews being published?                          Optional           2   0.0116959
+Are author responses to reviews being published?                          Yes                1   0.0058480
+Are previous versions of the manuscript being published?                  Conditional        1   0.0058480
+Are previous versions of the manuscript being published?                  No                 8   0.0467836
+Are previous versions of the manuscript being published?                  Not specified    162   0.9473684
 
 
 Since the aspect of revealed reviewer identities is the only one that is

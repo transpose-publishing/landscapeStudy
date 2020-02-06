@@ -324,6 +324,16 @@ p1 / p2 +
 they are not published. (n = 193)
 
 
+```{r opr-table}
+pdata %>% 
+  left_join(labels, by = "var") %>% 
+  ungroup %>% 
+  select(label, val_clean, n, prop) %>% 
+  mutate(label = str_replace(label, "\\n", " ")) %>% 
+  knitr::kable(caption = "Aspects of Open Peer Review (A)")
+```
+
+
 Since the aspect of revealed reviewer identities is the only one that is
 explicitly allowed by a substantive number of journals 
 (`r pdata %>% filter(var == "opr_indenties_author") %>% pull(order) %>% unique() %>%  scales::percent(., .1)`), we examine it
@@ -335,8 +345,6 @@ natural sciences, at least on an optional basis
 (for example in case the referee wants to sign their review). 
 
 
-TODO: explain differences between Yes, Mandatory, Conditional, Optional. Tony to
-check and explain.
 
 
 # Co-Review 
