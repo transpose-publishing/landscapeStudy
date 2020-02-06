@@ -184,10 +184,6 @@ natural sciences, at least on an optional basis
 (for example in case the referee wants to sign their review). 
 
 
-TODO: explain differences between Yes, Mandatory, Conditional, Optional. Tony to
-check and explain.
-
-
 # Co-Review 
 
 Information on co-review policies is sparse. 
