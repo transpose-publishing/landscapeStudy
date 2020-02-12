@@ -141,6 +141,8 @@ recode_vars <- function(raw_data, oa_data, out_path) {
       str_detect(publisher, "^IEEE") ~ "IEEE",
       str_detect(publisher, "^IOP") ~ "IOP",
       str_detect(publisher, "^SpringerNature") ~ "Springer Nature",
+      str_detect(publisher, "Wiley") ~ "Wiley",
+      str_detect(publisher, "SAGE") ~ "SAGE",
       TRUE ~ publisher
     ))
 
