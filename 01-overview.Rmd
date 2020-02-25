@@ -132,7 +132,7 @@ peer_type_publisher <- refined %>%
   order_pr_type() %>% 
   mutate(has_society = case_when(
          str_detect(
-           publisher_clean, 
+           publisher, 
            "Society|Associa|Union|Academy|College|Instit|School"
            ) ~ "Published by Society/Association",
          TRUE ~ "General publisher"
