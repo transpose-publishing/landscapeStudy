@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2020-02-06
+date: Last updated 2020-02-12
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -689,11 +689,13 @@ Life Sciences & Earth Sciences                   NA        NA   -388            
 Physics & Mathematics                            NA        NA   -121                      757                      NA    -68                      243                      NA
 Social Sciences                                  NA        NA    105                      310                      NA   -157                      690                      NA
 American Chemical Society                        NA        NA    -36                       24                      NA    233                      976                      NA
-Elsevier                                         NA        NA    268                      903                      NA     88                       97                      NA
+Elsevier                                         NA        NA    124                     1000                      NA      0                        0                      NA
 IEEE                                             NA        NA    206                      727                      NA    126                      273                      NA
 Royal Society of Chemistry                       NA        NA   -158                      317                      NA    231                      683                      NA
+SAGE                                             NA        NA   -177                      708                      NA   -114                      292                      NA
 Springer Nature                                  NA        NA   -532                      915                      NA    163                       85                      NA
-Other publishers                                 NA        NA     70                      243                      NA   -123                      757                      NA
+Wiley                                            NA        NA    491                      913                      NA    151                       87                      NA
+Other publishers                                 NA        NA     49                       77                      NA   -170                      923                      NA
 
 
 

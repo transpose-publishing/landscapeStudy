@@ -847,15 +847,19 @@ mca_data <- refined_with_areas %>%
       TRUE ~ "Revealing reviewer\nidentities to authors ++"
     ),
     pr_type_clean = case_when(pr_type_clean == "Unsure" ~ "Peer review ??",
-                               TRUE ~ "Peer review ++")
+                               TRUE ~ "Peer review ++"),
+    publisher_mca = case_when(
+      str_detect(publisher_clean, "Elsevier") ~ "Elsevier",
+      TRUE ~ publisher_clean
+    )
   )
 ```
 
 
 ```{r compute-mca}
 final_4 <- mca_data %>%
-  mutate(publisher_cat = fct_lump(publisher_clean, n = 5,
-                                  other_level = "Other publishers")) %>%
+  mutate(publisher_cat = fct_lump_min(publisher_mca, min = 6,
+                                      other_level = "Other publishers")) %>%
   select(co_review, preprint_posting, preprint_citing, identities_revealed,
          pr_type_clean, area, publisher_cat) %>% 
   ca::mjca(supcol = 6:7)
