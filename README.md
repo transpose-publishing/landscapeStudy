@@ -2,7 +2,8 @@
 
 [![DOI](https://zenodo.org/badge/191401145.svg)](https://zenodo.org/badge/latestdoi/191401145)
 
-This repository holds code and data for this paper: LINK TO PREPRINT/PAPER.
+This repository holds code and data for the preprint [Peer review and preprint policies are unclear at most major journals](https://www.biorxiv.org/content/10.1101/2020.01.24.918995v2)
+on bioRxiv.
 
 
 ## Reproducible code
