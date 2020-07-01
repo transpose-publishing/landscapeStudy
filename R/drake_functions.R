@@ -88,16 +88,14 @@ import_raw_data <- function(out_file) {
 
 
 create_var_overview <- function(out_file) {
-  ls_sheet <- "1WcvxxmDhaV3BwBiIfwC_nEAr6-EKCDD11R6eJ5vZElA"
-
   # import list of variables for ease of use
-  transpose_vars <- read_sheet(
-    ls_sheet, col_types = "c",
-    sheet = "Raw", n_max = 2)
+  transpose_vars <- read_csv(
+    "data/TRANSPOSE landscape study - round 3 - Raw.csv",
+    col_types = cols(
+      .default = col_character()
+    ), n_max = 2) %>%
+    as_tibble(.name_repair = "universal")
 
-  # fix some var names
-  transpose_vars <- transpose_vars %>%
-    rename(`review date` = `review date...3`, `review date_1` = `review date...5`)
 
   part1 <- transpose_vars %>%
     slice(1) %>%
@@ -112,6 +110,9 @@ create_var_overview <- function(out_file) {
   part1 %>%
     left_join(part2, by = "variable") %>%
     mutate(var_number = 1:n())   -> var_overview
+
+  var_overview <- var_overview %>%
+    mutate(variable = str_replace_all(variable, "\\.", "_"))
 
   write_csv(var_overview, out_file)
 }
