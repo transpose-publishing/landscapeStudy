@@ -2,7 +2,7 @@ plot_univariate <- function(data, var, nudge_y = 2) {
     pdata <- data %>%
     count({{var}}) %>%
     mutate(y = str_trunc({{var}}, 40),
-           prop = {n/sum(n)} %>% scales::percent(),
+           prop = {n/sum(n)} %>% scales::percent(accuracy = 1),
            label = glue::glue("{n} ({prop})"))
 
 
