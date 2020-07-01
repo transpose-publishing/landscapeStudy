@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2020-02-12
+date: Last updated 2020-07-01
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -137,40 +137,40 @@ they are not published. (n = 193)
 
 Table: (\#tab:opr-table)Aspects of Open Peer Review (A)
 
-label                                                                     val_clean          n        prop
-------------------------------------------------------------------------  --------------  ----  ----------
-Is there public commenting during formal peer review?                     No                 7   0.0409357
-Is there public commenting during formal peer review?                     Not specified    164   0.9590643
-Are reviewer identities being published?                                  Conditional        3   0.0175439
-Are reviewer identities being published?                                  No                28   0.1637427
-Are reviewer identities being published?                                  Not specified    138   0.8070175
-Are reviewer identities being published?                                  Optional           2   0.0116959
-Are reviewer identities revealed to the author (even if not published)?   Conditional        6   0.0350877
-Are reviewer identities revealed to the author (even if not published)?   No                31   0.1812865
-Are reviewer identities revealed to the author (even if not published)?   Not specified    100   0.5847953
-Are reviewer identities revealed to the author (even if not published)?   Optional          32   0.1871345
-Are reviewer identities revealed to the author (even if not published)?   Yes                2   0.0116959
-Is there open interaction (reviewers consult with one another)?           Conditional        1   0.0058480
-Is there open interaction (reviewers consult with one another)?           No                 5   0.0292398
-Is there open interaction (reviewers consult with one another)?           Not specified    162   0.9473684
-Is there open interaction (reviewers consult with one another)?           Yes                3   0.0175439
-Are editorial decision letters being published?                           Conditional        1   0.0058480
-Are editorial decision letters being published?                           No                10   0.0584795
-Are editorial decision letters being published?                           Not specified    159   0.9298246
-Are editorial decision letters being published?                           Yes                1   0.0058480
-Are peer review reports being published?                                  Conditional        2   0.0116959
-Are peer review reports being published?                                  No                17   0.0994152
-Are peer review reports being published?                                  Not specified    150   0.8771930
-Are peer review reports being published?                                  Optional           1   0.0058480
-Are peer review reports being published?                                  Yes                1   0.0058480
-Are author responses to reviews being published?                          Conditional        1   0.0058480
-Are author responses to reviews being published?                          No                 9   0.0526316
-Are author responses to reviews being published?                          Not specified    158   0.9239766
-Are author responses to reviews being published?                          Optional           2   0.0116959
-Are author responses to reviews being published?                          Yes                1   0.0058480
-Are previous versions of the manuscript being published?                  Conditional        1   0.0058480
-Are previous versions of the manuscript being published?                  No                 8   0.0467836
-Are previous versions of the manuscript being published?                  Not specified    162   0.9473684
+|label                                                                   |val_clean     |   n|      prop|
+|:-----------------------------------------------------------------------|:-------------|---:|---------:|
+|Is there public commenting during formal peer review?                   |No            |   7| 0.0409357|
+|Is there public commenting during formal peer review?                   |Not specified | 164| 0.9590643|
+|Are reviewer identities being published?                                |Conditional   |   3| 0.0175439|
+|Are reviewer identities being published?                                |No            |  28| 0.1637427|
+|Are reviewer identities being published?                                |Not specified | 138| 0.8070175|
+|Are reviewer identities being published?                                |Optional      |   2| 0.0116959|
+|Are reviewer identities revealed to the author (even if not published)? |Conditional   |   6| 0.0350877|
+|Are reviewer identities revealed to the author (even if not published)? |No            |  31| 0.1812865|
+|Are reviewer identities revealed to the author (even if not published)? |Not specified | 100| 0.5847953|
+|Are reviewer identities revealed to the author (even if not published)? |Optional      |  32| 0.1871345|
+|Are reviewer identities revealed to the author (even if not published)? |Yes           |   2| 0.0116959|
+|Is there open interaction (reviewers consult with one another)?         |Conditional   |   1| 0.0058480|
+|Is there open interaction (reviewers consult with one another)?         |No            |   5| 0.0292398|
+|Is there open interaction (reviewers consult with one another)?         |Not specified | 162| 0.9473684|
+|Is there open interaction (reviewers consult with one another)?         |Yes           |   3| 0.0175439|
+|Are editorial decision letters being published?                         |Conditional   |   1| 0.0058480|
+|Are editorial decision letters being published?                         |No            |  10| 0.0584795|
+|Are editorial decision letters being published?                         |Not specified | 159| 0.9298246|
+|Are editorial decision letters being published?                         |Yes           |   1| 0.0058480|
+|Are peer review reports being published?                                |Conditional   |   2| 0.0116959|
+|Are peer review reports being published?                                |No            |  17| 0.0994152|
+|Are peer review reports being published?                                |Not specified | 150| 0.8771930|
+|Are peer review reports being published?                                |Optional      |   1| 0.0058480|
+|Are peer review reports being published?                                |Yes           |   1| 0.0058480|
+|Are author responses to reviews being published?                        |Conditional   |   1| 0.0058480|
+|Are author responses to reviews being published?                        |No            |   9| 0.0526316|
+|Are author responses to reviews being published?                        |Not specified | 158| 0.9239766|
+|Are author responses to reviews being published?                        |Optional      |   2| 0.0116959|
+|Are author responses to reviews being published?                        |Yes           |   1| 0.0058480|
+|Are previous versions of the manuscript being published?                |Conditional   |   1| 0.0058480|
+|Are previous versions of the manuscript being published?                |No            |   8| 0.0467836|
+|Are previous versions of the manuscript being published?                |Not specified | 162| 0.9473684|
 
 
 Since the aspect of revealed reviewer identities is the only one that is
@@ -205,27 +205,27 @@ management 90% of journals have no policy on co-reviewing.
 
 
 
-area                               coreview_email     n        prop       order
----------------------------------  ---------------  ---  ----------  ----------
-Business, Economics & Management   Yes                1   0.0500000   0.0500000
-Business, Economics & Management   No                 1   0.0500000   0.0500000
-Business, Economics & Management   Unsure            18   0.9000000   0.0500000
-Chemical & Materials Sciences      Yes                2   0.0952381   0.0952381
-Chemical & Materials Sciences      Unsure            19   0.9047619   0.0952381
-Engineering & Computer Science     Yes                4   0.1666667   0.1666667
-Engineering & Computer Science     Unsure            20   0.8333333   0.1666667
-Health & Medical Sciences          Yes               14   0.3111111   0.3111111
-Health & Medical Sciences          No                 2   0.0444444   0.3111111
-Health & Medical Sciences          Unsure            29   0.6444444   0.3111111
-Humanities, Literature & Arts      Yes                2   0.1000000   0.1000000
-Humanities, Literature & Arts      Unsure            18   0.9000000   0.1000000
-Life Sciences & Earth Sciences     Yes                9   0.4090909   0.4090909
-Life Sciences & Earth Sciences     Unsure            13   0.5909091   0.4090909
-Physics & Mathematics              Yes                6   0.3000000   0.3000000
-Physics & Mathematics              No                 1   0.0500000   0.3000000
-Physics & Mathematics              Unsure            13   0.6500000   0.3000000
-Social Sciences                    Yes                5   0.2380952   0.2380952
-Social Sciences                    Unsure            16   0.7619048   0.2380952
+|area                             |coreview_email |  n|      prop|     order|
+|:--------------------------------|:--------------|--:|---------:|---------:|
+|Business, Economics & Management |Yes            |  1| 0.0500000| 0.0500000|
+|Business, Economics & Management |No             |  1| 0.0500000| 0.0500000|
+|Business, Economics & Management |Unsure         | 18| 0.9000000| 0.0500000|
+|Chemical & Materials Sciences    |Yes            |  2| 0.0952381| 0.0952381|
+|Chemical & Materials Sciences    |Unsure         | 19| 0.9047619| 0.0952381|
+|Engineering & Computer Science   |Yes            |  4| 0.1666667| 0.1666667|
+|Engineering & Computer Science   |Unsure         | 20| 0.8333333| 0.1666667|
+|Health & Medical Sciences        |Yes            | 14| 0.3111111| 0.3111111|
+|Health & Medical Sciences        |No             |  2| 0.0444444| 0.3111111|
+|Health & Medical Sciences        |Unsure         | 29| 0.6444444| 0.3111111|
+|Humanities, Literature & Arts    |Yes            |  2| 0.1000000| 0.1000000|
+|Humanities, Literature & Arts    |Unsure         | 18| 0.9000000| 0.1000000|
+|Life Sciences & Earth Sciences   |Yes            |  9| 0.4090909| 0.4090909|
+|Life Sciences & Earth Sciences   |Unsure         | 13| 0.5909091| 0.4090909|
+|Physics & Mathematics            |Yes            |  6| 0.3000000| 0.3000000|
+|Physics & Mathematics            |No             |  1| 0.0500000| 0.3000000|
+|Physics & Mathematics            |Unsure         | 13| 0.6500000| 0.3000000|
+|Social Sciences                  |Yes            |  5| 0.2380952| 0.2380952|
+|Social Sciences                  |Unsure         | 16| 0.7619048| 0.2380952|
 
 
 To obtain a more nuanced view of the policies' contents, we also analysed their
@@ -254,28 +254,28 @@ term.
 
 Table: (\#tab:coreview-table)Propensity of terms in co-review policies
 
-Term          Term frequency  Proportion of policies that contain term 
------------  ---------------  -----------------------------------------
-review                   100  93%                                      
-manuscript                43  75%                                      
-editor                    33  73%                                      
-confidenti                26  63%                                      
-not                       24  60%                                      
-inform                    19  51%                                      
-colleagu                  18  49%                                      
-student                   14  34%                                      
-discuss                   12  32%                                      
-involv                    12  32%                                      
-consult                   12  32%                                      
-permiss                   11  31%                                      
-disclos                   12  29%                                      
-author                    11  29%                                      
-peer                      10  29%                                      
-journal                   10  28%                                      
-share                      9  25%                                      
-collabor                  10  24%                                      
-advic                      8  23%                                      
-ident                      8  23%                                      
+|Term       | Term frequency|Proportion of policies that contain term |
+|:----------|--------------:|:----------------------------------------|
+|review     |            100|93%                                      |
+|manuscript |             43|75%                                      |
+|editor     |             33|73%                                      |
+|confidenti |             26|63%                                      |
+|not        |             24|60%                                      |
+|inform     |             19|51%                                      |
+|colleagu   |             18|49%                                      |
+|student    |             14|34%                                      |
+|discuss    |             12|32%                                      |
+|involv     |             12|32%                                      |
+|consult    |             12|32%                                      |
+|permiss    |             11|31%                                      |
+|disclos    |             12|29%                                      |
+|author     |             11|29%                                      |
+|peer       |             10|29%                                      |
+|journal    |             10|28%                                      |
+|share      |              9|25%                                      |
+|collabor   |             10|24%                                      |
+|advic      |              8|23%                                      |
+|ident      |              8|23%                                      |
 
 
 The most prominent themes that emerge are:
@@ -383,87 +383,87 @@ do not have a preprint policy.
 
 Table: (\#tab:preprint-tables)Posting of prepritns
 
-area                               preprint_version_clean                                               n        prop       order
----------------------------------  -----------------------------------------------------------------  ---  ----------  ----------
-Business, Economics & Management   Unsure (preprints are allowed, but it's not clear which version)     4   0.2000000   0.5500000
-Business, Economics & Management   First submission only (before peer review)                           4   0.2000000   0.5500000
-Business, Economics & Management   After peer review                                                    3   0.1500000   0.5500000
-Business, Economics & Management   Other                                                                1   0.0500000   0.5500000
-Business, Economics & Management   None                                                                 2   0.1000000   0.5500000
-Business, Economics & Management   No preprint policy                                                   6   0.3000000   0.5500000
-Chemical & Materials Sciences      Unsure (preprints are allowed, but it's not clear which version)     1   0.0476190   0.7619048
-Chemical & Materials Sciences      First submission only (before peer review)                          14   0.6666667   0.7619048
-Chemical & Materials Sciences      After peer review                                                    1   0.0476190   0.7619048
-Chemical & Materials Sciences      Other                                                                1   0.0476190   0.7619048
-Chemical & Materials Sciences      None                                                                 4   0.1904762   0.7619048
-Engineering & Computer Science     Unsure (preprints are allowed, but it's not clear which version)     3   0.1250000   0.8750000
-Engineering & Computer Science     Any                                                                  4   0.1666667   0.8750000
-Engineering & Computer Science     First submission only (before peer review)                          14   0.5833333   0.8750000
-Engineering & Computer Science     None                                                                 3   0.1250000   0.8750000
-Health & Medical Sciences          Unsure (preprints are allowed, but it's not clear which version)     7   0.1555556   0.7111111
-Health & Medical Sciences          Any                                                                  2   0.0444444   0.7111111
-Health & Medical Sciences          First submission only (before peer review)                          20   0.4444444   0.7111111
-Health & Medical Sciences          After peer review                                                    3   0.0666667   0.7111111
-Health & Medical Sciences          None                                                                 3   0.0666667   0.7111111
-Health & Medical Sciences          No preprint policy                                                  10   0.2222222   0.7111111
-Humanities, Literature & Arts      Unsure (preprints are allowed, but it's not clear which version)     1   0.0500000   0.4500000
-Humanities, Literature & Arts      First submission only (before peer review)                           5   0.2500000   0.4500000
-Humanities, Literature & Arts      After peer review                                                    3   0.1500000   0.4500000
-Humanities, Literature & Arts      No preprint policy                                                  11   0.5500000   0.4500000
-Life Sciences & Earth Sciences     Unsure (preprints are allowed, but it's not clear which version)     2   0.0909091   0.9090909
-Life Sciences & Earth Sciences     Any                                                                  3   0.1363636   0.9090909
-Life Sciences & Earth Sciences     First submission only (before peer review)                          15   0.6818182   0.9090909
-Life Sciences & Earth Sciences     No preprint policy                                                   2   0.0909091   0.9090909
-Physics & Mathematics              Unsure (preprints are allowed, but it's not clear which version)     1   0.0500000   0.6500000
-Physics & Mathematics              Any                                                                  5   0.2500000   0.6500000
-Physics & Mathematics              First submission only (before peer review)                           5   0.2500000   0.6500000
-Physics & Mathematics              After peer review                                                    2   0.1000000   0.6500000
-Physics & Mathematics              No preprint policy                                                   7   0.3500000   0.6500000
-Social Sciences                    Unsure (preprints are allowed, but it's not clear which version)     7   0.3333333   0.7619048
-Social Sciences                    Any                                                                  3   0.1428571   0.7619048
-Social Sciences                    First submission only (before peer review)                           4   0.1904762   0.7619048
-Social Sciences                    After peer review                                                    2   0.0952381   0.7619048
-Social Sciences                    Other                                                                1   0.0476190   0.7619048
-Social Sciences                    No preprint policy                                                   4   0.1904762   0.7619048
+|area                             |preprint_version_clean                                           |  n|      prop|     order|
+|:--------------------------------|:----------------------------------------------------------------|--:|---------:|---------:|
+|Business, Economics & Management |Unsure (preprints are allowed, but it's not clear which version) |  4| 0.2000000| 0.5500000|
+|Business, Economics & Management |First submission only (before peer review)                       |  4| 0.2000000| 0.5500000|
+|Business, Economics & Management |After peer review                                                |  3| 0.1500000| 0.5500000|
+|Business, Economics & Management |Other                                                            |  1| 0.0500000| 0.5500000|
+|Business, Economics & Management |None                                                             |  2| 0.1000000| 0.5500000|
+|Business, Economics & Management |No preprint policy                                               |  6| 0.3000000| 0.5500000|
+|Chemical & Materials Sciences    |Unsure (preprints are allowed, but it's not clear which version) |  1| 0.0476190| 0.7619048|
+|Chemical & Materials Sciences    |First submission only (before peer review)                       | 14| 0.6666667| 0.7619048|
+|Chemical & Materials Sciences    |After peer review                                                |  1| 0.0476190| 0.7619048|
+|Chemical & Materials Sciences    |Other                                                            |  1| 0.0476190| 0.7619048|
+|Chemical & Materials Sciences    |None                                                             |  4| 0.1904762| 0.7619048|
+|Engineering & Computer Science   |Unsure (preprints are allowed, but it's not clear which version) |  3| 0.1250000| 0.8750000|
+|Engineering & Computer Science   |Any                                                              |  4| 0.1666667| 0.8750000|
+|Engineering & Computer Science   |First submission only (before peer review)                       | 14| 0.5833333| 0.8750000|
+|Engineering & Computer Science   |None                                                             |  3| 0.1250000| 0.8750000|
+|Health & Medical Sciences        |Unsure (preprints are allowed, but it's not clear which version) |  7| 0.1555556| 0.7111111|
+|Health & Medical Sciences        |Any                                                              |  2| 0.0444444| 0.7111111|
+|Health & Medical Sciences        |First submission only (before peer review)                       | 20| 0.4444444| 0.7111111|
+|Health & Medical Sciences        |After peer review                                                |  3| 0.0666667| 0.7111111|
+|Health & Medical Sciences        |None                                                             |  3| 0.0666667| 0.7111111|
+|Health & Medical Sciences        |No preprint policy                                               | 10| 0.2222222| 0.7111111|
+|Humanities, Literature & Arts    |Unsure (preprints are allowed, but it's not clear which version) |  1| 0.0500000| 0.4500000|
+|Humanities, Literature & Arts    |First submission only (before peer review)                       |  5| 0.2500000| 0.4500000|
+|Humanities, Literature & Arts    |After peer review                                                |  3| 0.1500000| 0.4500000|
+|Humanities, Literature & Arts    |No preprint policy                                               | 11| 0.5500000| 0.4500000|
+|Life Sciences & Earth Sciences   |Unsure (preprints are allowed, but it's not clear which version) |  2| 0.0909091| 0.9090909|
+|Life Sciences & Earth Sciences   |Any                                                              |  3| 0.1363636| 0.9090909|
+|Life Sciences & Earth Sciences   |First submission only (before peer review)                       | 15| 0.6818182| 0.9090909|
+|Life Sciences & Earth Sciences   |No preprint policy                                               |  2| 0.0909091| 0.9090909|
+|Physics & Mathematics            |Unsure (preprints are allowed, but it's not clear which version) |  1| 0.0500000| 0.6500000|
+|Physics & Mathematics            |Any                                                              |  5| 0.2500000| 0.6500000|
+|Physics & Mathematics            |First submission only (before peer review)                       |  5| 0.2500000| 0.6500000|
+|Physics & Mathematics            |After peer review                                                |  2| 0.1000000| 0.6500000|
+|Physics & Mathematics            |No preprint policy                                               |  7| 0.3500000| 0.6500000|
+|Social Sciences                  |Unsure (preprints are allowed, but it's not clear which version) |  7| 0.3333333| 0.7619048|
+|Social Sciences                  |Any                                                              |  3| 0.1428571| 0.7619048|
+|Social Sciences                  |First submission only (before peer review)                       |  4| 0.1904762| 0.7619048|
+|Social Sciences                  |After peer review                                                |  2| 0.0952381| 0.7619048|
+|Social Sciences                  |Other                                                            |  1| 0.0476190| 0.7619048|
+|Social Sciences                  |No preprint policy                                               |  4| 0.1904762| 0.7619048|
 
 
 
 Table: (\#tab:preprint-tables)Citing of prepritns
 
-area                               preprint_citation_clean        n        prop       order
----------------------------------  ---------------------------  ---  ----------  ----------
-Business, Economics & Management   Other                          1   0.0500000   0.0500000
-Business, Economics & Management   Unsure                         3   0.1500000   0.0500000
-Business, Economics & Management   Not specified                 16   0.8000000   0.0500000
-Chemical & Materials Sciences      Yes, in the reference list     8   0.3809524   0.3809524
-Chemical & Materials Sciences      No                             1   0.0476190   0.3809524
-Chemical & Materials Sciences      Unsure                         6   0.2857143   0.3809524
-Chemical & Materials Sciences      Not specified                  6   0.2857143   0.3809524
-Engineering & Computer Science     Yes, in the reference list     7   0.2916667   0.2916667
-Engineering & Computer Science     Unsure                         3   0.1250000   0.2916667
-Engineering & Computer Science     Not specified                 14   0.5833333   0.2916667
-Health & Medical Sciences          Yes, in the reference list     5   0.1111111   0.2000000
-Health & Medical Sciences          Yes, but only in the text      3   0.0666667   0.2000000
-Health & Medical Sciences          Other                          1   0.0222222   0.2000000
-Health & Medical Sciences          No                             2   0.0444444   0.2000000
-Health & Medical Sciences          Unsure                         4   0.0888889   0.2000000
-Health & Medical Sciences          Not specified                 30   0.6666667   0.2000000
-Humanities, Literature & Arts      Yes, in the reference list     1   0.0500000   0.1500000
-Humanities, Literature & Arts      Yes, but only in the text      2   0.1000000   0.1500000
-Humanities, Literature & Arts      Unsure                         4   0.2000000   0.1500000
-Humanities, Literature & Arts      Not specified                 13   0.6500000   0.1500000
-Life Sciences & Earth Sciences     Yes, in the reference list    10   0.4545455   0.5454545
-Life Sciences & Earth Sciences     Yes, but only in the text      1   0.0454545   0.5454545
-Life Sciences & Earth Sciences     Other                          1   0.0454545   0.5454545
-Life Sciences & Earth Sciences     Not specified                 10   0.4545455   0.5454545
-Physics & Mathematics              Yes, in the reference list     7   0.3500000   0.4000000
-Physics & Mathematics              Other                          1   0.0500000   0.4000000
-Physics & Mathematics              Unsure                         4   0.2000000   0.4000000
-Physics & Mathematics              Not specified                  8   0.4000000   0.4000000
-Social Sciences                    Yes, in the reference list     2   0.0952381   0.1428571
-Social Sciences                    Yes, but only in the text      1   0.0476190   0.1428571
-Social Sciences                    Unsure                         4   0.1904762   0.1428571
-Social Sciences                    Not specified                 14   0.6666667   0.1428571
+|area                             |preprint_citation_clean    |  n|      prop|     order|
+|:--------------------------------|:--------------------------|--:|---------:|---------:|
+|Business, Economics & Management |Other                      |  1| 0.0500000| 0.0500000|
+|Business, Economics & Management |Unsure                     |  3| 0.1500000| 0.0500000|
+|Business, Economics & Management |Not specified              | 16| 0.8000000| 0.0500000|
+|Chemical & Materials Sciences    |Yes, in the reference list |  8| 0.3809524| 0.3809524|
+|Chemical & Materials Sciences    |No                         |  1| 0.0476190| 0.3809524|
+|Chemical & Materials Sciences    |Unsure                     |  6| 0.2857143| 0.3809524|
+|Chemical & Materials Sciences    |Not specified              |  6| 0.2857143| 0.3809524|
+|Engineering & Computer Science   |Yes, in the reference list |  7| 0.2916667| 0.2916667|
+|Engineering & Computer Science   |Unsure                     |  3| 0.1250000| 0.2916667|
+|Engineering & Computer Science   |Not specified              | 14| 0.5833333| 0.2916667|
+|Health & Medical Sciences        |Yes, in the reference list |  5| 0.1111111| 0.2000000|
+|Health & Medical Sciences        |Yes, but only in the text  |  3| 0.0666667| 0.2000000|
+|Health & Medical Sciences        |Other                      |  1| 0.0222222| 0.2000000|
+|Health & Medical Sciences        |No                         |  2| 0.0444444| 0.2000000|
+|Health & Medical Sciences        |Unsure                     |  4| 0.0888889| 0.2000000|
+|Health & Medical Sciences        |Not specified              | 30| 0.6666667| 0.2000000|
+|Humanities, Literature & Arts    |Yes, in the reference list |  1| 0.0500000| 0.1500000|
+|Humanities, Literature & Arts    |Yes, but only in the text  |  2| 0.1000000| 0.1500000|
+|Humanities, Literature & Arts    |Unsure                     |  4| 0.2000000| 0.1500000|
+|Humanities, Literature & Arts    |Not specified              | 13| 0.6500000| 0.1500000|
+|Life Sciences & Earth Sciences   |Yes, in the reference list | 10| 0.4545455| 0.5454545|
+|Life Sciences & Earth Sciences   |Yes, but only in the text  |  1| 0.0454545| 0.5454545|
+|Life Sciences & Earth Sciences   |Other                      |  1| 0.0454545| 0.5454545|
+|Life Sciences & Earth Sciences   |Not specified              | 10| 0.4545455| 0.5454545|
+|Physics & Mathematics            |Yes, in the reference list |  7| 0.3500000| 0.4000000|
+|Physics & Mathematics            |Other                      |  1| 0.0500000| 0.4000000|
+|Physics & Mathematics            |Unsure                     |  4| 0.2000000| 0.4000000|
+|Physics & Mathematics            |Not specified              |  8| 0.4000000| 0.4000000|
+|Social Sciences                  |Yes, in the reference list |  2| 0.0952381| 0.1428571|
+|Social Sciences                  |Yes, but only in the text  |  1| 0.0476190| 0.1428571|
+|Social Sciences                  |Unsure                     |  4| 0.1904762| 0.1428571|
+|Social Sciences                  |Not specified              | 14| 0.6666667| 0.1428571|
 
 
 
@@ -520,13 +520,13 @@ guidance on these issues is rarely provided:
 
 
 
-var                  no_info_perc 
--------------------  -------------
-preprint_media       72.5%        
-preprint_link        88.3%        
-preprint_licensing   94.7%        
-preprint_review      98.2%        
-preprint_scoop       98.2%        
+|var                |no_info_perc |
+|:------------------|:------------|
+|preprint_media     |72.5%        |
+|preprint_link      |88.3%        |
+|preprint_licensing |94.7%        |
+|preprint_review    |98.2%        |
+|preprint_scoop     |98.2%        |
 
 
 72.5%
@@ -608,6 +608,23 @@ prevalent in one area or another.
 
 
 
+
+```
+## Warning in min(x): no non-missing arguments to min; returning Inf
+```
+
+```
+## Warning in max(x): no non-missing arguments to max; returning -Inf
+```
+
+```
+## Warning in min(x): no non-missing arguments to min; returning Inf
+```
+
+```
+## Warning in max(x): no non-missing arguments to max; returning -Inf
+```
+
 <div class="figure">
 <img src="02-analysis-writeup_files/figure-html/mca-figures-1.png" alt="The Landscape of Open Science Policies"  />
 <p class="caption">(\#fig:mca-figures)The Landscape of Open Science Policies</p>
@@ -668,34 +685,34 @@ from the SSH are below average in this regard.
 
 Table: (\#tab:mca-table)Numerical output from Multiple Correspondence analysis
 
-Variable                                       mass   inertia    k=1   correlation with dim 1   contribution to dim 1    k=2   correlation with dim 2   contribution to dim 2
---------------------------------------------  -----  --------  -----  -----------------------  ----------------------  -----  -----------------------  ----------------------
-Coreview ??                                     151        48     75                      586                      33     29                       87                      86
-Coreview ++                                      49       148   -233                      586                     103    -90                       87                     267
-Posting preprints ??                             72       118     81                      305                      18    -81                      302                     320
-Posting preprints ++                            128        66    -45                      305                      10     45                      302                     178
-Citing preprints ??                             147        52     95                      861                      52    -19                       35                      37
-Citing preprints ++                              53       144   -264                      861                     143     53                       35                     102
-Revealing reviewer identities to authors ??     115        95    195                      728                     171      7                        1                       4
-Revealing reviewer identities to authors ++      85       129   -264                      728                     231    -10                        1                       6
-Peer review ??                                   62       138    260                      853                     164      0                        0                       0
-Peer review ++                                  138        62   -117                      853                      74      0                        0                       0
-Business, Economics & Management                 NA        NA    376                      936                      NA    -98                       64                      NA
-Chemical & Materials Sciences                    NA        NA   -109                      108                      NA    313                      892                      NA
-Engineering & Computer Science                   NA        NA     59                       70                      NA    216                      930                      NA
-Health & Medical Sciences                        NA        NA    -29                       67                      NA   -107                      933                      NA
-Humanities, Literature & Arts                    NA        NA    169                      749                      NA    -98                      251                      NA
-Life Sciences & Earth Sciences                   NA        NA   -388                      965                      NA     74                       35                      NA
-Physics & Mathematics                            NA        NA   -121                      757                      NA    -68                      243                      NA
-Social Sciences                                  NA        NA    105                      310                      NA   -157                      690                      NA
-American Chemical Society                        NA        NA    -36                       24                      NA    233                      976                      NA
-Elsevier                                         NA        NA    124                     1000                      NA      0                        0                      NA
-IEEE                                             NA        NA    206                      727                      NA    126                      273                      NA
-Royal Society of Chemistry                       NA        NA   -158                      317                      NA    231                      683                      NA
-SAGE                                             NA        NA   -177                      708                      NA   -114                      292                      NA
-Springer Nature                                  NA        NA   -532                      915                      NA    163                       85                      NA
-Wiley                                            NA        NA    491                      913                      NA    151                       87                      NA
-Other publishers                                 NA        NA     49                       77                      NA   -170                      923                      NA
+|Variable                                    | mass| inertia|  k=1| correlation with dim 1| contribution to dim 1|  k=2| correlation with dim 2| contribution to dim 2|
+|:-------------------------------------------|----:|-------:|----:|----------------------:|---------------------:|----:|----------------------:|---------------------:|
+|Coreview ??                                 |  151|      48|   75|                    586|                    33|   29|                     87|                    86|
+|Coreview ++                                 |   49|     148| -233|                    586|                   103|  -90|                     87|                   267|
+|Posting preprints ??                        |   72|     118|   81|                    305|                    18|  -81|                    302|                   320|
+|Posting preprints ++                        |  128|      66|  -45|                    305|                    10|   45|                    302|                   178|
+|Citing preprints ??                         |  147|      52|   95|                    861|                    52|  -19|                     35|                    37|
+|Citing preprints ++                         |   53|     144| -264|                    861|                   143|   53|                     35|                   102|
+|Revealing reviewer identities to authors ?? |  115|      95|  195|                    728|                   171|    7|                      1|                     4|
+|Revealing reviewer identities to authors ++ |   85|     129| -264|                    728|                   231|  -10|                      1|                     6|
+|Peer review ??                              |   62|     138|  260|                    853|                   164|    0|                      0|                     0|
+|Peer review ++                              |  138|      62| -117|                    853|                    74|    0|                      0|                     0|
+|Business, Economics & Management            |   NA|      NA|  376|                    936|                    NA|  -98|                     64|                    NA|
+|Chemical & Materials Sciences               |   NA|      NA| -109|                    108|                    NA|  313|                    892|                    NA|
+|Engineering & Computer Science              |   NA|      NA|   59|                     70|                    NA|  216|                    930|                    NA|
+|Health & Medical Sciences                   |   NA|      NA|  -29|                     67|                    NA| -107|                    933|                    NA|
+|Humanities, Literature & Arts               |   NA|      NA|  169|                    749|                    NA|  -98|                    251|                    NA|
+|Life Sciences & Earth Sciences              |   NA|      NA| -388|                    965|                    NA|   74|                     35|                    NA|
+|Physics & Mathematics                       |   NA|      NA| -121|                    757|                    NA|  -68|                    243|                    NA|
+|Social Sciences                             |   NA|      NA|  105|                    310|                    NA| -157|                    690|                    NA|
+|American Chemical Society                   |   NA|      NA|  -36|                     24|                    NA|  233|                    976|                    NA|
+|Elsevier                                    |   NA|      NA|  124|                   1000|                    NA|    0|                      0|                    NA|
+|IEEE                                        |   NA|      NA|  206|                    727|                    NA|  126|                    273|                    NA|
+|Royal Society of Chemistry                  |   NA|      NA| -158|                    317|                    NA|  231|                    683|                    NA|
+|SAGE                                        |   NA|      NA| -177|                    708|                    NA| -114|                    292|                    NA|
+|Springer Nature                             |   NA|      NA| -532|                    915|                    NA|  163|                     85|                    NA|
+|Wiley                                       |   NA|      NA|  491|                    913|                    NA|  151|                     87|                    NA|
+|Other publishers                            |   NA|      NA|   49|                     77|                    NA| -170|                    923|                    NA|
 
 
 
@@ -706,21 +723,21 @@ Other publishers                                 NA        NA     49            
 
 Table: (\#tab:graph for clarity)Are policies clear?
 
-label                                                             No            Yes         
-----------------------------------------------------------------  ------------  ------------
-Are author responses to reviews being published?                  158 (92.4%)   13 (7.6%)   
-Are editorial decision letters being published?                   158 (92.4%)   13 (7.6%)   
-Are peer review reports being published?                          150 (87.7%)   21 (12.3%)  
-Are previous versions of the manuscript being published?          162 (94.7%)   9 (5.3%)    
-Are reviewer identities being published?                          138 (80.7%)   33 (19.3%)  
-Are reviewer identities revealed to the authors?                  100 (58.5%)   71 (41.5%)  
-Can co-reviewers contribute?                                      130 (76.0%)   41 (24.0%)  
-Can preprints be cited?                                           127 (74.3%)   44 (25.7%)  
-Can preprints be posted?                                          67 (39.2%)    104 (60.8%) 
-Is there a link provided to the preprint version of a paper?      151 (88.3%)   20 (11.7%)  
-Is there open interaction (reviewers consult with one another)?   162 (94.7%)   9 (5.3%)    
-Is there public commenting during formal peer review?             164 (95.9%)   7 (4.1%)    
-Which type of peer review is used?                                54 (31.6%)    117 (68.4%) 
+|label                                                           |No          |Yes         |
+|:---------------------------------------------------------------|:-----------|:-----------|
+|Are author responses to reviews being published?                |158 (92.4%) |13 (7.6%)   |
+|Are editorial decision letters being published?                 |158 (92.4%) |13 (7.6%)   |
+|Are peer review reports being published?                        |150 (87.7%) |21 (12.3%)  |
+|Are previous versions of the manuscript being published?        |162 (94.7%) |9 (5.3%)    |
+|Are reviewer identities being published?                        |138 (80.7%) |33 (19.3%)  |
+|Are reviewer identities revealed to the authors?                |100 (58.5%) |71 (41.5%)  |
+|Can co-reviewers contribute?                                    |130 (76.0%) |41 (24.0%)  |
+|Can preprints be cited?                                         |127 (74.3%) |44 (25.7%)  |
+|Can preprints be posted?                                        |67 (39.2%)  |104 (60.8%) |
+|Is there a link provided to the preprint version of a paper?    |151 (88.3%) |20 (11.7%)  |
+|Is there open interaction (reviewers consult with one another)? |162 (94.7%) |9 (5.3%)    |
+|Is there public commenting during formal peer review?           |164 (95.9%) |7 (4.1%)    |
+|Which type of peer review is used?                              |54 (31.6%)  |117 (68.4%) |
 
 ![](02-analysis-writeup_files/figure-html/clarity-graph-1.png)<!-- -->
 
