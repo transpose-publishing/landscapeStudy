@@ -1,9 +1,13 @@
-plot_univariate <- function(data, var, nudge_y = 2) {
-    pdata <- data %>%
+get_univ_data <- function(data, var) {
+  data %>%
     count({{var}}) %>%
     mutate(y = str_trunc({{var}}, 40),
            prop = {n/sum(n)} %>% scales::percent(accuracy = 1),
            label = glue::glue("{n} ({prop})"))
+}
+
+plot_univariate <- function(data, var, nudge_y = 2) {
+    pdata <- get_univ_data(data, var)
 
 
   pdata %>%
