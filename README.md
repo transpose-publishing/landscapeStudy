@@ -42,6 +42,7 @@ and initial explorations can be found in `01-overview.html`, as well as
 executing `R/01-explore.R` and `R/02-explore-missings.R`. 
 
 ### Code files
+
 **Core files for reproducing the analysis **
 
 |filename                        |purpose                                                                    |
