@@ -8,7 +8,7 @@ get_univ_data <- function(data, var) {
 }
 
 plot_univariate <- function(data, var, nudge_y = 2) {
-    pdata <- get_univ_data(data, var)
+  pdata <- get_univ_data(data, {{var}})
 
 
   pdata %>%
