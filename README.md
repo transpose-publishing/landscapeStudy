@@ -19,6 +19,9 @@ source("R/plan.R")
 
 vis_drake_graph(plan)
 ```
+A rendered version of the dependency graph is available under
+`documentation/analysis_pipeline.png`.
+
 
 All packages that are used during the analysis are specified in `R/packages.R`.
 For the analysis files to render you will need to install the font "Hind" (for
