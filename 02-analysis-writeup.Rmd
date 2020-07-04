@@ -444,6 +444,12 @@ ggplot(co_rev, aes(fct_reorder(area, order), prop,
        caption = "Can co-reviewers contribute?")
 ```
 
+```{r corev-export}
+co_rev %>% 
+  select(-order, can_coreviewers_contribute = coreview_email) %>% 
+  write_csv("data/figures/Fig5.csv")
+```
+
 
 ```{r corev-table}
 knitr::kable(co_rev)
