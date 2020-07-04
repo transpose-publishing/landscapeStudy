@@ -225,6 +225,17 @@ p1 / p2 +
 (A) Type of peer review used overall (n = 171)
 (B) Type of peer review used by disciplines (n = 193)
 
+```{r peer-type-data, include=FALSE}
+pr_type_prop %>% 
+  select(-order) %>% 
+  write_csv("data/figures/Fig3_A.csv")
+
+peer_type_data %>% 
+  select(-order, peer_review_type = pr_type_clean) %>% 
+  write_csv("data/figures/Fig3_B.csv")
+
+```
+
 
 However, there are major differences between disciplines (see figure 
 \@ref(fig:peer-type-combined)B). In the social sciences, humanities, and business, double

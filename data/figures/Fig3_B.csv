@@ -1,0 +1,26 @@
+area,peer_review_type,n,prop
+"Business, Economics & Management",Double blind,11,0.55
+"Business, Economics & Management",Unsure,9,0.45
+Chemical & Materials Sciences,Single blind,10,0.47619047619047616
+Chemical & Materials Sciences,Other,3,0.14285714285714285
+Chemical & Materials Sciences,Unsure,8,0.38095238095238093
+Engineering & Computer Science,Single blind,8,0.3333333333333333
+Engineering & Computer Science,Double blind,3,0.125
+Engineering & Computer Science,Other,3,0.125
+Engineering & Computer Science,Unsure,10,0.4166666666666667
+Health & Medical Sciences,Single blind,21,0.4666666666666667
+Health & Medical Sciences,Not blinded,2,0.044444444444444446
+Health & Medical Sciences,Other,4,0.08888888888888889
+Health & Medical Sciences,Unsure,18,0.4
+"Humanities, Literature & Arts",Double blind,15,0.75
+"Humanities, Literature & Arts",Other,2,0.1
+"Humanities, Literature & Arts",Unsure,3,0.15
+Life Sciences & Earth Sciences,Single blind,9,0.4090909090909091
+Life Sciences & Earth Sciences,Other,7,0.3181818181818182
+Life Sciences & Earth Sciences,Unsure,6,0.2727272727272727
+Physics & Mathematics,Single blind,12,0.6
+Physics & Mathematics,Other,2,0.1
+Physics & Mathematics,Unsure,6,0.3
+Social Sciences,Single blind,2,0.09523809523809523
+Social Sciences,Double blind,18,0.8571428571428571
+Social Sciences,Other,1,0.047619047619047616
