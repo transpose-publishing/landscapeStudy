@@ -30,7 +30,8 @@ register it with
 [`extrafont`](https://cran.r-project.org/web/packages/extrafont/README.html). 
 
 
-The basis for the paper is `02-analysis-writeup.html`. Since writing the paper
+The basis for the paper is `02-analysis-writeup.Rmd` (which is transformed into
+`02-analysis-writeup.html` with the `knitr` package). Since writing the paper
 was a collaborative effort, we used a GoogleSheet to work on the manuscript. For
 this reason, the text in `02-analysis-writeup.html` is not identical to the 
 paper, but rather a first draft version. The code and figures are identical to
@@ -39,6 +40,35 @@ the paper. Data for all figures has been exported in `data/figures/`.
 Further results
 and initial explorations can be found in `01-overview.html`, as well as 
 executing `R/01-explore.R` and `R/02-explore-missings.R`. 
+
+### Code files
+
+
+|filename                        |purpose                                                                    |
+|:-------------------------------|:--------------------------------------------------------------------------|
+|drake.R                         |Core file for building the analysis. Run with `drake::r_make("drake.r")`| 
+|R/plan.R                        |Describes all inputs and outputs along with the functions processing them.|
+|R/packages.R                    |Lists and loads all packages relevant to the analysis.                 |
+|R/plotting_functions.R          |Functions for plotting that are re-used in multiple places.            |
+|R/drake_functions.R             |Functions that wrap preprocessing tasks as outlined in `plan.r`|
+|R/correspondence_analysis_funs.R|Functions for conducting and plotting the multiple correspondence analysis.|
+|R/helpers.R                     |General helper functions|
+
+: Core files for reproducing the analysis 
+
+|filename                       |purpose                        |
+|:------------------------------|:------------------------------|
+|analysis-scripts/01-explore.R   |General exploratory graphs from early in the analysis.|
+|analysis-scripts/02-explore-missings.R|Exploration of missing values from the survey data.|
+|analysis-scripts/03-get-oa-status.R|Matching the journals surveyed against the DOAJ to determine whether they are open access or not.|
+|analysis-scripts/04-scrape-gs-fields.R |Scraping h5-index and h5-median for all journals from Google Scholar Metrics to fill in gaps in the initial data collection.|
+|analysis-scripts/05-do-correspondence-analysis.R |Script which records the steps taken while developing the multiple correspondence analysis for figure 2.|
+|analysis-scripts/06-clean-coreview.R|Script computing string-distances between co-review-policies to identify duplicates.|
+|analysis-scripts/07-print-coreview-policies.Rmd|Notebook that displays all co-review-policies so they can be printed out on paper for further inspection (finding duplicates)|
+|analysis-scripts/08-upload-analysis.R|Script used to upload the rendered analysis to GoogleDrive.|
+
+: Additional files for scraping and exploring data
+
 
 
 ## Data files
