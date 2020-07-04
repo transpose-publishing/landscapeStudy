@@ -2,7 +2,8 @@ get_univ_data <- function(data, var) {
   data %>%
     count({{var}}) %>%
     mutate(y = str_trunc({{var}}, 40),
-           prop = {n/sum(n)} %>% scales::percent(accuracy = 1),
+           prop_numeric = {n/sum(n)},
+           prop = scales::percent(prop_numeric, accuracy = 1),
            label = glue::glue("{n} ({prop})"))
 }
 
