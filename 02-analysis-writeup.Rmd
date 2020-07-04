@@ -113,6 +113,21 @@ p1 / p2 + plot_annotation(tag_levels = "A")
 (A): The distribution of h5-indices across the top-20 journals of each 
 discipline. (B) Number and proportion of journals sampled by discipline in total.
 
+```{r write-h-indices-data, include=FALSE}
+refined_with_areas %>% 
+  filter(!area_was_scraped) %>% 
+  select(area, `h5-index`, title) %>% 
+  arrange(area) %>% 
+  write_csv("data/figures/Fig7_A.csv")
+  
+
+refined_with_areas %>%
+  get_univ_data(area) %>% 
+  select(area, n, prop, prop_numeric) %>% 
+  write_csv("data/figures/Fig7_B.csv")
+```
+
+
 
 
 ```{r}
