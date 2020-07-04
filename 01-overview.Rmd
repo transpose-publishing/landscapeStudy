@@ -77,6 +77,7 @@ refined %>%
   count(publisher_clean, sort = T) %>% 
   filter(n > 4) %>% 
   left_join(refined_with_areas) %>% 
+  select(-n) %>% 
   count(publisher_clean, area) %>% 
   ggplot(aes(publisher_clean, str_wrap(area, 20), colour = n, size = n)) +
   geom_point() +
