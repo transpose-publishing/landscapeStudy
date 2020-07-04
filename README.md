@@ -42,7 +42,7 @@ and initial explorations can be found in `01-overview.html`, as well as
 executing `R/01-explore.R` and `R/02-explore-missings.R`. 
 
 ### Code files
-
+**Core files for reproducing the analysis **
 
 |filename                        |purpose                                                                    |
 |:-------------------------------|:--------------------------------------------------------------------------|
@@ -54,10 +54,11 @@ executing `R/01-explore.R` and `R/02-explore-missings.R`.
 |R/correspondence_analysis_funs.R|Functions for conducting and plotting the multiple correspondence analysis.|
 |R/helpers.R                     |General helper functions|
 
-: Core files for reproducing the analysis 
 
-|filename                       |purpose                        |
-|:------------------------------|:------------------------------|
+**Additional files for scraping and exploring data**
+
+|filename                       |purpose                                                                  |
+|:------------------------------|:------------------------------------------------------------------------|
 |analysis-scripts/01-explore.R   |General exploratory graphs from early in the analysis.|
 |analysis-scripts/02-explore-missings.R|Exploration of missing values from the survey data.|
 |analysis-scripts/03-get-oa-status.R|Matching the journals surveyed against the DOAJ to determine whether they are open access or not.|
@@ -67,7 +68,7 @@ executing `R/01-explore.R` and `R/02-explore-missings.R`.
 |analysis-scripts/07-print-coreview-policies.Rmd|Notebook that displays all co-review-policies so they can be printed out on paper for further inspection (finding duplicates)|
 |analysis-scripts/08-upload-analysis.R|Script used to upload the rendered analysis to GoogleDrive.|
 
-: Additional files for scraping and exploring data
+
 
 
 
