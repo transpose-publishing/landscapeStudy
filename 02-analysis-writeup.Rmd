@@ -444,7 +444,7 @@ ggplot(co_rev, aes(fct_reorder(area, order), prop,
        caption = "Can co-reviewers contribute?")
 ```
 
-```{r corev-export}
+```{r corev-export, include=FALSE}
 co_rev %>% 
   select(-order, can_coreviewers_contribute = coreview_email) %>% 
   write_csv("data/figures/Fig5.csv")
@@ -534,6 +534,22 @@ distinct_coreview %>%
   theme(legend.position = "bottom") +
   labs(edge_alpha = "How many times each bigram occured:")
 ```
+
+```{r bigrams-export, include=FALSE}
+my_stop_words <- c("review", tidytext::stop_words$word) %>%
+    str_remove("not")
+
+# code extracted from the function `make_bigram_analysis`
+distinct_coreview %>% 
+  distinct(coreview_policy) %>% 
+  tidytext::unnest_tokens(bigram, coreview_policy, token = "ngrams", n = 2) %>% 
+  separate(bigram, c("word1", "word2"), sep = " ") %>% 
+  filter(!word1 %in% my_stop_words) %>%
+  filter(!word2 %in% my_stop_words) %>% 
+  count(word1, word2, sort = TRUE) %>% 
+  write_csv("data/figures/S1 Fig.csv")
+```
+
 
 From both displays it is obvious, that journals stress the importance of 
 "maintaining confidentiality", by "not shar[ing]" or disclosing information,
@@ -719,6 +735,16 @@ gridExtra::grid.arrange(gt1, gt2)
 (A) Results on whether a preprint can be posted, and which version is allowed (n = 193).
 (B) Results on whether preprints can be cited (n = 193)
 
+
+```{r preprint-export, include=FALSE}
+preprint_version %>% 
+  select(-order, preprint_version = preprint_version_clean) %>% 
+  write_csv("data/figures/Fig6_A.csv")
+
+preprint_citation %>% 
+    select(-order, preprint_citation = preprint_citation_clean) %>% 
+  write_csv("data/figures/Fig6_B.csv")
+```
 
 
 ```{r preprint-tables}

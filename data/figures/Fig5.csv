@@ -1,0 +1,20 @@
+area,can_coreviewers_contribute,n,prop
+"Business, Economics & Management",Yes,1,0.05
+"Business, Economics & Management",No,1,0.05
+"Business, Economics & Management",Unsure,18,0.9
+Chemical & Materials Sciences,Yes,2,0.09523809523809523
+Chemical & Materials Sciences,Unsure,19,0.9047619047619048
+Engineering & Computer Science,Yes,4,0.16666666666666666
+Engineering & Computer Science,Unsure,20,0.8333333333333334
+Health & Medical Sciences,Yes,14,0.3111111111111111
+Health & Medical Sciences,No,2,0.044444444444444446
+Health & Medical Sciences,Unsure,29,0.6444444444444445
+"Humanities, Literature & Arts",Yes,2,0.1
+"Humanities, Literature & Arts",Unsure,18,0.9
+Life Sciences & Earth Sciences,Yes,9,0.4090909090909091
+Life Sciences & Earth Sciences,Unsure,13,0.5909090909090909
+Physics & Mathematics,Yes,6,0.3
+Physics & Mathematics,No,1,0.05
+Physics & Mathematics,Unsure,13,0.65
+Social Sciences,Yes,5,0.23809523809523808
+Social Sciences,Unsure,16,0.7619047619047619

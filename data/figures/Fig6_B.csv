@@ -1,0 +1,33 @@
+area,preprint_citation,n,prop
+"Business, Economics & Management",Other,1,0.05
+"Business, Economics & Management",Unsure,3,0.15
+"Business, Economics & Management",Not specified,16,0.8
+Chemical & Materials Sciences,"Yes, in the reference list",8,0.38095238095238093
+Chemical & Materials Sciences,No,1,0.047619047619047616
+Chemical & Materials Sciences,Unsure,6,0.2857142857142857
+Chemical & Materials Sciences,Not specified,6,0.2857142857142857
+Engineering & Computer Science,"Yes, in the reference list",7,0.2916666666666667
+Engineering & Computer Science,Unsure,3,0.125
+Engineering & Computer Science,Not specified,14,0.5833333333333334
+Health & Medical Sciences,"Yes, in the reference list",5,0.1111111111111111
+Health & Medical Sciences,"Yes, but only in the text",3,0.06666666666666667
+Health & Medical Sciences,Other,1,0.022222222222222223
+Health & Medical Sciences,No,2,0.044444444444444446
+Health & Medical Sciences,Unsure,4,0.08888888888888889
+Health & Medical Sciences,Not specified,30,0.6666666666666666
+"Humanities, Literature & Arts","Yes, in the reference list",1,0.05
+"Humanities, Literature & Arts","Yes, but only in the text",2,0.1
+"Humanities, Literature & Arts",Unsure,4,0.2
+"Humanities, Literature & Arts",Not specified,13,0.65
+Life Sciences & Earth Sciences,"Yes, in the reference list",10,0.45454545454545453
+Life Sciences & Earth Sciences,"Yes, but only in the text",1,0.045454545454545456
+Life Sciences & Earth Sciences,Other,1,0.045454545454545456
+Life Sciences & Earth Sciences,Not specified,10,0.45454545454545453
+Physics & Mathematics,"Yes, in the reference list",7,0.35
+Physics & Mathematics,Other,1,0.05
+Physics & Mathematics,Unsure,4,0.2
+Physics & Mathematics,Not specified,8,0.4
+Social Sciences,"Yes, in the reference list",2,0.09523809523809523
+Social Sciences,"Yes, but only in the text",1,0.047619047619047616
+Social Sciences,Unsure,4,0.19047619047619047
+Social Sciences,Not specified,14,0.6666666666666666

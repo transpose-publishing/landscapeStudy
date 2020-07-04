@@ -1,0 +1,41 @@
+area,preprint_version,n,prop
+"Business, Economics & Management","Unsure (preprints are allowed, but it's not clear which version)",4,0.2
+"Business, Economics & Management",First submission only (before peer review),4,0.2
+"Business, Economics & Management",After peer review,3,0.15
+"Business, Economics & Management",Other,1,0.05
+"Business, Economics & Management",None,2,0.1
+"Business, Economics & Management",No preprint policy,6,0.3
+Chemical & Materials Sciences,"Unsure (preprints are allowed, but it's not clear which version)",1,0.047619047619047616
+Chemical & Materials Sciences,First submission only (before peer review),14,0.6666666666666666
+Chemical & Materials Sciences,After peer review,1,0.047619047619047616
+Chemical & Materials Sciences,Other,1,0.047619047619047616
+Chemical & Materials Sciences,None,4,0.19047619047619047
+Engineering & Computer Science,"Unsure (preprints are allowed, but it's not clear which version)",3,0.125
+Engineering & Computer Science,Any,4,0.16666666666666666
+Engineering & Computer Science,First submission only (before peer review),14,0.5833333333333334
+Engineering & Computer Science,None,3,0.125
+Health & Medical Sciences,"Unsure (preprints are allowed, but it's not clear which version)",7,0.15555555555555556
+Health & Medical Sciences,Any,2,0.044444444444444446
+Health & Medical Sciences,First submission only (before peer review),20,0.4444444444444444
+Health & Medical Sciences,After peer review,3,0.06666666666666667
+Health & Medical Sciences,None,3,0.06666666666666667
+Health & Medical Sciences,No preprint policy,10,0.2222222222222222
+"Humanities, Literature & Arts","Unsure (preprints are allowed, but it's not clear which version)",1,0.05
+"Humanities, Literature & Arts",First submission only (before peer review),5,0.25
+"Humanities, Literature & Arts",After peer review,3,0.15
+"Humanities, Literature & Arts",No preprint policy,11,0.55
+Life Sciences & Earth Sciences,"Unsure (preprints are allowed, but it's not clear which version)",2,0.09090909090909091
+Life Sciences & Earth Sciences,Any,3,0.13636363636363635
+Life Sciences & Earth Sciences,First submission only (before peer review),15,0.6818181818181818
+Life Sciences & Earth Sciences,No preprint policy,2,0.09090909090909091
+Physics & Mathematics,"Unsure (preprints are allowed, but it's not clear which version)",1,0.05
+Physics & Mathematics,Any,5,0.25
+Physics & Mathematics,First submission only (before peer review),5,0.25
+Physics & Mathematics,After peer review,2,0.1
+Physics & Mathematics,No preprint policy,7,0.35
+Social Sciences,"Unsure (preprints are allowed, but it's not clear which version)",7,0.3333333333333333
+Social Sciences,Any,3,0.14285714285714285
+Social Sciences,First submission only (before peer review),4,0.19047619047619047
+Social Sciences,After peer review,2,0.09523809523809523
+Social Sciences,Other,1,0.047619047619047616
+Social Sciences,No preprint policy,4,0.19047619047619047
