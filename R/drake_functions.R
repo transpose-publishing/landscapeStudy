@@ -1,9 +1,9 @@
 # data import functions ------
 
-import_raw_data <- function(out_file) {
+import_raw_data <- function(gs_data, survey_data, out_file) {
   # Import data on google scholar rankings of journals ----
   gs_dat <- read_csv(
-    "data/Compiled_Landscape study journals list - G_ALL_dedup.csv",
+    gs_data,
     col_types = cols(
        `Journal Title` = col_character(),
        ISSN = col_character(),
@@ -37,7 +37,7 @@ import_raw_data <- function(out_file) {
   # so we have to import the raw sheet, and then take either the first or the
   # third row.
   transpose_fixed <- read_csv(
-    "data/TRANSPOSE landscape study - round 3 - Raw.csv",
+   survey_data,
     col_types = cols(
       .default = col_character()
     )) %>%
@@ -87,10 +87,10 @@ import_raw_data <- function(out_file) {
 }
 
 
-create_var_overview <- function(out_file) {
+create_var_overview <- function(in_file, out_file) {
   # import list of variables for ease of use
   transpose_vars <- read_csv(
-    "data/TRANSPOSE landscape study - round 3 - Raw.csv",
+    in_file,
     col_types = cols(
       .default = col_character()
     ), n_max = 2) %>%
