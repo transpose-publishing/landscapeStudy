@@ -1,26 +1,26 @@
 # this script collects all journal titles from google scholar for major and for
-# subcategories. 
+# subcategories.
 library(rvest)
 library(tidyverse)
 
 # function definitions
 get_sub_fields <- function(page) {
-  page %>% 
-    read_html() %>% 
-    html_nodes(".gs_md_li") %>% 
-    html_attr("href") %>% 
+  page %>%
+    read_html() %>%
+    html_nodes(".gs_md_li") %>%
+    html_attr("href") %>%
     keep(str_detect(., "vq"))
 }
 
 scraper <- function(page) {
   pb$tick()
-  res <- read_html(page) %>% 
-    html_table %>% 
-    .[[1]] %>% 
+  res <- read_html(page) %>%
+    html_table %>%
+    .[[1]] %>%
     select(Publication, `h5-index`, `h5-median`)
-  
+
   Sys.sleep(1)
-  
+
   res
 }
 
@@ -41,9 +41,9 @@ all_fields <- c(
 
 
 
-# find links to subfields subfields ----
-all_links <- all_fields %>% 
-  map(get_sub_fields) %>% 
+# find links to subfields ----
+all_links <- all_fields %>%
+  map(get_sub_fields) %>%
   flatten_chr()
 
 
@@ -55,10 +55,10 @@ ticks <- length(to_scrape)
 pb <- progress::progress_bar$new(total = ticks)
 
 
-res <- to_scrape %>% 
-  paste0("https://scholar.google.at", .) %>% 
-  set_names(., str_extract(., "(?<=vq\\=).*$")) %>% 
+res <- to_scrape %>%
+  paste0("https://scholar.google.at", .) %>%
+  set_names(., str_extract(., "(?<=vq\\=).*$")) %>%
   map_dfr(scraper, .id = "id")
 
 
-write_csv(res, here::here("data-transformed/gs_scraped_total.csv"))
+write_csv(res, here::here("data/raw/gs_scraped_total.csv"))

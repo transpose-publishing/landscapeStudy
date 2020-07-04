@@ -6,8 +6,8 @@ library(rcrossref)
 source("R/helpers.R")
 
 # import data
-refined <- read_csv("data-transformed/refined.csv")
-refined_with_areas <- read_csv("data-transformed/refined_w_areas.csv")
+refined <- read_csv("data/transformed//refined.csv")
+refined_with_areas <- read_csv("data/transformed/refined_w_areas.csv")
 
 # small tweaks
 refined_with_areas <- refined_with_areas %>%

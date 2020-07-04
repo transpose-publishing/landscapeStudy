@@ -2,7 +2,7 @@ library(tidyverse)
 library(jaod)
 library(jsonlite)
 
-refined <- read_csv(here::here("data-transformed/refined.csv"))
+refined <- read_csv(here::here("data/transformed/refined.csv"))
 
 
 # filter out two journals that have no proper issn
@@ -55,4 +55,4 @@ selected_results <- flat_results %>%
          issn_type = type)
 
 
-write_csv(selected_results, "data-transformed/oa_data.csv")
+write_csv(selected_results, "data/raw/oa_data.csv")

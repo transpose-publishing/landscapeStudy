@@ -2,7 +2,7 @@
 # in detecting duplicates.
 
 library(tidyverse)
-refined <- read_csv(here::here("data/refined.csv"))
+refined <- read_csv(here::here("data/transformed/refined.csv"))
 
 coreview_policies <- refined %>%
   select(coreview_policy) %>%
@@ -42,5 +42,5 @@ d.matrix %>%
   select(-index1.y, index1 = index1.x) %>%
   # top 100 entries should be sufficient to find duplicates
   head(100) %>%
-  write_csv("data-transformed/coreview-policies.csv")
+  write_csv("data/transformed/coreview-policies.csv")
 

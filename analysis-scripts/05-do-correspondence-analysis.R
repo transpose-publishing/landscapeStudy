@@ -21,8 +21,8 @@ theme_set(hrbrmisc::theme_hrbrmstr())
 
 
 # import data
-refined <- read_csv(here("data-transformed/refined.csv"))
-refined_with_areas <- read_csv(here("data-transformed/refined_w_areas.csv"))
+refined <- read_csv(here("data/transformed/refined.csv"))
+refined_with_areas <- read_csv(here("data/transformed/refined_w_areas.csv"))
 
 
 recoded <- refined_with_areas %>%
