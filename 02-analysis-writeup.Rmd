@@ -349,6 +349,19 @@ p1 / p2 +
 (B) Results on whether reviewer identitities are revealed to the authors, even if
 they are not published. (n = 193)
 
+```{r opr-combined-export, include=FALSE}
+pdata %>% 
+  left_join(labels) %>% 
+  select(variable = var, label, value = val_clean, n, prop) %>% 
+  mutate(label = str_replace_all(label, "\\\n", " ")) %>% 
+  write_csv("data/figures/Fig4_A.csv")
+
+
+rev_identitiy %>% 
+  select(-order, open_peer_review.identities_revealed_to_authors = opr_indenties_author_clean) %>% 
+  write_csv("data/figures/Fig4_B.csv")
+```
+
 
 ```{r opr-table}
 pdata %>% 

@@ -1,0 +1,27 @@
+area,open_peer_review.identities_revealed_to_authors,n,prop
+"Business, Economics & Management",No,4,0.2
+"Business, Economics & Management",Not specified,16,0.8
+Chemical & Materials Sciences,Conditional,5,0.23809523809523808
+Chemical & Materials Sciences,Optional,6,0.2857142857142857
+Chemical & Materials Sciences,No,1,0.047619047619047616
+Chemical & Materials Sciences,Not specified,9,0.42857142857142855
+Engineering & Computer Science,Conditional,2,0.08333333333333333
+Engineering & Computer Science,Optional,4,0.16666666666666666
+Engineering & Computer Science,No,3,0.125
+Engineering & Computer Science,Not specified,15,0.625
+Health & Medical Sciences,Yes,2,0.044444444444444446
+Health & Medical Sciences,Conditional,1,0.022222222222222223
+Health & Medical Sciences,Optional,12,0.26666666666666666
+Health & Medical Sciences,No,8,0.17777777777777778
+Health & Medical Sciences,Not specified,22,0.4888888888888889
+"Humanities, Literature & Arts",No,5,0.25
+"Humanities, Literature & Arts",Not specified,15,0.75
+Life Sciences & Earth Sciences,Conditional,1,0.045454545454545456
+Life Sciences & Earth Sciences,Optional,13,0.5909090909090909
+Life Sciences & Earth Sciences,No,2,0.09090909090909091
+Life Sciences & Earth Sciences,Not specified,6,0.2727272727272727
+Physics & Mathematics,Optional,4,0.2
+Physics & Mathematics,No,6,0.3
+Physics & Mathematics,Not specified,10,0.5
+Social Sciences,No,3,0.14285714285714285
+Social Sciences,Not specified,18,0.8571428571428571

@@ -1,0 +1,33 @@
+variable,label,value,n,prop
+opr_comments,Is there public commenting during formal peer review?,No,7,0.04093567251461988
+opr_comments,Is there public commenting during formal peer review?,Not specified,164,0.9590643274853801
+opr_identities_published,Are reviewer identities being published?,Conditional,3,0.017543859649122806
+opr_identities_published,Are reviewer identities being published?,No,28,0.16374269005847952
+opr_identities_published,Are reviewer identities being published?,Not specified,138,0.8070175438596491
+opr_identities_published,Are reviewer identities being published?,Optional,2,0.011695906432748537
+opr_indenties_author,Are reviewer identities revealed to the author (even if not published)?,Conditional,6,0.03508771929824561
+opr_indenties_author,Are reviewer identities revealed to the author (even if not published)?,No,31,0.18128654970760233
+opr_indenties_author,Are reviewer identities revealed to the author (even if not published)?,Not specified,100,0.5847953216374269
+opr_indenties_author,Are reviewer identities revealed to the author (even if not published)?,Optional,32,0.1871345029239766
+opr_indenties_author,Are reviewer identities revealed to the author (even if not published)?,Yes,2,0.011695906432748537
+opr_interaction,Is there open interaction (reviewers consult with one another)?,Conditional,1,0.005847953216374269
+opr_interaction,Is there open interaction (reviewers consult with one another)?,No,5,0.029239766081871343
+opr_interaction,Is there open interaction (reviewers consult with one another)?,Not specified,162,0.9473684210526315
+opr_interaction,Is there open interaction (reviewers consult with one another)?,Yes,3,0.017543859649122806
+opr_letters,Are editorial decision letters being published?,Conditional,1,0.005847953216374269
+opr_letters,Are editorial decision letters being published?,No,10,0.05847953216374269
+opr_letters,Are editorial decision letters being published?,Not specified,159,0.9298245614035088
+opr_letters,Are editorial decision letters being published?,Yes,1,0.005847953216374269
+opr_reports,Are peer review reports being published?,Conditional,2,0.011695906432748537
+opr_reports,Are peer review reports being published?,No,17,0.09941520467836257
+opr_reports,Are peer review reports being published?,Not specified,150,0.8771929824561403
+opr_reports,Are peer review reports being published?,Optional,1,0.005847953216374269
+opr_reports,Are peer review reports being published?,Yes,1,0.005847953216374269
+opr_responses,Are author responses to reviews being published?,Conditional,1,0.005847953216374269
+opr_responses,Are author responses to reviews being published?,No,9,0.05263157894736842
+opr_responses,Are author responses to reviews being published?,Not specified,158,0.9239766081871345
+opr_responses,Are author responses to reviews being published?,Optional,2,0.011695906432748537
+opr_responses,Are author responses to reviews being published?,Yes,1,0.005847953216374269
+opr_versions,Are previous versions of the manuscript being published?,Conditional,1,0.005847953216374269
+opr_versions,Are previous versions of the manuscript being published?,No,8,0.04678362573099415
+opr_versions,Are previous versions of the manuscript being published?,Not specified,162,0.9473684210526315
