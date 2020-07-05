@@ -1,7 +1,7 @@
 ---
 title: "Landscape Study - General Overview"
 author: Thomas Klebel
-date: Last changed 2020-07-04
+date: Last changed 2020-07-05
 output: 
   html_document:
     df_print: paged
@@ -252,50 +252,28 @@ not testing any hypothesis.
 ## 
 ## 
 ## Columns:
-##                                                              name   mass  qlt
-## 1  |                           pr_type_clean:pr_type-Double blind |   54  463
-## 2  |                                  pr_type_clean:pr_type-Other |   21  758
-## 3  |                           pr_type_clean:pr_type-Single blind |   60  524
-## 4  |                                 pr_type_clean:pr_type-Unsure |   64  611
-## 5  |                                   coreview_email:coreview-No |    5  167
-## 6  |                               coreview_email:coreview-Unsure |  153  502
-## 7  |                                  coreview_email:coreview-Yes |   43  443
-## 8  |   opr_indenties_author_clean:reviewer_identities-Conditional |    7  248
-## 9  |            opr_indenties_author_clean:reviewer_identities-No |   37  347
-## 10 | opr_indenties_author_clean:reviewer_identities-Not specified |  118  767
-## 11 |      opr_indenties_author_clean:reviewer_identities-Optional |   38  800
-## 12 |            preprint_version_clean:preprint_version-No policy |   45  213
-## 13 |                 preprint_version_clean:preprint_version-None |   11  260
-## 14 |                preprint_version_clean:preprint_version-Other |    6  169
-## 15 |               preprint_version_clean:preprint_version-Unsure |   28  526
-## 16 |                  preprint_version_clean:preprint_version-Yes |  110  841
-## 17 |                 preprint_citation_clean:preprint_citation-No |    4   89
-## 18 |      preprint_citation_clean:preprint_citation-Not specified |  115  689
-## 19 |              preprint_citation_clean:preprint_citation-Other |    5  385
-## 20 |             preprint_citation_clean:preprint_citation-Unsure |   30  349
-## 21 |                preprint_citation_clean:preprint_citation-Yes |   47  857
-##     inr    k=1 cor ctr    k=2 cor ctr  
-## 1    46 | -269 459  47 |  -26   4   2 |
-## 2    75 |  967 709 235 |  255  49  73 |
-## 3    44 |   93  67   6 | -242 457 187 |
-## 4    41 | -181 332  25 |  166 279  92 |
-## 5    53 |  194  53   2 | -286 114  20 |
-## 6    15 |  -50 132   5 |   84 370  57 |
-## 7    50 |  158 114  13 | -269 329 162 |
-## 8    59 |  -98   8   1 | -552 240 114 |
-## 9    49 |   28   4   0 | -260 343 131 |
-## 10   31 | -228 632  72 |  105 135  69 |
-## 11   66 |  704 799 221 |   27   1   1 |
-## 12   44 | -118 165   7 |  -63  47  10 |
-## 13   53 | -332 260  14 |  -13   0   0 |
-## 14   54 | -322 139   7 |  150  30   7 |
-## 15   49 | -308 526  32 |   10   1   0 |
-## 16   27 |  177 834  41 |   17   7   2 |
-## 17   55 | -228  39   2 |  261  51  13 |
-## 18   27 | -176 688  42 |   -5   1   0 |
-## 19   52 | -296 201   5 |  283 185  20 |
-## 20   50 | -216 242  16 | -144 107  32 |
-## 21   60 |  610 850 207 |   55   7   8 |
+##                                                              name   mass  qlt  inr    k=1 cor ctr    k=2 cor ctr  
+## 1  |                           pr_type_clean:pr_type-Double blind |   54  463   46 | -269 459  47 |  -26   4   2 |
+## 2  |                                  pr_type_clean:pr_type-Other |   21  758   75 |  967 709 235 |  255  49  73 |
+## 3  |                           pr_type_clean:pr_type-Single blind |   60  524   44 |   93  67   6 | -242 457 187 |
+## 4  |                                 pr_type_clean:pr_type-Unsure |   64  611   41 | -181 332  25 |  166 279  92 |
+## 5  |                                   coreview_email:coreview-No |    5  167   53 |  194  53   2 | -286 114  20 |
+## 6  |                               coreview_email:coreview-Unsure |  153  502   15 |  -50 132   5 |   84 370  57 |
+## 7  |                                  coreview_email:coreview-Yes |   43  443   50 |  158 114  13 | -269 329 162 |
+## 8  |   opr_indenties_author_clean:reviewer_identities-Conditional |    7  248   59 |  -98   8   1 | -552 240 114 |
+## 9  |            opr_indenties_author_clean:reviewer_identities-No |   37  347   49 |   28   4   0 | -260 343 131 |
+## 10 | opr_indenties_author_clean:reviewer_identities-Not specified |  118  767   31 | -228 632  72 |  105 135  69 |
+## 11 |      opr_indenties_author_clean:reviewer_identities-Optional |   38  800   66 |  704 799 221 |   27   1   1 |
+## 12 |            preprint_version_clean:preprint_version-No policy |   45  213   44 | -118 165   7 |  -63  47  10 |
+## 13 |                 preprint_version_clean:preprint_version-None |   11  260   53 | -332 260  14 |  -13   0   0 |
+## 14 |                preprint_version_clean:preprint_version-Other |    6  169   54 | -322 139   7 |  150  30   7 |
+## 15 |               preprint_version_clean:preprint_version-Unsure |   28  526   49 | -308 526  32 |   10   1   0 |
+## 16 |                  preprint_version_clean:preprint_version-Yes |  110  841   27 |  177 834  41 |   17   7   2 |
+## 17 |                 preprint_citation_clean:preprint_citation-No |    4   89   55 | -228  39   2 |  261  51  13 |
+## 18 |      preprint_citation_clean:preprint_citation-Not specified |  115  689   27 | -176 688  42 |   -5   1   0 |
+## 19 |              preprint_citation_clean:preprint_citation-Other |    5  385   52 | -296 201   5 |  283 185  20 |
+## 20 |             preprint_citation_clean:preprint_citation-Unsure |   30  349   50 | -216 242  16 | -144 107  32 |
+## 21 |                preprint_citation_clean:preprint_citation-Yes |   47  857   60 |  610 850 207 |   55   7   8 |
 ```
 
 ![](01-overview_files/figure-html/unnamed-chunk-30-1.png)<!-- -->
@@ -320,58 +298,32 @@ not testing any hypothesis.
 ## 
 ## 
 ## Columns:
-##                                                         name   mass  qlt  inr  
-## 1  |                      pr_type_clean:pr_type-Double blind |   62  412   59 |
-## 2  |                             pr_type_clean:pr_type-Other |   29  716   84 |
-## 3  |                      pr_type_clean:pr_type-Single blind |   81   71   51 |
-## 4  |                            pr_type_clean:pr_type-Unsure |   79  513   52 |
-## 5  |                              coreview_email:coreview-No |    5   33   69 |
-## 6  |                          coreview_email:coreview-Unsure |  190  439   18 |
-## 7  |                             coreview_email:coreview-Yes |   55  444   60 |
-## 8  |       preprint_version_clean:preprint_version-No policy |   51  715   59 |
-## 9  |            preprint_version_clean:preprint_version-None |   16  471   70 |
-## 10 |           preprint_version_clean:preprint_version-Other |    7  464   72 |
-## 11 |          preprint_version_clean:preprint_version-Unsure |   33  582   63 |
-## 12 |             preprint_version_clean:preprint_version-Yes |  144  903   34 |
-## 13 |            preprint_citation_clean:preprint_citation-No |    4  403   73 |
-## 14 | preprint_citation_clean:preprint_citation-Not specified |  144  758   35 |
-## 15 |         preprint_citation_clean:preprint_citation-Other |    5  173   69 |
-## 16 |        preprint_citation_clean:preprint_citation-Unsure |   35  269   61 |
-## 17 |           preprint_citation_clean:preprint_citation-Yes |   62  750   72 |
-## 18 |                (*)area:Business, Economics & Management | <NA>  666 <NA> |
-## 19 |                   (*)area:Chemical & Materials Sciences | <NA>  680 <NA> |
-## 20 |                  (*)area:Engineering & Computer Science | <NA>  597 <NA> |
-## 21 |                       (*)area:Health & Medical Sciences | <NA>   13 <NA> |
-## 22 |                   (*)area:Humanities, Literature & Arts | <NA>  162 <NA> |
-## 23 |                  (*)area:Life Sciences & Earth Sciences | <NA>  765 <NA> |
-## 24 |                           (*)area:Physics & Mathematics | <NA>  273 <NA> |
-## 25 |                                 (*)area:Social Sciences | <NA>  246 <NA> |
-##     k=1 cor  ctr    k=2 cor  ctr  
-## 1   234 378   51 |  -70  34   21 |
-## 2  -853 716  320 |   17   0    1 |
-## 3   -33  16    1 |  -61  55   21 |
-## 4   164 349   32 |  112 164   69 |
-## 5   114  21    1 |  -87  12    3 |
-## 6   -17  23    1 |   74 416   72 |
-## 7    50  17    2 | -246 427  233 |
-## 8   269 616   57 | -108  99   42 |
-## 9   370 317   33 |  257 154   73 |
-## 10  146  22    2 |  650 441  193 |
-## 11  256 457   33 | -133 124   41 |
-## 12 -201 900   89 |   11   3    1 |
-## 13  -91   5    0 |  819 398  184 |
-## 14  198 750   87 |  -20   7    4 |
-## 15  167  55    2 |  244 118   22 |
-## 16  127 226    9 |   55  43    8 |
-## 17 -546 741  280 |  -59   9   15 |
-## 18  476 609 <NA> |  145  56 <NA> |
-## 19 -253 234 <NA> |  350 446 <NA> |
-## 20 -128 240 <NA> |  156 357 <NA> |
-## 21   34  10 <NA> |  -18   3 <NA> |
-## 22  251 126 <NA> | -135  36 <NA> |
-## 23 -510 679 <NA> | -181  85 <NA> |
-## 24 -118 173 <NA> |  -90 100 <NA> |
-## 25  285 151 <NA> | -226  95 <NA> |
+##                                                         name   mass  qlt  inr    k=1 cor  ctr    k=2 cor  ctr  
+## 1  |                      pr_type_clean:pr_type-Double blind |   62  412   59 |  234 378   51 |  -70  34   21 |
+## 2  |                             pr_type_clean:pr_type-Other |   29  716   84 | -853 716  320 |   17   0    1 |
+## 3  |                      pr_type_clean:pr_type-Single blind |   81   71   51 |  -33  16    1 |  -61  55   21 |
+## 4  |                            pr_type_clean:pr_type-Unsure |   79  513   52 |  164 349   32 |  112 164   69 |
+## 5  |                              coreview_email:coreview-No |    5   33   69 |  114  21    1 |  -87  12    3 |
+## 6  |                          coreview_email:coreview-Unsure |  190  439   18 |  -17  23    1 |   74 416   72 |
+## 7  |                             coreview_email:coreview-Yes |   55  444   60 |   50  17    2 | -246 427  233 |
+## 8  |       preprint_version_clean:preprint_version-No policy |   51  715   59 |  269 616   57 | -108  99   42 |
+## 9  |            preprint_version_clean:preprint_version-None |   16  471   70 |  370 317   33 |  257 154   73 |
+## 10 |           preprint_version_clean:preprint_version-Other |    7  464   72 |  146  22    2 |  650 441  193 |
+## 11 |          preprint_version_clean:preprint_version-Unsure |   33  582   63 |  256 457   33 | -133 124   41 |
+## 12 |             preprint_version_clean:preprint_version-Yes |  144  903   34 | -201 900   89 |   11   3    1 |
+## 13 |            preprint_citation_clean:preprint_citation-No |    4  403   73 |  -91   5    0 |  819 398  184 |
+## 14 | preprint_citation_clean:preprint_citation-Not specified |  144  758   35 |  198 750   87 |  -20   7    4 |
+## 15 |         preprint_citation_clean:preprint_citation-Other |    5  173   69 |  167  55    2 |  244 118   22 |
+## 16 |        preprint_citation_clean:preprint_citation-Unsure |   35  269   61 |  127 226    9 |   55  43    8 |
+## 17 |           preprint_citation_clean:preprint_citation-Yes |   62  750   72 | -546 741  280 |  -59   9   15 |
+## 18 |                (*)area:Business, Economics & Management | <NA>  666 <NA> |  476 609 <NA> |  145  56 <NA> |
+## 19 |                   (*)area:Chemical & Materials Sciences | <NA>  680 <NA> | -253 234 <NA> |  350 446 <NA> |
+## 20 |                  (*)area:Engineering & Computer Science | <NA>  597 <NA> | -128 240 <NA> |  156 357 <NA> |
+## 21 |                       (*)area:Health & Medical Sciences | <NA>   13 <NA> |   34  10 <NA> |  -18   3 <NA> |
+## 22 |                   (*)area:Humanities, Literature & Arts | <NA>  162 <NA> |  251 126 <NA> | -135  36 <NA> |
+## 23 |                  (*)area:Life Sciences & Earth Sciences | <NA>  765 <NA> | -510 679 <NA> | -181  85 <NA> |
+## 24 |                           (*)area:Physics & Mathematics | <NA>  273 <NA> | -118 173 <NA> |  -90 100 <NA> |
+## 25 |                                 (*)area:Social Sciences | <NA>  246 <NA> |  285 151 <NA> | -226  95 <NA> |
 ```
 
 ![](01-overview_files/figure-html/unnamed-chunk-32-1.png)<!-- -->
@@ -396,66 +348,36 @@ This looks intelligble, but lets try one more time with this crude variable
 ## 
 ## 
 ## Columns:
-##                                                              name   mass  qlt
-## 1  |                           pr_type_clean:pr_type-Double blind |   49  451
-## 2  |                                  pr_type_clean:pr_type-Other |   23  770
-## 3  |                           pr_type_clean:pr_type-Single blind |   65  482
-## 4  |                                 pr_type_clean:pr_type-Unsure |   63  659
-## 5  |                                   coreview_email:coreview-No |    4   71
-## 6  |                               coreview_email:coreview-Unsure |  152  524
-## 7  |                                  coreview_email:coreview-Yes |   44  501
-## 8  |   opr_indenties_author_clean:reviewer_identities-Conditional |    9  243
-## 9  |            opr_indenties_author_clean:reviewer_identities-No |   34  424
-## 10 | opr_indenties_author_clean:reviewer_identities-Not specified |  116  785
-## 11 |      opr_indenties_author_clean:reviewer_identities-Optional |   41  819
-## 12 |            preprint_version_clean:preprint_version-No policy |   41  297
-## 13 |                 preprint_version_clean:preprint_version-None |   13  501
-## 14 |                preprint_version_clean:preprint_version-Other |    5  161
-## 15 |               preprint_version_clean:preprint_version-Unsure |   26  530
-## 16 |                  preprint_version_clean:preprint_version-Yes |  115  889
-## 17 |                 preprint_citation_clean:preprint_citation-No |    3   93
-## 18 |      preprint_citation_clean:preprint_citation-Not specified |  115  751
-## 19 |              preprint_citation_clean:preprint_citation-Other |    4  364
-## 20 |             preprint_citation_clean:preprint_citation-Unsure |   28  337
-## 21 |                preprint_citation_clean:preprint_citation-Yes |   49  862
-## 22 |                     (*)area:Business, Economics & Management | <NA>  790
-## 23 |                        (*)area:Chemical & Materials Sciences | <NA>   88
-## 24 |                       (*)area:Engineering & Computer Science | <NA>  210
-## 25 |                            (*)area:Health & Medical Sciences | <NA>   61
-## 26 |                        (*)area:Humanities, Literature & Arts | <NA>  199
-## 27 |                       (*)area:Life Sciences & Earth Sciences | <NA>  848
-## 28 |                                (*)area:Physics & Mathematics | <NA>  448
-## 29 |                                      (*)area:Social Sciences | <NA>  261
-##     inr    k=1 cor  ctr    k=2 cor  ctr  
-## 1    48 | -296 442   45 |  -43   9    4 |
-## 2    76 |  988 727  237 |  240  43   64 |
-## 3    42 |   78  50    4 | -229 432  164 |
-## 4    42 | -211 378   30 |  182 281  100 |
-## 5    52 |  142  32    1 | -156  39    5 |
-## 6    15 |  -41  90    3 |   90 434   59 |
-## 7    49 |  127  79    8 | -295 422  184 |
-## 8    58 | -103  11    1 | -481 233  105 |
-## 9    49 |   -3   0    0 | -300 424  146 |
-## 10   32 | -240 640   71 |  114 145   73 |
-## 11   66 |  710 817  217 |   32   2    2 |
-## 12   45 | -167 263   12 |  -59  33    7 |
-## 13   53 | -403 389   22 |  216 112   28 |
-## 14   54 | -339 133    6 |  153  27    6 |
-## 15   49 | -321 517   28 |  -51  13    3 |
-## 16   26 |  192 889   45 |    2   0    0 |
-## 17   54 | -231  37    2 |  285  56   12 |
-## 18   27 | -194 748   46 |  -13   3    1 |
-## 19   52 | -314 212    4 |  265 151   14 |
-## 20   49 | -228 274   16 | -110  63   16 |
-## 21   61 |  626 857  203 |   52   6    6 |
-## 22 <NA> | -509 693 <NA> |  190  96 <NA> |
-## 23 <NA> |  184  85 <NA> |   32   3 <NA> |
-## 24 <NA> |   42  30 <NA> |  102 180 <NA> |
-## 25 <NA> |   49  25 <NA> |  -59  36 <NA> |
-## 26 <NA> | -304 197 <NA> |   34   2 <NA> |
-## 27 <NA> |  642 848 <NA> |  -14   0 <NA> |
-## 28 <NA> |  140 163 <NA> | -185 284 <NA> |
-## 29 <NA> | -365 256 <NA> |  -50   5 <NA> |
+##                                                              name   mass  qlt  inr    k=1 cor  ctr    k=2 cor  ctr  
+## 1  |                           pr_type_clean:pr_type-Double blind |   49  451   48 | -296 442   45 |  -43   9    4 |
+## 2  |                                  pr_type_clean:pr_type-Other |   23  770   76 |  988 727  237 |  240  43   64 |
+## 3  |                           pr_type_clean:pr_type-Single blind |   65  482   42 |   78  50    4 | -229 432  164 |
+## 4  |                                 pr_type_clean:pr_type-Unsure |   63  659   42 | -211 378   30 |  182 281  100 |
+## 5  |                                   coreview_email:coreview-No |    4   71   52 |  142  32    1 | -156  39    5 |
+## 6  |                               coreview_email:coreview-Unsure |  152  524   15 |  -41  90    3 |   90 434   59 |
+## 7  |                                  coreview_email:coreview-Yes |   44  501   49 |  127  79    8 | -295 422  184 |
+## 8  |   opr_indenties_author_clean:reviewer_identities-Conditional |    9  243   58 | -103  11    1 | -481 233  105 |
+## 9  |            opr_indenties_author_clean:reviewer_identities-No |   34  424   49 |   -3   0    0 | -300 424  146 |
+## 10 | opr_indenties_author_clean:reviewer_identities-Not specified |  116  785   32 | -240 640   71 |  114 145   73 |
+## 11 |      opr_indenties_author_clean:reviewer_identities-Optional |   41  819   66 |  710 817  217 |   32   2    2 |
+## 12 |            preprint_version_clean:preprint_version-No policy |   41  297   45 | -167 263   12 |  -59  33    7 |
+## 13 |                 preprint_version_clean:preprint_version-None |   13  501   53 | -403 389   22 |  216 112   28 |
+## 14 |                preprint_version_clean:preprint_version-Other |    5  161   54 | -339 133    6 |  153  27    6 |
+## 15 |               preprint_version_clean:preprint_version-Unsure |   26  530   49 | -321 517   28 |  -51  13    3 |
+## 16 |                  preprint_version_clean:preprint_version-Yes |  115  889   26 |  192 889   45 |    2   0    0 |
+## 17 |                 preprint_citation_clean:preprint_citation-No |    3   93   54 | -231  37    2 |  285  56   12 |
+## 18 |      preprint_citation_clean:preprint_citation-Not specified |  115  751   27 | -194 748   46 |  -13   3    1 |
+## 19 |              preprint_citation_clean:preprint_citation-Other |    4  364   52 | -314 212    4 |  265 151   14 |
+## 20 |             preprint_citation_clean:preprint_citation-Unsure |   28  337   49 | -228 274   16 | -110  63   16 |
+## 21 |                preprint_citation_clean:preprint_citation-Yes |   49  862   61 |  626 857  203 |   52   6    6 |
+## 22 |                     (*)area:Business, Economics & Management | <NA>  790 <NA> | -509 693 <NA> |  190  96 <NA> |
+## 23 |                        (*)area:Chemical & Materials Sciences | <NA>   88 <NA> |  184  85 <NA> |   32   3 <NA> |
+## 24 |                       (*)area:Engineering & Computer Science | <NA>  210 <NA> |   42  30 <NA> |  102 180 <NA> |
+## 25 |                            (*)area:Health & Medical Sciences | <NA>   61 <NA> |   49  25 <NA> |  -59  36 <NA> |
+## 26 |                        (*)area:Humanities, Literature & Arts | <NA>  199 <NA> | -304 197 <NA> |   34   2 <NA> |
+## 27 |                       (*)area:Life Sciences & Earth Sciences | <NA>  848 <NA> |  642 848 <NA> |  -14   0 <NA> |
+## 28 |                                (*)area:Physics & Mathematics | <NA>  448 <NA> |  140 163 <NA> | -185 284 <NA> |
+## 29 |                                      (*)area:Social Sciences | <NA>  261 <NA> | -365 256 <NA> |  -50   5 <NA> |
 ```
 
 ![](01-overview_files/figure-html/unnamed-chunk-33-1.png)<!-- -->
@@ -468,8 +390,7 @@ This looks intelligble, but lets try one more time with this crude variable
 
 
 ```
-## Warning in stats::chisq.test(x, y, ...): Chi-squared approximation may be
-## incorrect
+## Warning in stats::chisq.test(x, y, ...): Chi-squared approximation may be incorrect
 ```
 
 ```
@@ -481,8 +402,7 @@ This looks intelligble, but lets try one more time with this crude variable
 ```
 
 ```
-## Warning in stats::chisq.test(tab, correct = FALSE): Chi-squared approximation
-## may be incorrect
+## Warning in stats::chisq.test(tab, correct = FALSE): Chi-squared approximation may be incorrect
 ```
 
 ```
@@ -555,69 +475,39 @@ being not very influential
 ## 
 ## 
 ##  Rows:
-##         coreview-Has no policy coreview-Has policy preprint_version-No policy
-## Mass                  0.187173            0.062827                   0.051047
-## ChiDist               0.176868            0.526919                   0.805284
-## Inertia               0.005855            0.017444                   0.033103
-## Dim. 1               -0.208662            0.621639                  -1.051879
-## Dim. 2               -0.617497            1.839628                   1.858271
-##         preprint_version-None preprint_version-Other preprint_version-Unsure
-## Mass                 0.015707               0.006545                0.032723
-## ChiDist              1.025120               0.899974                0.676312
-## Inertia              0.016506               0.005301                0.014967
-## Dim. 1               0.757799              -0.352191               -0.797899
-## Dim. 2              -4.323368              -1.997743                0.119226
-##         preprint_version-Yes preprint_citation-No
-## Mass                0.143979             0.003927
-## ChiDist             0.267798             1.408809
-## Inertia             0.010326             0.007793
-## Dim. 1              0.487619             1.483073
-## Dim. 2             -0.123492            -1.963233
-##         preprint_citation-Not specified preprint_citation-Other
-## Mass                           0.143979                0.005236
-## ChiDist                        0.264054                1.006966
-## Inertia                        0.010039                0.005309
-## Dim. 1                        -0.365443                0.589690
-## Dim. 2                         0.069211                2.219163
-##         preprint_citation-Unsure preprint_citation-Yes pr_type-Double blind
-## Mass                    0.035340              0.061518             0.061518
-## ChiDist                 0.582205              0.576274             1.364655
-## Inertia                 0.011979              0.020430             0.114565
-## Dim. 1                 -0.429116              0.956954            -2.993924
-## Dim. 2                 -1.259100              0.497778             0.062737
-##         pr_type-Other pr_type-Single blind pr_type-Unsure
-## Mass         0.028796             0.081152       0.078534
-## ChiDist      0.720790             0.654872       0.451213
-## Inertia      0.014961             0.034803       0.015989
-## Dim. 1       0.959127             1.347637       0.601002
-## Dim. 2       1.042317             0.419260      -0.864563
+##         coreview-Has no policy coreview-Has policy preprint_version-No policy preprint_version-None preprint_version-Other preprint_version-Unsure
+## Mass                  0.187173            0.062827                   0.051047              0.015707               0.006545                0.032723
+## ChiDist               0.176868            0.526919                   0.805284              1.025120               0.899974                0.676312
+## Inertia               0.005855            0.017444                   0.033103              0.016506               0.005301                0.014967
+## Dim. 1               -0.208662            0.621639                  -1.051879              0.757799              -0.352191               -0.797899
+## Dim. 2               -0.617497            1.839628                   1.858271             -4.323368              -1.997743                0.119226
+##         preprint_version-Yes preprint_citation-No preprint_citation-Not specified preprint_citation-Other preprint_citation-Unsure preprint_citation-Yes
+## Mass                0.143979             0.003927                        0.143979                0.005236                 0.035340              0.061518
+## ChiDist             0.267798             1.408809                        0.264054                1.006966                 0.582205              0.576274
+## Inertia             0.010326             0.007793                        0.010039                0.005309                 0.011979              0.020430
+## Dim. 1              0.487619             1.483073                       -0.365443                0.589690                -0.429116              0.956954
+## Dim. 2             -0.123492            -1.963233                        0.069211                2.219163                -1.259100              0.497778
+##         pr_type-Double blind pr_type-Other pr_type-Single blind pr_type-Unsure
+## Mass                0.061518      0.028796             0.081152       0.078534
+## ChiDist             1.364655      0.720790             0.654872       0.451213
+## Inertia             0.114565      0.014961             0.034803       0.015989
+## Dim. 1             -2.993924      0.959127             1.347637       0.601002
+## Dim. 2              0.062737      1.042317             0.419260      -0.864563
 ## 
 ## 
 ##  Columns:
-##         Business, Economics & Management Chemical & Materials Sciences
-## Mass                            0.104712                      0.109948
-## ChiDist                         0.632291                      0.609887
-## Inertia                         0.041863                      0.040896
-## Dim. 1                         -1.153188                      0.846897
-## Dim. 2                         -0.840234                     -1.819903
-##         Engineering & Computer Science Health & Medical Sciences
-## Mass                          0.125654                  0.225131
-## ChiDist                       0.361956                  0.381467
-## Inertia                       0.016462                  0.032760
-## Dim. 1                        0.425946                  0.577454
-## Dim. 2                       -1.095257                  0.258944
-##         Humanities, Literature & Arts Life Sciences & Earth Sciences
-## Mass                         0.104712                       0.115183
-## ChiDist                      0.783012                       0.612972
-## Inertia                      0.064200                       0.043278
-## Dim. 1                      -1.549271                       0.956480
-## Dim. 2                       0.561214                       1.260950
-##         Physics & Mathematics Social Sciences
-## Mass                 0.104712        0.109948
-## ChiDist              0.526766        0.802754
-## Inertia              0.029056        0.070852
-## Dim. 1               0.680514       -1.592465
-## Dim. 2               1.282670        0.264554
+##         Business, Economics & Management Chemical & Materials Sciences Engineering & Computer Science Health & Medical Sciences
+## Mass                            0.104712                      0.109948                       0.125654                  0.225131
+## ChiDist                         0.632291                      0.609887                       0.361956                  0.381467
+## Inertia                         0.041863                      0.040896                       0.016462                  0.032760
+## Dim. 1                         -1.153188                      0.846897                       0.425946                  0.577454
+## Dim. 2                         -0.840234                     -1.819903                      -1.095257                  0.258944
+##         Humanities, Literature & Arts Life Sciences & Earth Sciences Physics & Mathematics Social Sciences
+## Mass                         0.104712                       0.115183              0.104712        0.109948
+## ChiDist                      0.783012                       0.612972              0.526766        0.802754
+## Inertia                      0.064200                       0.043278              0.029056        0.070852
+## Dim. 1                      -1.549271                       0.956480              0.680514       -1.592465
+## Dim. 2                       0.561214                       1.260950              1.282670        0.264554
 ```
 
 Axes are mainly determined by peer review policy. Maybe remove this variable to
@@ -724,8 +614,7 @@ There is not much variation left to explain here, somehow.
 
 
 ```
-## Warning in stats::chisq.test(x, y, ...): Chi-squared approximation may be
-## incorrect
+## Warning in stats::chisq.test(x, y, ...): Chi-squared approximation may be incorrect
 ```
 
 ```
