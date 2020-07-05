@@ -540,27 +540,6 @@ stemmed_words %>%
   select(Term = word_stemmed, Variants = variants, `Term frequency` = n, 
          `Proportion of policies that contain term` = prop_of_texts) %>% 
   knitr::kable(caption = "Propensity of terms in co-review policies")
-
-
-
-# top_terms %>% 
-#   left_join(stemmed_words) %>% 
-#   select(-policy_id) %>% 
-#   distinct() %>% 
-#   group_by(word_stemmed) %>% I
-# 
-# 
-# 
-#   mutate(variants = list(sample(unique(word), pmin(3, length(unique(word))))),
-#          variants = map_chr(variants, paste, collapse = "; ")) %>% 
-#   select(-word) %>% 
-#   distinct()
-#   select(Term = word_stemmed, Variants = variants, `Term frequency` = n, 
-#          `Proportion of policies that contain term` = prop_of_texts)
-#   
-
-
-
 ```
 
 
