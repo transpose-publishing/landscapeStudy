@@ -107,3 +107,12 @@ make_percent2 <- function(x, round_to = c("ten", "one", "comma")) {
     head(1) %>%
     scales::percent(accuracy = accuracy)
 }
+
+
+select_univariate <- function(var, df = refined) {
+  select(df, journal = title, issn, {{var}})
+}
+
+select_bivariate <- function(var, df = refined_with_areas) {
+  select(df, journal = title, issn, area, {{var}})
+}

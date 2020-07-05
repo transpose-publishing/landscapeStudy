@@ -1,6 +1,172 @@
-pr_type_clean,n,prop
-Double blind,46,0.26900584795321636
-Not blinded,2,0.011695906432748537
-Other,18,0.10526315789473684
-Single blind,51,0.2982456140350877
-Unsure,54,0.3157894736842105
+journal,issn,pr_type_clean
+Academic Medicine,1040-2446,Single blind
+ACS Applied Materials & Interfaces,1944-8252,Single blind
+Accounts of Chemical Research,1520-4898,Single blind
+ACS Catalysis,2155-5435,Single blind
+Academy of Management Journal,0001-4273,Double blind
+ACS Nano,1936-086X,Single blind
+Advanced Energy Materials,1614-6840,Unsure
+Advanced Functional Materials,1616-3028,Unsure
+Advanced Materials,1521-4095,Unsure
+American Economic Review,0002-8282,Double blind
+American Journal of Political Science,1540-5907,Double blind
+American Journal of Public Health,1541-0048,Double blind
+American Political Science Review,1537-5943,Double blind
+American Sociological Review,1939-8271,Double blind
+Angewandte Chemie International Edition,1521-3773,Single blind
+Annals of Internal Medicine,0003-4819,Single blind
+Annals of Oncology,1569-8041,Unsure
+Annals of the Rheumatic Diseases,1468-2060,Single blind
+Annals of Tourism Research,0160-7383,Double blind
+Applied Energy,0306-2619,Single blind
+Applied Linguistics,1477-450X,Double blind
+Applied Physics Letters,1077-3118,Unsure
+Astronomy & Astrophysics,1432-0746,Unsure
+Biomaterials,0142-9612,Single blind
+Blood,1528-0020,Single blind
+BMJ,1756-1833,Not blinded
+Cancer Cell,1535-6108,Single blind
+Cancer Research,0099-7013,Unsure
+Cell,1097-4172,Single blind
+Cell Metabolism,1550-4131,Single blind
+Cell Stem Cell,1934-5909,Single blind
+"Chemical communications (Cambridge, England)",0144-557X,Single blind
+Chemical Reviews,1520-6890,Unsure
+Chemical Society reviews,1460-4744,Unsure
+Chemistry of Materials,1520-5002,Unsure
+Circulation,0009-7322,Single blind
+Circulation Research,1524-4571,Single blind
+Clinical Cancer Research,1557-3265,Unsure
+Computers & Education,0360-1315,Double blind
+Diabetes Care,1935-5548,Single blind
+Digital Journalism,2167-082X,Double blind
+Econometrica,1468-0262,Unsure
+Energy and Environmental Science,1754-5706,Single blind
+Environmental Science & Technology,0013-936X,Unsure
+European Heart Journal,1522-9645,Unsure
+European Urology,0302-2838,Single blind
+Gastroenterology,0016-5085,Single blind
+Gender & Society,1552-3977,Double blind
+Geophysical Research Letters,1944-8007,Unsure
+Global Environmental Change,0959-3780,Double blind
+Government Information Quarterly,0740-624X,Other
+Gut,1468-3288,Single blind
+Health Affairs,1544-5208,Double blind
+Hepatology,1527-3350,Unsure
+IEEE Communications Magazine,0163-6804,Unsure
+IEEE Communications Surveys & Tutorials,1553-877X,Unsure
+"IEEE Conference on Computer Vision and Pattern Recognition, CVPR","Only ISBN available, counts as a book",Double blind
+IEEE International Conference on Computer Vision,2380-7504,Double blind
+IEEE Transactions on Automatic Control,0018-9286,Unsure
+IEEE Transactions on Industrial Electronics,0278-0046,Unsure
+IEEE Transactions on Pattern Analysis and Machine Intelligence,0162-8828,Unsure
+IEEE Transactions on Power Electronics,0885-8993,Single blind
+IEEE Transactions on Signal Processing,1053-587X,Single blind
+Immunity,1074-7613,Single blind
+International Journal of Communication,1932-8036,Unsure
+International Journal of Production Economics,0925-5273,Double blind
+Journal of the American Medical Association,1538-3598,Single blind
+Journal of Allergy and Clinical Immunology,0091-6749,Unsure
+Journal of Banking & Finance,0378-4266,Double blind
+Journal of Business Ethics,1573-0697,Double blind
+Journal of Business Research,0148-2963,Double blind
+Journal of Cleaner Production,0959-6526,Single blind
+Journal of Clinical Oncology,1527-7755,Single blind
+Journal of Communication,1460-2466,Unsure
+Journal of Cosmology and Astroparticle Physics,1475-7516,Single blind
+Journal of Economic Perspectives,1944-7965,Unsure
+Journal of Educational Psychology,1939-2176,Double blind
+Journal of Financial Economics,0304-405X,Unsure
+Journal of Geophysical Research,2156-2202,Unsure
+Journal of Hepatology,0168-8278,Unsure
+Journal of High Energy Physics,1029-8479,Single blind
+Journal of Management,1557-1211,Double blind
+Journal of Materials Chemistry. A,2050-7488,Single blind
+Journal of Pragmatics,0378-2166,Double blind
+Journal of the American Chemical Society,1520-5126,Single blind
+Journal of the American College of Cardiology,0735-1097,Single blind
+Journal of Youth and Adolescence,1573-6601,Double blind
+Journalism,1741-3001,Double blind
+Journalism Practice,1751-2786,Double blind
+Journalism Studies,1461-670X,Double blind
+Land Use Policy,0264-8377,Double blind
+Language Learning,1467-9922,Other
+Lingua,0024-3841,Double blind
+Management Information Systems Quarterly,2162-9730,Double blind
+Management Science,1526-5501,Double blind
+"Media, Culture & Society",1460-3675,Double blind
+Molecular Cell,1097-2765,Unsure
+Monthly Notices of the Royal Astronomical Society,1365-2966,Single blind
+Nano Letters,1530-6992,Unsure
+Nanoscale,2040-3372,Unsure
+Nature,1476-4687,Other
+Nature Biotechnology,1546-1696,Other
+Nature Cell Biology,1476-4679,Other
+Nature Chemistry,1755-4349,Other
+Nature Climate Change,1758-6798,Other
+Nature Communications,2041-1723,Other
+Nature Genetics,1546-1718,Other
+Nature Immunology,1529-2916,Other
+Nature Materials,1476-4660,Other
+Nature Medicine,1546-170X,Other
+Nature Methods,1548-7105,Other
+Nature Nanotechnology,1748-3395,Other
+Nature Neuroscience,1546-1726,Other
+Nature Photonics,1749-4893,Other
+Nature Physics,1745-2481,Other
+Nature Reviews Cancer,1474-1768,Unsure
+Nature Reviews Genetics,1471-0064,Unsure
+Nature Reviews Immunology,1474-1733,Unsure
+Nature Reviews Neuroscience,1471-0048,Unsure
+Nature Reviews. Drug Discovery,1474-1784,Unsure
+Nature Reviews. Molecular Cell Biology,1471-0080,Unsure
+Neural Information Processing Systems (NIPS),NIPS-ISSN,Double blind
+NeuroImage,1053-8119,Single blind
+Neuron,1097-4199,Single blind
+New Media and Society,1461-7315,Double blind
+Noûs,1468-0068,Other
+Nucleic Acids Research,1362-4962,Unsure
+Obstetrical & Gynecological Survey,1533-9866,Unsure
+Optics Express,1094-4087,Single blind
+Pediatrics,1098-4275,Unsure
+Philosophical Studies,1573-0883,Double blind
+Physical Review B,1550-235X,Single blind
+Physical Review D,1550- 2368,Single blind
+Physical Review Letters,1079-7114,Single blind
+Physical Review X,2160-3308,Single blind
+Physics Letters B,0375-9601,Single blind
+PLoS One,1932-6203,Single blind
+Proceedings of the National Academy of Sciences,1091-6490,Single blind
+Progress in Human Geography,1477-0288,Double blind
+Public Opinion Quarterly,1537-5331,Double blind
+Regional Studies,1360-0591,Double blind
+Renewable and Sustainable Energy Reviews,1364-0321,Single blind
+Research Policy,0048-7333,Double blind
+Review of Economics and Statistics,0034-6535,Unsure
+Reviews of Modern Physics,1539-0756,Single blind
+Science,1095-9203,Unsure
+Science Translational Medicine,1946-6234,Unsure
+Scientific Reports,2045-2322,Single blind
+Social Science & Medicine,0277-9536,Double blind
+Strategic Management Journal,1097-0266,Unsure
+Synthese,1573-0964,Double blind
+System,0346-251X,Double blind
+Teaching and Teacher Education,0742-051X,Double blind
+TESOL Quarterly,1545-7249,Unsure
+The Astrophysical Journal,1538-4357,Unsure
+The China Quarterly,1468-2648,Double blind
+The Cochrane Database of Systematic Reviews,1469-493X,Not blinded
+The European Physical Journal C,1434-6052,Single blind
+The Journal of Clinical Investigation,1558-8238,Unsure
+The Journal of Finance,1540-6261,Unsure
+The Journal of Physical Chemistry Letters,1948-7185,Single blind
+The Lancet,1474-547X,Unsure
+The Lancet Neurology,1474-4422,Unsure
+The Lancet Oncology,1470-2045,Unsure
+The Modern Language Journal,1540-4781,Double blind
+The New England Journal of Medicine,1533-4406,Single blind
+The Quarterly Journal of Economics,1531-4650,Unsure
+The Review of Economic Studies,1467-937X,Unsure
+The Review of Financial Studies,1465-7368,Unsure
+Tourism Management,0261-5177,Double blind
+World Development,1873-5991,Double blind

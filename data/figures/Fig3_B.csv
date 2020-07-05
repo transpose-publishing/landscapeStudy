@@ -1,26 +1,194 @@
-area,peer_review_type,n,prop
-"Business, Economics & Management",Double blind,11,0.55
-"Business, Economics & Management",Unsure,9,0.45
-Chemical & Materials Sciences,Single blind,10,0.47619047619047616
-Chemical & Materials Sciences,Other,3,0.14285714285714285
-Chemical & Materials Sciences,Unsure,8,0.38095238095238093
-Engineering & Computer Science,Single blind,8,0.3333333333333333
-Engineering & Computer Science,Double blind,3,0.125
-Engineering & Computer Science,Other,3,0.125
-Engineering & Computer Science,Unsure,10,0.4166666666666667
-Health & Medical Sciences,Single blind,21,0.4666666666666667
-Health & Medical Sciences,Not blinded,2,0.044444444444444446
-Health & Medical Sciences,Other,4,0.08888888888888889
-Health & Medical Sciences,Unsure,18,0.4
-"Humanities, Literature & Arts",Double blind,15,0.75
-"Humanities, Literature & Arts",Other,2,0.1
-"Humanities, Literature & Arts",Unsure,3,0.15
-Life Sciences & Earth Sciences,Single blind,9,0.4090909090909091
-Life Sciences & Earth Sciences,Other,7,0.3181818181818182
-Life Sciences & Earth Sciences,Unsure,6,0.2727272727272727
-Physics & Mathematics,Single blind,12,0.6
-Physics & Mathematics,Other,2,0.1
-Physics & Mathematics,Unsure,6,0.3
-Social Sciences,Single blind,2,0.09523809523809523
-Social Sciences,Double blind,18,0.8571428571428571
-Social Sciences,Other,1,0.047619047619047616
+journal,issn,area,pr_type_clean
+Academic Medicine,1040-2446,Social Sciences,Single blind
+ACS Applied Materials & Interfaces,1944-8252,Chemical & Materials Sciences,Single blind
+ACS Applied Materials & Interfaces,1944-8252,Engineering & Computer Science,Single blind
+Accounts of Chemical Research,1520-4898,Chemical & Materials Sciences,Single blind
+ACS Catalysis,2155-5435,Chemical & Materials Sciences,Single blind
+Academy of Management Journal,0001-4273,"Business, Economics & Management",Double blind
+ACS Nano,1936-086X,Chemical & Materials Sciences,Single blind
+ACS Nano,1936-086X,Engineering & Computer Science,Single blind
+Advanced Energy Materials,1614-6840,Chemical & Materials Sciences,Unsure
+Advanced Energy Materials,1614-6840,Engineering & Computer Science,Unsure
+Advanced Functional Materials,1616-3028,Chemical & Materials Sciences,Unsure
+Advanced Functional Materials,1616-3028,Engineering & Computer Science,Unsure
+Advanced Materials,1521-4095,Chemical & Materials Sciences,Unsure
+Advanced Materials,1521-4095,Engineering & Computer Science,Unsure
+American Economic Review,0002-8282,"Business, Economics & Management",Double blind
+American Journal of Political Science,1540-5907,Social Sciences,Double blind
+American Journal of Public Health,1541-0048,Social Sciences,Double blind
+American Political Science Review,1537-5943,Social Sciences,Double blind
+American Sociological Review,1939-8271,Social Sciences,Double blind
+Angewandte Chemie International Edition,1521-3773,Chemical & Materials Sciences,Single blind
+Annals of Internal Medicine,0003-4819,Health & Medical Sciences,Single blind
+Annals of Oncology,1569-8041,Health & Medical Sciences,Unsure
+Annals of the Rheumatic Diseases,1468-2060,Health & Medical Sciences,Single blind
+Annals of Tourism Research,0160-7383,Social Sciences,Double blind
+Applied Energy,0306-2619,Engineering & Computer Science,Single blind
+Applied Energy,0306-2619,Life Sciences & Earth Sciences,Single blind
+Applied Linguistics,1477-450X,"Humanities, Literature & Arts",Double blind
+Applied Physics Letters,1077-3118,Physics & Mathematics,Unsure
+Astronomy & Astrophysics,1432-0746,Physics & Mathematics,Unsure
+Biomaterials,0142-9612,Engineering & Computer Science,Single blind
+Biomaterials,0142-9612,Health & Medical Sciences,Single blind
+Blood,1528-0020,Health & Medical Sciences,Single blind
+BMJ,1756-1833,Health & Medical Sciences,Not blinded
+Cancer Cell,1535-6108,Health & Medical Sciences,Single blind
+Cancer Research,0099-7013,Health & Medical Sciences,Unsure
+Cell,1097-4172,Health & Medical Sciences,Single blind
+Cell,1097-4172,Life Sciences & Earth Sciences,Single blind
+Cell Metabolism,1550-4131,Life Sciences & Earth Sciences,Single blind
+Cell Stem Cell,1934-5909,Life Sciences & Earth Sciences,Single blind
+"Chemical communications (Cambridge, England)",0144-557X,Chemical & Materials Sciences,Single blind
+Chemical Reviews,1520-6890,Chemical & Materials Sciences,Unsure
+Chemical Society reviews,1460-4744,Chemical & Materials Sciences,Unsure
+Chemistry of Materials,1520-5002,Chemical & Materials Sciences,Unsure
+Chemistry of Materials,1520-5002,Engineering & Computer Science,Unsure
+Circulation,0009-7322,Health & Medical Sciences,Single blind
+Circulation Research,1524-4571,Health & Medical Sciences,Single blind
+Clinical Cancer Research,1557-3265,Health & Medical Sciences,Unsure
+Computers & Education,0360-1315,Social Sciences,Double blind
+Diabetes Care,1935-5548,Health & Medical Sciences,Single blind
+Digital Journalism,2167-082X,"Humanities, Literature & Arts",Double blind
+Econometrica,1468-0262,"Business, Economics & Management",Unsure
+Energy and Environmental Science,1754-5706,Chemical & Materials Sciences,Single blind
+Energy and Environmental Science,1754-5706,Engineering & Computer Science,Single blind
+Environmental Science & Technology,0013-936X,Life Sciences & Earth Sciences,Unsure
+European Heart Journal,1522-9645,Health & Medical Sciences,Unsure
+European Urology,0302-2838,Health & Medical Sciences,Single blind
+Gastroenterology,0016-5085,Health & Medical Sciences,Single blind
+Gender & Society,1552-3977,"Humanities, Literature & Arts",Double blind
+Geophysical Research Letters,1944-8007,Physics & Mathematics,Unsure
+Global Environmental Change,0959-3780,Social Sciences,Double blind
+Government Information Quarterly,0740-624X,Social Sciences,Other
+Gut,1468-3288,Health & Medical Sciences,Single blind
+Health Affairs,1544-5208,Social Sciences,Double blind
+Hepatology,1527-3350,Health & Medical Sciences,Unsure
+IEEE Communications Magazine,0163-6804,Engineering & Computer Science,Unsure
+IEEE Communications Surveys & Tutorials,1553-877X,Engineering & Computer Science,Unsure
+"IEEE Conference on Computer Vision and Pattern Recognition, CVPR","Only ISBN available, counts as a book",Engineering & Computer Science,Double blind
+IEEE International Conference on Computer Vision,2380-7504,Engineering & Computer Science,Double blind
+IEEE Transactions on Automatic Control,0018-9286,Physics & Mathematics,Unsure
+IEEE Transactions on Industrial Electronics,0278-0046,Engineering & Computer Science,Unsure
+IEEE Transactions on Pattern Analysis and Machine Intelligence,0162-8828,Engineering & Computer Science,Unsure
+IEEE Transactions on Power Electronics,0885-8993,Engineering & Computer Science,Single blind
+IEEE Transactions on Signal Processing,1053-587X,Physics & Mathematics,Single blind
+Immunity,1074-7613,Health & Medical Sciences,Single blind
+International Journal of Communication,1932-8036,"Humanities, Literature & Arts",Unsure
+International Journal of Production Economics,0925-5273,"Business, Economics & Management",Double blind
+Journal of the American Medical Association,1538-3598,Health & Medical Sciences,Single blind
+Journal of Allergy and Clinical Immunology,0091-6749,Health & Medical Sciences,Unsure
+Journal of Banking & Finance,0378-4266,"Business, Economics & Management",Double blind
+Journal of Business Ethics,1573-0697,"Business, Economics & Management",Double blind
+Journal of Business Ethics,1573-0697,Social Sciences,Double blind
+Journal of Business Research,0148-2963,"Business, Economics & Management",Double blind
+Journal of Cleaner Production,0959-6526,Life Sciences & Earth Sciences,Single blind
+Journal of Cleaner Production,0959-6526,Social Sciences,Single blind
+Journal of Clinical Oncology,1527-7755,Health & Medical Sciences,Single blind
+Journal of Communication,1460-2466,"Humanities, Literature & Arts",Unsure
+Journal of Cosmology and Astroparticle Physics,1475-7516,Physics & Mathematics,Single blind
+Journal of Economic Perspectives,1944-7965,"Business, Economics & Management",Unsure
+Journal of Educational Psychology,1939-2176,Social Sciences,Double blind
+Journal of Financial Economics,0304-405X,"Business, Economics & Management",Unsure
+Journal of Geophysical Research,2156-2202,Physics & Mathematics,Unsure
+Journal of Hepatology,0168-8278,Health & Medical Sciences,Unsure
+Journal of High Energy Physics,1029-8479,Physics & Mathematics,Single blind
+Journal of Management,1557-1211,"Business, Economics & Management",Double blind
+Journal of Materials Chemistry. A,2050-7488,Chemical & Materials Sciences,Single blind
+Journal of Materials Chemistry. A,2050-7488,Engineering & Computer Science,Single blind
+Journal of Pragmatics,0378-2166,"Humanities, Literature & Arts",Double blind
+Journal of the American Chemical Society,1520-5126,Chemical & Materials Sciences,Single blind
+Journal of the American College of Cardiology,0735-1097,Health & Medical Sciences,Single blind
+Journal of Youth and Adolescence,1573-6601,Social Sciences,Double blind
+Journalism,1741-3001,"Humanities, Literature & Arts",Double blind
+Journalism Practice,1751-2786,"Humanities, Literature & Arts",Double blind
+Journalism Studies,1461-670X,"Humanities, Literature & Arts",Double blind
+Land Use Policy,0264-8377,Social Sciences,Double blind
+Language Learning,1467-9922,"Humanities, Literature & Arts",Other
+Lingua,0024-3841,"Humanities, Literature & Arts",Double blind
+Management Information Systems Quarterly,2162-9730,"Business, Economics & Management",Double blind
+Management Science,1526-5501,"Business, Economics & Management",Double blind
+"Media, Culture & Society",1460-3675,"Humanities, Literature & Arts",Double blind
+Molecular Cell,1097-2765,Life Sciences & Earth Sciences,Unsure
+Monthly Notices of the Royal Astronomical Society,1365-2966,Physics & Mathematics,Single blind
+Nano Letters,1530-6992,Chemical & Materials Sciences,Unsure
+Nano Letters,1530-6992,Engineering & Computer Science,Unsure
+Nanoscale,2040-3372,Chemical & Materials Sciences,Unsure
+Nanoscale,2040-3372,Engineering & Computer Science,Unsure
+Nature,1476-4687,Life Sciences & Earth Sciences,Other
+Nature Biotechnology,1546-1696,Life Sciences & Earth Sciences,Other
+Nature Cell Biology,1476-4679,Life Sciences & Earth Sciences,Other
+Nature Chemistry,1755-4349,Chemical & Materials Sciences,Other
+Nature Climate Change,1758-6798,Life Sciences & Earth Sciences,Other
+Nature Communications,2041-1723,Life Sciences & Earth Sciences,Other
+Nature Genetics,1546-1718,Health & Medical Sciences,Other
+Nature Genetics,1546-1718,Life Sciences & Earth Sciences,Other
+Nature Immunology,1529-2916,Health & Medical Sciences,Other
+Nature Materials,1476-4660,Chemical & Materials Sciences,Other
+Nature Materials,1476-4660,Engineering & Computer Science,Other
+Nature Medicine,1546-170X,Health & Medical Sciences,Other
+Nature Methods,1548-7105,Life Sciences & Earth Sciences,Other
+Nature Nanotechnology,1748-3395,Chemical & Materials Sciences,Other
+Nature Nanotechnology,1748-3395,Engineering & Computer Science,Other
+Nature Neuroscience,1546-1726,Health & Medical Sciences,Other
+Nature Photonics,1749-4893,Engineering & Computer Science,Other
+Nature Photonics,1749-4893,Physics & Mathematics,Other
+Nature Physics,1745-2481,Physics & Mathematics,Other
+Nature Reviews Cancer,1474-1768,Health & Medical Sciences,Unsure
+Nature Reviews Genetics,1471-0064,Life Sciences & Earth Sciences,Unsure
+Nature Reviews Immunology,1474-1733,Health & Medical Sciences,Unsure
+Nature Reviews Neuroscience,1471-0048,Health & Medical Sciences,Unsure
+Nature Reviews. Drug Discovery,1474-1784,Health & Medical Sciences,Unsure
+Nature Reviews. Molecular Cell Biology,1471-0080,Life Sciences & Earth Sciences,Unsure
+Neural Information Processing Systems (NIPS),NIPS-ISSN,Engineering & Computer Science,Double blind
+NeuroImage,1053-8119,Health & Medical Sciences,Single blind
+Neuron,1097-4199,Health & Medical Sciences,Single blind
+Neuron,1097-4199,Life Sciences & Earth Sciences,Single blind
+New Media and Society,1461-7315,Social Sciences,Double blind
+Noûs,1468-0068,"Humanities, Literature & Arts",Other
+Nucleic Acids Research,1362-4962,Life Sciences & Earth Sciences,Unsure
+Obstetrical & Gynecological Survey,1533-9866,Health & Medical Sciences,Unsure
+Optics Express,1094-4087,Physics & Mathematics,Single blind
+Pediatrics,1098-4275,Health & Medical Sciences,Unsure
+Philosophical Studies,1573-0883,"Humanities, Literature & Arts",Double blind
+Physical Review B,1550-235X,Physics & Mathematics,Single blind
+Physical Review D,1550- 2368,Physics & Mathematics,Single blind
+Physical Review Letters,1079-7114,Physics & Mathematics,Single blind
+Physical Review X,2160-3308,Physics & Mathematics,Single blind
+Physics Letters B,0375-9601,Physics & Mathematics,Single blind
+PLoS One,1932-6203,Health & Medical Sciences,Single blind
+PLoS One,1932-6203,Life Sciences & Earth Sciences,Single blind
+Proceedings of the National Academy of Sciences,1091-6490,Health & Medical Sciences,Single blind
+Proceedings of the National Academy of Sciences,1091-6490,Life Sciences & Earth Sciences,Single blind
+Progress in Human Geography,1477-0288,Social Sciences,Double blind
+Public Opinion Quarterly,1537-5331,"Humanities, Literature & Arts",Double blind
+Regional Studies,1360-0591,Social Sciences,Double blind
+Renewable and Sustainable Energy Reviews,1364-0321,Engineering & Computer Science,Single blind
+Research Policy,0048-7333,Social Sciences,Double blind
+Review of Economics and Statistics,0034-6535,"Business, Economics & Management",Unsure
+Reviews of Modern Physics,1539-0756,Physics & Mathematics,Single blind
+Science,1095-9203,Life Sciences & Earth Sciences,Unsure
+Science Translational Medicine,1946-6234,Health & Medical Sciences,Unsure
+Scientific Reports,2045-2322,Life Sciences & Earth Sciences,Single blind
+Social Science & Medicine,0277-9536,Social Sciences,Double blind
+Strategic Management Journal,1097-0266,"Business, Economics & Management",Unsure
+Synthese,1573-0964,"Humanities, Literature & Arts",Double blind
+System,0346-251X,"Humanities, Literature & Arts",Double blind
+Teaching and Teacher Education,0742-051X,Social Sciences,Double blind
+TESOL Quarterly,1545-7249,"Humanities, Literature & Arts",Unsure
+The Astrophysical Journal,1538-4357,Physics & Mathematics,Unsure
+The China Quarterly,1468-2648,"Humanities, Literature & Arts",Double blind
+The Cochrane Database of Systematic Reviews,1469-493X,Health & Medical Sciences,Not blinded
+The European Physical Journal C,1434-6052,Physics & Mathematics,Single blind
+The Journal of Clinical Investigation,1558-8238,Health & Medical Sciences,Unsure
+The Journal of Finance,1540-6261,"Business, Economics & Management",Unsure
+The Journal of Physical Chemistry Letters,1948-7185,Chemical & Materials Sciences,Single blind
+The Lancet,1474-547X,Health & Medical Sciences,Unsure
+The Lancet Neurology,1474-4422,Health & Medical Sciences,Unsure
+The Lancet Oncology,1470-2045,Health & Medical Sciences,Unsure
+The Modern Language Journal,1540-4781,"Humanities, Literature & Arts",Double blind
+The New England Journal of Medicine,1533-4406,Health & Medical Sciences,Single blind
+The Quarterly Journal of Economics,1531-4650,"Business, Economics & Management",Unsure
+The Review of Economic Studies,1467-937X,"Business, Economics & Management",Unsure
+The Review of Financial Studies,1465-7368,"Business, Economics & Management",Unsure
+Tourism Management,0261-5177,"Business, Economics & Management",Double blind
+World Development,1873-5991,"Business, Economics & Management",Double blind

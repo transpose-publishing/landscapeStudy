@@ -121,9 +121,7 @@ refined_with_areas %>%
   write_csv("data/figures/Fig7_A.csv")
   
 
-refined_with_areas %>%
-  get_univ_data(area) %>% 
-  select(area, n, prop, prop_numeric) %>% 
+select_bivariate() %>% 
   write_csv("data/figures/Fig7_B.csv")
 ```
 
@@ -226,14 +224,11 @@ p1 / p2 +
 (B) Type of peer review used by disciplines (n = 193)
 
 ```{r peer-type-data, include=FALSE}
-pr_type_prop %>% 
-  select(-order) %>% 
+select_univariate(pr_type_clean) %>% 
   write_csv("data/figures/Fig3_A.csv")
 
-peer_type_data %>% 
-  select(-order, peer_review_type = pr_type_clean) %>% 
+select_bivariate(pr_type_clean) %>% 
   write_csv("data/figures/Fig3_B.csv")
-
 ```
 
 
