@@ -6,7 +6,7 @@ library(extrafont)
 # register fonts with extrafont
 extrafont::font_import(paths = "c:/Users/ThomasKlebel/AppData/Local/Microsoft/Windows/Fonts/")
 
-# depending on the device you are using, you might need to load them explicietly
+# depending on the device you are using, you might need to load them explicitly
 extrafont::loadfonts(device = "win")
 # or
 extrafont::loadfonts()
