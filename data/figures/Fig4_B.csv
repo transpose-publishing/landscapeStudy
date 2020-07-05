@@ -1,27 +1,194 @@
-area,open_peer_review.identities_revealed_to_authors,n,prop
-"Business, Economics & Management",No,4,0.2
-"Business, Economics & Management",Not specified,16,0.8
-Chemical & Materials Sciences,Conditional,5,0.23809523809523808
-Chemical & Materials Sciences,Optional,6,0.2857142857142857
-Chemical & Materials Sciences,No,1,0.047619047619047616
-Chemical & Materials Sciences,Not specified,9,0.42857142857142855
-Engineering & Computer Science,Conditional,2,0.08333333333333333
-Engineering & Computer Science,Optional,4,0.16666666666666666
-Engineering & Computer Science,No,3,0.125
-Engineering & Computer Science,Not specified,15,0.625
-Health & Medical Sciences,Yes,2,0.044444444444444446
-Health & Medical Sciences,Conditional,1,0.022222222222222223
-Health & Medical Sciences,Optional,12,0.26666666666666666
-Health & Medical Sciences,No,8,0.17777777777777778
-Health & Medical Sciences,Not specified,22,0.4888888888888889
-"Humanities, Literature & Arts",No,5,0.25
-"Humanities, Literature & Arts",Not specified,15,0.75
-Life Sciences & Earth Sciences,Conditional,1,0.045454545454545456
-Life Sciences & Earth Sciences,Optional,13,0.5909090909090909
-Life Sciences & Earth Sciences,No,2,0.09090909090909091
-Life Sciences & Earth Sciences,Not specified,6,0.2727272727272727
-Physics & Mathematics,Optional,4,0.2
-Physics & Mathematics,No,6,0.3
-Physics & Mathematics,Not specified,10,0.5
-Social Sciences,No,3,0.14285714285714285
-Social Sciences,Not specified,18,0.8571428571428571
+journal,issn,open_peer_review.identities_revealed_to_authors
+Academic Medicine,1040-2446,Not specified
+ACS Applied Materials & Interfaces,1944-8252,Conditional
+ACS Applied Materials & Interfaces,1944-8252,Conditional
+Accounts of Chemical Research,1520-4898,Conditional
+ACS Catalysis,2155-5435,Conditional
+Academy of Management Journal,0001-4273,Not specified
+ACS Nano,1936-086X,Conditional
+ACS Nano,1936-086X,Conditional
+Advanced Energy Materials,1614-6840,Not specified
+Advanced Energy Materials,1614-6840,Not specified
+Advanced Functional Materials,1616-3028,Not specified
+Advanced Functional Materials,1616-3028,Not specified
+Advanced Materials,1521-4095,Not specified
+Advanced Materials,1521-4095,Not specified
+American Economic Review,0002-8282,Not specified
+American Journal of Political Science,1540-5907,Not specified
+American Journal of Public Health,1541-0048,Not specified
+American Political Science Review,1537-5943,Not specified
+American Sociological Review,1939-8271,Not specified
+Angewandte Chemie International Edition,1521-3773,Not specified
+Annals of Internal Medicine,0003-4819,Optional
+Annals of Oncology,1569-8041,Not specified
+Annals of the Rheumatic Diseases,1468-2060,Not specified
+Annals of Tourism Research,0160-7383,Not specified
+Applied Energy,0306-2619,Not specified
+Applied Energy,0306-2619,Not specified
+Applied Linguistics,1477-450X,No
+Applied Physics Letters,1077-3118,Not specified
+Astronomy & Astrophysics,1432-0746,Not specified
+Biomaterials,0142-9612,Not specified
+Biomaterials,0142-9612,Not specified
+Blood,1528-0020,Not specified
+BMJ,1756-1833,Yes
+Cancer Cell,1535-6108,No
+Cancer Research,0099-7013,Not specified
+Cell,1097-4172,Optional
+Cell,1097-4172,Optional
+Cell Metabolism,1550-4131,Optional
+Cell Stem Cell,1934-5909,Optional
+"Chemical communications (Cambridge, England)",0144-557X,Optional
+Chemical Reviews,1520-6890,Not specified
+Chemical Society reviews,1460-4744,Optional
+Chemistry of Materials,1520-5002,Not specified
+Chemistry of Materials,1520-5002,Not specified
+Circulation,0009-7322,Not specified
+Circulation Research,1524-4571,Not specified
+Clinical Cancer Research,1557-3265,Not specified
+Computers & Education,0360-1315,Not specified
+Diabetes Care,1935-5548,Not specified
+Digital Journalism,2167-082X,Not specified
+Econometrica,1468-0262,Not specified
+Energy and Environmental Science,1754-5706,Optional
+Energy and Environmental Science,1754-5706,Optional
+Environmental Science & Technology,0013-936X,Not specified
+European Heart Journal,1522-9645,Not specified
+European Urology,0302-2838,Not specified
+Gastroenterology,0016-5085,No
+Gender & Society,1552-3977,Not specified
+Geophysical Research Letters,1944-8007,Not specified
+Global Environmental Change,0959-3780,Not specified
+Government Information Quarterly,0740-624X,Not specified
+Gut,1468-3288,No
+Health Affairs,1544-5208,Not specified
+Hepatology,1527-3350,No
+IEEE Communications Magazine,0163-6804,Not specified
+IEEE Communications Surveys & Tutorials,1553-877X,Not specified
+"IEEE Conference on Computer Vision and Pattern Recognition, CVPR","Only ISBN available, counts as a book",Not specified
+IEEE International Conference on Computer Vision,2380-7504,No
+IEEE Transactions on Automatic Control,0018-9286,Not specified
+IEEE Transactions on Industrial Electronics,0278-0046,Not specified
+IEEE Transactions on Pattern Analysis and Machine Intelligence,0162-8828,Not specified
+IEEE Transactions on Power Electronics,0885-8993,No
+IEEE Transactions on Signal Processing,1053-587X,No
+Immunity,1074-7613,No
+International Journal of Communication,1932-8036,Not specified
+International Journal of Production Economics,0925-5273,Not specified
+Journal of the American Medical Association,1538-3598,Optional
+Journal of Allergy and Clinical Immunology,0091-6749,Not specified
+Journal of Banking & Finance,0378-4266,Not specified
+Journal of Business Ethics,1573-0697,Not specified
+Journal of Business Ethics,1573-0697,Not specified
+Journal of Business Research,0148-2963,Not specified
+Journal of Cleaner Production,0959-6526,Not specified
+Journal of Cleaner Production,0959-6526,Not specified
+Journal of Clinical Oncology,1527-7755,Not specified
+Journal of Communication,1460-2466,Not specified
+Journal of Cosmology and Astroparticle Physics,1475-7516,Optional
+Journal of Economic Perspectives,1944-7965,Not specified
+Journal of Educational Psychology,1939-2176,Not specified
+Journal of Financial Economics,0304-405X,Not specified
+Journal of Geophysical Research,2156-2202,Not specified
+Journal of Hepatology,0168-8278,Not specified
+Journal of High Energy Physics,1029-8479,Not specified
+Journal of Management,1557-1211,No
+Journal of Materials Chemistry. A,2050-7488,Not specified
+Journal of Materials Chemistry. A,2050-7488,Not specified
+Journal of Pragmatics,0378-2166,Not specified
+Journal of the American Chemical Society,1520-5126,No
+Journal of the American College of Cardiology,0735-1097,Not specified
+Journal of Youth and Adolescence,1573-6601,Not specified
+Journalism,1741-3001,Not specified
+Journalism Practice,1751-2786,Not specified
+Journalism Studies,1461-670X,Not specified
+Land Use Policy,0264-8377,No
+Language Learning,1467-9922,Not specified
+Lingua,0024-3841,No
+Management Information Systems Quarterly,2162-9730,No
+Management Science,1526-5501,No
+"Media, Culture & Society",1460-3675,No
+Molecular Cell,1097-2765,Not specified
+Monthly Notices of the Royal Astronomical Society,1365-2966,Not specified
+Nano Letters,1530-6992,Not specified
+Nano Letters,1530-6992,Not specified
+Nanoscale,2040-3372,Not specified
+Nanoscale,2040-3372,Not specified
+Nature,1476-4687,Not specified
+Nature Biotechnology,1546-1696,Optional
+Nature Cell Biology,1476-4679,Optional
+Nature Chemistry,1755-4349,Optional
+Nature Climate Change,1758-6798,Optional
+Nature Communications,2041-1723,Optional
+Nature Genetics,1546-1718,Optional
+Nature Genetics,1546-1718,Optional
+Nature Immunology,1529-2916,Optional
+Nature Materials,1476-4660,Optional
+Nature Materials,1476-4660,Optional
+Nature Medicine,1546-170X,Optional
+Nature Methods,1548-7105,Optional
+Nature Nanotechnology,1748-3395,Optional
+Nature Nanotechnology,1748-3395,Optional
+Nature Neuroscience,1546-1726,Optional
+Nature Photonics,1749-4893,Optional
+Nature Photonics,1749-4893,Optional
+Nature Physics,1745-2481,Optional
+Nature Reviews Cancer,1474-1768,Optional
+Nature Reviews Genetics,1471-0064,Optional
+Nature Reviews Immunology,1474-1733,Optional
+Nature Reviews Neuroscience,1471-0048,Optional
+Nature Reviews. Drug Discovery,1474-1784,Optional
+Nature Reviews. Molecular Cell Biology,1471-0080,Optional
+Neural Information Processing Systems (NIPS),NIPS-ISSN,No
+NeuroImage,1053-8119,Not specified
+Neuron,1097-4199,No
+Neuron,1097-4199,No
+New Media and Society,1461-7315,No
+Noûs,1468-0068,No
+Nucleic Acids Research,1362-4962,Not specified
+Obstetrical & Gynecological Survey,1533-9866,Not specified
+Optics Express,1094-4087,Optional
+Pediatrics,1098-4275,No
+Philosophical Studies,1573-0883,No
+Physical Review B,1550-235X,No
+Physical Review D,1550- 2368,No
+Physical Review Letters,1079-7114,No
+Physical Review X,2160-3308,No
+Physics Letters B,0375-9601,Not specified
+PLoS One,1932-6203,Optional
+PLoS One,1932-6203,Optional
+Proceedings of the National Academy of Sciences,1091-6490,Conditional
+Proceedings of the National Academy of Sciences,1091-6490,Conditional
+Progress in Human Geography,1477-0288,Not specified
+Public Opinion Quarterly,1537-5331,Not specified
+Regional Studies,1360-0591,Not specified
+Renewable and Sustainable Energy Reviews,1364-0321,Not specified
+Research Policy,0048-7333,Not specified
+Review of Economics and Statistics,0034-6535,Not specified
+Reviews of Modern Physics,1539-0756,No
+Science,1095-9203,No
+Science Translational Medicine,1946-6234,No
+Scientific Reports,2045-2322,Optional
+Social Science & Medicine,0277-9536,Not specified
+Strategic Management Journal,1097-0266,Not specified
+Synthese,1573-0964,Not specified
+System,0346-251X,Not specified
+Teaching and Teacher Education,0742-051X,No
+TESOL Quarterly,1545-7249,Not specified
+The Astrophysical Journal,1538-4357,Not specified
+The China Quarterly,1468-2648,Not specified
+The Cochrane Database of Systematic Reviews,1469-493X,Yes
+The European Physical Journal C,1434-6052,Not specified
+The Journal of Clinical Investigation,1558-8238,Not specified
+The Journal of Finance,1540-6261,Not specified
+The Journal of Physical Chemistry Letters,1948-7185,Conditional
+The Lancet,1474-547X,Not specified
+The Lancet Neurology,1474-4422,Not specified
+The Lancet Oncology,1470-2045,Not specified
+The Modern Language Journal,1540-4781,Not specified
+The New England Journal of Medicine,1533-4406,Not specified
+The Quarterly Journal of Economics,1531-4650,Not specified
+The Review of Economic Studies,1467-937X,Not specified
+The Review of Financial Studies,1465-7368,Not specified
+Tourism Management,0261-5177,No
+World Development,1873-5991,Not specified

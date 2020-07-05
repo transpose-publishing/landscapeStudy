@@ -1,33 +1,2395 @@
-variable,label,value,n,prop
-opr_comments,Is there public commenting during formal peer review?,No,7,0.04093567251461988
-opr_comments,Is there public commenting during formal peer review?,Not specified,164,0.9590643274853801
-opr_identities_published,Are reviewer identities being published?,Conditional,3,0.017543859649122806
-opr_identities_published,Are reviewer identities being published?,No,28,0.16374269005847952
-opr_identities_published,Are reviewer identities being published?,Not specified,138,0.8070175438596491
-opr_identities_published,Are reviewer identities being published?,Optional,2,0.011695906432748537
-opr_indenties_author,Are reviewer identities revealed to the author (even if not published)?,Conditional,6,0.03508771929824561
-opr_indenties_author,Are reviewer identities revealed to the author (even if not published)?,No,31,0.18128654970760233
-opr_indenties_author,Are reviewer identities revealed to the author (even if not published)?,Not specified,100,0.5847953216374269
-opr_indenties_author,Are reviewer identities revealed to the author (even if not published)?,Optional,32,0.1871345029239766
-opr_indenties_author,Are reviewer identities revealed to the author (even if not published)?,Yes,2,0.011695906432748537
-opr_interaction,Is there open interaction (reviewers consult with one another)?,Conditional,1,0.005847953216374269
-opr_interaction,Is there open interaction (reviewers consult with one another)?,No,5,0.029239766081871343
-opr_interaction,Is there open interaction (reviewers consult with one another)?,Not specified,162,0.9473684210526315
-opr_interaction,Is there open interaction (reviewers consult with one another)?,Yes,3,0.017543859649122806
-opr_letters,Are editorial decision letters being published?,Conditional,1,0.005847953216374269
-opr_letters,Are editorial decision letters being published?,No,10,0.05847953216374269
-opr_letters,Are editorial decision letters being published?,Not specified,159,0.9298245614035088
-opr_letters,Are editorial decision letters being published?,Yes,1,0.005847953216374269
-opr_reports,Are peer review reports being published?,Conditional,2,0.011695906432748537
-opr_reports,Are peer review reports being published?,No,17,0.09941520467836257
-opr_reports,Are peer review reports being published?,Not specified,150,0.8771929824561403
-opr_reports,Are peer review reports being published?,Optional,1,0.005847953216374269
-opr_reports,Are peer review reports being published?,Yes,1,0.005847953216374269
-opr_responses,Are author responses to reviews being published?,Conditional,1,0.005847953216374269
-opr_responses,Are author responses to reviews being published?,No,9,0.05263157894736842
-opr_responses,Are author responses to reviews being published?,Not specified,158,0.9239766081871345
-opr_responses,Are author responses to reviews being published?,Optional,2,0.011695906432748537
-opr_responses,Are author responses to reviews being published?,Yes,1,0.005847953216374269
-opr_versions,Are previous versions of the manuscript being published?,Conditional,1,0.005847953216374269
-opr_versions,Are previous versions of the manuscript being published?,No,8,0.04678362573099415
-opr_versions,Are previous versions of the manuscript being published?,Not specified,162,0.9473684210526315
+journal,issn,variable,label,value
+Academic Medicine,1040-2446,opr_reports,Are peer review reports being published?,Not specified
+ACS Applied Materials & Interfaces,1944-8252,opr_reports,Are peer review reports being published?,Not specified
+Accounts of Chemical Research,1520-4898,opr_reports,Are peer review reports being published?,Not specified
+ACS Catalysis,2155-5435,opr_reports,Are peer review reports being published?,Not specified
+Academy of Management Journal,0001-4273,opr_reports,Are peer review reports being published?,Not specified
+ACS Nano,1936-086X,opr_reports,Are peer review reports being published?,Not specified
+Advanced Energy Materials,1614-6840,opr_reports,Are peer review reports being published?,Not specified
+Advanced Functional Materials,1616-3028,opr_reports,Are peer review reports being published?,Not specified
+Advanced Materials,1521-4095,opr_reports,Are peer review reports being published?,Not specified
+American Economic Review,0002-8282,opr_reports,Are peer review reports being published?,Not specified
+American Journal of Political Science,1540-5907,opr_reports,Are peer review reports being published?,Not specified
+American Journal of Public Health,1541-0048,opr_reports,Are peer review reports being published?,Not specified
+American Political Science Review,1537-5943,opr_reports,Are peer review reports being published?,Not specified
+American Sociological Review,1939-8271,opr_reports,Are peer review reports being published?,Not specified
+Angewandte Chemie International Edition,1521-3773,opr_reports,Are peer review reports being published?,Not specified
+Annals of Internal Medicine,0003-4819,opr_reports,Are peer review reports being published?,Not specified
+Annals of Oncology,1569-8041,opr_reports,Are peer review reports being published?,Not specified
+Annals of the Rheumatic Diseases,1468-2060,opr_reports,Are peer review reports being published?,Not specified
+Annals of Tourism Research,0160-7383,opr_reports,Are peer review reports being published?,Not specified
+Applied Energy,0306-2619,opr_reports,Are peer review reports being published?,Not specified
+Applied Linguistics,1477-450X,opr_reports,Are peer review reports being published?,No
+Applied Physics Letters,1077-3118,opr_reports,Are peer review reports being published?,Not specified
+Astronomy & Astrophysics,1432-0746,opr_reports,Are peer review reports being published?,Not specified
+Biomaterials,0142-9612,opr_reports,Are peer review reports being published?,Not specified
+Blood,1528-0020,opr_reports,Are peer review reports being published?,Not specified
+BMJ,1756-1833,opr_reports,Are peer review reports being published?,Conditional
+Cancer Cell,1535-6108,opr_reports,Are peer review reports being published?,Not specified
+Cancer Research,0099-7013,opr_reports,Are peer review reports being published?,Not specified
+Cell,1097-4172,opr_reports,Are peer review reports being published?,Not specified
+Cell Metabolism,1550-4131,opr_reports,Are peer review reports being published?,Not specified
+Cell Stem Cell,1934-5909,opr_reports,Are peer review reports being published?,Not specified
+"Chemical communications (Cambridge, England)",0144-557X,opr_reports,Are peer review reports being published?,No
+Chemical Reviews,1520-6890,opr_reports,Are peer review reports being published?,Not specified
+Chemical Society reviews,1460-4744,opr_reports,Are peer review reports being published?,No
+Chemistry of Materials,1520-5002,opr_reports,Are peer review reports being published?,Not specified
+Circulation,0009-7322,opr_reports,Are peer review reports being published?,Not specified
+Circulation Research,1524-4571,opr_reports,Are peer review reports being published?,Not specified
+Clinical Cancer Research,1557-3265,opr_reports,Are peer review reports being published?,Not specified
+Computers & Education,0360-1315,opr_reports,Are peer review reports being published?,Not specified
+Diabetes Care,1935-5548,opr_reports,Are peer review reports being published?,Not specified
+Digital Journalism,2167-082X,opr_reports,Are peer review reports being published?,Not specified
+Econometrica,1468-0262,opr_reports,Are peer review reports being published?,Not specified
+Energy and Environmental Science,1754-5706,opr_reports,Are peer review reports being published?,Conditional
+Environmental Science & Technology,0013-936X,opr_reports,Are peer review reports being published?,Not specified
+European Heart Journal,1522-9645,opr_reports,Are peer review reports being published?,Not specified
+European Urology,0302-2838,opr_reports,Are peer review reports being published?,Not specified
+Gastroenterology,0016-5085,opr_reports,Are peer review reports being published?,No
+Gender & Society,1552-3977,opr_reports,Are peer review reports being published?,Not specified
+Geophysical Research Letters,1944-8007,opr_reports,Are peer review reports being published?,Not specified
+Global Environmental Change,0959-3780,opr_reports,Are peer review reports being published?,Not specified
+Government Information Quarterly,0740-624X,opr_reports,Are peer review reports being published?,Not specified
+Gut,1468-3288,opr_reports,Are peer review reports being published?,No
+Health Affairs,1544-5208,opr_reports,Are peer review reports being published?,No
+Hepatology,1527-3350,opr_reports,Are peer review reports being published?,Not specified
+IEEE Communications Magazine,0163-6804,opr_reports,Are peer review reports being published?,Not specified
+IEEE Communications Surveys & Tutorials,1553-877X,opr_reports,Are peer review reports being published?,Not specified
+"IEEE Conference on Computer Vision and Pattern Recognition, CVPR","Only ISBN available, counts as a book",opr_reports,Are peer review reports being published?,Not specified
+IEEE International Conference on Computer Vision,2380-7504,opr_reports,Are peer review reports being published?,No
+IEEE Transactions on Automatic Control,0018-9286,opr_reports,Are peer review reports being published?,Not specified
+IEEE Transactions on Industrial Electronics,0278-0046,opr_reports,Are peer review reports being published?,Not specified
+IEEE Transactions on Pattern Analysis and Machine Intelligence,0162-8828,opr_reports,Are peer review reports being published?,Not specified
+IEEE Transactions on Power Electronics,0885-8993,opr_reports,Are peer review reports being published?,Not specified
+IEEE Transactions on Signal Processing,1053-587X,opr_reports,Are peer review reports being published?,Not specified
+Immunity,1074-7613,opr_reports,Are peer review reports being published?,Not specified
+International Journal of Communication,1932-8036,opr_reports,Are peer review reports being published?,Not specified
+International Journal of Production Economics,0925-5273,opr_reports,Are peer review reports being published?,Not specified
+Journal of the American Medical Association,1538-3598,opr_reports,Are peer review reports being published?,No
+Journal of Allergy and Clinical Immunology,0091-6749,opr_reports,Are peer review reports being published?,Not specified
+Journal of Banking & Finance,0378-4266,opr_reports,Are peer review reports being published?,Not specified
+Journal of Business Ethics,1573-0697,opr_reports,Are peer review reports being published?,Not specified
+Journal of Business Research,0148-2963,opr_reports,Are peer review reports being published?,Not specified
+Journal of Cleaner Production,0959-6526,opr_reports,Are peer review reports being published?,Not specified
+Journal of Clinical Oncology,1527-7755,opr_reports,Are peer review reports being published?,Not specified
+Journal of Communication,1460-2466,opr_reports,Are peer review reports being published?,Not specified
+Journal of Cosmology and Astroparticle Physics,1475-7516,opr_reports,Are peer review reports being published?,No
+Journal of Economic Perspectives,1944-7965,opr_reports,Are peer review reports being published?,Not specified
+Journal of Educational Psychology,1939-2176,opr_reports,Are peer review reports being published?,Not specified
+Journal of Financial Economics,0304-405X,opr_reports,Are peer review reports being published?,Not specified
+Journal of Geophysical Research,2156-2202,opr_reports,Are peer review reports being published?,Not specified
+Journal of Hepatology,0168-8278,opr_reports,Are peer review reports being published?,Not specified
+Journal of High Energy Physics,1029-8479,opr_reports,Are peer review reports being published?,Not specified
+Journal of Management,1557-1211,opr_reports,Are peer review reports being published?,Not specified
+Journal of Materials Chemistry. A,2050-7488,opr_reports,Are peer review reports being published?,Not specified
+Journal of Pragmatics,0378-2166,opr_reports,Are peer review reports being published?,Not specified
+Journal of the American Chemical Society,1520-5126,opr_reports,Are peer review reports being published?,Not specified
+Journal of the American College of Cardiology,0735-1097,opr_reports,Are peer review reports being published?,Not specified
+Journal of Youth and Adolescence,1573-6601,opr_reports,Are peer review reports being published?,Not specified
+Journalism,1741-3001,opr_reports,Are peer review reports being published?,Not specified
+Journalism Practice,1751-2786,opr_reports,Are peer review reports being published?,Not specified
+Journalism Studies,1461-670X,opr_reports,Are peer review reports being published?,Not specified
+Land Use Policy,0264-8377,opr_reports,Are peer review reports being published?,Not specified
+Language Learning,1467-9922,opr_reports,Are peer review reports being published?,Not specified
+Lingua,0024-3841,opr_reports,Are peer review reports being published?,Not specified
+Management Information Systems Quarterly,2162-9730,opr_reports,Are peer review reports being published?,Not specified
+Management Science,1526-5501,opr_reports,Are peer review reports being published?,Not specified
+"Media, Culture & Society",1460-3675,opr_reports,Are peer review reports being published?,Not specified
+Molecular Cell,1097-2765,opr_reports,Are peer review reports being published?,Not specified
+Monthly Notices of the Royal Astronomical Society,1365-2966,opr_reports,Are peer review reports being published?,Not specified
+Nano Letters,1530-6992,opr_reports,Are peer review reports being published?,Not specified
+Nanoscale,2040-3372,opr_reports,Are peer review reports being published?,Not specified
+Nature,1476-4687,opr_reports,Are peer review reports being published?,Not specified
+Nature Biotechnology,1546-1696,opr_reports,Are peer review reports being published?,Not specified
+Nature Cell Biology,1476-4679,opr_reports,Are peer review reports being published?,Not specified
+Nature Chemistry,1755-4349,opr_reports,Are peer review reports being published?,Not specified
+Nature Climate Change,1758-6798,opr_reports,Are peer review reports being published?,Not specified
+Nature Communications,2041-1723,opr_reports,Are peer review reports being published?,Optional
+Nature Genetics,1546-1718,opr_reports,Are peer review reports being published?,Not specified
+Nature Immunology,1529-2916,opr_reports,Are peer review reports being published?,Not specified
+Nature Materials,1476-4660,opr_reports,Are peer review reports being published?,Not specified
+Nature Medicine,1546-170X,opr_reports,Are peer review reports being published?,Not specified
+Nature Methods,1548-7105,opr_reports,Are peer review reports being published?,Not specified
+Nature Nanotechnology,1748-3395,opr_reports,Are peer review reports being published?,Not specified
+Nature Neuroscience,1546-1726,opr_reports,Are peer review reports being published?,Not specified
+Nature Photonics,1749-4893,opr_reports,Are peer review reports being published?,Not specified
+Nature Physics,1745-2481,opr_reports,Are peer review reports being published?,Not specified
+Nature Reviews Cancer,1474-1768,opr_reports,Are peer review reports being published?,Not specified
+Nature Reviews Genetics,1471-0064,opr_reports,Are peer review reports being published?,Not specified
+Nature Reviews Immunology,1474-1733,opr_reports,Are peer review reports being published?,Not specified
+Nature Reviews Neuroscience,1471-0048,opr_reports,Are peer review reports being published?,Not specified
+Nature Reviews. Drug Discovery,1474-1784,opr_reports,Are peer review reports being published?,Not specified
+Nature Reviews. Molecular Cell Biology,1471-0080,opr_reports,Are peer review reports being published?,Not specified
+Neural Information Processing Systems (NIPS),NIPS-ISSN,opr_reports,Are peer review reports being published?,Yes
+NeuroImage,1053-8119,opr_reports,Are peer review reports being published?,Not specified
+Neuron,1097-4199,opr_reports,Are peer review reports being published?,Not specified
+New Media and Society,1461-7315,opr_reports,Are peer review reports being published?,Not specified
+Noûs,1468-0068,opr_reports,Are peer review reports being published?,Not specified
+Nucleic Acids Research,1362-4962,opr_reports,Are peer review reports being published?,Not specified
+Obstetrical & Gynecological Survey,1533-9866,opr_reports,Are peer review reports being published?,Not specified
+Optics Express,1094-4087,opr_reports,Are peer review reports being published?,Not specified
+Pediatrics,1098-4275,opr_reports,Are peer review reports being published?,Not specified
+Philosophical Studies,1573-0883,opr_reports,Are peer review reports being published?,Not specified
+Physical Review B,1550-235X,opr_reports,Are peer review reports being published?,No
+Physical Review D,1550- 2368,opr_reports,Are peer review reports being published?,No
+Physical Review Letters,1079-7114,opr_reports,Are peer review reports being published?,No
+Physical Review X,2160-3308,opr_reports,Are peer review reports being published?,No
+Physics Letters B,0375-9601,opr_reports,Are peer review reports being published?,Not specified
+PLoS One,1932-6203,opr_reports,Are peer review reports being published?,Not specified
+Proceedings of the National Academy of Sciences,1091-6490,opr_reports,Are peer review reports being published?,Not specified
+Progress in Human Geography,1477-0288,opr_reports,Are peer review reports being published?,Not specified
+Public Opinion Quarterly,1537-5331,opr_reports,Are peer review reports being published?,Not specified
+Regional Studies,1360-0591,opr_reports,Are peer review reports being published?,Not specified
+Renewable and Sustainable Energy Reviews,1364-0321,opr_reports,Are peer review reports being published?,Not specified
+Research Policy,0048-7333,opr_reports,Are peer review reports being published?,Not specified
+Review of Economics and Statistics,0034-6535,opr_reports,Are peer review reports being published?,Not specified
+Reviews of Modern Physics,1539-0756,opr_reports,Are peer review reports being published?,No
+Science,1095-9203,opr_reports,Are peer review reports being published?,No
+Science Translational Medicine,1946-6234,opr_reports,Are peer review reports being published?,No
+Scientific Reports,2045-2322,opr_reports,Are peer review reports being published?,Not specified
+Social Science & Medicine,0277-9536,opr_reports,Are peer review reports being published?,Not specified
+Strategic Management Journal,1097-0266,opr_reports,Are peer review reports being published?,Not specified
+Synthese,1573-0964,opr_reports,Are peer review reports being published?,Not specified
+System,0346-251X,opr_reports,Are peer review reports being published?,Not specified
+Teaching and Teacher Education,0742-051X,opr_reports,Are peer review reports being published?,Not specified
+TESOL Quarterly,1545-7249,opr_reports,Are peer review reports being published?,Not specified
+The Astrophysical Journal,1538-4357,opr_reports,Are peer review reports being published?,Not specified
+The China Quarterly,1468-2648,opr_reports,Are peer review reports being published?,Not specified
+The Cochrane Database of Systematic Reviews,1469-493X,opr_reports,Are peer review reports being published?,No
+The European Physical Journal C,1434-6052,opr_reports,Are peer review reports being published?,Not specified
+The Journal of Clinical Investigation,1558-8238,opr_reports,Are peer review reports being published?,Not specified
+The Journal of Finance,1540-6261,opr_reports,Are peer review reports being published?,Not specified
+The Journal of Physical Chemistry Letters,1948-7185,opr_reports,Are peer review reports being published?,Not specified
+The Lancet,1474-547X,opr_reports,Are peer review reports being published?,Not specified
+The Lancet Neurology,1474-4422,opr_reports,Are peer review reports being published?,Not specified
+The Lancet Oncology,1470-2045,opr_reports,Are peer review reports being published?,Not specified
+The Modern Language Journal,1540-4781,opr_reports,Are peer review reports being published?,Not specified
+The New England Journal of Medicine,1533-4406,opr_reports,Are peer review reports being published?,Not specified
+The Quarterly Journal of Economics,1531-4650,opr_reports,Are peer review reports being published?,Not specified
+The Review of Economic Studies,1467-937X,opr_reports,Are peer review reports being published?,Not specified
+The Review of Financial Studies,1465-7368,opr_reports,Are peer review reports being published?,Not specified
+Tourism Management,0261-5177,opr_reports,Are peer review reports being published?,Not specified
+World Development,1873-5991,opr_reports,Are peer review reports being published?,Not specified
+Academic Medicine,1040-2446,opr_responses,"Are author responses to reviews being
+published?",Not specified
+ACS Applied Materials & Interfaces,1944-8252,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Accounts of Chemical Research,1520-4898,opr_responses,"Are author responses to reviews being
+published?",Not specified
+ACS Catalysis,2155-5435,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Academy of Management Journal,0001-4273,opr_responses,"Are author responses to reviews being
+published?",Not specified
+ACS Nano,1936-086X,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Advanced Energy Materials,1614-6840,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Advanced Functional Materials,1616-3028,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Advanced Materials,1521-4095,opr_responses,"Are author responses to reviews being
+published?",Not specified
+American Economic Review,0002-8282,opr_responses,"Are author responses to reviews being
+published?",Not specified
+American Journal of Political Science,1540-5907,opr_responses,"Are author responses to reviews being
+published?",Not specified
+American Journal of Public Health,1541-0048,opr_responses,"Are author responses to reviews being
+published?",Not specified
+American Political Science Review,1537-5943,opr_responses,"Are author responses to reviews being
+published?",Not specified
+American Sociological Review,1939-8271,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Angewandte Chemie International Edition,1521-3773,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Annals of Internal Medicine,0003-4819,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Annals of Oncology,1569-8041,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Annals of the Rheumatic Diseases,1468-2060,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Annals of Tourism Research,0160-7383,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Applied Energy,0306-2619,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Applied Linguistics,1477-450X,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Applied Physics Letters,1077-3118,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Astronomy & Astrophysics,1432-0746,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Biomaterials,0142-9612,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Blood,1528-0020,opr_responses,"Are author responses to reviews being
+published?",Not specified
+BMJ,1756-1833,opr_responses,"Are author responses to reviews being
+published?",Conditional
+Cancer Cell,1535-6108,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Cancer Research,0099-7013,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Cell,1097-4172,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Cell Metabolism,1550-4131,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Cell Stem Cell,1934-5909,opr_responses,"Are author responses to reviews being
+published?",Not specified
+"Chemical communications (Cambridge, England)",0144-557X,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Chemical Reviews,1520-6890,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Chemical Society reviews,1460-4744,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Chemistry of Materials,1520-5002,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Circulation,0009-7322,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Circulation Research,1524-4571,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Clinical Cancer Research,1557-3265,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Computers & Education,0360-1315,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Diabetes Care,1935-5548,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Digital Journalism,2167-082X,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Econometrica,1468-0262,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Energy and Environmental Science,1754-5706,opr_responses,"Are author responses to reviews being
+published?",Optional
+Environmental Science & Technology,0013-936X,opr_responses,"Are author responses to reviews being
+published?",Not specified
+European Heart Journal,1522-9645,opr_responses,"Are author responses to reviews being
+published?",Not specified
+European Urology,0302-2838,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Gastroenterology,0016-5085,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Gender & Society,1552-3977,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Geophysical Research Letters,1944-8007,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Global Environmental Change,0959-3780,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Government Information Quarterly,0740-624X,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Gut,1468-3288,opr_responses,"Are author responses to reviews being
+published?",No
+Health Affairs,1544-5208,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Hepatology,1527-3350,opr_responses,"Are author responses to reviews being
+published?",Not specified
+IEEE Communications Magazine,0163-6804,opr_responses,"Are author responses to reviews being
+published?",Not specified
+IEEE Communications Surveys & Tutorials,1553-877X,opr_responses,"Are author responses to reviews being
+published?",Not specified
+"IEEE Conference on Computer Vision and Pattern Recognition, CVPR","Only ISBN available, counts as a book",opr_responses,"Are author responses to reviews being
+published?",Not specified
+IEEE International Conference on Computer Vision,2380-7504,opr_responses,"Are author responses to reviews being
+published?",No
+IEEE Transactions on Automatic Control,0018-9286,opr_responses,"Are author responses to reviews being
+published?",Not specified
+IEEE Transactions on Industrial Electronics,0278-0046,opr_responses,"Are author responses to reviews being
+published?",Not specified
+IEEE Transactions on Pattern Analysis and Machine Intelligence,0162-8828,opr_responses,"Are author responses to reviews being
+published?",Not specified
+IEEE Transactions on Power Electronics,0885-8993,opr_responses,"Are author responses to reviews being
+published?",Not specified
+IEEE Transactions on Signal Processing,1053-587X,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Immunity,1074-7613,opr_responses,"Are author responses to reviews being
+published?",Not specified
+International Journal of Communication,1932-8036,opr_responses,"Are author responses to reviews being
+published?",Not specified
+International Journal of Production Economics,0925-5273,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of the American Medical Association,1538-3598,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of Allergy and Clinical Immunology,0091-6749,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of Banking & Finance,0378-4266,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of Business Ethics,1573-0697,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of Business Research,0148-2963,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of Cleaner Production,0959-6526,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of Clinical Oncology,1527-7755,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of Communication,1460-2466,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of Cosmology and Astroparticle Physics,1475-7516,opr_responses,"Are author responses to reviews being
+published?",No
+Journal of Economic Perspectives,1944-7965,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of Educational Psychology,1939-2176,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of Financial Economics,0304-405X,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of Geophysical Research,2156-2202,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of Hepatology,0168-8278,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of High Energy Physics,1029-8479,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of Management,1557-1211,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of Materials Chemistry. A,2050-7488,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of Pragmatics,0378-2166,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of the American Chemical Society,1520-5126,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of the American College of Cardiology,0735-1097,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journal of Youth and Adolescence,1573-6601,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journalism,1741-3001,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journalism Practice,1751-2786,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Journalism Studies,1461-670X,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Land Use Policy,0264-8377,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Language Learning,1467-9922,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Lingua,0024-3841,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Management Information Systems Quarterly,2162-9730,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Management Science,1526-5501,opr_responses,"Are author responses to reviews being
+published?",Not specified
+"Media, Culture & Society",1460-3675,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Molecular Cell,1097-2765,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Monthly Notices of the Royal Astronomical Society,1365-2966,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nano Letters,1530-6992,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nanoscale,2040-3372,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature,1476-4687,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Biotechnology,1546-1696,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Cell Biology,1476-4679,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Chemistry,1755-4349,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Climate Change,1758-6798,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Communications,2041-1723,opr_responses,"Are author responses to reviews being
+published?",Optional
+Nature Genetics,1546-1718,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Immunology,1529-2916,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Materials,1476-4660,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Medicine,1546-170X,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Methods,1548-7105,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Nanotechnology,1748-3395,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Neuroscience,1546-1726,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Photonics,1749-4893,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Physics,1745-2481,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Reviews Cancer,1474-1768,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Reviews Genetics,1471-0064,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Reviews Immunology,1474-1733,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Reviews Neuroscience,1471-0048,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Reviews. Drug Discovery,1474-1784,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nature Reviews. Molecular Cell Biology,1471-0080,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Neural Information Processing Systems (NIPS),NIPS-ISSN,opr_responses,"Are author responses to reviews being
+published?",Yes
+NeuroImage,1053-8119,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Neuron,1097-4199,opr_responses,"Are author responses to reviews being
+published?",Not specified
+New Media and Society,1461-7315,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Noûs,1468-0068,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Nucleic Acids Research,1362-4962,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Obstetrical & Gynecological Survey,1533-9866,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Optics Express,1094-4087,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Pediatrics,1098-4275,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Philosophical Studies,1573-0883,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Physical Review B,1550-235X,opr_responses,"Are author responses to reviews being
+published?",No
+Physical Review D,1550- 2368,opr_responses,"Are author responses to reviews being
+published?",No
+Physical Review Letters,1079-7114,opr_responses,"Are author responses to reviews being
+published?",No
+Physical Review X,2160-3308,opr_responses,"Are author responses to reviews being
+published?",No
+Physics Letters B,0375-9601,opr_responses,"Are author responses to reviews being
+published?",Not specified
+PLoS One,1932-6203,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Proceedings of the National Academy of Sciences,1091-6490,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Progress in Human Geography,1477-0288,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Public Opinion Quarterly,1537-5331,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Regional Studies,1360-0591,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Renewable and Sustainable Energy Reviews,1364-0321,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Research Policy,0048-7333,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Review of Economics and Statistics,0034-6535,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Reviews of Modern Physics,1539-0756,opr_responses,"Are author responses to reviews being
+published?",No
+Science,1095-9203,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Science Translational Medicine,1946-6234,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Scientific Reports,2045-2322,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Social Science & Medicine,0277-9536,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Strategic Management Journal,1097-0266,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Synthese,1573-0964,opr_responses,"Are author responses to reviews being
+published?",Not specified
+System,0346-251X,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Teaching and Teacher Education,0742-051X,opr_responses,"Are author responses to reviews being
+published?",Not specified
+TESOL Quarterly,1545-7249,opr_responses,"Are author responses to reviews being
+published?",Not specified
+The Astrophysical Journal,1538-4357,opr_responses,"Are author responses to reviews being
+published?",Not specified
+The China Quarterly,1468-2648,opr_responses,"Are author responses to reviews being
+published?",Not specified
+The Cochrane Database of Systematic Reviews,1469-493X,opr_responses,"Are author responses to reviews being
+published?",No
+The European Physical Journal C,1434-6052,opr_responses,"Are author responses to reviews being
+published?",Not specified
+The Journal of Clinical Investigation,1558-8238,opr_responses,"Are author responses to reviews being
+published?",Not specified
+The Journal of Finance,1540-6261,opr_responses,"Are author responses to reviews being
+published?",Not specified
+The Journal of Physical Chemistry Letters,1948-7185,opr_responses,"Are author responses to reviews being
+published?",Not specified
+The Lancet,1474-547X,opr_responses,"Are author responses to reviews being
+published?",Not specified
+The Lancet Neurology,1474-4422,opr_responses,"Are author responses to reviews being
+published?",Not specified
+The Lancet Oncology,1470-2045,opr_responses,"Are author responses to reviews being
+published?",Not specified
+The Modern Language Journal,1540-4781,opr_responses,"Are author responses to reviews being
+published?",Not specified
+The New England Journal of Medicine,1533-4406,opr_responses,"Are author responses to reviews being
+published?",Not specified
+The Quarterly Journal of Economics,1531-4650,opr_responses,"Are author responses to reviews being
+published?",Not specified
+The Review of Economic Studies,1467-937X,opr_responses,"Are author responses to reviews being
+published?",Not specified
+The Review of Financial Studies,1465-7368,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Tourism Management,0261-5177,opr_responses,"Are author responses to reviews being
+published?",Not specified
+World Development,1873-5991,opr_responses,"Are author responses to reviews being
+published?",Not specified
+Academic Medicine,1040-2446,opr_letters,"Are editorial decision letters being
+published?",Not specified
+ACS Applied Materials & Interfaces,1944-8252,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Accounts of Chemical Research,1520-4898,opr_letters,"Are editorial decision letters being
+published?",Not specified
+ACS Catalysis,2155-5435,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Academy of Management Journal,0001-4273,opr_letters,"Are editorial decision letters being
+published?",Not specified
+ACS Nano,1936-086X,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Advanced Energy Materials,1614-6840,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Advanced Functional Materials,1616-3028,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Advanced Materials,1521-4095,opr_letters,"Are editorial decision letters being
+published?",Not specified
+American Economic Review,0002-8282,opr_letters,"Are editorial decision letters being
+published?",Not specified
+American Journal of Political Science,1540-5907,opr_letters,"Are editorial decision letters being
+published?",Not specified
+American Journal of Public Health,1541-0048,opr_letters,"Are editorial decision letters being
+published?",Not specified
+American Political Science Review,1537-5943,opr_letters,"Are editorial decision letters being
+published?",Not specified
+American Sociological Review,1939-8271,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Angewandte Chemie International Edition,1521-3773,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Annals of Internal Medicine,0003-4819,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Annals of Oncology,1569-8041,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Annals of the Rheumatic Diseases,1468-2060,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Annals of Tourism Research,0160-7383,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Applied Energy,0306-2619,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Applied Linguistics,1477-450X,opr_letters,"Are editorial decision letters being
+published?",No
+Applied Physics Letters,1077-3118,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Astronomy & Astrophysics,1432-0746,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Biomaterials,0142-9612,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Blood,1528-0020,opr_letters,"Are editorial decision letters being
+published?",Not specified
+BMJ,1756-1833,opr_letters,"Are editorial decision letters being
+published?",Conditional
+Cancer Cell,1535-6108,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Cancer Research,0099-7013,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Cell,1097-4172,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Cell Metabolism,1550-4131,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Cell Stem Cell,1934-5909,opr_letters,"Are editorial decision letters being
+published?",Not specified
+"Chemical communications (Cambridge, England)",0144-557X,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Chemical Reviews,1520-6890,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Chemical Society reviews,1460-4744,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Chemistry of Materials,1520-5002,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Circulation,0009-7322,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Circulation Research,1524-4571,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Clinical Cancer Research,1557-3265,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Computers & Education,0360-1315,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Diabetes Care,1935-5548,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Digital Journalism,2167-082X,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Econometrica,1468-0262,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Energy and Environmental Science,1754-5706,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Environmental Science & Technology,0013-936X,opr_letters,"Are editorial decision letters being
+published?",Not specified
+European Heart Journal,1522-9645,opr_letters,"Are editorial decision letters being
+published?",Not specified
+European Urology,0302-2838,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Gastroenterology,0016-5085,opr_letters,"Are editorial decision letters being
+published?",No
+Gender & Society,1552-3977,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Geophysical Research Letters,1944-8007,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Global Environmental Change,0959-3780,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Government Information Quarterly,0740-624X,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Gut,1468-3288,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Health Affairs,1544-5208,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Hepatology,1527-3350,opr_letters,"Are editorial decision letters being
+published?",Not specified
+IEEE Communications Magazine,0163-6804,opr_letters,"Are editorial decision letters being
+published?",Not specified
+IEEE Communications Surveys & Tutorials,1553-877X,opr_letters,"Are editorial decision letters being
+published?",Not specified
+"IEEE Conference on Computer Vision and Pattern Recognition, CVPR","Only ISBN available, counts as a book",opr_letters,"Are editorial decision letters being
+published?",Not specified
+IEEE International Conference on Computer Vision,2380-7504,opr_letters,"Are editorial decision letters being
+published?",No
+IEEE Transactions on Automatic Control,0018-9286,opr_letters,"Are editorial decision letters being
+published?",Not specified
+IEEE Transactions on Industrial Electronics,0278-0046,opr_letters,"Are editorial decision letters being
+published?",Not specified
+IEEE Transactions on Pattern Analysis and Machine Intelligence,0162-8828,opr_letters,"Are editorial decision letters being
+published?",Not specified
+IEEE Transactions on Power Electronics,0885-8993,opr_letters,"Are editorial decision letters being
+published?",Not specified
+IEEE Transactions on Signal Processing,1053-587X,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Immunity,1074-7613,opr_letters,"Are editorial decision letters being
+published?",Not specified
+International Journal of Communication,1932-8036,opr_letters,"Are editorial decision letters being
+published?",Not specified
+International Journal of Production Economics,0925-5273,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of the American Medical Association,1538-3598,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of Allergy and Clinical Immunology,0091-6749,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of Banking & Finance,0378-4266,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of Business Ethics,1573-0697,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of Business Research,0148-2963,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of Cleaner Production,0959-6526,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of Clinical Oncology,1527-7755,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of Communication,1460-2466,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of Cosmology and Astroparticle Physics,1475-7516,opr_letters,"Are editorial decision letters being
+published?",No
+Journal of Economic Perspectives,1944-7965,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of Educational Psychology,1939-2176,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of Financial Economics,0304-405X,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of Geophysical Research,2156-2202,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of Hepatology,0168-8278,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of High Energy Physics,1029-8479,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of Management,1557-1211,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of Materials Chemistry. A,2050-7488,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of Pragmatics,0378-2166,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of the American Chemical Society,1520-5126,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of the American College of Cardiology,0735-1097,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journal of Youth and Adolescence,1573-6601,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journalism,1741-3001,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journalism Practice,1751-2786,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Journalism Studies,1461-670X,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Land Use Policy,0264-8377,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Language Learning,1467-9922,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Lingua,0024-3841,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Management Information Systems Quarterly,2162-9730,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Management Science,1526-5501,opr_letters,"Are editorial decision letters being
+published?",Not specified
+"Media, Culture & Society",1460-3675,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Molecular Cell,1097-2765,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Monthly Notices of the Royal Astronomical Society,1365-2966,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nano Letters,1530-6992,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nanoscale,2040-3372,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature,1476-4687,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Biotechnology,1546-1696,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Cell Biology,1476-4679,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Chemistry,1755-4349,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Climate Change,1758-6798,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Communications,2041-1723,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Genetics,1546-1718,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Immunology,1529-2916,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Materials,1476-4660,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Medicine,1546-170X,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Methods,1548-7105,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Nanotechnology,1748-3395,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Neuroscience,1546-1726,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Photonics,1749-4893,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Physics,1745-2481,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Reviews Cancer,1474-1768,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Reviews Genetics,1471-0064,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Reviews Immunology,1474-1733,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Reviews Neuroscience,1471-0048,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Reviews. Drug Discovery,1474-1784,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nature Reviews. Molecular Cell Biology,1471-0080,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Neural Information Processing Systems (NIPS),NIPS-ISSN,opr_letters,"Are editorial decision letters being
+published?",Yes
+NeuroImage,1053-8119,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Neuron,1097-4199,opr_letters,"Are editorial decision letters being
+published?",Not specified
+New Media and Society,1461-7315,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Noûs,1468-0068,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Nucleic Acids Research,1362-4962,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Obstetrical & Gynecological Survey,1533-9866,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Optics Express,1094-4087,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Pediatrics,1098-4275,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Philosophical Studies,1573-0883,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Physical Review B,1550-235X,opr_letters,"Are editorial decision letters being
+published?",No
+Physical Review D,1550- 2368,opr_letters,"Are editorial decision letters being
+published?",No
+Physical Review Letters,1079-7114,opr_letters,"Are editorial decision letters being
+published?",No
+Physical Review X,2160-3308,opr_letters,"Are editorial decision letters being
+published?",No
+Physics Letters B,0375-9601,opr_letters,"Are editorial decision letters being
+published?",Not specified
+PLoS One,1932-6203,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Proceedings of the National Academy of Sciences,1091-6490,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Progress in Human Geography,1477-0288,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Public Opinion Quarterly,1537-5331,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Regional Studies,1360-0591,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Renewable and Sustainable Energy Reviews,1364-0321,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Research Policy,0048-7333,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Review of Economics and Statistics,0034-6535,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Reviews of Modern Physics,1539-0756,opr_letters,"Are editorial decision letters being
+published?",No
+Science,1095-9203,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Science Translational Medicine,1946-6234,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Scientific Reports,2045-2322,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Social Science & Medicine,0277-9536,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Strategic Management Journal,1097-0266,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Synthese,1573-0964,opr_letters,"Are editorial decision letters being
+published?",Not specified
+System,0346-251X,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Teaching and Teacher Education,0742-051X,opr_letters,"Are editorial decision letters being
+published?",Not specified
+TESOL Quarterly,1545-7249,opr_letters,"Are editorial decision letters being
+published?",Not specified
+The Astrophysical Journal,1538-4357,opr_letters,"Are editorial decision letters being
+published?",Not specified
+The China Quarterly,1468-2648,opr_letters,"Are editorial decision letters being
+published?",Not specified
+The Cochrane Database of Systematic Reviews,1469-493X,opr_letters,"Are editorial decision letters being
+published?",No
+The European Physical Journal C,1434-6052,opr_letters,"Are editorial decision letters being
+published?",Not specified
+The Journal of Clinical Investigation,1558-8238,opr_letters,"Are editorial decision letters being
+published?",Not specified
+The Journal of Finance,1540-6261,opr_letters,"Are editorial decision letters being
+published?",Not specified
+The Journal of Physical Chemistry Letters,1948-7185,opr_letters,"Are editorial decision letters being
+published?",Not specified
+The Lancet,1474-547X,opr_letters,"Are editorial decision letters being
+published?",Not specified
+The Lancet Neurology,1474-4422,opr_letters,"Are editorial decision letters being
+published?",Not specified
+The Lancet Oncology,1470-2045,opr_letters,"Are editorial decision letters being
+published?",Not specified
+The Modern Language Journal,1540-4781,opr_letters,"Are editorial decision letters being
+published?",Not specified
+The New England Journal of Medicine,1533-4406,opr_letters,"Are editorial decision letters being
+published?",Not specified
+The Quarterly Journal of Economics,1531-4650,opr_letters,"Are editorial decision letters being
+published?",Not specified
+The Review of Economic Studies,1467-937X,opr_letters,"Are editorial decision letters being
+published?",Not specified
+The Review of Financial Studies,1465-7368,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Tourism Management,0261-5177,opr_letters,"Are editorial decision letters being
+published?",Not specified
+World Development,1873-5991,opr_letters,"Are editorial decision letters being
+published?",Not specified
+Academic Medicine,1040-2446,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+ACS Applied Materials & Interfaces,1944-8252,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Accounts of Chemical Research,1520-4898,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+ACS Catalysis,2155-5435,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Academy of Management Journal,0001-4273,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+ACS Nano,1936-086X,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Advanced Energy Materials,1614-6840,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Advanced Functional Materials,1616-3028,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Advanced Materials,1521-4095,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+American Economic Review,0002-8282,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+American Journal of Political Science,1540-5907,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+American Journal of Public Health,1541-0048,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+American Political Science Review,1537-5943,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+American Sociological Review,1939-8271,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Angewandte Chemie International Edition,1521-3773,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Annals of Internal Medicine,0003-4819,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Annals of Oncology,1569-8041,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Annals of the Rheumatic Diseases,1468-2060,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Annals of Tourism Research,0160-7383,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Applied Energy,0306-2619,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Applied Linguistics,1477-450X,opr_versions,"Are previous versions of the manuscript
+being published?",No
+Applied Physics Letters,1077-3118,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Astronomy & Astrophysics,1432-0746,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Biomaterials,0142-9612,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Blood,1528-0020,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+BMJ,1756-1833,opr_versions,"Are previous versions of the manuscript
+being published?",Conditional
+Cancer Cell,1535-6108,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Cancer Research,0099-7013,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Cell,1097-4172,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Cell Metabolism,1550-4131,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Cell Stem Cell,1934-5909,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+"Chemical communications (Cambridge, England)",0144-557X,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Chemical Reviews,1520-6890,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Chemical Society reviews,1460-4744,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Chemistry of Materials,1520-5002,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Circulation,0009-7322,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Circulation Research,1524-4571,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Clinical Cancer Research,1557-3265,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Computers & Education,0360-1315,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Diabetes Care,1935-5548,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Digital Journalism,2167-082X,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Econometrica,1468-0262,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Energy and Environmental Science,1754-5706,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Environmental Science & Technology,0013-936X,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+European Heart Journal,1522-9645,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+European Urology,0302-2838,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Gastroenterology,0016-5085,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Gender & Society,1552-3977,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Geophysical Research Letters,1944-8007,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Global Environmental Change,0959-3780,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Government Information Quarterly,0740-624X,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Gut,1468-3288,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Health Affairs,1544-5208,opr_versions,"Are previous versions of the manuscript
+being published?",No
+Hepatology,1527-3350,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+IEEE Communications Magazine,0163-6804,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+IEEE Communications Surveys & Tutorials,1553-877X,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+"IEEE Conference on Computer Vision and Pattern Recognition, CVPR","Only ISBN available, counts as a book",opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+IEEE International Conference on Computer Vision,2380-7504,opr_versions,"Are previous versions of the manuscript
+being published?",No
+IEEE Transactions on Automatic Control,0018-9286,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+IEEE Transactions on Industrial Electronics,0278-0046,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+IEEE Transactions on Pattern Analysis and Machine Intelligence,0162-8828,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+IEEE Transactions on Power Electronics,0885-8993,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+IEEE Transactions on Signal Processing,1053-587X,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Immunity,1074-7613,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+International Journal of Communication,1932-8036,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+International Journal of Production Economics,0925-5273,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of the American Medical Association,1538-3598,opr_versions,"Are previous versions of the manuscript
+being published?",No
+Journal of Allergy and Clinical Immunology,0091-6749,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of Banking & Finance,0378-4266,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of Business Ethics,1573-0697,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of Business Research,0148-2963,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of Cleaner Production,0959-6526,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of Clinical Oncology,1527-7755,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of Communication,1460-2466,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of Cosmology and Astroparticle Physics,1475-7516,opr_versions,"Are previous versions of the manuscript
+being published?",No
+Journal of Economic Perspectives,1944-7965,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of Educational Psychology,1939-2176,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of Financial Economics,0304-405X,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of Geophysical Research,2156-2202,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of Hepatology,0168-8278,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of High Energy Physics,1029-8479,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of Management,1557-1211,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of Materials Chemistry. A,2050-7488,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of Pragmatics,0378-2166,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of the American Chemical Society,1520-5126,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of the American College of Cardiology,0735-1097,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journal of Youth and Adolescence,1573-6601,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journalism,1741-3001,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journalism Practice,1751-2786,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Journalism Studies,1461-670X,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Land Use Policy,0264-8377,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Language Learning,1467-9922,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Lingua,0024-3841,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Management Information Systems Quarterly,2162-9730,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Management Science,1526-5501,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+"Media, Culture & Society",1460-3675,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Molecular Cell,1097-2765,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Monthly Notices of the Royal Astronomical Society,1365-2966,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nano Letters,1530-6992,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nanoscale,2040-3372,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature,1476-4687,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Biotechnology,1546-1696,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Cell Biology,1476-4679,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Chemistry,1755-4349,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Climate Change,1758-6798,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Communications,2041-1723,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Genetics,1546-1718,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Immunology,1529-2916,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Materials,1476-4660,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Medicine,1546-170X,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Methods,1548-7105,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Nanotechnology,1748-3395,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Neuroscience,1546-1726,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Photonics,1749-4893,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Physics,1745-2481,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Reviews Cancer,1474-1768,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Reviews Genetics,1471-0064,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Reviews Immunology,1474-1733,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Reviews Neuroscience,1471-0048,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Reviews. Drug Discovery,1474-1784,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nature Reviews. Molecular Cell Biology,1471-0080,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Neural Information Processing Systems (NIPS),NIPS-ISSN,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+NeuroImage,1053-8119,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Neuron,1097-4199,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+New Media and Society,1461-7315,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Noûs,1468-0068,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Nucleic Acids Research,1362-4962,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Obstetrical & Gynecological Survey,1533-9866,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Optics Express,1094-4087,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Pediatrics,1098-4275,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Philosophical Studies,1573-0883,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Physical Review B,1550-235X,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Physical Review D,1550- 2368,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Physical Review Letters,1079-7114,opr_versions,"Are previous versions of the manuscript
+being published?",No
+Physical Review X,2160-3308,opr_versions,"Are previous versions of the manuscript
+being published?",No
+Physics Letters B,0375-9601,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+PLoS One,1932-6203,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Proceedings of the National Academy of Sciences,1091-6490,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Progress in Human Geography,1477-0288,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Public Opinion Quarterly,1537-5331,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Regional Studies,1360-0591,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Renewable and Sustainable Energy Reviews,1364-0321,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Research Policy,0048-7333,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Review of Economics and Statistics,0034-6535,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Reviews of Modern Physics,1539-0756,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Science,1095-9203,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Science Translational Medicine,1946-6234,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Scientific Reports,2045-2322,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Social Science & Medicine,0277-9536,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Strategic Management Journal,1097-0266,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Synthese,1573-0964,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+System,0346-251X,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Teaching and Teacher Education,0742-051X,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+TESOL Quarterly,1545-7249,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+The Astrophysical Journal,1538-4357,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+The China Quarterly,1468-2648,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+The Cochrane Database of Systematic Reviews,1469-493X,opr_versions,"Are previous versions of the manuscript
+being published?",No
+The European Physical Journal C,1434-6052,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+The Journal of Clinical Investigation,1558-8238,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+The Journal of Finance,1540-6261,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+The Journal of Physical Chemistry Letters,1948-7185,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+The Lancet,1474-547X,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+The Lancet Neurology,1474-4422,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+The Lancet Oncology,1470-2045,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+The Modern Language Journal,1540-4781,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+The New England Journal of Medicine,1533-4406,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+The Quarterly Journal of Economics,1531-4650,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+The Review of Economic Studies,1467-937X,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+The Review of Financial Studies,1465-7368,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Tourism Management,0261-5177,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+World Development,1873-5991,opr_versions,"Are previous versions of the manuscript
+being published?",Not specified
+Academic Medicine,1040-2446,opr_identities_published,Are reviewer identities being published?,Not specified
+ACS Applied Materials & Interfaces,1944-8252,opr_identities_published,Are reviewer identities being published?,No
+Accounts of Chemical Research,1520-4898,opr_identities_published,Are reviewer identities being published?,No
+ACS Catalysis,2155-5435,opr_identities_published,Are reviewer identities being published?,No
+Academy of Management Journal,0001-4273,opr_identities_published,Are reviewer identities being published?,Not specified
+ACS Nano,1936-086X,opr_identities_published,Are reviewer identities being published?,Not specified
+Advanced Energy Materials,1614-6840,opr_identities_published,Are reviewer identities being published?,No
+Advanced Functional Materials,1616-3028,opr_identities_published,Are reviewer identities being published?,No
+Advanced Materials,1521-4095,opr_identities_published,Are reviewer identities being published?,Not specified
+American Economic Review,0002-8282,opr_identities_published,Are reviewer identities being published?,Not specified
+American Journal of Political Science,1540-5907,opr_identities_published,Are reviewer identities being published?,Not specified
+American Journal of Public Health,1541-0048,opr_identities_published,Are reviewer identities being published?,Not specified
+American Political Science Review,1537-5943,opr_identities_published,Are reviewer identities being published?,Not specified
+American Sociological Review,1939-8271,opr_identities_published,Are reviewer identities being published?,Not specified
+Angewandte Chemie International Edition,1521-3773,opr_identities_published,Are reviewer identities being published?,Not specified
+Annals of Internal Medicine,0003-4819,opr_identities_published,Are reviewer identities being published?,Not specified
+Annals of Oncology,1569-8041,opr_identities_published,Are reviewer identities being published?,Not specified
+Annals of the Rheumatic Diseases,1468-2060,opr_identities_published,Are reviewer identities being published?,Not specified
+Annals of Tourism Research,0160-7383,opr_identities_published,Are reviewer identities being published?,Not specified
+Applied Energy,0306-2619,opr_identities_published,Are reviewer identities being published?,Not specified
+Applied Linguistics,1477-450X,opr_identities_published,Are reviewer identities being published?,No
+Applied Physics Letters,1077-3118,opr_identities_published,Are reviewer identities being published?,Not specified
+Astronomy & Astrophysics,1432-0746,opr_identities_published,Are reviewer identities being published?,Not specified
+Biomaterials,0142-9612,opr_identities_published,Are reviewer identities being published?,Not specified
+Blood,1528-0020,opr_identities_published,Are reviewer identities being published?,Not specified
+BMJ,1756-1833,opr_identities_published,Are reviewer identities being published?,Conditional
+Cancer Cell,1535-6108,opr_identities_published,Are reviewer identities being published?,No
+Cancer Research,0099-7013,opr_identities_published,Are reviewer identities being published?,Not specified
+Cell,1097-4172,opr_identities_published,Are reviewer identities being published?,No
+Cell Metabolism,1550-4131,opr_identities_published,Are reviewer identities being published?,No
+Cell Stem Cell,1934-5909,opr_identities_published,Are reviewer identities being published?,No
+"Chemical communications (Cambridge, England)",0144-557X,opr_identities_published,Are reviewer identities being published?,Optional
+Chemical Reviews,1520-6890,opr_identities_published,Are reviewer identities being published?,Not specified
+Chemical Society reviews,1460-4744,opr_identities_published,Are reviewer identities being published?,Not specified
+Chemistry of Materials,1520-5002,opr_identities_published,Are reviewer identities being published?,Not specified
+Circulation,0009-7322,opr_identities_published,Are reviewer identities being published?,Not specified
+Circulation Research,1524-4571,opr_identities_published,Are reviewer identities being published?,Not specified
+Clinical Cancer Research,1557-3265,opr_identities_published,Are reviewer identities being published?,Not specified
+Computers & Education,0360-1315,opr_identities_published,Are reviewer identities being published?,Not specified
+Diabetes Care,1935-5548,opr_identities_published,Are reviewer identities being published?,Not specified
+Digital Journalism,2167-082X,opr_identities_published,Are reviewer identities being published?,Not specified
+Econometrica,1468-0262,opr_identities_published,Are reviewer identities being published?,Not specified
+Energy and Environmental Science,1754-5706,opr_identities_published,Are reviewer identities being published?,Not specified
+Environmental Science & Technology,0013-936X,opr_identities_published,Are reviewer identities being published?,Not specified
+European Heart Journal,1522-9645,opr_identities_published,Are reviewer identities being published?,Not specified
+European Urology,0302-2838,opr_identities_published,Are reviewer identities being published?,Not specified
+Gastroenterology,0016-5085,opr_identities_published,Are reviewer identities being published?,No
+Gender & Society,1552-3977,opr_identities_published,Are reviewer identities being published?,Not specified
+Geophysical Research Letters,1944-8007,opr_identities_published,Are reviewer identities being published?,Not specified
+Global Environmental Change,0959-3780,opr_identities_published,Are reviewer identities being published?,Not specified
+Government Information Quarterly,0740-624X,opr_identities_published,Are reviewer identities being published?,Not specified
+Gut,1468-3288,opr_identities_published,Are reviewer identities being published?,No
+Health Affairs,1544-5208,opr_identities_published,Are reviewer identities being published?,Not specified
+Hepatology,1527-3350,opr_identities_published,Are reviewer identities being published?,No
+IEEE Communications Magazine,0163-6804,opr_identities_published,Are reviewer identities being published?,Not specified
+IEEE Communications Surveys & Tutorials,1553-877X,opr_identities_published,Are reviewer identities being published?,Not specified
+"IEEE Conference on Computer Vision and Pattern Recognition, CVPR","Only ISBN available, counts as a book",opr_identities_published,Are reviewer identities being published?,Not specified
+IEEE International Conference on Computer Vision,2380-7504,opr_identities_published,Are reviewer identities being published?,No
+IEEE Transactions on Automatic Control,0018-9286,opr_identities_published,Are reviewer identities being published?,Not specified
+IEEE Transactions on Industrial Electronics,0278-0046,opr_identities_published,Are reviewer identities being published?,Not specified
+IEEE Transactions on Pattern Analysis and Machine Intelligence,0162-8828,opr_identities_published,Are reviewer identities being published?,Not specified
+IEEE Transactions on Power Electronics,0885-8993,opr_identities_published,Are reviewer identities being published?,No
+IEEE Transactions on Signal Processing,1053-587X,opr_identities_published,Are reviewer identities being published?,No
+Immunity,1074-7613,opr_identities_published,Are reviewer identities being published?,No
+International Journal of Communication,1932-8036,opr_identities_published,Are reviewer identities being published?,Not specified
+International Journal of Production Economics,0925-5273,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of the American Medical Association,1538-3598,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of Allergy and Clinical Immunology,0091-6749,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of Banking & Finance,0378-4266,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of Business Ethics,1573-0697,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of Business Research,0148-2963,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of Cleaner Production,0959-6526,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of Clinical Oncology,1527-7755,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of Communication,1460-2466,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of Cosmology and Astroparticle Physics,1475-7516,opr_identities_published,Are reviewer identities being published?,No
+Journal of Economic Perspectives,1944-7965,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of Educational Psychology,1939-2176,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of Financial Economics,0304-405X,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of Geophysical Research,2156-2202,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of Hepatology,0168-8278,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of High Energy Physics,1029-8479,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of Management,1557-1211,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of Materials Chemistry. A,2050-7488,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of Pragmatics,0378-2166,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of the American Chemical Society,1520-5126,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of the American College of Cardiology,0735-1097,opr_identities_published,Are reviewer identities being published?,Not specified
+Journal of Youth and Adolescence,1573-6601,opr_identities_published,Are reviewer identities being published?,Not specified
+Journalism,1741-3001,opr_identities_published,Are reviewer identities being published?,Not specified
+Journalism Practice,1751-2786,opr_identities_published,Are reviewer identities being published?,Not specified
+Journalism Studies,1461-670X,opr_identities_published,Are reviewer identities being published?,Not specified
+Land Use Policy,0264-8377,opr_identities_published,Are reviewer identities being published?,Not specified
+Language Learning,1467-9922,opr_identities_published,Are reviewer identities being published?,Conditional
+Lingua,0024-3841,opr_identities_published,Are reviewer identities being published?,Not specified
+Management Information Systems Quarterly,2162-9730,opr_identities_published,Are reviewer identities being published?,Not specified
+Management Science,1526-5501,opr_identities_published,Are reviewer identities being published?,Not specified
+"Media, Culture & Society",1460-3675,opr_identities_published,Are reviewer identities being published?,Not specified
+Molecular Cell,1097-2765,opr_identities_published,Are reviewer identities being published?,Not specified
+Monthly Notices of the Royal Astronomical Society,1365-2966,opr_identities_published,Are reviewer identities being published?,Not specified
+Nano Letters,1530-6992,opr_identities_published,Are reviewer identities being published?,Not specified
+Nanoscale,2040-3372,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature,1476-4687,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Biotechnology,1546-1696,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Cell Biology,1476-4679,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Chemistry,1755-4349,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Climate Change,1758-6798,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Communications,2041-1723,opr_identities_published,Are reviewer identities being published?,Optional
+Nature Genetics,1546-1718,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Immunology,1529-2916,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Materials,1476-4660,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Medicine,1546-170X,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Methods,1548-7105,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Nanotechnology,1748-3395,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Neuroscience,1546-1726,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Photonics,1749-4893,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Physics,1745-2481,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Reviews Cancer,1474-1768,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Reviews Genetics,1471-0064,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Reviews Immunology,1474-1733,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Reviews Neuroscience,1471-0048,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Reviews. Drug Discovery,1474-1784,opr_identities_published,Are reviewer identities being published?,Not specified
+Nature Reviews. Molecular Cell Biology,1471-0080,opr_identities_published,Are reviewer identities being published?,Not specified
+Neural Information Processing Systems (NIPS),NIPS-ISSN,opr_identities_published,Are reviewer identities being published?,No
+NeuroImage,1053-8119,opr_identities_published,Are reviewer identities being published?,Not specified
+Neuron,1097-4199,opr_identities_published,Are reviewer identities being published?,Not specified
+New Media and Society,1461-7315,opr_identities_published,Are reviewer identities being published?,Not specified
+Noûs,1468-0068,opr_identities_published,Are reviewer identities being published?,Not specified
+Nucleic Acids Research,1362-4962,opr_identities_published,Are reviewer identities being published?,Not specified
+Obstetrical & Gynecological Survey,1533-9866,opr_identities_published,Are reviewer identities being published?,Not specified
+Optics Express,1094-4087,opr_identities_published,Are reviewer identities being published?,Not specified
+Pediatrics,1098-4275,opr_identities_published,Are reviewer identities being published?,Not specified
+Philosophical Studies,1573-0883,opr_identities_published,Are reviewer identities being published?,Not specified
+Physical Review B,1550-235X,opr_identities_published,Are reviewer identities being published?,No
+Physical Review D,1550- 2368,opr_identities_published,Are reviewer identities being published?,No
+Physical Review Letters,1079-7114,opr_identities_published,Are reviewer identities being published?,No
+Physical Review X,2160-3308,opr_identities_published,Are reviewer identities being published?,No
+Physics Letters B,0375-9601,opr_identities_published,Are reviewer identities being published?,Not specified
+PLoS One,1932-6203,opr_identities_published,Are reviewer identities being published?,Not specified
+Proceedings of the National Academy of Sciences,1091-6490,opr_identities_published,Are reviewer identities being published?,Conditional
+Progress in Human Geography,1477-0288,opr_identities_published,Are reviewer identities being published?,Not specified
+Public Opinion Quarterly,1537-5331,opr_identities_published,Are reviewer identities being published?,Not specified
+Regional Studies,1360-0591,opr_identities_published,Are reviewer identities being published?,Not specified
+Renewable and Sustainable Energy Reviews,1364-0321,opr_identities_published,Are reviewer identities being published?,Not specified
+Research Policy,0048-7333,opr_identities_published,Are reviewer identities being published?,Not specified
+Review of Economics and Statistics,0034-6535,opr_identities_published,Are reviewer identities being published?,Not specified
+Reviews of Modern Physics,1539-0756,opr_identities_published,Are reviewer identities being published?,No
+Science,1095-9203,opr_identities_published,Are reviewer identities being published?,No
+Science Translational Medicine,1946-6234,opr_identities_published,Are reviewer identities being published?,No
+Scientific Reports,2045-2322,opr_identities_published,Are reviewer identities being published?,Not specified
+Social Science & Medicine,0277-9536,opr_identities_published,Are reviewer identities being published?,Not specified
+Strategic Management Journal,1097-0266,opr_identities_published,Are reviewer identities being published?,Not specified
+Synthese,1573-0964,opr_identities_published,Are reviewer identities being published?,Not specified
+System,0346-251X,opr_identities_published,Are reviewer identities being published?,Not specified
+Teaching and Teacher Education,0742-051X,opr_identities_published,Are reviewer identities being published?,No
+TESOL Quarterly,1545-7249,opr_identities_published,Are reviewer identities being published?,Not specified
+The Astrophysical Journal,1538-4357,opr_identities_published,Are reviewer identities being published?,Not specified
+The China Quarterly,1468-2648,opr_identities_published,Are reviewer identities being published?,Not specified
+The Cochrane Database of Systematic Reviews,1469-493X,opr_identities_published,Are reviewer identities being published?,No
+The European Physical Journal C,1434-6052,opr_identities_published,Are reviewer identities being published?,Not specified
+The Journal of Clinical Investigation,1558-8238,opr_identities_published,Are reviewer identities being published?,Not specified
+The Journal of Finance,1540-6261,opr_identities_published,Are reviewer identities being published?,Not specified
+The Journal of Physical Chemistry Letters,1948-7185,opr_identities_published,Are reviewer identities being published?,Not specified
+The Lancet,1474-547X,opr_identities_published,Are reviewer identities being published?,Not specified
+The Lancet Neurology,1474-4422,opr_identities_published,Are reviewer identities being published?,Not specified
+The Lancet Oncology,1470-2045,opr_identities_published,Are reviewer identities being published?,Not specified
+The Modern Language Journal,1540-4781,opr_identities_published,Are reviewer identities being published?,Not specified
+The New England Journal of Medicine,1533-4406,opr_identities_published,Are reviewer identities being published?,Not specified
+The Quarterly Journal of Economics,1531-4650,opr_identities_published,Are reviewer identities being published?,Not specified
+The Review of Economic Studies,1467-937X,opr_identities_published,Are reviewer identities being published?,Not specified
+The Review of Financial Studies,1465-7368,opr_identities_published,Are reviewer identities being published?,Not specified
+Tourism Management,0261-5177,opr_identities_published,Are reviewer identities being published?,Not specified
+World Development,1873-5991,opr_identities_published,Are reviewer identities being published?,Not specified
+Academic Medicine,1040-2446,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+ACS Applied Materials & Interfaces,1944-8252,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Conditional
+Accounts of Chemical Research,1520-4898,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Conditional
+ACS Catalysis,2155-5435,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Conditional
+Academy of Management Journal,0001-4273,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+ACS Nano,1936-086X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Conditional
+Advanced Energy Materials,1614-6840,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Advanced Functional Materials,1616-3028,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Advanced Materials,1521-4095,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+American Economic Review,0002-8282,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+American Journal of Political Science,1540-5907,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+American Journal of Public Health,1541-0048,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+American Political Science Review,1537-5943,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+American Sociological Review,1939-8271,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Angewandte Chemie International Edition,1521-3773,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Annals of Internal Medicine,0003-4819,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Annals of Oncology,1569-8041,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Annals of the Rheumatic Diseases,1468-2060,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Annals of Tourism Research,0160-7383,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Applied Energy,0306-2619,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Applied Linguistics,1477-450X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Applied Physics Letters,1077-3118,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Astronomy & Astrophysics,1432-0746,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Biomaterials,0142-9612,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Blood,1528-0020,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+BMJ,1756-1833,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Yes
+Cancer Cell,1535-6108,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Cancer Research,0099-7013,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Cell,1097-4172,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Cell Metabolism,1550-4131,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Cell Stem Cell,1934-5909,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+"Chemical communications (Cambridge, England)",0144-557X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Chemical Reviews,1520-6890,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Chemical Society reviews,1460-4744,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Chemistry of Materials,1520-5002,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Circulation,0009-7322,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Circulation Research,1524-4571,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Clinical Cancer Research,1557-3265,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Computers & Education,0360-1315,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Diabetes Care,1935-5548,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Digital Journalism,2167-082X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Econometrica,1468-0262,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Energy and Environmental Science,1754-5706,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Environmental Science & Technology,0013-936X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+European Heart Journal,1522-9645,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+European Urology,0302-2838,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Gastroenterology,0016-5085,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Gender & Society,1552-3977,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Geophysical Research Letters,1944-8007,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Global Environmental Change,0959-3780,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Government Information Quarterly,0740-624X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Gut,1468-3288,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Health Affairs,1544-5208,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Hepatology,1527-3350,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+IEEE Communications Magazine,0163-6804,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+IEEE Communications Surveys & Tutorials,1553-877X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+"IEEE Conference on Computer Vision and Pattern Recognition, CVPR","Only ISBN available, counts as a book",opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+IEEE International Conference on Computer Vision,2380-7504,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+IEEE Transactions on Automatic Control,0018-9286,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+IEEE Transactions on Industrial Electronics,0278-0046,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+IEEE Transactions on Pattern Analysis and Machine Intelligence,0162-8828,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+IEEE Transactions on Power Electronics,0885-8993,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+IEEE Transactions on Signal Processing,1053-587X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Immunity,1074-7613,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+International Journal of Communication,1932-8036,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+International Journal of Production Economics,0925-5273,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of the American Medical Association,1538-3598,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Journal of Allergy and Clinical Immunology,0091-6749,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of Banking & Finance,0378-4266,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of Business Ethics,1573-0697,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of Business Research,0148-2963,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of Cleaner Production,0959-6526,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of Clinical Oncology,1527-7755,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of Communication,1460-2466,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of Cosmology and Astroparticle Physics,1475-7516,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Journal of Economic Perspectives,1944-7965,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of Educational Psychology,1939-2176,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of Financial Economics,0304-405X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of Geophysical Research,2156-2202,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of Hepatology,0168-8278,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of High Energy Physics,1029-8479,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of Management,1557-1211,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Journal of Materials Chemistry. A,2050-7488,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of Pragmatics,0378-2166,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of the American Chemical Society,1520-5126,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Journal of the American College of Cardiology,0735-1097,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journal of Youth and Adolescence,1573-6601,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journalism,1741-3001,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journalism Practice,1751-2786,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Journalism Studies,1461-670X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Land Use Policy,0264-8377,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Language Learning,1467-9922,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Lingua,0024-3841,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Management Information Systems Quarterly,2162-9730,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Management Science,1526-5501,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+"Media, Culture & Society",1460-3675,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Molecular Cell,1097-2765,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Monthly Notices of the Royal Astronomical Society,1365-2966,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Nano Letters,1530-6992,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Nanoscale,2040-3372,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Nature,1476-4687,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Nature Biotechnology,1546-1696,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Cell Biology,1476-4679,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Chemistry,1755-4349,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Climate Change,1758-6798,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Communications,2041-1723,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Genetics,1546-1718,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Immunology,1529-2916,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Materials,1476-4660,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Medicine,1546-170X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Methods,1548-7105,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Nanotechnology,1748-3395,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Neuroscience,1546-1726,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Photonics,1749-4893,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Physics,1745-2481,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Reviews Cancer,1474-1768,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Reviews Genetics,1471-0064,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Reviews Immunology,1474-1733,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Reviews Neuroscience,1471-0048,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Reviews. Drug Discovery,1474-1784,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Nature Reviews. Molecular Cell Biology,1471-0080,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Neural Information Processing Systems (NIPS),NIPS-ISSN,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+NeuroImage,1053-8119,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Neuron,1097-4199,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+New Media and Society,1461-7315,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Noûs,1468-0068,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Nucleic Acids Research,1362-4962,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Obstetrical & Gynecological Survey,1533-9866,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Optics Express,1094-4087,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Pediatrics,1098-4275,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Philosophical Studies,1573-0883,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Physical Review B,1550-235X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Physical Review D,1550- 2368,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Physical Review Letters,1079-7114,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Physical Review X,2160-3308,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Physics Letters B,0375-9601,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+PLoS One,1932-6203,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Proceedings of the National Academy of Sciences,1091-6490,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Conditional
+Progress in Human Geography,1477-0288,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Public Opinion Quarterly,1537-5331,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Regional Studies,1360-0591,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Renewable and Sustainable Energy Reviews,1364-0321,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Research Policy,0048-7333,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Review of Economics and Statistics,0034-6535,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Reviews of Modern Physics,1539-0756,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Science,1095-9203,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Science Translational Medicine,1946-6234,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+Scientific Reports,2045-2322,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Optional
+Social Science & Medicine,0277-9536,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Strategic Management Journal,1097-0266,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Synthese,1573-0964,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+System,0346-251X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Teaching and Teacher Education,0742-051X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+TESOL Quarterly,1545-7249,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+The Astrophysical Journal,1538-4357,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+The China Quarterly,1468-2648,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+The Cochrane Database of Systematic Reviews,1469-493X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Yes
+The European Physical Journal C,1434-6052,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+The Journal of Clinical Investigation,1558-8238,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+The Journal of Finance,1540-6261,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+The Journal of Physical Chemistry Letters,1948-7185,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Conditional
+The Lancet,1474-547X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+The Lancet Neurology,1474-4422,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+The Lancet Oncology,1470-2045,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+The Modern Language Journal,1540-4781,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+The New England Journal of Medicine,1533-4406,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+The Quarterly Journal of Economics,1531-4650,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+The Review of Economic Studies,1467-937X,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+The Review of Financial Studies,1465-7368,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Tourism Management,0261-5177,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",No
+World Development,1873-5991,opr_indenties_author,"Are reviewer identities revealed to the
+author (even if not published)?",Not specified
+Academic Medicine,1040-2446,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+ACS Applied Materials & Interfaces,1944-8252,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Accounts of Chemical Research,1520-4898,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+ACS Catalysis,2155-5435,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Academy of Management Journal,0001-4273,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+ACS Nano,1936-086X,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Advanced Energy Materials,1614-6840,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Advanced Functional Materials,1616-3028,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Advanced Materials,1521-4095,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+American Economic Review,0002-8282,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+American Journal of Political Science,1540-5907,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+American Journal of Public Health,1541-0048,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+American Political Science Review,1537-5943,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+American Sociological Review,1939-8271,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Angewandte Chemie International Edition,1521-3773,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Annals of Internal Medicine,0003-4819,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Annals of Oncology,1569-8041,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Annals of the Rheumatic Diseases,1468-2060,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Annals of Tourism Research,0160-7383,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Applied Energy,0306-2619,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Applied Linguistics,1477-450X,opr_comments,"Is there public commenting during formal
+peer review?",No
+Applied Physics Letters,1077-3118,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Astronomy & Astrophysics,1432-0746,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Biomaterials,0142-9612,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Blood,1528-0020,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+BMJ,1756-1833,opr_comments,"Is there public commenting during formal
+peer review?",No
+Cancer Cell,1535-6108,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Cancer Research,0099-7013,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Cell,1097-4172,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Cell Metabolism,1550-4131,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Cell Stem Cell,1934-5909,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+"Chemical communications (Cambridge, England)",0144-557X,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Chemical Reviews,1520-6890,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Chemical Society reviews,1460-4744,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Chemistry of Materials,1520-5002,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Circulation,0009-7322,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Circulation Research,1524-4571,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Clinical Cancer Research,1557-3265,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Computers & Education,0360-1315,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Diabetes Care,1935-5548,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Digital Journalism,2167-082X,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Econometrica,1468-0262,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Energy and Environmental Science,1754-5706,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Environmental Science & Technology,0013-936X,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+European Heart Journal,1522-9645,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+European Urology,0302-2838,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Gastroenterology,0016-5085,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Gender & Society,1552-3977,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Geophysical Research Letters,1944-8007,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Global Environmental Change,0959-3780,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Government Information Quarterly,0740-624X,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Gut,1468-3288,opr_comments,"Is there public commenting during formal
+peer review?",No
+Health Affairs,1544-5208,opr_comments,"Is there public commenting during formal
+peer review?",No
+Hepatology,1527-3350,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+IEEE Communications Magazine,0163-6804,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+IEEE Communications Surveys & Tutorials,1553-877X,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+"IEEE Conference on Computer Vision and Pattern Recognition, CVPR","Only ISBN available, counts as a book",opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+IEEE International Conference on Computer Vision,2380-7504,opr_comments,"Is there public commenting during formal
+peer review?",No
+IEEE Transactions on Automatic Control,0018-9286,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+IEEE Transactions on Industrial Electronics,0278-0046,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+IEEE Transactions on Pattern Analysis and Machine Intelligence,0162-8828,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+IEEE Transactions on Power Electronics,0885-8993,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+IEEE Transactions on Signal Processing,1053-587X,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Immunity,1074-7613,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+International Journal of Communication,1932-8036,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+International Journal of Production Economics,0925-5273,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of the American Medical Association,1538-3598,opr_comments,"Is there public commenting during formal
+peer review?",No
+Journal of Allergy and Clinical Immunology,0091-6749,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of Banking & Finance,0378-4266,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of Business Ethics,1573-0697,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of Business Research,0148-2963,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of Cleaner Production,0959-6526,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of Clinical Oncology,1527-7755,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of Communication,1460-2466,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of Cosmology and Astroparticle Physics,1475-7516,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of Economic Perspectives,1944-7965,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of Educational Psychology,1939-2176,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of Financial Economics,0304-405X,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of Geophysical Research,2156-2202,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of Hepatology,0168-8278,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of High Energy Physics,1029-8479,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of Management,1557-1211,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of Materials Chemistry. A,2050-7488,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of Pragmatics,0378-2166,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of the American Chemical Society,1520-5126,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of the American College of Cardiology,0735-1097,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journal of Youth and Adolescence,1573-6601,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journalism,1741-3001,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journalism Practice,1751-2786,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Journalism Studies,1461-670X,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Land Use Policy,0264-8377,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Language Learning,1467-9922,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Lingua,0024-3841,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Management Information Systems Quarterly,2162-9730,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Management Science,1526-5501,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+"Media, Culture & Society",1460-3675,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Molecular Cell,1097-2765,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Monthly Notices of the Royal Astronomical Society,1365-2966,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nano Letters,1530-6992,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nanoscale,2040-3372,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature,1476-4687,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Biotechnology,1546-1696,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Cell Biology,1476-4679,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Chemistry,1755-4349,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Climate Change,1758-6798,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Communications,2041-1723,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Genetics,1546-1718,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Immunology,1529-2916,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Materials,1476-4660,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Medicine,1546-170X,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Methods,1548-7105,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Nanotechnology,1748-3395,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Neuroscience,1546-1726,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Photonics,1749-4893,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Physics,1745-2481,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Reviews Cancer,1474-1768,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Reviews Genetics,1471-0064,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Reviews Immunology,1474-1733,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Reviews Neuroscience,1471-0048,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Reviews. Drug Discovery,1474-1784,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nature Reviews. Molecular Cell Biology,1471-0080,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Neural Information Processing Systems (NIPS),NIPS-ISSN,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+NeuroImage,1053-8119,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Neuron,1097-4199,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+New Media and Society,1461-7315,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Noûs,1468-0068,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Nucleic Acids Research,1362-4962,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Obstetrical & Gynecological Survey,1533-9866,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Optics Express,1094-4087,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Pediatrics,1098-4275,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Philosophical Studies,1573-0883,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Physical Review B,1550-235X,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Physical Review D,1550- 2368,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Physical Review Letters,1079-7114,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Physical Review X,2160-3308,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Physics Letters B,0375-9601,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+PLoS One,1932-6203,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Proceedings of the National Academy of Sciences,1091-6490,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Progress in Human Geography,1477-0288,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Public Opinion Quarterly,1537-5331,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Regional Studies,1360-0591,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Renewable and Sustainable Energy Reviews,1364-0321,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Research Policy,0048-7333,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Review of Economics and Statistics,0034-6535,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Reviews of Modern Physics,1539-0756,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Science,1095-9203,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Science Translational Medicine,1946-6234,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Scientific Reports,2045-2322,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Social Science & Medicine,0277-9536,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Strategic Management Journal,1097-0266,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Synthese,1573-0964,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+System,0346-251X,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Teaching and Teacher Education,0742-051X,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+TESOL Quarterly,1545-7249,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+The Astrophysical Journal,1538-4357,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+The China Quarterly,1468-2648,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+The Cochrane Database of Systematic Reviews,1469-493X,opr_comments,"Is there public commenting during formal
+peer review?",No
+The European Physical Journal C,1434-6052,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+The Journal of Clinical Investigation,1558-8238,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+The Journal of Finance,1540-6261,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+The Journal of Physical Chemistry Letters,1948-7185,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+The Lancet,1474-547X,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+The Lancet Neurology,1474-4422,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+The Lancet Oncology,1470-2045,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+The Modern Language Journal,1540-4781,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+The New England Journal of Medicine,1533-4406,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+The Quarterly Journal of Economics,1531-4650,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+The Review of Economic Studies,1467-937X,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+The Review of Financial Studies,1465-7368,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Tourism Management,0261-5177,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+World Development,1873-5991,opr_comments,"Is there public commenting during formal
+peer review?",Not specified
+Academic Medicine,1040-2446,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+ACS Applied Materials & Interfaces,1944-8252,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Accounts of Chemical Research,1520-4898,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+ACS Catalysis,2155-5435,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Academy of Management Journal,0001-4273,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+ACS Nano,1936-086X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Advanced Energy Materials,1614-6840,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Advanced Functional Materials,1616-3028,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Advanced Materials,1521-4095,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+American Economic Review,0002-8282,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+American Journal of Political Science,1540-5907,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+American Journal of Public Health,1541-0048,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+American Political Science Review,1537-5943,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+American Sociological Review,1939-8271,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Angewandte Chemie International Edition,1521-3773,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Annals of Internal Medicine,0003-4819,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Annals of Oncology,1569-8041,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Annals of the Rheumatic Diseases,1468-2060,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Annals of Tourism Research,0160-7383,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Applied Energy,0306-2619,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Applied Linguistics,1477-450X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Conditional
+Applied Physics Letters,1077-3118,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Astronomy & Astrophysics,1432-0746,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Biomaterials,0142-9612,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Blood,1528-0020,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+BMJ,1756-1833,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",No
+Cancer Cell,1535-6108,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Cancer Research,0099-7013,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Cell,1097-4172,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Cell Metabolism,1550-4131,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Cell Stem Cell,1934-5909,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+"Chemical communications (Cambridge, England)",0144-557X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Chemical Reviews,1520-6890,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Chemical Society reviews,1460-4744,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Chemistry of Materials,1520-5002,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Circulation,0009-7322,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Circulation Research,1524-4571,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Clinical Cancer Research,1557-3265,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Computers & Education,0360-1315,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Diabetes Care,1935-5548,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Digital Journalism,2167-082X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Econometrica,1468-0262,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Energy and Environmental Science,1754-5706,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Yes
+Environmental Science & Technology,0013-936X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+European Heart Journal,1522-9645,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+European Urology,0302-2838,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Gastroenterology,0016-5085,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Gender & Society,1552-3977,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Geophysical Research Letters,1944-8007,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Global Environmental Change,0959-3780,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Government Information Quarterly,0740-624X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Gut,1468-3288,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",No
+Health Affairs,1544-5208,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",No
+Hepatology,1527-3350,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+IEEE Communications Magazine,0163-6804,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+IEEE Communications Surveys & Tutorials,1553-877X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+"IEEE Conference on Computer Vision and Pattern Recognition, CVPR","Only ISBN available, counts as a book",opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+IEEE International Conference on Computer Vision,2380-7504,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Yes
+IEEE Transactions on Automatic Control,0018-9286,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+IEEE Transactions on Industrial Electronics,0278-0046,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+IEEE Transactions on Pattern Analysis and Machine Intelligence,0162-8828,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+IEEE Transactions on Power Electronics,0885-8993,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+IEEE Transactions on Signal Processing,1053-587X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Immunity,1074-7613,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+International Journal of Communication,1932-8036,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+International Journal of Production Economics,0925-5273,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of the American Medical Association,1538-3598,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of Allergy and Clinical Immunology,0091-6749,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of Banking & Finance,0378-4266,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of Business Ethics,1573-0697,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of Business Research,0148-2963,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of Cleaner Production,0959-6526,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of Clinical Oncology,1527-7755,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of Communication,1460-2466,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of Cosmology and Astroparticle Physics,1475-7516,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of Economic Perspectives,1944-7965,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of Educational Psychology,1939-2176,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of Financial Economics,0304-405X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of Geophysical Research,2156-2202,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of Hepatology,0168-8278,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of High Energy Physics,1029-8479,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of Management,1557-1211,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of Materials Chemistry. A,2050-7488,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of Pragmatics,0378-2166,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of the American Chemical Society,1520-5126,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journal of the American College of Cardiology,0735-1097,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",No
+Journal of Youth and Adolescence,1573-6601,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journalism,1741-3001,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journalism Practice,1751-2786,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Journalism Studies,1461-670X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Land Use Policy,0264-8377,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Language Learning,1467-9922,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Lingua,0024-3841,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Management Information Systems Quarterly,2162-9730,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Management Science,1526-5501,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+"Media, Culture & Society",1460-3675,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Molecular Cell,1097-2765,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Monthly Notices of the Royal Astronomical Society,1365-2966,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nano Letters,1530-6992,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nanoscale,2040-3372,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature,1476-4687,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Biotechnology,1546-1696,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Cell Biology,1476-4679,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Chemistry,1755-4349,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Climate Change,1758-6798,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Communications,2041-1723,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Genetics,1546-1718,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Immunology,1529-2916,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Materials,1476-4660,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Medicine,1546-170X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Methods,1548-7105,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Nanotechnology,1748-3395,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Neuroscience,1546-1726,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Photonics,1749-4893,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Physics,1745-2481,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Reviews Cancer,1474-1768,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Reviews Genetics,1471-0064,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Reviews Immunology,1474-1733,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Reviews Neuroscience,1471-0048,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Reviews. Drug Discovery,1474-1784,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nature Reviews. Molecular Cell Biology,1471-0080,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Neural Information Processing Systems (NIPS),NIPS-ISSN,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+NeuroImage,1053-8119,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Neuron,1097-4199,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+New Media and Society,1461-7315,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Noûs,1468-0068,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Nucleic Acids Research,1362-4962,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Obstetrical & Gynecological Survey,1533-9866,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Optics Express,1094-4087,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Pediatrics,1098-4275,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Philosophical Studies,1573-0883,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Physical Review B,1550-235X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Physical Review D,1550- 2368,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Physical Review Letters,1079-7114,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Physical Review X,2160-3308,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Physics Letters B,0375-9601,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+PLoS One,1932-6203,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Proceedings of the National Academy of Sciences,1091-6490,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Progress in Human Geography,1477-0288,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Public Opinion Quarterly,1537-5331,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Regional Studies,1360-0591,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Renewable and Sustainable Energy Reviews,1364-0321,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Research Policy,0048-7333,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Review of Economics and Statistics,0034-6535,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Reviews of Modern Physics,1539-0756,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Science,1095-9203,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Yes
+Science Translational Medicine,1946-6234,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Scientific Reports,2045-2322,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Social Science & Medicine,0277-9536,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Strategic Management Journal,1097-0266,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Synthese,1573-0964,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+System,0346-251X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Teaching and Teacher Education,0742-051X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+TESOL Quarterly,1545-7249,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+The Astrophysical Journal,1538-4357,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+The China Quarterly,1468-2648,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+The Cochrane Database of Systematic Reviews,1469-493X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",No
+The European Physical Journal C,1434-6052,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+The Journal of Clinical Investigation,1558-8238,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+The Journal of Finance,1540-6261,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+The Journal of Physical Chemistry Letters,1948-7185,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+The Lancet,1474-547X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+The Lancet Neurology,1474-4422,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+The Lancet Oncology,1470-2045,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+The Modern Language Journal,1540-4781,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+The New England Journal of Medicine,1533-4406,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+The Quarterly Journal of Economics,1531-4650,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+The Review of Economic Studies,1467-937X,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+The Review of Financial Studies,1465-7368,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+Tourism Management,0261-5177,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified
+World Development,1873-5991,opr_interaction,"Is there open interaction (reviewers
+consult with one another)?",Not specified

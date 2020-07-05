@@ -345,15 +345,32 @@ p1 / p2 +
 they are not published. (n = 193)
 
 ```{r opr-combined-export, include=FALSE}
-pdata %>% 
+refined %>% 
+  select(title, issn, opr_reports:opr_interaction) %>% 
+  gather(var, val, -title, -issn) %>% 
+  mutate(val_clean = case_when(
+    str_detect(val, "Conditional") ~ "Conditional",
+    str_detect(str_to_lower(val), "not spec") ~ "Not specified",
+    str_detect(val, "Optional") ~ "Optional",
+    # recode mandatory to yes, since the meaning is the same
+    str_detect(val, "Mandatory") ~ "Yes",
+    TRUE ~ val
+  )) %>% 
   left_join(labels) %>% 
-  select(variable = var, label, value = val_clean, n, prop) %>% 
-  mutate(label = str_replace_all(label, "\\\n", " ")) %>% 
+  select(journal = title, issn, variable = var, label, value = val_clean) %>% 
   write_csv("data/figures/Fig4_A.csv")
 
 
-rev_identitiy %>% 
-  select(-order, open_peer_review.identities_revealed_to_authors = opr_indenties_author_clean) %>% 
+refined_with_areas %>% 
+  mutate(opr_indenties_author_clean = case_when(
+    str_detect(opr_indenties_author, "Conditional") ~ "Conditional",
+    str_detect(str_to_lower(opr_indenties_author), "not spec") ~ "Not specified",
+    str_detect(opr_indenties_author, "Optional") ~ "Optional",
+    # recode mandatory to yes, since the meaning is the same
+    str_detect(opr_indenties_author, "Mandatory") ~ "Yes",
+    TRUE ~ opr_indenties_author
+  )) %>% 
+  select(journal = title, issn, open_peer_review.identities_revealed_to_authors = opr_indenties_author_clean) %>% 
   write_csv("data/figures/Fig4_B.csv")
 ```
 
