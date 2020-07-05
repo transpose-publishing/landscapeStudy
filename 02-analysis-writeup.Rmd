@@ -536,7 +536,7 @@ stemmed_words %>%
          variants = map_chr(variants, paste, collapse = "; ")) %>%
   select(-word, -variant_count) %>% 
   distinct() %>% 
-  arrange(desc(n)) %>% 
+  arrange(desc(prop_of_texts)) %>% 
   select(Term = word_stemmed, Variants = variants, `Term frequency` = n, 
          `Proportion of policies that contain term` = prop_of_texts) %>% 
   knitr::kable(caption = "Propensity of terms in co-review policies")

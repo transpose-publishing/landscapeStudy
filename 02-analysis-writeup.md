@@ -274,15 +274,15 @@ Table: (\#tab:coreview-table)Propensity of terms in co-review policies
 |colleagu   |colleague; colleagues                     |             18|49%                                      |
 |student    |students; student                         |             14|34%                                      |
 |consult    |consult; consulted; consulting            |             12|32%                                      |
-|disclos    |disclosed; disclose                       |             12|29%                                      |
 |discuss    |discuss; discussed; discussion            |             12|32%                                      |
 |involv     |involved; involve; involving              |             12|32%                                      |
-|author     |authors; author; authorization            |             11|29%                                      |
 |permiss    |permission                                |             11|31%                                      |
-|collabor   |collaborate; collaborators; collaborating |             10|24%                                      |
-|journal    |journal                                   |             10|28%                                      |
+|author     |authors; author; authorization            |             11|29%                                      |
+|disclos    |disclosed; disclose                       |             12|29%                                      |
 |peer       |peer                                      |             10|29%                                      |
+|journal    |journal                                   |             10|28%                                      |
 |share      |share; shared; sharing                    |              9|25%                                      |
+|collabor   |collaborate; collaborators; collaborating |             10|24%                                      |
 |advic      |advice                                    |              8|23%                                      |
 |ident      |identities; identity                      |              8|23%                                      |
 
