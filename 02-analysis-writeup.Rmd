@@ -955,6 +955,16 @@ final_4 <- mca_data %>%
   ca::mjca(supcol = 6:7)
 ```
 
+
+```{r export-mca-data, include=FALSE}
+mca_data %>%
+  mutate(publisher_cat = fct_lump_min(publisher_mca, min = 6,
+                                      other_level = "Other publishers")) %>%
+  select(journal = title, issn, area, publisher_cat, co_review, preprint_posting, preprint_citing, identities_revealed,
+         pr_type_clean) %>% 
+  write_csv("data/figures/Fig2.csv")
+```
+
 We included five active categories in our model. All were recoded in terms of
 whether there was a clear policy on:
 
@@ -1126,7 +1136,7 @@ summary(final_4) %>%
 (This will go on top in the manuscript, down here for convenience.)
 
 ```{r graph for clarity, warning=FALSE}
-clarity_data <- refined %>%
+clarity_base_data <- refined %>%
   mutate(
     co_review = case_when(
       coreview_email == "Yes" | coreview_email == "No" ~ "Yes",
@@ -1159,14 +1169,16 @@ clarity_data <- refined %>%
     preprint_link = case_when(preprint_link %in% c("Yes", "No") ~ "Yes",
                               TRUE ~ "No")
   ) %>% 
-  select(co_review, preprint_posting, preprint_citing, preprint_link,
+  select(title, issn, co_review, preprint_posting, preprint_citing, preprint_link,
          pr_type_clean, starts_with("opr"), -opr_was_recoded) %>% 
   select(-opr_additional) %>% 
   mutate_at(vars(starts_with("opr")), function(x) case_when(
       x == "Not specified" ~ "No",
       TRUE ~ "Yes"
-    )) %>% 
-  gather(var, val) %>% 
+    ))
+
+clarity_data <- clarity_base_data %>% 
+  gather(var, val, -title, -issn) %>% 
   make_proportion(val, var, "Yes")
 
 
@@ -1217,6 +1229,15 @@ clarity_data %>%
   guides(fill = guide_legend(reverse = T)) +
   labs(x = NULL, y = NULL, fill = NULL) 
 
+```
+
+
+```{r}
+clarity_base_data %>% 
+  gather(var, val, -title, -issn) %>% 
+  left_join(labels) %>% 
+  rename(variable = var, value = val) %>% 
+  write_csv("data/figures/Fig1.csv")
 ```
 
 
