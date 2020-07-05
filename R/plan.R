@@ -1,9 +1,8 @@
 plan <- drake_plan(
   # initial import of data
-  data = import_raw_data(
+  data_joined = import_raw_data(
     gs_data = file_in("data/raw/Compiled_Landscape study journals list - G_ALL_dedup.csv"),
-    survey_data = file_in("data/raw/TRANSPOSE landscape study - round 3 - Raw.csv"),
-    out_file = file_out("data/transformed/joined_data.csv")
+    survey_data = file_in("data/raw/TRANSPOSE landscape study - round 3 - Raw.csv")
   ),
   # create a simple file as overview of the variables
   variables = create_var_overview(
@@ -12,7 +11,7 @@ plan <- drake_plan(
   ),
   # recode variables like peer review type
   clean_data = recode_vars(
-    raw_data = data,
+    raw_data = data_joined,
     oa_data = file_in("data/raw/oa_data.csv"),
     out_path = file_out("data/transformed/refined.csv")
   ),

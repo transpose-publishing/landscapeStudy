@@ -1,6 +1,6 @@
 # data import functions ------
 
-import_raw_data <- function(gs_data, survey_data, out_file) {
+import_raw_data <- function(gs_data, survey_data) {
   # Import data on google scholar rankings of journals ----
   gs_dat <- read_csv(
     gs_data,
@@ -82,7 +82,7 @@ import_raw_data <- function(gs_data, survey_data, out_file) {
     stop("Matching wasn't sucessful! Please check the output!")
   } else {
     # write result to disk
-    write_csv(joined_dataset, out_file)
+    joined_dataset
   }
 }
 
