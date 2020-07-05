@@ -43,9 +43,9 @@ executing `R/01-explore.R` and `R/02-explore-missings.R`.
 
 ### Code files
 
-**Core files for reproducing the analysis **
+**Core files for reproducing the analysis**
 
-|filename                        |purpose                                                                    |
+|Filename                        |Purpose                                                                    |
 |:-------------------------------|:--------------------------------------------------------------------------|
 |drake.R                         |Core file for building the analysis. Run with `drake::r_make("drake.r")`| 
 |R/plan.R                        |Describes all inputs and outputs along with the functions processing them.|
@@ -58,7 +58,7 @@ executing `R/01-explore.R` and `R/02-explore-missings.R`.
 
 **Additional files for scraping and exploring data**
 
-|filename                       |purpose                                                                  |
+|Filename                       |Purpose                                                                  |
 |:------------------------------|:------------------------------------------------------------------------|
 |analysis-scripts/01-explore.R   |General exploratory graphs from early in the analysis.|
 |analysis-scripts/02-explore-missings.R|Exploration of missing values from the survey data.|
@@ -95,6 +95,33 @@ except for the column `area` which specifies the GSM area.
 All subsequent analysis is based on either of the two files (depending on
 whether `area` was considered or not). The files - along with other intermediate
 data-files - can be found in the directory `data/transformed`. 
+
+### Overview of data files
+
+**Raw data files**
+
+|Filename                        |Purpose                                                                    |
+|:-------------------------------|:--------------------------------------------------------------------------|
+|data/raw/TRANSPOSE landscape study - round 3 - Raw.csv|Raw data of the landscape scan on 171 journals. Conducted with the data collection instrument.|
+|data/raw/Compiled_Landscape study journals list - G_ALL_dedup.csv |Data from Google Scholar Metrics on journals and their respective ranking within the overall top 100 and top 20 per subject area. Retrieved on 2018-10-13.|
+|data/raw/data_collection_instrument.csv |This file preserves the instrument used when collecting data on journals.|
+|data/raw/gs_scraped_total.csv|All journals listed in Google Scholar Metrics as of 2019-06-18, including h5-index and h5-median. This file was generated via the script `analysis-scripts/04-scrape-gs-fields.R`|
+|data/raw/oa_data.csv| Data on open access status of all journals surveyed. Generated via `analysis-scripts/04-get-oa-status.R`|
+
+
+
+**Transformed data files**
+
+|Filename                        |Purpose                                                                    |
+|:-------------------------------|:--------------------------------------------------------------------------|
+|data/transformed/refined.csv|Cleaned data from our landscape scan, joined with data from Google Scholar Metrics. This file is the basis for the analysis presented in our paper.|
+|data/transformed/refined_w_areas.csv|This file is identical to `refined.csv`, except for the additional variable "area" which holds data on the subject category from Google Scholar Metrics. Since some journals appear in multiple categories, this file has more rows (193) than `refined.csv` (Which has 171 rows on 171 journals)|
+|data/transformed/var_overview.csv|Plain language descriptions of the variables in `data/raw/TRANSPOSE landscape study - round 3 - Raw.csv`.|
+|data/transformed/coreview-policies.csv|String distances between different coreview policies for detecting duplicates. Produced via `analysis-scripts/06-clean-coreview.R`|
+|data/transformed/journals_with_missing_categories.csv|List of journals for which no subject category from Google Scholar metrics is available in `data/raw/Compiled_Landscape study journals list - G_ALL_dedup.csv`. The missing data for these journals is taken from `data/raw/gs_scraped_total.csv`. |
+|data/transformed/policies.txt|A plain language file containing the raw text of the journals' policies on coreviewing.
+
+
 
 
 ## Further resources
