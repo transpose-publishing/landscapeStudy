@@ -1,33 +1,194 @@
-area,preprint_citation,n,prop
-"Business, Economics & Management",Other,1,0.05
-"Business, Economics & Management",Unsure,3,0.15
-"Business, Economics & Management",Not specified,16,0.8
-Chemical & Materials Sciences,"Yes, in the reference list",8,0.38095238095238093
-Chemical & Materials Sciences,No,1,0.047619047619047616
-Chemical & Materials Sciences,Unsure,6,0.2857142857142857
-Chemical & Materials Sciences,Not specified,6,0.2857142857142857
-Engineering & Computer Science,"Yes, in the reference list",7,0.2916666666666667
-Engineering & Computer Science,Unsure,3,0.125
-Engineering & Computer Science,Not specified,14,0.5833333333333334
-Health & Medical Sciences,"Yes, in the reference list",5,0.1111111111111111
-Health & Medical Sciences,"Yes, but only in the text",3,0.06666666666666667
-Health & Medical Sciences,Other,1,0.022222222222222223
-Health & Medical Sciences,No,2,0.044444444444444446
-Health & Medical Sciences,Unsure,4,0.08888888888888889
-Health & Medical Sciences,Not specified,30,0.6666666666666666
-"Humanities, Literature & Arts","Yes, in the reference list",1,0.05
-"Humanities, Literature & Arts","Yes, but only in the text",2,0.1
-"Humanities, Literature & Arts",Unsure,4,0.2
-"Humanities, Literature & Arts",Not specified,13,0.65
-Life Sciences & Earth Sciences,"Yes, in the reference list",10,0.45454545454545453
-Life Sciences & Earth Sciences,"Yes, but only in the text",1,0.045454545454545456
-Life Sciences & Earth Sciences,Other,1,0.045454545454545456
-Life Sciences & Earth Sciences,Not specified,10,0.45454545454545453
-Physics & Mathematics,"Yes, in the reference list",7,0.35
-Physics & Mathematics,Other,1,0.05
-Physics & Mathematics,Unsure,4,0.2
-Physics & Mathematics,Not specified,8,0.4
-Social Sciences,"Yes, in the reference list",2,0.09523809523809523
-Social Sciences,"Yes, but only in the text",1,0.047619047619047616
-Social Sciences,Unsure,4,0.19047619047619047
-Social Sciences,Not specified,14,0.6666666666666666
+journal,issn,area,preprint_citation
+Academic Medicine,1040-2446,Social Sciences,"Yes, in the reference list"
+ACS Applied Materials & Interfaces,1944-8252,Chemical & Materials Sciences,Unsure
+ACS Applied Materials & Interfaces,1944-8252,Engineering & Computer Science,Unsure
+Accounts of Chemical Research,1520-4898,Chemical & Materials Sciences,Unsure
+ACS Catalysis,2155-5435,Chemical & Materials Sciences,Unsure
+Academy of Management Journal,0001-4273,"Business, Economics & Management",Not specified
+ACS Nano,1936-086X,Chemical & Materials Sciences,Not specified
+ACS Nano,1936-086X,Engineering & Computer Science,Not specified
+Advanced Energy Materials,1614-6840,Chemical & Materials Sciences,Not specified
+Advanced Energy Materials,1614-6840,Engineering & Computer Science,Not specified
+Advanced Functional Materials,1616-3028,Chemical & Materials Sciences,Not specified
+Advanced Functional Materials,1616-3028,Engineering & Computer Science,Not specified
+Advanced Materials,1521-4095,Chemical & Materials Sciences,Not specified
+Advanced Materials,1521-4095,Engineering & Computer Science,Not specified
+American Economic Review,0002-8282,"Business, Economics & Management",Not specified
+American Journal of Political Science,1540-5907,Social Sciences,Not specified
+American Journal of Public Health,1541-0048,Social Sciences,Not specified
+American Political Science Review,1537-5943,Social Sciences,Unsure
+American Sociological Review,1939-8271,Social Sciences,"Yes, in the reference list"
+Angewandte Chemie International Edition,1521-3773,Chemical & Materials Sciences,"Yes, in the reference list"
+Annals of Internal Medicine,0003-4819,Health & Medical Sciences,"Yes, but only in the text"
+Annals of Oncology,1569-8041,Health & Medical Sciences,"Yes, but only in the text"
+Annals of the Rheumatic Diseases,1468-2060,Health & Medical Sciences,Not specified
+Annals of Tourism Research,0160-7383,Social Sciences,Not specified
+Applied Energy,0306-2619,Engineering & Computer Science,Not specified
+Applied Energy,0306-2619,Life Sciences & Earth Sciences,Not specified
+Applied Linguistics,1477-450X,"Humanities, Literature & Arts","Yes, but only in the text"
+Applied Physics Letters,1077-3118,Physics & Mathematics,Not specified
+Astronomy & Astrophysics,1432-0746,Physics & Mathematics,Not specified
+Biomaterials,0142-9612,Engineering & Computer Science,Not specified
+Biomaterials,0142-9612,Health & Medical Sciences,Not specified
+Blood,1528-0020,Health & Medical Sciences,Not specified
+BMJ,1756-1833,Health & Medical Sciences,Not specified
+Cancer Cell,1535-6108,Health & Medical Sciences,Not specified
+Cancer Research,0099-7013,Health & Medical Sciences,Not specified
+Cell,1097-4172,Health & Medical Sciences,Not specified
+Cell,1097-4172,Life Sciences & Earth Sciences,Not specified
+Cell Metabolism,1550-4131,Life Sciences & Earth Sciences,Not specified
+Cell Stem Cell,1934-5909,Life Sciences & Earth Sciences,Not specified
+"Chemical communications (Cambridge, England)",0144-557X,Chemical & Materials Sciences,"Yes, in the reference list"
+Chemical Reviews,1520-6890,Chemical & Materials Sciences,No
+Chemical Society reviews,1460-4744,Chemical & Materials Sciences,"Yes, in the reference list"
+Chemistry of Materials,1520-5002,Chemical & Materials Sciences,Unsure
+Chemistry of Materials,1520-5002,Engineering & Computer Science,Unsure
+Circulation,0009-7322,Health & Medical Sciences,No
+Circulation Research,1524-4571,Health & Medical Sciences,No
+Clinical Cancer Research,1557-3265,Health & Medical Sciences,Not specified
+Computers & Education,0360-1315,Social Sciences,"Yes, but only in the text"
+Diabetes Care,1935-5548,Health & Medical Sciences,Not specified
+Digital Journalism,2167-082X,"Humanities, Literature & Arts",Not specified
+Econometrica,1468-0262,"Business, Economics & Management",Not specified
+Energy and Environmental Science,1754-5706,Chemical & Materials Sciences,Not specified
+Energy and Environmental Science,1754-5706,Engineering & Computer Science,Not specified
+Environmental Science & Technology,0013-936X,Life Sciences & Earth Sciences,Other
+European Heart Journal,1522-9645,Health & Medical Sciences,Unsure
+European Urology,0302-2838,Health & Medical Sciences,Not specified
+Gastroenterology,0016-5085,Health & Medical Sciences,Not specified
+Gender & Society,1552-3977,"Humanities, Literature & Arts",Not specified
+Geophysical Research Letters,1944-8007,Physics & Mathematics,Not specified
+Global Environmental Change,0959-3780,Social Sciences,Not specified
+Government Information Quarterly,0740-624X,Social Sciences,Unsure
+Gut,1468-3288,Health & Medical Sciences,Not specified
+Health Affairs,1544-5208,Social Sciences,Not specified
+Hepatology,1527-3350,Health & Medical Sciences,Not specified
+IEEE Communications Magazine,0163-6804,Engineering & Computer Science,Not specified
+IEEE Communications Surveys & Tutorials,1553-877X,Engineering & Computer Science,Not specified
+"IEEE Conference on Computer Vision and Pattern Recognition, CVPR","Only ISBN available, counts as a book",Engineering & Computer Science,Unsure
+IEEE International Conference on Computer Vision,2380-7504,Engineering & Computer Science,"Yes, in the reference list"
+IEEE Transactions on Automatic Control,0018-9286,Physics & Mathematics,Not specified
+IEEE Transactions on Industrial Electronics,0278-0046,Engineering & Computer Science,Not specified
+IEEE Transactions on Pattern Analysis and Machine Intelligence,0162-8828,Engineering & Computer Science,Not specified
+IEEE Transactions on Power Electronics,0885-8993,Engineering & Computer Science,Not specified
+IEEE Transactions on Signal Processing,1053-587X,Physics & Mathematics,Not specified
+Immunity,1074-7613,Health & Medical Sciences,Other
+International Journal of Communication,1932-8036,"Humanities, Literature & Arts",Not specified
+International Journal of Production Economics,0925-5273,"Business, Economics & Management",Not specified
+Journal of the American Medical Association,1538-3598,Health & Medical Sciences,Not specified
+Journal of Allergy and Clinical Immunology,0091-6749,Health & Medical Sciences,Not specified
+Journal of Banking & Finance,0378-4266,"Business, Economics & Management",Not specified
+Journal of Business Ethics,1573-0697,"Business, Economics & Management",Not specified
+Journal of Business Ethics,1573-0697,Social Sciences,Not specified
+Journal of Business Research,0148-2963,"Business, Economics & Management",Not specified
+Journal of Cleaner Production,0959-6526,Life Sciences & Earth Sciences,Not specified
+Journal of Cleaner Production,0959-6526,Social Sciences,Not specified
+Journal of Clinical Oncology,1527-7755,Health & Medical Sciences,Not specified
+Journal of Communication,1460-2466,"Humanities, Literature & Arts",Not specified
+Journal of Cosmology and Astroparticle Physics,1475-7516,Physics & Mathematics,Unsure
+Journal of Economic Perspectives,1944-7965,"Business, Economics & Management",Not specified
+Journal of Educational Psychology,1939-2176,Social Sciences,Not specified
+Journal of Financial Economics,0304-405X,"Business, Economics & Management",Not specified
+Journal of Geophysical Research,2156-2202,Physics & Mathematics,Other
+Journal of Hepatology,0168-8278,Health & Medical Sciences,Not specified
+Journal of High Energy Physics,1029-8479,Physics & Mathematics,"Yes, in the reference list"
+Journal of Management,1557-1211,"Business, Economics & Management",Unsure
+Journal of Materials Chemistry. A,2050-7488,Chemical & Materials Sciences,"Yes, in the reference list"
+Journal of Materials Chemistry. A,2050-7488,Engineering & Computer Science,"Yes, in the reference list"
+Journal of Pragmatics,0378-2166,"Humanities, Literature & Arts",Unsure
+Journal of the American Chemical Society,1520-5126,Chemical & Materials Sciences,Unsure
+Journal of the American College of Cardiology,0735-1097,Health & Medical Sciences,Not specified
+Journal of Youth and Adolescence,1573-6601,Social Sciences,Unsure
+Journalism,1741-3001,"Humanities, Literature & Arts",Unsure
+Journalism Practice,1751-2786,"Humanities, Literature & Arts",Not specified
+Journalism Studies,1461-670X,"Humanities, Literature & Arts",Not specified
+Land Use Policy,0264-8377,Social Sciences,Not specified
+Language Learning,1467-9922,"Humanities, Literature & Arts",Not specified
+Lingua,0024-3841,"Humanities, Literature & Arts",Not specified
+Management Information Systems Quarterly,2162-9730,"Business, Economics & Management",Not specified
+Management Science,1526-5501,"Business, Economics & Management",Not specified
+"Media, Culture & Society",1460-3675,"Humanities, Literature & Arts",Not specified
+Molecular Cell,1097-2765,Life Sciences & Earth Sciences,"Yes, but only in the text"
+Monthly Notices of the Royal Astronomical Society,1365-2966,Physics & Mathematics,"Yes, in the reference list"
+Nano Letters,1530-6992,Chemical & Materials Sciences,"Yes, in the reference list"
+Nano Letters,1530-6992,Engineering & Computer Science,"Yes, in the reference list"
+Nanoscale,2040-3372,Chemical & Materials Sciences,Not specified
+Nanoscale,2040-3372,Engineering & Computer Science,Not specified
+Nature,1476-4687,Life Sciences & Earth Sciences,"Yes, in the reference list"
+Nature Biotechnology,1546-1696,Life Sciences & Earth Sciences,"Yes, in the reference list"
+Nature Cell Biology,1476-4679,Life Sciences & Earth Sciences,"Yes, in the reference list"
+Nature Chemistry,1755-4349,Chemical & Materials Sciences,"Yes, in the reference list"
+Nature Climate Change,1758-6798,Life Sciences & Earth Sciences,"Yes, in the reference list"
+Nature Communications,2041-1723,Life Sciences & Earth Sciences,"Yes, in the reference list"
+Nature Genetics,1546-1718,Health & Medical Sciences,"Yes, in the reference list"
+Nature Genetics,1546-1718,Life Sciences & Earth Sciences,"Yes, in the reference list"
+Nature Immunology,1529-2916,Health & Medical Sciences,"Yes, in the reference list"
+Nature Materials,1476-4660,Chemical & Materials Sciences,"Yes, in the reference list"
+Nature Materials,1476-4660,Engineering & Computer Science,"Yes, in the reference list"
+Nature Medicine,1546-170X,Health & Medical Sciences,"Yes, in the reference list"
+Nature Methods,1548-7105,Life Sciences & Earth Sciences,"Yes, in the reference list"
+Nature Nanotechnology,1748-3395,Chemical & Materials Sciences,"Yes, in the reference list"
+Nature Nanotechnology,1748-3395,Engineering & Computer Science,"Yes, in the reference list"
+Nature Neuroscience,1546-1726,Health & Medical Sciences,"Yes, in the reference list"
+Nature Photonics,1749-4893,Engineering & Computer Science,"Yes, in the reference list"
+Nature Photonics,1749-4893,Physics & Mathematics,"Yes, in the reference list"
+Nature Physics,1745-2481,Physics & Mathematics,"Yes, in the reference list"
+Nature Reviews Cancer,1474-1768,Health & Medical Sciences,Not specified
+Nature Reviews Genetics,1471-0064,Life Sciences & Earth Sciences,Not specified
+Nature Reviews Immunology,1474-1733,Health & Medical Sciences,Not specified
+Nature Reviews Neuroscience,1471-0048,Health & Medical Sciences,Not specified
+Nature Reviews. Drug Discovery,1474-1784,Health & Medical Sciences,Not specified
+Nature Reviews. Molecular Cell Biology,1471-0080,Life Sciences & Earth Sciences,Not specified
+Neural Information Processing Systems (NIPS),NIPS-ISSN,Engineering & Computer Science,"Yes, in the reference list"
+NeuroImage,1053-8119,Health & Medical Sciences,Unsure
+Neuron,1097-4199,Health & Medical Sciences,Not specified
+Neuron,1097-4199,Life Sciences & Earth Sciences,Not specified
+New Media and Society,1461-7315,Social Sciences,Not specified
+Noûs,1468-0068,"Humanities, Literature & Arts","Yes, in the reference list"
+Nucleic Acids Research,1362-4962,Life Sciences & Earth Sciences,"Yes, in the reference list"
+Obstetrical & Gynecological Survey,1533-9866,Health & Medical Sciences,"Yes, but only in the text"
+Optics Express,1094-4087,Physics & Mathematics,Not specified
+Pediatrics,1098-4275,Health & Medical Sciences,Not specified
+Philosophical Studies,1573-0883,"Humanities, Literature & Arts","Yes, but only in the text"
+Physical Review B,1550-235X,Physics & Mathematics,"Yes, in the reference list"
+Physical Review D,1550- 2368,Physics & Mathematics,"Yes, in the reference list"
+Physical Review Letters,1079-7114,Physics & Mathematics,Unsure
+Physical Review X,2160-3308,Physics & Mathematics,"Yes, in the reference list"
+Physics Letters B,0375-9601,Physics & Mathematics,Not specified
+PLoS One,1932-6203,Health & Medical Sciences,"Yes, in the reference list"
+PLoS One,1932-6203,Life Sciences & Earth Sciences,"Yes, in the reference list"
+Proceedings of the National Academy of Sciences,1091-6490,Health & Medical Sciences,Not specified
+Proceedings of the National Academy of Sciences,1091-6490,Life Sciences & Earth Sciences,Not specified
+Progress in Human Geography,1477-0288,Social Sciences,Not specified
+Public Opinion Quarterly,1537-5331,"Humanities, Literature & Arts",Not specified
+Regional Studies,1360-0591,Social Sciences,Not specified
+Renewable and Sustainable Energy Reviews,1364-0321,Engineering & Computer Science,Not specified
+Research Policy,0048-7333,Social Sciences,Not specified
+Review of Economics and Statistics,0034-6535,"Business, Economics & Management",Not specified
+Reviews of Modern Physics,1539-0756,Physics & Mathematics,Not specified
+Science,1095-9203,Life Sciences & Earth Sciences,Not specified
+Science Translational Medicine,1946-6234,Health & Medical Sciences,Not specified
+Scientific Reports,2045-2322,Life Sciences & Earth Sciences,"Yes, in the reference list"
+Social Science & Medicine,0277-9536,Social Sciences,Unsure
+Strategic Management Journal,1097-0266,"Business, Economics & Management",Other
+Synthese,1573-0964,"Humanities, Literature & Arts",Not specified
+System,0346-251X,"Humanities, Literature & Arts",Not specified
+Teaching and Teacher Education,0742-051X,Social Sciences,Not specified
+TESOL Quarterly,1545-7249,"Humanities, Literature & Arts",Unsure
+The Astrophysical Journal,1538-4357,Physics & Mathematics,Unsure
+The China Quarterly,1468-2648,"Humanities, Literature & Arts",Unsure
+The Cochrane Database of Systematic Reviews,1469-493X,Health & Medical Sciences,Unsure
+The European Physical Journal C,1434-6052,Physics & Mathematics,Unsure
+The Journal of Clinical Investigation,1558-8238,Health & Medical Sciences,Unsure
+The Journal of Finance,1540-6261,"Business, Economics & Management",Unsure
+The Journal of Physical Chemistry Letters,1948-7185,Chemical & Materials Sciences,Unsure
+The Lancet,1474-547X,Health & Medical Sciences,Not specified
+The Lancet Neurology,1474-4422,Health & Medical Sciences,Not specified
+The Lancet Oncology,1470-2045,Health & Medical Sciences,Not specified
+The Modern Language Journal,1540-4781,"Humanities, Literature & Arts",Not specified
+The New England Journal of Medicine,1533-4406,Health & Medical Sciences,Not specified
+The Quarterly Journal of Economics,1531-4650,"Business, Economics & Management",Not specified
+The Review of Economic Studies,1467-937X,"Business, Economics & Management",Not specified
+The Review of Financial Studies,1465-7368,"Business, Economics & Management",Not specified
+Tourism Management,0261-5177,"Business, Economics & Management",Unsure
+World Development,1873-5991,"Business, Economics & Management",Not specified

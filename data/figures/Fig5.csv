@@ -1,20 +1,194 @@
-area,can_coreviewers_contribute,n,prop
-"Business, Economics & Management",Yes,1,0.05
-"Business, Economics & Management",No,1,0.05
-"Business, Economics & Management",Unsure,18,0.9
-Chemical & Materials Sciences,Yes,2,0.09523809523809523
-Chemical & Materials Sciences,Unsure,19,0.9047619047619048
-Engineering & Computer Science,Yes,4,0.16666666666666666
-Engineering & Computer Science,Unsure,20,0.8333333333333334
-Health & Medical Sciences,Yes,14,0.3111111111111111
-Health & Medical Sciences,No,2,0.044444444444444446
-Health & Medical Sciences,Unsure,29,0.6444444444444445
-"Humanities, Literature & Arts",Yes,2,0.1
-"Humanities, Literature & Arts",Unsure,18,0.9
-Life Sciences & Earth Sciences,Yes,9,0.4090909090909091
-Life Sciences & Earth Sciences,Unsure,13,0.5909090909090909
-Physics & Mathematics,Yes,6,0.3
-Physics & Mathematics,No,1,0.05
-Physics & Mathematics,Unsure,13,0.65
-Social Sciences,Yes,5,0.23809523809523808
-Social Sciences,Unsure,16,0.7619047619047619
+journal,issn,can_coreviewers_contribute
+Academic Medicine,1040-2446,Yes
+ACS Applied Materials & Interfaces,1944-8252,Unsure
+ACS Applied Materials & Interfaces,1944-8252,Unsure
+Accounts of Chemical Research,1520-4898,Unsure
+ACS Catalysis,2155-5435,Unsure
+Academy of Management Journal,0001-4273,No
+ACS Nano,1936-086X,Unsure
+ACS Nano,1936-086X,Unsure
+Advanced Energy Materials,1614-6840,Unsure
+Advanced Energy Materials,1614-6840,Unsure
+Advanced Functional Materials,1616-3028,Unsure
+Advanced Functional Materials,1616-3028,Unsure
+Advanced Materials,1521-4095,Unsure
+Advanced Materials,1521-4095,Unsure
+American Economic Review,0002-8282,Unsure
+American Journal of Political Science,1540-5907,Unsure
+American Journal of Public Health,1541-0048,Unsure
+American Political Science Review,1537-5943,Unsure
+American Sociological Review,1939-8271,Yes
+Angewandte Chemie International Edition,1521-3773,Unsure
+Annals of Internal Medicine,0003-4819,No
+Annals of Oncology,1569-8041,Unsure
+Annals of the Rheumatic Diseases,1468-2060,Yes
+Annals of Tourism Research,0160-7383,Unsure
+Applied Energy,0306-2619,Unsure
+Applied Energy,0306-2619,Unsure
+Applied Linguistics,1477-450X,Yes
+Applied Physics Letters,1077-3118,Unsure
+Astronomy & Astrophysics,1432-0746,Unsure
+Biomaterials,0142-9612,Unsure
+Biomaterials,0142-9612,Unsure
+Blood,1528-0020,No
+BMJ,1756-1833,Yes
+Cancer Cell,1535-6108,Yes
+Cancer Research,0099-7013,Unsure
+Cell,1097-4172,Yes
+Cell,1097-4172,Yes
+Cell Metabolism,1550-4131,Yes
+Cell Stem Cell,1934-5909,Yes
+"Chemical communications (Cambridge, England)",0144-557X,Unsure
+Chemical Reviews,1520-6890,Unsure
+Chemical Society reviews,1460-4744,Unsure
+Chemistry of Materials,1520-5002,Unsure
+Chemistry of Materials,1520-5002,Unsure
+Circulation,0009-7322,Unsure
+Circulation Research,1524-4571,Unsure
+Clinical Cancer Research,1557-3265,Yes
+Computers & Education,0360-1315,Unsure
+Diabetes Care,1935-5548,Unsure
+Digital Journalism,2167-082X,Unsure
+Econometrica,1468-0262,Unsure
+Energy and Environmental Science,1754-5706,Unsure
+Energy and Environmental Science,1754-5706,Unsure
+Environmental Science & Technology,0013-936X,Unsure
+European Heart Journal,1522-9645,Unsure
+European Urology,0302-2838,Unsure
+Gastroenterology,0016-5085,Unsure
+Gender & Society,1552-3977,Unsure
+Geophysical Research Letters,1944-8007,Unsure
+Global Environmental Change,0959-3780,Unsure
+Government Information Quarterly,0740-624X,Unsure
+Gut,1468-3288,Yes
+Health Affairs,1544-5208,Yes
+Hepatology,1527-3350,Unsure
+IEEE Communications Magazine,0163-6804,Unsure
+IEEE Communications Surveys & Tutorials,1553-877X,Unsure
+"IEEE Conference on Computer Vision and Pattern Recognition, CVPR","Only ISBN available, counts as a book",Yes
+IEEE International Conference on Computer Vision,2380-7504,Yes
+IEEE Transactions on Automatic Control,0018-9286,Unsure
+IEEE Transactions on Industrial Electronics,0278-0046,Unsure
+IEEE Transactions on Pattern Analysis and Machine Intelligence,0162-8828,Unsure
+IEEE Transactions on Power Electronics,0885-8993,Unsure
+IEEE Transactions on Signal Processing,1053-587X,Unsure
+Immunity,1074-7613,Unsure
+International Journal of Communication,1932-8036,Unsure
+International Journal of Production Economics,0925-5273,Unsure
+Journal of the American Medical Association,1538-3598,Unsure
+Journal of Allergy and Clinical Immunology,0091-6749,Unsure
+Journal of Banking & Finance,0378-4266,Unsure
+Journal of Business Ethics,1573-0697,Unsure
+Journal of Business Ethics,1573-0697,Unsure
+Journal of Business Research,0148-2963,Unsure
+Journal of Cleaner Production,0959-6526,Unsure
+Journal of Cleaner Production,0959-6526,Unsure
+Journal of Clinical Oncology,1527-7755,Unsure
+Journal of Communication,1460-2466,Unsure
+Journal of Cosmology and Astroparticle Physics,1475-7516,No
+Journal of Economic Perspectives,1944-7965,Unsure
+Journal of Educational Psychology,1939-2176,Yes
+Journal of Financial Economics,0304-405X,Unsure
+Journal of Geophysical Research,2156-2202,Unsure
+Journal of Hepatology,0168-8278,Unsure
+Journal of High Energy Physics,1029-8479,Unsure
+Journal of Management,1557-1211,Yes
+Journal of Materials Chemistry. A,2050-7488,Unsure
+Journal of Materials Chemistry. A,2050-7488,Unsure
+Journal of Pragmatics,0378-2166,Unsure
+Journal of the American Chemical Society,1520-5126,Unsure
+Journal of the American College of Cardiology,0735-1097,Unsure
+Journal of Youth and Adolescence,1573-6601,Unsure
+Journalism,1741-3001,Unsure
+Journalism Practice,1751-2786,Unsure
+Journalism Studies,1461-670X,Unsure
+Land Use Policy,0264-8377,Unsure
+Language Learning,1467-9922,Unsure
+Lingua,0024-3841,Unsure
+Management Information Systems Quarterly,2162-9730,Unsure
+Management Science,1526-5501,Unsure
+"Media, Culture & Society",1460-3675,Unsure
+Molecular Cell,1097-2765,Unsure
+Monthly Notices of the Royal Astronomical Society,1365-2966,Unsure
+Nano Letters,1530-6992,Yes
+Nano Letters,1530-6992,Yes
+Nanoscale,2040-3372,Yes
+Nanoscale,2040-3372,Yes
+Nature,1476-4687,Unsure
+Nature Biotechnology,1546-1696,Unsure
+Nature Cell Biology,1476-4679,Unsure
+Nature Chemistry,1755-4349,Unsure
+Nature Climate Change,1758-6798,Unsure
+Nature Communications,2041-1723,Unsure
+Nature Genetics,1546-1718,Unsure
+Nature Genetics,1546-1718,Unsure
+Nature Immunology,1529-2916,Unsure
+Nature Materials,1476-4660,Unsure
+Nature Materials,1476-4660,Unsure
+Nature Medicine,1546-170X,Unsure
+Nature Methods,1548-7105,Unsure
+Nature Nanotechnology,1748-3395,Unsure
+Nature Nanotechnology,1748-3395,Unsure
+Nature Neuroscience,1546-1726,Unsure
+Nature Photonics,1749-4893,Unsure
+Nature Photonics,1749-4893,Unsure
+Nature Physics,1745-2481,Unsure
+Nature Reviews Cancer,1474-1768,Yes
+Nature Reviews Genetics,1471-0064,Yes
+Nature Reviews Immunology,1474-1733,Yes
+Nature Reviews Neuroscience,1471-0048,Yes
+Nature Reviews. Drug Discovery,1474-1784,Yes
+Nature Reviews. Molecular Cell Biology,1471-0080,Yes
+Neural Information Processing Systems (NIPS),NIPS-ISSN,Unsure
+NeuroImage,1053-8119,Unsure
+Neuron,1097-4199,Yes
+Neuron,1097-4199,Yes
+New Media and Society,1461-7315,Unsure
+Noûs,1468-0068,Yes
+Nucleic Acids Research,1362-4962,Unsure
+Obstetrical & Gynecological Survey,1533-9866,Unsure
+Optics Express,1094-4087,Yes
+Pediatrics,1098-4275,Yes
+Philosophical Studies,1573-0883,Unsure
+Physical Review B,1550-235X,Yes
+Physical Review D,1550- 2368,Yes
+Physical Review Letters,1079-7114,Yes
+Physical Review X,2160-3308,Yes
+Physics Letters B,0375-9601,Unsure
+PLoS One,1932-6203,Yes
+PLoS One,1932-6203,Yes
+Proceedings of the National Academy of Sciences,1091-6490,Yes
+Proceedings of the National Academy of Sciences,1091-6490,Yes
+Progress in Human Geography,1477-0288,Yes
+Public Opinion Quarterly,1537-5331,Unsure
+Regional Studies,1360-0591,Unsure
+Renewable and Sustainable Energy Reviews,1364-0321,Unsure
+Research Policy,0048-7333,Unsure
+Review of Economics and Statistics,0034-6535,Unsure
+Reviews of Modern Physics,1539-0756,Yes
+Science,1095-9203,Unsure
+Science Translational Medicine,1946-6234,Unsure
+Scientific Reports,2045-2322,Yes
+Social Science & Medicine,0277-9536,Unsure
+Strategic Management Journal,1097-0266,Unsure
+Synthese,1573-0964,Unsure
+System,0346-251X,Unsure
+Teaching and Teacher Education,0742-051X,Unsure
+TESOL Quarterly,1545-7249,Unsure
+The Astrophysical Journal,1538-4357,Unsure
+The China Quarterly,1468-2648,Unsure
+The Cochrane Database of Systematic Reviews,1469-493X,Unsure
+The European Physical Journal C,1434-6052,Unsure
+The Journal of Clinical Investigation,1558-8238,Unsure
+The Journal of Finance,1540-6261,Unsure
+The Journal of Physical Chemistry Letters,1948-7185,Unsure
+The Lancet,1474-547X,Unsure
+The Lancet Neurology,1474-4422,Unsure
+The Lancet Oncology,1470-2045,Unsure
+The Modern Language Journal,1540-4781,Unsure
+The New England Journal of Medicine,1533-4406,Unsure
+The Quarterly Journal of Economics,1531-4650,Unsure
+The Review of Economic Studies,1467-937X,Unsure
+The Review of Financial Studies,1465-7368,Unsure
+Tourism Management,0261-5177,Unsure
+World Development,1873-5991,Unsure

@@ -457,8 +457,15 @@ ggplot(co_rev, aes(fct_reorder(area, order), prop,
 ```
 
 ```{r corev-export, include=FALSE}
-co_rev %>% 
-  select(-order, can_coreviewers_contribute = coreview_email) %>% 
+refined_with_areas %>% 
+  mutate(coreview_email = case_when(
+    coreview_email == "unsure" ~ "Unsure",
+    # lump the two not specified to unsure, since this is similar in this 
+    # instance
+    coreview_email == "Not specified" ~ "Unsure",
+    TRUE ~ coreview_email
+  )) %>% 
+  select(journal = title, issn, can_coreviewers_contribute = coreview_email) %>% 
   write_csv("data/figures/Fig5.csv")
 ```
 
@@ -749,12 +756,12 @@ gridExtra::grid.arrange(gt1, gt2)
 
 
 ```{r preprint-export, include=FALSE}
-preprint_version %>% 
-  select(-order, preprint_version = preprint_version_clean) %>% 
+select_bivariate(preprint_version_clean) %>% 
+  rename(preprint_version = preprint_version_clean) %>% 
   write_csv("data/figures/Fig6_A.csv")
 
-preprint_citation %>% 
-    select(-order, preprint_citation = preprint_citation_clean) %>% 
+select_bivariate(preprint_citation_clean) %>% 
+  rename(preprint_citation = preprint_citation_clean) %>% 
   write_csv("data/figures/Fig6_B.csv")
 ```
 

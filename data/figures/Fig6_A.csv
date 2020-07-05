@@ -1,41 +1,194 @@
-area,preprint_version,n,prop
-"Business, Economics & Management","Unsure (preprints are allowed, but it's not clear which version)",4,0.2
-"Business, Economics & Management",First submission only (before peer review),4,0.2
-"Business, Economics & Management",After peer review,3,0.15
-"Business, Economics & Management",Other,1,0.05
-"Business, Economics & Management",None,2,0.1
-"Business, Economics & Management",No preprint policy,6,0.3
-Chemical & Materials Sciences,"Unsure (preprints are allowed, but it's not clear which version)",1,0.047619047619047616
-Chemical & Materials Sciences,First submission only (before peer review),14,0.6666666666666666
-Chemical & Materials Sciences,After peer review,1,0.047619047619047616
-Chemical & Materials Sciences,Other,1,0.047619047619047616
-Chemical & Materials Sciences,None,4,0.19047619047619047
-Engineering & Computer Science,"Unsure (preprints are allowed, but it's not clear which version)",3,0.125
-Engineering & Computer Science,Any,4,0.16666666666666666
-Engineering & Computer Science,First submission only (before peer review),14,0.5833333333333334
-Engineering & Computer Science,None,3,0.125
-Health & Medical Sciences,"Unsure (preprints are allowed, but it's not clear which version)",7,0.15555555555555556
-Health & Medical Sciences,Any,2,0.044444444444444446
-Health & Medical Sciences,First submission only (before peer review),20,0.4444444444444444
-Health & Medical Sciences,After peer review,3,0.06666666666666667
-Health & Medical Sciences,None,3,0.06666666666666667
-Health & Medical Sciences,No preprint policy,10,0.2222222222222222
-"Humanities, Literature & Arts","Unsure (preprints are allowed, but it's not clear which version)",1,0.05
-"Humanities, Literature & Arts",First submission only (before peer review),5,0.25
-"Humanities, Literature & Arts",After peer review,3,0.15
-"Humanities, Literature & Arts",No preprint policy,11,0.55
-Life Sciences & Earth Sciences,"Unsure (preprints are allowed, but it's not clear which version)",2,0.09090909090909091
-Life Sciences & Earth Sciences,Any,3,0.13636363636363635
-Life Sciences & Earth Sciences,First submission only (before peer review),15,0.6818181818181818
-Life Sciences & Earth Sciences,No preprint policy,2,0.09090909090909091
-Physics & Mathematics,"Unsure (preprints are allowed, but it's not clear which version)",1,0.05
-Physics & Mathematics,Any,5,0.25
-Physics & Mathematics,First submission only (before peer review),5,0.25
-Physics & Mathematics,After peer review,2,0.1
-Physics & Mathematics,No preprint policy,7,0.35
-Social Sciences,"Unsure (preprints are allowed, but it's not clear which version)",7,0.3333333333333333
-Social Sciences,Any,3,0.14285714285714285
-Social Sciences,First submission only (before peer review),4,0.19047619047619047
-Social Sciences,After peer review,2,0.09523809523809523
-Social Sciences,Other,1,0.047619047619047616
-Social Sciences,No preprint policy,4,0.19047619047619047
+journal,issn,area,preprint_version
+Academic Medicine,1040-2446,Social Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+ACS Applied Materials & Interfaces,1944-8252,Chemical & Materials Sciences,First submission only (before peer review)
+ACS Applied Materials & Interfaces,1944-8252,Engineering & Computer Science,First submission only (before peer review)
+Accounts of Chemical Research,1520-4898,Chemical & Materials Sciences,None
+ACS Catalysis,2155-5435,Chemical & Materials Sciences,First submission only (before peer review)
+Academy of Management Journal,0001-4273,"Business, Economics & Management",None
+ACS Nano,1936-086X,Chemical & Materials Sciences,First submission only (before peer review)
+ACS Nano,1936-086X,Engineering & Computer Science,First submission only (before peer review)
+Advanced Energy Materials,1614-6840,Chemical & Materials Sciences,None
+Advanced Energy Materials,1614-6840,Engineering & Computer Science,None
+Advanced Functional Materials,1616-3028,Chemical & Materials Sciences,None
+Advanced Functional Materials,1616-3028,Engineering & Computer Science,None
+Advanced Materials,1521-4095,Chemical & Materials Sciences,None
+Advanced Materials,1521-4095,Engineering & Computer Science,None
+American Economic Review,0002-8282,"Business, Economics & Management","Unsure (preprints are allowed, but it's not clear which version)"
+American Journal of Political Science,1540-5907,Social Sciences,After peer review
+American Journal of Public Health,1541-0048,Social Sciences,No preprint policy
+American Political Science Review,1537-5943,Social Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+American Sociological Review,1939-8271,Social Sciences,First submission only (before peer review)
+Angewandte Chemie International Edition,1521-3773,Chemical & Materials Sciences,First submission only (before peer review)
+Annals of Internal Medicine,0003-4819,Health & Medical Sciences,No preprint policy
+Annals of Oncology,1569-8041,Health & Medical Sciences,First submission only (before peer review)
+Annals of the Rheumatic Diseases,1468-2060,Health & Medical Sciences,After peer review
+Annals of Tourism Research,0160-7383,Social Sciences,Any
+Applied Energy,0306-2619,Engineering & Computer Science,Any
+Applied Energy,0306-2619,Life Sciences & Earth Sciences,Any
+Applied Linguistics,1477-450X,"Humanities, Literature & Arts","Unsure (preprints are allowed, but it's not clear which version)"
+Applied Physics Letters,1077-3118,Physics & Mathematics,No preprint policy
+Astronomy & Astrophysics,1432-0746,Physics & Mathematics,"Unsure (preprints are allowed, but it's not clear which version)"
+Biomaterials,0142-9612,Engineering & Computer Science,Any
+Biomaterials,0142-9612,Health & Medical Sciences,Any
+Blood,1528-0020,Health & Medical Sciences,First submission only (before peer review)
+BMJ,1756-1833,Health & Medical Sciences,Any
+Cancer Cell,1535-6108,Health & Medical Sciences,First submission only (before peer review)
+Cancer Research,0099-7013,Health & Medical Sciences,First submission only (before peer review)
+Cell,1097-4172,Health & Medical Sciences,First submission only (before peer review)
+Cell,1097-4172,Life Sciences & Earth Sciences,First submission only (before peer review)
+Cell Metabolism,1550-4131,Life Sciences & Earth Sciences,First submission only (before peer review)
+Cell Stem Cell,1934-5909,Life Sciences & Earth Sciences,First submission only (before peer review)
+"Chemical communications (Cambridge, England)",0144-557X,Chemical & Materials Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+Chemical Reviews,1520-6890,Chemical & Materials Sciences,Other
+Chemical Society reviews,1460-4744,Chemical & Materials Sciences,First submission only (before peer review)
+Chemistry of Materials,1520-5002,Chemical & Materials Sciences,First submission only (before peer review)
+Chemistry of Materials,1520-5002,Engineering & Computer Science,First submission only (before peer review)
+Circulation,0009-7322,Health & Medical Sciences,First submission only (before peer review)
+Circulation Research,1524-4571,Health & Medical Sciences,First submission only (before peer review)
+Clinical Cancer Research,1557-3265,Health & Medical Sciences,First submission only (before peer review)
+Computers & Education,0360-1315,Social Sciences,Any
+Diabetes Care,1935-5548,Health & Medical Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+Digital Journalism,2167-082X,"Humanities, Literature & Arts",No preprint policy
+Econometrica,1468-0262,"Business, Economics & Management",Other
+Energy and Environmental Science,1754-5706,Chemical & Materials Sciences,First submission only (before peer review)
+Energy and Environmental Science,1754-5706,Engineering & Computer Science,First submission only (before peer review)
+Environmental Science & Technology,0013-936X,Life Sciences & Earth Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+European Heart Journal,1522-9645,Health & Medical Sciences,First submission only (before peer review)
+European Urology,0302-2838,Health & Medical Sciences,No preprint policy
+Gastroenterology,0016-5085,Health & Medical Sciences,No preprint policy
+Gender & Society,1552-3977,"Humanities, Literature & Arts",After peer review
+Geophysical Research Letters,1944-8007,Physics & Mathematics,After peer review
+Global Environmental Change,0959-3780,Social Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+Government Information Quarterly,0740-624X,Social Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+Gut,1468-3288,Health & Medical Sciences,After peer review
+Health Affairs,1544-5208,Social Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+Hepatology,1527-3350,Health & Medical Sciences,First submission only (before peer review)
+IEEE Communications Magazine,0163-6804,Engineering & Computer Science,First submission only (before peer review)
+IEEE Communications Surveys & Tutorials,1553-877X,Engineering & Computer Science,First submission only (before peer review)
+"IEEE Conference on Computer Vision and Pattern Recognition, CVPR","Only ISBN available, counts as a book",Engineering & Computer Science,"Unsure (preprints are allowed, but it's not clear which version)"
+IEEE International Conference on Computer Vision,2380-7504,Engineering & Computer Science,Any
+IEEE Transactions on Automatic Control,0018-9286,Physics & Mathematics,First submission only (before peer review)
+IEEE Transactions on Industrial Electronics,0278-0046,Engineering & Computer Science,Any
+IEEE Transactions on Pattern Analysis and Machine Intelligence,0162-8828,Engineering & Computer Science,First submission only (before peer review)
+IEEE Transactions on Power Electronics,0885-8993,Engineering & Computer Science,First submission only (before peer review)
+IEEE Transactions on Signal Processing,1053-587X,Physics & Mathematics,First submission only (before peer review)
+Immunity,1074-7613,Health & Medical Sciences,First submission only (before peer review)
+International Journal of Communication,1932-8036,"Humanities, Literature & Arts",No preprint policy
+International Journal of Production Economics,0925-5273,"Business, Economics & Management","Unsure (preprints are allowed, but it's not clear which version)"
+Journal of the American Medical Association,1538-3598,Health & Medical Sciences,None
+Journal of Allergy and Clinical Immunology,0091-6749,Health & Medical Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+Journal of Banking & Finance,0378-4266,"Business, Economics & Management",No preprint policy
+Journal of Business Ethics,1573-0697,"Business, Economics & Management",No preprint policy
+Journal of Business Ethics,1573-0697,Social Sciences,No preprint policy
+Journal of Business Research,0148-2963,"Business, Economics & Management","Unsure (preprints are allowed, but it's not clear which version)"
+Journal of Cleaner Production,0959-6526,Life Sciences & Earth Sciences,Any
+Journal of Cleaner Production,0959-6526,Social Sciences,Any
+Journal of Clinical Oncology,1527-7755,Health & Medical Sciences,First submission only (before peer review)
+Journal of Communication,1460-2466,"Humanities, Literature & Arts",First submission only (before peer review)
+Journal of Cosmology and Astroparticle Physics,1475-7516,Physics & Mathematics,Any
+Journal of Economic Perspectives,1944-7965,"Business, Economics & Management",No preprint policy
+Journal of Educational Psychology,1939-2176,Social Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+Journal of Financial Economics,0304-405X,"Business, Economics & Management",After peer review
+Journal of Geophysical Research,2156-2202,Physics & Mathematics,After peer review
+Journal of Hepatology,0168-8278,Health & Medical Sciences,After peer review
+Journal of High Energy Physics,1029-8479,Physics & Mathematics,Any
+Journal of Management,1557-1211,"Business, Economics & Management",First submission only (before peer review)
+Journal of Materials Chemistry. A,2050-7488,Chemical & Materials Sciences,First submission only (before peer review)
+Journal of Materials Chemistry. A,2050-7488,Engineering & Computer Science,First submission only (before peer review)
+Journal of Pragmatics,0378-2166,"Humanities, Literature & Arts",After peer review
+Journal of the American Chemical Society,1520-5126,Chemical & Materials Sciences,After peer review
+Journal of the American College of Cardiology,0735-1097,Health & Medical Sciences,None
+Journal of Youth and Adolescence,1573-6601,Social Sciences,No preprint policy
+Journalism,1741-3001,"Humanities, Literature & Arts",First submission only (before peer review)
+Journalism Practice,1751-2786,"Humanities, Literature & Arts",No preprint policy
+Journalism Studies,1461-670X,"Humanities, Literature & Arts",No preprint policy
+Land Use Policy,0264-8377,Social Sciences,After peer review
+Language Learning,1467-9922,"Humanities, Literature & Arts",No preprint policy
+Lingua,0024-3841,"Humanities, Literature & Arts",After peer review
+Management Information Systems Quarterly,2162-9730,"Business, Economics & Management",No preprint policy
+Management Science,1526-5501,"Business, Economics & Management",No preprint policy
+"Media, Culture & Society",1460-3675,"Humanities, Literature & Arts",First submission only (before peer review)
+Molecular Cell,1097-2765,Life Sciences & Earth Sciences,First submission only (before peer review)
+Monthly Notices of the Royal Astronomical Society,1365-2966,Physics & Mathematics,Any
+Nano Letters,1530-6992,Chemical & Materials Sciences,First submission only (before peer review)
+Nano Letters,1530-6992,Engineering & Computer Science,First submission only (before peer review)
+Nanoscale,2040-3372,Chemical & Materials Sciences,First submission only (before peer review)
+Nanoscale,2040-3372,Engineering & Computer Science,First submission only (before peer review)
+Nature,1476-4687,Life Sciences & Earth Sciences,First submission only (before peer review)
+Nature Biotechnology,1546-1696,Life Sciences & Earth Sciences,First submission only (before peer review)
+Nature Cell Biology,1476-4679,Life Sciences & Earth Sciences,First submission only (before peer review)
+Nature Chemistry,1755-4349,Chemical & Materials Sciences,First submission only (before peer review)
+Nature Climate Change,1758-6798,Life Sciences & Earth Sciences,First submission only (before peer review)
+Nature Communications,2041-1723,Life Sciences & Earth Sciences,First submission only (before peer review)
+Nature Genetics,1546-1718,Health & Medical Sciences,First submission only (before peer review)
+Nature Genetics,1546-1718,Life Sciences & Earth Sciences,First submission only (before peer review)
+Nature Immunology,1529-2916,Health & Medical Sciences,First submission only (before peer review)
+Nature Materials,1476-4660,Chemical & Materials Sciences,First submission only (before peer review)
+Nature Materials,1476-4660,Engineering & Computer Science,First submission only (before peer review)
+Nature Medicine,1546-170X,Health & Medical Sciences,First submission only (before peer review)
+Nature Methods,1548-7105,Life Sciences & Earth Sciences,First submission only (before peer review)
+Nature Nanotechnology,1748-3395,Chemical & Materials Sciences,First submission only (before peer review)
+Nature Nanotechnology,1748-3395,Engineering & Computer Science,First submission only (before peer review)
+Nature Neuroscience,1546-1726,Health & Medical Sciences,First submission only (before peer review)
+Nature Photonics,1749-4893,Engineering & Computer Science,First submission only (before peer review)
+Nature Photonics,1749-4893,Physics & Mathematics,First submission only (before peer review)
+Nature Physics,1745-2481,Physics & Mathematics,First submission only (before peer review)
+Nature Reviews Cancer,1474-1768,Health & Medical Sciences,No preprint policy
+Nature Reviews Genetics,1471-0064,Life Sciences & Earth Sciences,No preprint policy
+Nature Reviews Immunology,1474-1733,Health & Medical Sciences,No preprint policy
+Nature Reviews Neuroscience,1471-0048,Health & Medical Sciences,No preprint policy
+Nature Reviews. Drug Discovery,1474-1784,Health & Medical Sciences,No preprint policy
+Nature Reviews. Molecular Cell Biology,1471-0080,Life Sciences & Earth Sciences,No preprint policy
+Neural Information Processing Systems (NIPS),NIPS-ISSN,Engineering & Computer Science,"Unsure (preprints are allowed, but it's not clear which version)"
+NeuroImage,1053-8119,Health & Medical Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+Neuron,1097-4199,Health & Medical Sciences,First submission only (before peer review)
+Neuron,1097-4199,Life Sciences & Earth Sciences,First submission only (before peer review)
+New Media and Society,1461-7315,Social Sciences,Other
+Noûs,1468-0068,"Humanities, Literature & Arts",First submission only (before peer review)
+Nucleic Acids Research,1362-4962,Life Sciences & Earth Sciences,First submission only (before peer review)
+Obstetrical & Gynecological Survey,1533-9866,Health & Medical Sciences,No preprint policy
+Optics Express,1094-4087,Physics & Mathematics,No preprint policy
+Pediatrics,1098-4275,Health & Medical Sciences,No preprint policy
+Philosophical Studies,1573-0883,"Humanities, Literature & Arts",No preprint policy
+Physical Review B,1550-235X,Physics & Mathematics,No preprint policy
+Physical Review D,1550- 2368,Physics & Mathematics,No preprint policy
+Physical Review Letters,1079-7114,Physics & Mathematics,No preprint policy
+Physical Review X,2160-3308,Physics & Mathematics,No preprint policy
+Physics Letters B,0375-9601,Physics & Mathematics,First submission only (before peer review)
+PLoS One,1932-6203,Health & Medical Sciences,First submission only (before peer review)
+PLoS One,1932-6203,Life Sciences & Earth Sciences,First submission only (before peer review)
+Proceedings of the National Academy of Sciences,1091-6490,Health & Medical Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+Proceedings of the National Academy of Sciences,1091-6490,Life Sciences & Earth Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+Progress in Human Geography,1477-0288,Social Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+Public Opinion Quarterly,1537-5331,"Humanities, Literature & Arts",First submission only (before peer review)
+Regional Studies,1360-0591,Social Sciences,No preprint policy
+Renewable and Sustainable Energy Reviews,1364-0321,Engineering & Computer Science,"Unsure (preprints are allowed, but it's not clear which version)"
+Research Policy,0048-7333,Social Sciences,First submission only (before peer review)
+Review of Economics and Statistics,0034-6535,"Business, Economics & Management",After peer review
+Reviews of Modern Physics,1539-0756,Physics & Mathematics,Any
+Science,1095-9203,Life Sciences & Earth Sciences,First submission only (before peer review)
+Science Translational Medicine,1946-6234,Health & Medical Sciences,First submission only (before peer review)
+Scientific Reports,2045-2322,Life Sciences & Earth Sciences,Any
+Social Science & Medicine,0277-9536,Social Sciences,First submission only (before peer review)
+Strategic Management Journal,1097-0266,"Business, Economics & Management",No preprint policy
+Synthese,1573-0964,"Humanities, Literature & Arts",No preprint policy
+System,0346-251X,"Humanities, Literature & Arts",No preprint policy
+Teaching and Teacher Education,0742-051X,Social Sciences,First submission only (before peer review)
+TESOL Quarterly,1545-7249,"Humanities, Literature & Arts",No preprint policy
+The Astrophysical Journal,1538-4357,Physics & Mathematics,No preprint policy
+The China Quarterly,1468-2648,"Humanities, Literature & Arts",No preprint policy
+The Cochrane Database of Systematic Reviews,1469-493X,Health & Medical Sciences,No preprint policy
+The European Physical Journal C,1434-6052,Physics & Mathematics,Any
+The Journal of Clinical Investigation,1558-8238,Health & Medical Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+The Journal of Finance,1540-6261,"Business, Economics & Management",None
+The Journal of Physical Chemistry Letters,1948-7185,Chemical & Materials Sciences,First submission only (before peer review)
+The Lancet,1474-547X,Health & Medical Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+The Lancet Neurology,1474-4422,Health & Medical Sciences,"Unsure (preprints are allowed, but it's not clear which version)"
+The Lancet Oncology,1470-2045,Health & Medical Sciences,First submission only (before peer review)
+The Modern Language Journal,1540-4781,"Humanities, Literature & Arts",No preprint policy
+The New England Journal of Medicine,1533-4406,Health & Medical Sciences,None
+The Quarterly Journal of Economics,1531-4650,"Business, Economics & Management",First submission only (before peer review)
+The Review of Economic Studies,1467-937X,"Business, Economics & Management",First submission only (before peer review)
+The Review of Financial Studies,1465-7368,"Business, Economics & Management",After peer review
+Tourism Management,0261-5177,"Business, Economics & Management",First submission only (before peer review)
+World Development,1873-5991,"Business, Economics & Management","Unsure (preprints are allowed, but it's not clear which version)"
