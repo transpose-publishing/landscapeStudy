@@ -1,7 +1,7 @@
 ---
 title: "Analysis Write-up"
 author: "Thomas Klebel"
-date: Last updated 2020-07-04
+date: Last updated 2020-07-05
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -65,6 +65,9 @@ discipline. (B) Number and proportion of journals sampled by discipline in total
 
 
 
+
+
+
 Regarding practices of open access, only 8 of 
 171 journals are listed in the Directory of Open Access 
 Journals (DOAJ) and can thus be considered fully open access. ^[Code and data 
@@ -95,6 +98,8 @@ anonymize papers or reviews during review process.
 
 (A) Type of peer review used overall (n = 171)
 (B) Type of peer review used by disciplines (n = 193)
+
+
 
 
 However, there are major differences between disciplines (see figure 
@@ -132,6 +137,8 @@ available in more than 95% of journals.
 (A) Aspects of open peer review across all journals in the sample (n = 171)
 (B) Results on whether reviewer identitities are revealed to the authors, even if
 they are not published. (n = 193)
+
+
 
 
 
@@ -205,6 +212,8 @@ management 90% of journals have no policy on co-reviewing.
 
 
 
+
+
 |area                             |coreview_email |  n|      prop|     order|
 |:--------------------------------|:--------------|--:|---------:|---------:|
 |Business, Economics & Management |Yes            |  1| 0.0500000| 0.0500000|
@@ -254,28 +263,28 @@ term.
 
 Table: (\#tab:coreview-table)Propensity of terms in co-review policies
 
-|Term       | Term frequency|Proportion of policies that contain term |
-|:----------|--------------:|:----------------------------------------|
-|review     |            100|93%                                      |
-|manuscript |             43|75%                                      |
-|editor     |             33|73%                                      |
-|confidenti |             26|63%                                      |
-|not        |             24|60%                                      |
-|inform     |             19|51%                                      |
-|colleagu   |             18|49%                                      |
-|student    |             14|34%                                      |
-|discuss    |             12|32%                                      |
-|involv     |             12|32%                                      |
-|consult    |             12|32%                                      |
-|permiss    |             11|31%                                      |
-|disclos    |             12|29%                                      |
-|author     |             11|29%                                      |
-|peer       |             10|29%                                      |
-|journal    |             10|28%                                      |
-|share      |              9|25%                                      |
-|collabor   |             10|24%                                      |
-|advic      |              8|23%                                      |
-|ident      |              8|23%                                      |
+|Term       |Variants                                  | Term frequency|Proportion of policies that contain term |
+|:----------|:-----------------------------------------|--------------:|:----------------------------------------|
+|review     |review; reviewers; reviewer               |            100|93%                                      |
+|manuscript |manuscript; manuscripts                   |             43|75%                                      |
+|editor     |editor; editors                           |             33|73%                                      |
+|confidenti |confidential; confidentiality             |             26|63%                                      |
+|not        |not                                       |             24|60%                                      |
+|inform     |information; inform; informed             |             19|51%                                      |
+|colleagu   |colleague; colleagues                     |             18|49%                                      |
+|student    |students; student                         |             14|34%                                      |
+|consult    |consult; consulted; consulting            |             12|32%                                      |
+|disclos    |disclosed; disclose                       |             12|29%                                      |
+|discuss    |discuss; discussed; discussion            |             12|32%                                      |
+|involv     |involved; involve; involving              |             12|32%                                      |
+|author     |authors; author; authorization            |             11|29%                                      |
+|permiss    |permission                                |             11|31%                                      |
+|collabor   |collaborate; collaborators; collaborating |             10|24%                                      |
+|journal    |journal                                   |             10|28%                                      |
+|peer       |peer                                      |             10|29%                                      |
+|share      |share; shared; sharing                    |              9|25%                                      |
+|advic      |advice                                    |              8|23%                                      |
+|ident      |identities; identity                      |              8|23%                                      |
 
 
 The most prominent themes that emerge are:
@@ -301,6 +310,9 @@ most frequent associations in the figure are depicted by bold arrows.
 <img src="02-analysis-writeup_files/figure-html/bigrams-1.png" alt="Bigrams of co-review policies"  />
 <p class="caption">(\#fig:bigrams)Bigrams of co-review policies</p>
 </div>
+
+
+
 
 From both displays it is obvious, that journals stress the importance of 
 "maintaining confidentiality", by "not shar[ing]" or disclosing information,
@@ -377,6 +389,8 @@ do not have a preprint policy.
 
 (A) Results on whether a preprint can be posted, and which version is allowed (n = 193).
 (B) Results on whether preprints can be cited (n = 193)
+
+
 
 
 
@@ -577,6 +591,9 @@ hypothesis.
 
 
 
+
+
+
 We included five active categories in our model. All were recoded in terms of
 whether there was a clear policy on:
 
@@ -740,6 +757,9 @@ Table: (\#tab:graph for clarity)Are policies clear?
 |Which type of peer review is used?                              |54 (31.6%)  |117 (68.4%) |
 
 ![](02-analysis-writeup_files/figure-html/clarity-graph-1.png)<!-- -->
+
+
+
 
 
 

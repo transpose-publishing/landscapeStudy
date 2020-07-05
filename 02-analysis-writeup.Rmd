@@ -121,7 +121,7 @@ refined_with_areas %>%
   write_csv("data/figures/Fig7_A.csv")
   
 
-select_bivariate() %>% 
+select_bivariate(df = refined_with_areas) %>% 
   write_csv("data/figures/Fig7_B.csv")
 ```
 
@@ -224,10 +224,10 @@ p1 / p2 +
 (B) Type of peer review used by disciplines (n = 193)
 
 ```{r peer-type-data, include=FALSE}
-select_univariate(pr_type_clean) %>% 
+select_univariate(pr_type_clean, df = refined) %>% 
   write_csv("data/figures/Fig3_A.csv")
 
-select_bivariate(pr_type_clean) %>% 
+select_bivariate(pr_type_clean, df = refined_with_areas) %>% 
   write_csv("data/figures/Fig3_B.csv")
 ```
 
@@ -508,22 +508,59 @@ distinct policies, sorted by the proportion of policies that contain a given
 term.
 ```{r coreview-table}
 stemmed_words <- stopped_words %>% 
-  mutate(word = SnowballC::wordStem(word)) 
+  mutate(word_stemmed = SnowballC::wordStem(word)) 
   
 
-stemmed_words %>% 
+top_terms <- stemmed_words %>% 
   mutate(word_appears = T) %>% 
-  complete(policy_id, word, fill = list(word_appears = FALSE)) %>% 
-  group_by(word) %>% 
+  complete(policy_id, word_stemmed, fill = list(word_appears = FALSE)) %>% 
+  group_by(word_stemmed) %>% 
   summarise(n = sum(word_appears),
             n_policies = max(policy_id),
             prop_of_texts = mean(word_appears)) %>% 
   arrange(desc(prop_of_texts)) %>% 
   mutate(prop_of_texts = scales::percent(prop_of_texts, accuracy = 1)) %>% 
-  select(Term = word, `Term frequency` = n, 
+  head(20) 
+
+# sample from variants
+set.seed(1234)
+
+stemmed_words %>% 
+  count(word, word_stemmed, name = "variant_count") %>% 
+  right_join(top_terms) %>% 
+  arrange(word_stemmed, desc(variant_count)) %>% 
+  group_by(word_stemmed) %>% 
+  slice(1:3) %>% 
+  # filter(word != word_stemmed) %>% 
+  mutate(variants = list(unique(word)),
+         variants = map_chr(variants, paste, collapse = "; ")) %>%
+  select(-word, -variant_count) %>% 
+  distinct() %>% 
+  arrange(desc(n)) %>% 
+  select(Term = word_stemmed, Variants = variants, `Term frequency` = n, 
          `Proportion of policies that contain term` = prop_of_texts) %>% 
-  head(20) %>% 
   knitr::kable(caption = "Propensity of terms in co-review policies")
+
+
+
+# top_terms %>% 
+#   left_join(stemmed_words) %>% 
+#   select(-policy_id) %>% 
+#   distinct() %>% 
+#   group_by(word_stemmed) %>% I
+# 
+# 
+# 
+#   mutate(variants = list(sample(unique(word), pmin(3, length(unique(word))))),
+#          variants = map_chr(variants, paste, collapse = "; ")) %>% 
+#   select(-word) %>% 
+#   distinct()
+#   select(Term = word_stemmed, Variants = variants, `Term frequency` = n, 
+#          `Proportion of policies that contain term` = prop_of_texts)
+#   
+
+
+
 ```
 
 
@@ -756,11 +793,11 @@ gridExtra::grid.arrange(gt1, gt2)
 
 
 ```{r preprint-export, include=FALSE}
-select_bivariate(preprint_version_clean) %>% 
+select_bivariate(preprint_version_clean, df = refined_with_areas) %>% 
   rename(preprint_version = preprint_version_clean) %>% 
   write_csv("data/figures/Fig6_A.csv")
 
-select_bivariate(preprint_citation_clean) %>% 
+select_bivariate(preprint_citation_clean, df = refined_with_areas) %>% 
   rename(preprint_citation = preprint_citation_clean) %>% 
   write_csv("data/figures/Fig6_B.csv")
 ```
