@@ -28,6 +28,7 @@ For the analysis files to render you will need to install the font "Hind" (for
 example from [Google Fonts](https://fonts.google.com/)) and 
 register it with
 [`extrafont`](https://cran.r-project.org/web/packages/extrafont/README.html). 
+See the file `load_fonts.R` for specific instructions.
 
 
 The basis for the paper is `02-analysis-writeup.Rmd` (which is transformed into
@@ -35,10 +36,9 @@ The basis for the paper is `02-analysis-writeup.Rmd` (which is transformed into
 was a collaborative effort, we used a GoogleSheet to work on the manuscript. For
 this reason, the text in `02-analysis-writeup.html` is not identical to the 
 paper, but rather a first draft version. The code and figures are identical to
-the paper. Data for all figures has been exported in `data/figures/`.
+the paper. Data for all figures has been exported to `data/figures/`.
 
-Further results
-and initial explorations can be found in `01-overview.html`, as well as 
+Initial explorations can be found in `01-overview.html`, as well as 
 executing `R/01-explore.R` and `R/02-explore-missings.R`. 
 
 ### Code files
@@ -47,13 +47,13 @@ executing `R/01-explore.R` and `R/02-explore-missings.R`.
 
 |Filename                        |Purpose                                                                    |
 |:-------------------------------|:--------------------------------------------------------------------------|
-|drake.R                         |Core file for building the analysis. Run with `drake::r_make("drake.r")`| 
+|drake.R                         |Core file for building the analysis. Run with `drake::r_make("drake.R")`.| 
 |R/plan.R                        |Describes all inputs and outputs along with the functions processing them.|
 |R/packages.R                    |Lists and loads all packages relevant to the analysis.                 |
 |R/plotting_functions.R          |Functions for plotting that are re-used in multiple places.            |
-|R/drake_functions.R             |Functions that wrap preprocessing tasks as outlined in `plan.r`|
-|R/correspondence_analysis_funs.R|Functions for conducting and plotting the multiple correspondence analysis.|
-|R/helpers.R                     |General helper functions|
+|R/drake_functions.R             |Functions that wrap preprocessing tasks as outlined in `plan.R`.|
+|R/correspondence_analysis_funs.R|Functions for conducting and plotting the multiple correspondence analysis (Fig 2).|
+|R/helpers.R                     |General helper functions.|
 
 
 **Additional files for scraping and exploring data**
@@ -61,12 +61,12 @@ executing `R/01-explore.R` and `R/02-explore-missings.R`.
 |Filename                       |Purpose                                                                  |
 |:------------------------------|:------------------------------------------------------------------------|
 |analysis-scripts/01-explore.R   |General exploratory graphs from early in the analysis.|
-|analysis-scripts/02-explore-missings.R|Exploration of missing values from the survey data.|
+|analysis-scripts/02-explore-missings.R|Exploration of missing values.|
 |analysis-scripts/03-get-oa-status.R|Matching the journals surveyed against the DOAJ to determine whether they are open access or not.|
-|analysis-scripts/04-scrape-gs-fields.R |Scraping h5-index and h5-median for all journals from Google Scholar Metrics to fill in gaps in the initial data collection.|
+|analysis-scripts/04-scrape-gs-fields.R |Scraping h5-index and h5-median for all journals from GSM to fill in gaps in the initial data collection.|
 |analysis-scripts/05-do-correspondence-analysis.R |Script which records the steps taken while developing the multiple correspondence analysis for figure 2.|
 |analysis-scripts/06-clean-coreview.R|Script computing string-distances between co-review-policies to identify duplicates.|
-|analysis-scripts/07-print-coreview-policies.Rmd|Notebook that displays all co-review-policies so they can be printed out on paper for further inspection (finding duplicates)|
+|analysis-scripts/07-print-coreview-policies.Rmd|Notebook that displays all co-review-policies so they can be printed out on paper for further inspection (finding duplicates).|
 |analysis-scripts/08-upload-analysis.R|Script used to upload the rendered analysis to GoogleDrive.|
 
 
@@ -74,23 +74,25 @@ executing `R/01-explore.R` and `R/02-explore-missings.R`.
 
 
 ## Data files
-The original data file for the data we collected lives in a Google Sheet, which
-is available here: https://docs.google.com/spreadsheets/d/1WcvxxmDhaV3BwBiIfwC_nEAr6-EKCDD11R6eJ5vZElA/edit?usp=sharing
+The original data file for the data we collected lives in a Google Sheet (A),
+which is available here: https://docs.google.com/spreadsheets/d/1WcvxxmDhaV3BwBiIfwC_nEAr6-EKCDD11R6eJ5vZElA/edit?usp=sharing
 
-The original file with data on which journals are included is available here:
+The original data from Google Scholar Metrics (GSM) on which journals are 
+included, alongside data on their respective h5-index (B), is available here:
 https://docs.google.com/spreadsheets/d/1Dluo5DNWU4UrmwIZLzqcToioRdyZ1qc1EofAk4ypiW8/edit?usp=sharing
 
 The files were downloaded as `.csv` and `.xlsx` for archival. The analysis 
 builds on the `.csv` files, while the `.xlsx` files are supposed to preserve as
 much of the original formatting as possible, should the GoogleSheets become 
 unavailable one day. These data, along with data which we scraped from
-GoogleScholar can be found in the `data/raw` directory.
+GSM and the DOAJ, as well as a plain language description of the fields from (A)
+can be found in the `data/raw` directory.
 
 
-Some data wrangling was necessary before conducting the analysis. The output of
+Some data cleaning was necessary before conducting the analysis. The output of
 these operations are the files `data/refined.csv` and `data/refined_w_areas.csv`.
 The latter file contains more rows, since some journals belong to more than
-one area in GoogleScholarMetrics (GSM). Those journals have duplicate entries 
+one area in GSM. Those journals have duplicate entries 
 except for the column `area` which specifies the GSM area.
 All subsequent analysis is based on either of the two files (depending on
 whether `area` was considered or not). The files - along with other intermediate
@@ -100,12 +102,12 @@ data-files - can be found in the directory `data/transformed`.
 
 **Raw data files**
 
-|Filename                        |Purpose                                                                    |
-|:-------------------------------|:--------------------------------------------------------------------------|
+|Filename                        |Purpose                                                               |
+|:-------------------------------|:---------------------------------------------------------------------|
 |data/raw/TRANSPOSE landscape study - round 3 - Raw.csv|Raw data of the landscape scan on 171 journals. Conducted with the data collection instrument.|
-|data/raw/Compiled_Landscape study journals list - G_ALL_dedup.csv |Data from Google Scholar Metrics on journals and their respective ranking within the overall top 100 and top 20 per subject area. Retrieved on 2018-10-13.|
+|data/raw/Compiled_Landscape study journals list - G_ALL_dedup.csv |Data from GSM on journals and their respective ranking within the overall top 100 and top 20 per subject area. Retrieved on 2018-10-13.|
 |data/raw/data_collection_instrument.csv |This file preserves the instrument used when collecting data on journals.|
-|data/raw/gs_scraped_total.csv|All journals listed in Google Scholar Metrics as of 2019-06-18, including h5-index and h5-median. This file was generated via the script `analysis-scripts/04-scrape-gs-fields.R`|
+|data/raw/gs_scraped_total.csv|All journals listed in GSM as of 2019-06-18, including h5-index and h5-median. This file was generated via the script `analysis-scripts/04-scrape-gs-fields.R`|
 |data/raw/oa_data.csv| Data on open access status of all journals surveyed. Generated via `analysis-scripts/04-get-oa-status.R`|
 
 
@@ -114,11 +116,11 @@ data-files - can be found in the directory `data/transformed`.
 
 |Filename                        |Purpose                                                                    |
 |:-------------------------------|:--------------------------------------------------------------------------|
-|data/transformed/refined.csv|Cleaned data from our landscape scan, joined with data from Google Scholar Metrics. This file is the basis for the analysis presented in our paper.|
-|data/transformed/refined_w_areas.csv|This file is identical to `refined.csv`, except for the additional variable "area" which holds data on the subject category from Google Scholar Metrics. Since some journals appear in multiple categories, this file has more rows (193) than `refined.csv` (Which has 171 rows on 171 journals)|
+|data/transformed/refined.csv|Cleaned data from our landscape scan, joined with data from GSM. This file is the basis for the analysis presented in our paper.|
+|data/transformed/refined_w_areas.csv|This file is identical to `refined.csv`, except for the additional variable "area" which holds data on the subject category from GSM. Since some journals appear in multiple categories, this file has more rows (193) than `refined.csv` (which has 171 rows on 171 journals).|
 |data/transformed/var_overview.csv|Plain language descriptions of the variables in `data/raw/TRANSPOSE landscape study - round 3 - Raw.csv`.|
 |data/transformed/coreview-policies.csv|String distances between different coreview policies for detecting duplicates. Produced via `analysis-scripts/06-clean-coreview.R`|
-|data/transformed/journals_with_missing_categories.csv|List of journals for which no subject category from Google Scholar metrics is available in `data/raw/Compiled_Landscape study journals list - G_ALL_dedup.csv`. The missing data for these journals is taken from `data/raw/gs_scraped_total.csv`. |
+|data/transformed/journals_with_missing_categories.csv|List of journals for which no subject category from GSM is available in `data/raw/Compiled_Landscape study journals list - G_ALL_dedup.csv`. The missing data for these journals is taken from `data/raw/gs_scraped_total.csv`. |
 |data/transformed/policies.txt|A plain language file containing the raw text of the journals' policies on coreviewing.
 
 
