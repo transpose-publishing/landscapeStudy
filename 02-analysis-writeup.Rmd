@@ -525,7 +525,7 @@ top_terms <- stemmed_words %>%
 # sample from variants
 set.seed(1234)
 
-stemmed_words %>% 
+top_variants <- stemmed_words %>% 
   count(word, word_stemmed, name = "variant_count") %>% 
   right_join(top_terms) %>% 
   arrange(word_stemmed, desc(variant_count)) %>% 
@@ -536,10 +536,40 @@ stemmed_words %>%
          variants = map_chr(variants, paste, collapse = "; ")) %>%
   select(-word, -variant_count) %>% 
   distinct() %>% 
-  arrange(desc(prop_of_texts)) %>% 
+  arrange(desc(prop_of_texts))
+
+top_variants %>% 
   select(Term = word_stemmed, Variants = variants, `Term frequency` = n, 
          `Proportion of policies that contain term` = prop_of_texts) %>% 
   knitr::kable(caption = "Propensity of terms in co-review policies")
+```
+
+
+```{r sample-co-rev-phrases}
+co_rev_sentences <- distinct_coreview %>% 
+  unnest_tokens(sentence, coreview_policy, token = "sentences") %>% 
+  distinct()
+
+# search_terms <- top_terms$word_stemmed
+
+search_terms <- top_variants %>% 
+  pull(variants) %>% 
+  str_split(pattern = "; ") %>% 
+  flatten_chr()
+
+set.seed(98375)
+sampled_sentences <- co_rev_sentences %>% 
+  mutate(matching = map(sentence, str_detect, search_terms)) %>% 
+  unnest(matching) %>% 
+  mutate(term = rep(search_terms, nrow(co_rev_sentences))) %>% 
+  filter(matching) %>% 
+  group_by(term) %>% 
+  slice_sample(n = 1)
+  
+sampled_sentences %>% 
+  mutate(sentence = str_replace(sentence, term, paste0("*", term, "*"))) %>% 
+  select(term, sample_phrase = sentence) %>% 
+  knitr::kable(caption = "Sample phrases for prominent terms in co-review policies")
 ```
 
 
